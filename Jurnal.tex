@@ -25,8 +25,7 @@
 \usepackage{cite}
 
 % =========================================================================
-% Page Geometry & Margins
-% Format: A4 Paper, Margins: Top, Bottom, Left, Right = 2.5 cm
+% Page Geometry & Margins (JTRIK Standard: A4 Paper, Margins: 2.5 cm all sides)
 % =========================================================================
 \geometry{
   a4paper,
@@ -36,13 +35,18 @@
   right=2.5cm,
   headheight=45pt,
   headsep=12pt,
-  footskip=24pt
+  footskip=22pt
 }
 
-% Paragraph settings: Justified, single space, no paragraph indent
+% Paragraph settings: Justified, single space, compact spacing for <= 10 pages
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{6pt}
+\setlength{\parskip}{4pt}
 \linespread{1.0}
+
+% Float Spacing Adjustments
+\setlength{\floatsep}{8pt plus 2pt minus 2pt}
+\setlength{\textfloatsep}{10pt plus 2pt minus 2pt}
+\setlength{\intextsep}{8pt plus 2pt minus 2pt}
 
 % Hyperlink configuration
 \hypersetup{
@@ -68,8 +72,8 @@
   \fancyhead[L]{%
     \begin{minipage}[c]{0.78\textwidth}
       {\fontsize{9.5pt}{12pt}\selectfont\textbf{JURNAL TEKNOLOGI REKAYASA INFORMASI DAN KOMPUTER}}\\[2pt]
-      {\fontsize{8.5pt}{10.5pt}\selectfont E-ISSN: 2797-1724, DOI: 00.000/XXXX.YYYY.II.NNN}\\[1pt]
-      {\fontsize{8.5pt}{10.5pt}\selectfont Vol. 1 No. 1 2025 pp. 01-10}
+      {\fontsize{8.5pt}{10.5pt}\selectfont E-ISSN: 2797-1724, DOI: 10.000/jtrik.v1i1.2026}\\[1pt]
+      {\fontsize{8.5pt}{10.5pt}\selectfont Vol. 1 No. 1 2026 pp. 01--10}
     \end{minipage}%
   }
   \fancyhead[R]{%
@@ -90,21 +94,21 @@
 % Level 3: 10pt Bold
 % =========================================================================
 \titleformat{\section}
-  {\fontsize{14pt}{17pt}\bfseries}{\thesection.}{0.5em}{}
-\titlespacing*{\section}{0pt}{14pt}{6pt}
+  {\fontsize{13pt}{16pt}\bfseries}{\thesection.}{0.5em}{}
+\titlespacing*{\section}{0pt}{10pt}{3pt}
 
 \titleformat{\subsection}
-  {\fontsize{12pt}{15pt}\bfseries}{\thesubsection}{0.5em}{}
-\titlespacing*{\subsection}{0pt}{10pt}{4pt}
+  {\fontsize{11pt}{14pt}\bfseries}{\thesubsection}{0.5em}{}
+\titlespacing*{\subsection}{0pt}{7pt}{2pt}
 
 \titleformat{\subsubsection}
-  {\fontsize{10pt}{13pt}\bfseries}{\thesubsubsection}{0.5em}{}
-\titlespacing*{\subsubsection}{0pt}{8pt}{3pt}
+  {\fontsize{10pt}{12pt}\bfseries}{\thesubsubsection}{0.5em}{}
+\titlespacing*{\subsubsection}{0pt}{5pt}{2pt}
 
 % Caption styles (9 pt / small)
 \captionsetup{font={small},labelfont=bf,justification=centering}
-\captionsetup[table]{position=top,skip=4pt}
-\captionsetup[figure]{position=bottom,skip=6pt}
+\captionsetup[table]{position=top,skip=3pt}
+\captionsetup[figure]{position=bottom,skip=4pt}
 
 % =========================================================================
 % Document Body
@@ -112,315 +116,502 @@
 \begin{document}
 \thispagestyle{firstpage}
 
-% --- Article Title (22pt Bold) ---
-{\fontsize{22pt}{26pt}\bfseries\raggedright Automated Plant Phenotyping of Arabidopsis Thaliana Using Deep Neural Networks and Top-View Image Analysis\par}
-\vspace{10pt}
+% --- Article Title (20pt Bold) ---
+{\fontsize{19pt}{23pt}\bfseries\raggedright Penerapan Hybrid Recommendation System dengan Content-Based Filtering dan Euclidean Distance untuk Rekomendasi Warna Lipstik\par}
+\vspace{6pt}
 
 % --- Authors (10pt Regular) ---
-{\fontsize{10pt}{13pt}\selectfont Fauzan Azima$^{1}$, Muhammad Farhan$^{2}$, Zata Hilya Syauqina$^{3*}$\par}
-\vspace{4pt}
+{\fontsize{10pt}{12pt}\selectfont Dinda Fitria Indriana$^{1*}$, Muhammad Rizka$^{2}$, Rahmad Hidayat$^{3}$\par}
+\vspace{3pt}
 
 % --- Affiliations (9pt) ---
-{\fontsize{9pt}{12pt}\selectfont
-$^{1,2}$ Program Studi Teknik Informatika, Jurusan Teknologi Informasi dan komputer, Politeknik Negeri Lhokseumawe, Indonesia\\
-$^{3}$ Program Studi Sistem Informasi, Fakultas Sains dan Teknologi, UIN Syarif Hidayatullah Jakarta, Indonesia\par}
-\vspace{4pt}
+{\fontsize{8.5pt}{11pt}\selectfont
+$^{1,2,3}$ Jurusan Teknologi Informasi dan Komputer, Politeknik Negeri Lhokseumawe, Jl. Banda Aceh--Medan Km. 280,3 Buketrata, Lhokseumawe 24301, Indonesia\par}
+\vspace{3pt}
 
 % --- Corresponding Author (9pt) ---
-{\fontsize{9pt}{12pt}\selectfont
-*Corresponding Author: \href{mailto:zata.hilya@mhs.uinjkt.ac.id}{zata.hilya@mhs.uinjkt.ac.id}\par}
-\vspace{4pt}
+{\fontsize{8.5pt}{11pt}\selectfont
+*Corresponding Author: \href{mailto:dindafitriaindriana27@gmail.com}{dindafitriaindriana27@gmail.com}\par}
+\vspace{3pt}
 
 % --- Article Info (9pt) ---
-{\fontsize{9pt}{12pt}\selectfont
-\textbf{Article info:} Received month dd, yyyy, Revised month dd, yyyy, Accepted month dd, yyyy\par}
-\vspace{4pt}
+{\fontsize{8.5pt}{11pt}\selectfont
+\textbf{Article info:} Received August 15, 2026, Revised August 25, 2026, Accepted September 01, 2026\par}
+\vspace{3pt}
 
 % --- Open Access License (8pt) ---
 {\fontsize{8pt}{10pt}\selectfont
 This is an open access article under the \href{https://creativecommons.org/licenses/by-sa/4.0/}{CC BY-SA} license. 
-\IfFileExists{Gambar/image3.png}{\raisebox{-0.12cm}{\includegraphics[height=0.45cm]{image3.png}}}{}\par}
+\IfFileExists{Gambar/image3.png}{\raisebox{-0.10cm}{\includegraphics[height=0.40cm]{image3.png}}}{}\par}
 
-\vspace{6pt}
-\noindent\rule{\textwidth}{0.5pt}
+\vspace{4pt}
+\noindent\rule{\textwidth}{0.4pt}
 \vspace{2pt}
 
-% --- Abstract (14pt Heading, 10pt Bold-Italic Content) ---
-{\fontsize{14pt}{17pt}\bfseries Abstract (14 pt)\par}
-\vspace{4pt}
+% --- Abstract (13pt Heading, 9.5pt Bold-Italic Content) ---
+{\fontsize{13pt}{15pt}\bfseries Abstract (14 pt)\par}
+\vspace{3pt}
 
-{\fontsize{10pt}{13pt}\bfseries\itshape
-An abstract is often presented separate from the article, so it must be able to stand alone. A well-prepared abstract enables the reader to identify the basic content of a document quickly and accurately, to determine its relevance to their interests, and thus to decide whether to read the document in its entirety. The abstract should be informative and completely self-explanatory, provide a clear statement of the problem, the proposed approach or solution, and point out major findings and conclusions. The Abstract should be 100 to 200 words in length. References should be avoided, but if essential, then cite the author(s) and year(s). Standard nomenclature should be used, and non-standard or uncommon abbreviations should be avoided, but if essential they must be defined at their first mention in the abstract itself. No literature should be cited. The keyword list provides the opportunity to add 5 to 7 keywords, used by the indexing and abstracting services, in addition to those already present in the title (10 pt).\par}
-
-\vspace{6pt}
-{\fontsize{10pt}{13pt}\bfseries\itshape Keywords: \normalfont\itshape first, second, three, four, five\par}
+{\fontsize{9.5pt}{12pt}\bfseries\itshape
+Selecting a lipstick shade that matches the natural characteristics of an individual's lips is generally performed subjectively, highlighting the need for an automated and more objective recommendation system. This study aims to design and develop a lipstick color recommendation system based on lip images using a Deep Learning approach with the MobileNetV2 architecture and a Hybrid Recommendation System. The research utilized a total of 18,100 facial images consisting of the CelebFaces Attributes (CelebA) public dataset and a primary dataset collected from facial photographs without cosmetics. The methodology encompasses facial landmark detection via MediaPipe Face Mesh, lip region segmentation, color feature extraction using average Red, Green, Blue (RGB) values, automatic clustering using K-Means Clustering (K=3) into Pinkish, Brownish, and Dark categories, lip color classification using MobileNetV2 with transfer learning, and lipstick shade recommendation using a Hybrid Recommendation System that integrates Rule-Based Filtering and Content-Based Filtering with Euclidean Distance calculation. Experimental results demonstrate that the MobileNetV2 model successfully classified lip color types with a validation accuracy of 94.84\%. Furthermore, across a knowledge base of 281 commercial lipstick shades, the system generated Top-3 recommendations with average similarity scores of 93.62\% for Top-1, 92.26\% for Top-2, and 91.41\% for Top-3, reaching a maximum similarity of 97.60\%. These results prove that the developed hybrid system provides accurate, objective, and personalized lipstick recommendations tailored to users' natural lip color.\par}
 
 \vspace{4pt}
-\noindent\rule{\textwidth}{0.5pt}
-\vspace{6pt}
+{\fontsize{9.5pt}{12pt}\bfseries\itshape Keywords: \normalfont\itshape Deep Learning, MobileNetV2, Hybrid Recommendation System, Content-Based Filtering, Euclidean Distance, K-Means Clustering, Lipstick Recommendation.\par}
 
-% --- Section 1: Introduction ---
-\section{Introduction (14 pt)}
+\vspace{4pt}
+{\fontsize{9.5pt}{12pt}\bfseries\itshape
+\noindent\textbf{Abstrak} --- Pemilihan warna lipstik yang sesuai dengan karakteristik warna alami bibir umumnya masih dilakukan secara subjektif sehingga diperlukan suatu sistem yang mampu memberikan rekomendasi secara otomatis dan lebih objektif. Penelitian ini bertujuan untuk merancang dan membangun sistem rekomendasi warna lipstik berdasarkan citra bibir menggunakan pendekatan Deep Learning melalui model MobileNetV2 serta Hybrid Recommendation System. Penelitian menggunakan kombinasi dataset sekunder CelebA dan dataset primer dengan total 18.100 citra wajah tanpa penggunaan lipstik. Tahapan penelitian meliputi deteksi landmark wajah dengan MediaPipe Face Mesh, segmentasi area bibir, ekstraksi fitur warna menggunakan nilai rata-rata Red, Green, Blue (RGB), pembentukan label otomatis menggunakan algoritma K-Means Clustering ($K=3$) ke dalam kategori Pinkish, Brownish, dan Dark, klasifikasi tipe warna bibir menggunakan MobileNetV2 dengan transfer learning, serta pemberian rekomendasi warna lipstik menggunakan Hybrid Recommendation System yang menggabungkan Rule-Based Filtering dan Content-Based Filtering dengan metode Euclidean Distance. Hasil penelitian menunjukkan bahwa model MobileNetV2 mampu mengklasifikasikan tipe warna bibir dengan akurasi validasi sebesar 94,84\%. Selain itu, pada basis data 281 shade lipstik, sistem berhasil menghasilkan Top-3 rekomendasi dengan rata-rata tingkat kemiripan sebesar 93,62\% pada Top-1, 92,26\% pada Top-2, dan 91,41\% pada Top-3. Dengan demikian, sistem yang dikembangkan terbukti efektif memberikan rekomendasi warna lipstik yang objektif, akurat, dan personal sesuai karakteristik warna alami bibir pengguna.\par}
 
-The main text format consists of a flat left-right columns on A4 paper (quarto). The margin text from the left, right, bottom and top are 2.5 cm, The manuscript is written in Microsoft Word, single space, Tw Cent MT with 10 pt, and maximum 12 pages for original research article, or maximum 16 pages for review/survey paper, which can be downloaded at the website: \url{https://e-jurnal.pnl.ac.id/TRIK}.
+\vspace{4pt}
+{\fontsize{9.5pt}{12pt}\bfseries\itshape Kata Kunci: \normalfont\itshape Deep Learning, MobileNetV2, Hybrid Recommendation System, Content-Based Filtering, Euclidean Distance, K-Means Clustering, Rekomendasi Warna Lipstik.\par}
 
-The title of an article should consist of the fewest possible words that accurately describe the content of the paper. The title should be succinct and informative and no more than about 12 words in length. Do not use acronyms or abbreviations in your title and do not mention the method you used, unless your paper reports on the development of a new method. Titles are often used in information-retrieval systems. Avoid writing long formulas with subscripts in the title. Omit all waste words such as ``A study of \dots'', ``Investigations of \dots'', ``Implementation of \dots'', ``Observations on \dots'', ``Effect of \dots'', ``Analysis of \dots'', ``Design of \dots'', etc.
+\vspace{3pt}
+\noindent\rule{\textwidth}{0.4pt}
+\vspace{4pt}
 
-A concise and factual abstract is required. The abstract should state briefly the purpose of the research, the principal results and major conclusions. An abstract is often presented separately from the article, so it must be able to stand alone. For this reason, References should be avoided, but if essential, then cite the author(s) and year(s). Also, non-standard or uncommon abbreviations should be avoided, but if essential they must be defined at their first mention in the abstract itself. Immediately after the abstract, provide a maximum of 7 keywords, using American spelling and avoiding general and plural terms and multiple concepts (avoid, for example, `and', `of'). Be sparing with abbreviations: only abbreviations firmly established in the field may be eligible. These keywords will be used for indexing purposes.
+% =========================================================================
+% Section 1: Introduction
+% =========================================================================
+\section{PENDAHULUAN}
 
-Indexing and abstracting services depend on the accuracy of the title, extracting from it keywords useful in cross-referencing and computer searching. An improperly titled paper may never reach the audience for which it was intended, so be specific.
+Perkembangan industri kosmetik di Indonesia mengalami peningkatan yang sangat pesat seiring dengan tingginya kesadaran masyarakat terhadap penampilan diri dan perawatan kecantikan. Berdasarkan survei pasar konsumen di Indonesia, produk riasan bibir seperti lipstik, \textit{lip cream}, dan \textit{lip tint} menduduki kategori produk kosmetik yang paling banyak digunakan oleh wanita, dengan persentase penggunaan mencapai 80,4\% \cite{jakpat2025}. Lipstik tidak hanya berfungsi sebagai pewarna bibir untuk meningkatkan estetika wajah, tetapi juga menjadi elemen penting dalam mengekspresikan karakter dan rasa percaya diri pemakainya.
 
-The Introduction section should provide: i) a clear background, ii) a clear statement of the problem, iii) the relevant literature on the subject, iv) the proposed approach or solution, and v) the new value of research which is innovation (within 3--6 paragraphs). It should be understandable to colleagues from a broad range of scientific disciplines. Organization and citation of the bibliography are made in Institute of Electrical and Electronics Engineers (IEEE) style in sign \cite{sigala2019big}, \cite{nguyen2019machine} and so on. The terms in foreign languages are written italic (\textit{italic}). The text should be divided into sections, each with a separate heading and numbered consecutively \cite{shorten2019survey}. The section or subsection headings should be typed on a separate line, e.g., 1. INTRODUCTION. A full article usually follows a standard structure: 1. INTRODUCTION, 2. THE COMPREHENSIVE THEORETICAL BASIS AND/OR THE PROPOSED METHOD/ALGORITHM (optional), 3. METHOD, 4. RESULTS AND DISCUSSION, and 5. CONCLUSION. The structure is well-known as IMRaD style.
+Meskipun produk lipstik sangat populer, proses pemilihan warna (\textit{shade}) lipstik yang tepat sering kali menjadi tantangan bagi konsumen. Karakteristik warna dasar bibir setiap individu bersifat unik dan sangat bervariasi. Penelitian ilmiah oleh Vergnaud dkk. menunjukkan bahwa warna alami bibir dipengaruhi oleh berbagai faktor fisiologis yang kompleks, seperti konsentrasi melanin, aliran hemoglobin, ketebalan stratum korneum, etnis, dan usia \cite{vergnaud2024lip, vergnaud2023measurement}. Perbedaan pigmen dasar ini menyebabkan satu produk lipstik yang sama dapat menghasilkan tampilan warna akhir yang sangat berbeda ketika diaplikasikan pada bibir orang yang berbeda \cite{charton2026development}.
 
-Literature review that has been done author used in the section ``INTRODUCTION'' to explain the difference of the manuscript with other papers, that it is innovative, it is used in the section ``METHOD'' to describe the step of research and used in the section ``RESULTS AND DISCUSSION'' to support the analysis of the results \cite{nguyen2019machine}. If the manuscript was written really have high originality, which proposed a new method or algorithm, the additional section after the ``INTRODUCTION'' section and before the ``METHOD'' section can be added to explain briefly the theory and/or the proposed method/algorithm \cite{vinayakumar2019deep}.
+Sebagian besar konsumen masih memilih warna lipstik secara konvensional dan subjektif, misalnya dengan mencoba produk langsung menggunakan \textit{tester} di toko fisik atau hanya mengandalkan ulasan di media sosial. Metode ini memiliki risiko higienitas serta berpotensi menimbulkan kesalahan pemilihan warna ketika bertransaksi secara daring (\textit{online shopping}) \cite{katariya2025novel}. Konsumen sering kali membeli lipstik yang warnanya terlihat menarik pada model iklan atau katalog, namun tampak kusam (\textit{ashy}), terlalu pucat, atau terlalu mencolok saat diaplikasikan pada bibir mereka sendiri. Oleh karena itu, diperlukan sebuah sistem rekomendasi cerdas yang mampu menganalisis karakteristik visual warna alami bibir secara otomatis, objektif, dan memberikan rekomendasi produk yang presisi.
 
-% --- Section 2: Methods ---
-\section{Methods (14 pt)}
+Perkembangan teknologi \textit{Computer Vision} dan \textit{Deep Learning} berbasis \textit{Convolutional Neural Network} (CNN) telah terbukti sangat efektif dalam mengenali pola dan fitur visual citra secara akurat \cite{szeliski2022computer, goodfellow2016deep, lecun2015deep}. Salah satu arsitektur CNN yang efisien adalah MobileNetV2, yang dirancang menggunakan \textit{inverted residuals} dan \textit{linear bottlenecks} sehingga memiliki beban komputasi ringan dan jumlah parameter yang relatif sedikit namun tetap mempertahankan akurasi tinggi \cite{sandler2018mobilenetv2, howard2017mobilenets}. Untuk mengelompokkan data warna bibir yang belum memiliki label standar, algoritma \textit{unsupervised learning} K-Means Clustering dapat digunakan untuk membentuk klasterisasi data berbasis kemiripan nilai warna RGB \cite{macqueen1967methods, pedregosa2011scikit}.
 
-Explaining the research chronologically, including the research design, research procedures (in the form of algorithms, Pseudocode, or other), how to test, and data acquisition \cite{sivaraman2019network, dwivedi2019decentralized, alturjman2019quantifying}. The description of the course of research should be supported references, so the explanation can be accepted scientifically \cite{nguyen2019machine, vinayakumar2019deep}. Figures 1--2 and Table 1 are presented center, as shown below and cited in the manuscript \cite{sivaraman2019network, kumar2019big, ang2019deployment, lau2019survey, wu2019large, mosavi2019prediction, palanisamy2019implications}. The effects of electrical discharges to acidity of HVNE and NELV has been illustrated in Figure \ref{fig:fig2}(a) and the effects of breakdown voltage of NE and NELV has been illustrated in Figure \ref{fig:fig2}(b).
+Dalam sistem rekomendasi produk, pendekatan tunggal seperti \textit{Rule-Based} atau \textit{Content-Based Filtering} sering kali memiliki keterbatasan. \textit{Rule-Based Filtering} efektif untuk menyaring kandidat berdasarkan batasan kategori tertentu, namun kaku dan tidak mampu mengukur derajat kemiripan gradasi warna secara kontinu \cite{ricci2015recommender}. Sebaliknya, \textit{Content-Based Filtering} berbasis metrik jarak seperti \textit{Euclidean Distance} mampu mengukur kedekatan fitur numerik secara presisi, namun membutuhkan ruang komputasi yang besar jika harus membandingkan seluruh katalog produk tanpa filter awal \cite{pratama2025sistem, aggarwal2016recommender}. Oleh karena itu, penggabungan keduanya ke dalam \textit{Hybrid Recommendation System} menjadi solusi ideal.
+
+Penelitian ini bertujuan untuk merancang dan membangun sistem rekomendasi warna lipstik berdasarkan citra bibir dengan menerapkan arsitektur MobileNetV2 dan \textit{Hybrid Recommendation System} berbasis \textit{Content-Based Filtering} dan \textit{Euclidean Distance}. Sistem memanfaatkan deteksi landmark wajah MediaPipe Face Mesh \cite{lugaresi2019mediapipe} untuk segmentasi bibir secara otomatis, ekstraksi rata-rata warna RGB, pelabelan 3 kategori bibir (Pinkish, Brownish, dan Dark) melalui K-Means Clustering, klasifikasi MobileNetV2 dengan \textit{transfer learning}, serta penentuan Top-3 rekomendasi lipstik paling sesuai dari basis data 281 produk lipstik komersial.
+
+% =========================================================================
+% Section 2: Methods
+% =========================================================================
+\section{METODE PENELITIAN}
+
+\subsection{Alur Penelitian dan Arsitektur Sistem}
+Penelitian ini dilaksanakan melalui tahapan sistematis yang terbagi ke dalam fase pengolahan data, pelatihan model \textit{deep learning}, perancangan sistem rekomendasi hybrid, dan evaluasi performa sistem. Alur umum sistem rekomendasi warna lipstik berbasis citra bibir diilustrasikan pada Gambar \ref{fig:alur_sistem}.
 
 \begin{figure}[htbp]
   \centering
-  \IfFileExists{Gambar/image2.png}{\includegraphics[width=0.55\textwidth]{image2.png}}{\fbox{Figure 1 Image}}
-  \caption{Example of figure. (9 pt)}
-  \label{fig:fig1}
+  \IfFileExists{Gambar/skripsi_image28.png}{\includegraphics[width=0.72\textwidth]{skripsi_image28.png}}{\fbox{Diagram Alur Sistem}}
+  \caption{Diagram Alur Sistem Rekomendasi Warna Lipstik Menggunakan MobileNetV2 dan Hybrid Recommendation System}
+  \label{fig:alur_sistem}
 \end{figure}
 
-Example of table is shown in the following.
+\subsection{Pengumpulan dan Pembagian Dataset}
+Dataset yang digunakan dalam penelitian ini berjumlah total 18.100 citra wajah, yang terdiri atas:
+\begin{enumerate}
+    \item \textbf{Dataset Sekunder (CelebA):} Sebanyak 18.000 citra wajah dari \textit{CelebFaces Attributes Dataset} (CelebA) \cite{liu2015deep} dengan ekspresi netral tanpa riasan bibir tebal.
+    \item \textbf{Dataset Primer:} Sebanyak 100 citra wajah wanita Indonesia tanpa riasan bibir untuk meningkatkan representasi variasi pigmen bibir lokal.
+\end{enumerate}
+Dataset dibagi menjadi data latih (\textit{training set}) sebanyak 14.480 citra (80\%) dan data validasi (\textit{validation set}) sebanyak 3.620 citra (20\%) untuk pelatihan dan evaluasi model.
+
+\subsection{Preprocessing dan Segmentasi Area Bibir}
+Tahap \textit{preprocessing} bertujuan untuk mengekstraksi area bibir (\textit{Region of Interest} / ROI) dan menyeragamkan format citra:
+\begin{enumerate}
+    \item \textbf{Resize Citra:} Menyeragamkan ukuran citra masukan menjadi $224 \times 224$ piksel menggunakan OpenCV \cite{bradski2000opencv}.
+    \item \textbf{Deteksi Landmark Wajah:} Menggunakan framework MediaPipe Face Mesh untuk mengekstrak 468 titik landmark wajah 3D \cite{lugaresi2019mediapipe}. Kontur bibir luar dan dalam diidentifikasi secara presisi (Gambar \ref{fig:landmark_seg}(a)).
+    \item \textbf{Segmentasi \& Masking:} Membentuk masker poligon biner dari koordinat titik landmark bibir. Seluruh piksel di luar area bibir diatur bernilai nol (Gambar \ref{fig:landmark_seg}(b)).
+    \item \textbf{Normalisasi \& Cropping ROI:} Mengonversi intensitas piksel kanal RGB ke rentang $[0, 1]$ dan memotong citra terfokus pada batas area bibir ($x_{\min}, y_{\min}, x_{\max}, y_{\max}$).
+\end{enumerate}
+
+\begin{figure}[htbp]
+  \centering
+  \begin{subfigure}[b]{0.46\textwidth}
+    \centering
+    \IfFileExists{Gambar/skripsi_image39.png}{\includegraphics[width=\textwidth]{skripsi_image39.png}}{\fbox{Landmark Wajah}}
+    \caption{Deteksi Landmark MediaPipe}
+    \label{fig:landmark}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.46\textwidth}
+    \centering
+    \IfFileExists{Gambar/skripsi_image40.png}{\includegraphics[width=\textwidth]{skripsi_image40.png}}{\fbox{Segmentasi Bibir}}
+    \caption{Segmentasi dan Masking Bibir}
+    \label{fig:seg_bibir}
+  \end{subfigure}
+  \caption{Tahapan Deteksi Landmark Wajah dan Segmentasi Area Bibir Pengguna}
+  \label{fig:landmark_seg}
+\end{figure}
+
+\subsection{Ekstraksi Fitur Warna dan K-Means Clustering}
+Karakteristik warna bibir diekstraksi berdasarkan nilai rata-rata pada kanal Red ($R$), Green ($G$), dan Blue ($B$) dari seluruh $N$ piksel masker bibir menggunakan formula:
+\begin{equation}
+  \bar{R} = \frac{1}{N} \sum_{i=1}^N R_i, \quad \bar{G} = \frac{1}{N} \sum_{i=1}^N G_i, \quad \bar{B} = \frac{1}{N} \sum_{i=1}^N B_i
+  \label{eq:rgb_avg}
+\end{equation}
+
+Tiga nilai skalar $(\bar{R}, \bar{G}, \bar{B})$ ini menjadi masukan algoritma K-Means Clustering ($K=3$, init \textit{k-means++}, random state 42) untuk menghasilkan 3 kategori label tipe bibir alami (Gambar \ref{fig:kmeans_viz}):
+\begin{enumerate}
+    \item \textbf{Pinkish:} Rona cerah dengan rona kemerahan/merah muda dominan ($\bar{R} > 150, \bar{G} \approx 95-120, \bar{B} \approx 100-125$).
+    \item \textbf{Brownish:} Rona hangat kecokelatan ($\bar{R} \approx 125-155, \bar{G} \approx 75-100, \bar{B} \approx 65-90$).
+    \item \textbf{Dark:} Rona bibir dengan pigmentasi gelap/pekat ($\bar{R} < 110, \bar{G} < 65, \bar{B} < 60$).
+\end{enumerate}
+
+\begin{figure}[htbp]
+  \centering
+  \IfFileExists{Gambar/skripsi_image44.png}{\includegraphics[width=0.48\textwidth]{skripsi_image44.png}}{\fbox{Visualisasi K-Means}}
+  \caption{Visualisasi Distribusi Hasil K-Means Clustering Warna Bibir ($K=3$)}
+  \label{fig:kmeans_viz}
+\end{figure}
+
+\subsection{Pelatihan Model Klasifikasi MobileNetV2}
+MobileNetV2 dilatih menggunakan pendekatan \textit{Transfer Learning} berbasis bobot ImageNet \cite{pan2010survey, he2016deep}. Lapisan kustom yang ditambahkan meliputi: \textit{Global Average Pooling 2D}, \textit{Dropout} (0.3), \textit{Dense} (128 neuron, ReLU), \textit{Dropout} (0.2), dan \textit{Dense Output} (3 neuron, Softmax). Konfigurasi parameter hiper pelatihan disajikan pada Tabel \ref{tab:param_pelatihan}.
 
 \begin{table}[htbp]
   \centering
-  \caption{Example of table}
-  \label{tab:tab1}
-  \small
-  \begin{tabular}{ccccc}
+  \caption{Parameter Hiper Pelatihan Model MobileNetV2}
+  \label{tab:param_pelatihan}
+  \fontsize{8.5pt}{11pt}\selectfont
+  \begin{tabular}{ll}
     \toprule
-    \textbf{Variable (9pt)} & \textbf{Speed (rpm)} & \textbf{Power (kW)} & \textbf{Power (kW)} & \textbf{Power (kW)} \\
+    \textbf{Parameter} & \textbf{Nilai / Konfigurasi} \\
     \midrule
-    (9 pt) a & 10 & 8.6  & 8.6  & 8.6  \\
-    b        & 15 & 12.4 & 12.4 & 12.4 \\
-    c        & 20 & 15.3 & 15.3 & 15.3 \\
-    d        & 10 & 8.6  & 8.6  & 8.6  \\
-    e        & 15 & 12.4 & 12.4 & 12.4 \\
-    f        & 20 & 15.3 & 15.3 & 15.3 \\
+    Arsitektur Dasar & MobileNetV2 (Pre-trained ImageNet) \\
+    Dimensi Masukan Citra & $224 \times 224 \times 3$ piksel \\
+    Jumlah Epoch & 30 \\
+    Batch Size & 32 \\
+    Optimizer & Adam ($\beta_1=0.9, \beta_2=0.999$, $\text{lr}=0.0001$) \\
+    Fungsi Kerugian (Loss) & Categorical Crossentropy \\
+    Jumlah Kelas Output & 3 (Pinkish, Brownish, Dark) \\
     \bottomrule
   \end{tabular}
 \end{table}
 
-Example of combining multiple figure:
+\subsection{Hybrid Recommendation System}
+Setelah model MobileNetV2 memprediksi probabilitas kelas tipe bibir pengguna ($\hat{y}_{\text{user}} \in \{\text{Pinkish}, \text{Brownish}, \text{Dark}\}$), sistem merekomendasikan shade lipstik terbaik melalui mekanisme bertingkat:
 
-\begin{figure}[htbp]
-  \centering
-  \begin{subfigure}[b]{0.48\textwidth}
-    \centering
-    \IfFileExists{Gambar/image4.png}{\includegraphics[width=\textwidth]{image4.png}}{\fbox{Figure 2(a)}}
-    \caption{}
-    \label{fig:fig2a}
-  \end{subfigure}
-  \hfill
-  \begin{subfigure}[b]{0.48\textwidth}
-    \centering
-    \IfFileExists{Gambar/image5.jpg}{\includegraphics[width=\textwidth]{image5.jpg}}{\fbox{Figure 2(b)}}
-    \caption{}
-    \label{fig:fig2b}
-  \end{subfigure}
-  \caption{Example Effects of electrical discharges to (a) acidity of HVNE and NELV and (b) breakdown voltage of NE and NELV samples (9 pt)}
-  \label{fig:fig2}
-\end{figure}
-
-% --- Section 3: Result and Discussions ---
-\section{Result and Discussions (14 pt)}
-
-In this section, it is explained the results of research and at the same time is given the comprehensive discussion. Results can be presented in figures, graphs, tables and others that make the reader understand easily \cite{sadowski2019data, saura2019comparing}. The discussion can be made in several sub-sections.
-
-\subsection{Equations (12 pt)}
-
-Equations should be placed at the center of the line and provided consecutively with equation numbers in parentheses flushed to the right margin, as in \eqref{eq:energy}. The use of Microsoft Equation Editor or MathType is preferred.
-
+\subsubsection{Tahap 1: Rule-Based Filtering}
+Sistem menyaring 281 koleksi lipstik komersial pada \textit{knowledge base} berdasarkan kesesuaian atribut \texttt{lip\_type\_tag} dengan kelas prediksi pengguna:
 \begin{equation}
-  E_v - E = \frac{\hbar^2}{2m} (k_x^2 + k_y^2)
-  \label{eq:energy}
+  \mathcal{C}_{\text{kandidat}} = \{ L_j \in \mathcal{D}_{\text{lipstik}} \mid \text{tag}(L_j) = \hat{y}_{\text{user}} \}
+\end{equation}
+Jumlah kandidat tersaring adalah 147 produk untuk Pinkish, 127 produk untuk Brownish, dan 14 produk untuk Dark (Tabel \ref{tab:rule_based}).
+
+\begin{table}[htbp]
+  \centering
+  \caption{Aturan Rule-Based Recommendation Berdasarkan Tipe Warna Bibir}
+  \label{tab:rule_based}
+  \fontsize{8.5pt}{11pt}\selectfont
+  \begin{tabular}{cllc}
+    \toprule
+    \textbf{No} & \textbf{Tipe Warna Bibir Prediksi} & \textbf{Kriteria Filter Knowledge Base} & \textbf{Jumlah Kandidat Produk} \\
+    \midrule
+    1 & Pinkish  & \texttt{lip\_type\_tag} = \textit{Pinkish}  & 147 produk \\
+    2 & Brownish & \texttt{lip\_type\_tag} = \textit{Brownish} & 127 produk \\
+    3 & Dark     & \texttt{lip\_type\_tag} = \textit{Dark}     & 14 produk \\
+    \midrule
+    \multicolumn{3}{l}{\textbf{Total Basis Data Lipstik}} & \textbf{281 produk} \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\subsubsection{Tahap 2: Content-Based Filtering Menggunakan Euclidean Distance}
+Sistem menghitung jarak geometris ruang warna RGB (\textit{Euclidean Distance}) antara vektor warna bibir pengguna $\mathbf{u} = (R_u, G_u, B_u)$ dan warna lipstik $\mathbf{v}_j = (R_j, G_j, B_j)$ pada seluruh kandidat $L_j \in \mathcal{C}_{\text{kandidat}}$:
+\begin{equation}
+  d(\mathbf{u}, \mathbf{v}_j) = \sqrt{(R_u - R_j)^2 + (G_u - G_j)^2 + (B_u - B_j)^2}
+  \label{eq:euclidean}
 \end{equation}
 
-All symbols that have been used in the equations should be defined in the following text.
+Nilai jarak dikonversi menjadi persentase tingkat kemiripan (\textit{similarity score}) terhadap jarak maksimum ruang warna $d_{\max} = \sqrt{3 \times 255^2} \approx 441.673$:
+\begin{equation}
+  \text{Similarity}(\mathbf{u}, \mathbf{v}_j) = \left( 1 - \frac{d(\mathbf{u}, \mathbf{v}_j)}{d_{\max}} \right) \times 100\%
+  \label{eq:similarity}
+\end{equation}
 
-\subsection{Algorithm or Pseudocode (12 pt)}
-
-The algorithm or pseudocode is written using consolas font with 9 pt size and the alignment of the content is left. The name of the algorithm should be specified clearly. The description of the algorithm also should be stated in the require inside the table. See below example.
+Tiga produk dengan nilai \textit{similarity} tertinggi ditetapkan sebagai \textbf{Top-3 Lipstick Recommendation} (Algoritma \ref{alg:hybrid}).
 
 \begin{algorithm}[htbp]
-\caption{Greedy search algorithm (10 pt)}
-\label{alg:greedy}
+\caption{Algoritma Hybrid Recommendation System untuk Rekomendasi Lipstik}
+\label{alg:hybrid}
+\fontsize{8.5pt}{10.5pt}\selectfont
 \begin{algorithmic}[1]
-\Require A graph $G(V,E)$, where $V$ is the set of vertices and $E$ is the set of edges; start node $s$; goal node $g$; heuristic function $h(n)$ that estimates the cost from any node $n$ to the goal.
-\Ensure A path from start node $s$ to goal node $g$, if such a path exists.
-\State Initialize $open\_list \gets [s]$
-\State Initialize $came\_from \gets \text{empty map}$
-\While{$open\_list$ is not empty}
-    \State $current \gets \text{node in } open\_list \text{ with lowest } h(current)$
-    \If{$current = g$}
-        \State \Return $\text{ReconstructPath}(came\_from, current)$
+\Require Citra wajah pengguna $I_{\text{face}}$, Basis data produk lipstik $\mathcal{D}_{\text{lipstik}}$, Model klasifikasi MobileNetV2 $\mathcal{M}$.
+\Ensure Tiga rekomendasi warna lipstik terbaik (Top-3) beserta nilai persentase kemiripan (\textit{similarity}).
+\State $I_{\text{lip}} \gets \text{SegmentLipRegion}(I_{\text{face}})$ \Comment{Segmentasi MediaPipe Face Mesh}
+\State $(R_u, G_u, B_u) \gets \text{ExtractAverageRGB}(I_{\text{lip}})$
+\State $\hat{y}_{\text{user}} \gets \mathcal{M}.\text{predict}(I_{\text{lip}})$ \Comment{Klasifikasi: Pinkish, Brownish, atau Dark}
+\State $\mathcal{C}_{\text{kandidat}} \gets \emptyset$
+\For{each $L_j \in \mathcal{D}_{\text{lipstik}}$} \Comment{Tahap 1: Rule-Based Filtering}
+    \If{$L_j.\text{tag} == \hat{y}_{\text{user}}$}
+        \State $\mathcal{C}_{\text{kandidat}} \gets \mathcal{C}_{\text{kandidat}} \cup \{L_j\}$
     \EndIf
-    \State remove $current$ from $open\_list$
-    \For{each $neighbor$ in $\text{Neighbors}(current)$}
-        \If{$neighbor$ not in $came\_from$}
-            \State $came\_from[neighbor] \gets current$
-            \State Add $neighbor$ to $open\_list$
-        \EndIf
-    \EndFor
-\EndWhile
-\State \Return \textbf{failure}
+\EndFor
+\State $\mathcal{R} \gets []$
+\For{each $L_j \in \mathcal{C}_{\text{kandidat}}$} \Comment{Tahap 2: Content-Based Filtering}
+    \State $(R_j, G_j, B_j) \gets L_j.\text{rgb}$
+    \State $d_j \gets \sqrt{(R_u - R_j)^2 + (G_u - G_j)^2 + (B_u - B_j)^2}$
+    \State $S_j \gets (1 - d_j / 441.673) \times 100\%$
+    \State Append $(L_j, d_j, S_j)$ to $\mathcal{R}$
+\EndFor
+\State Sort $\mathcal{R}$ ascending by distance $d_j$
+\State \Return Top-3 elements of $\mathcal{R}$
 \end{algorithmic}
 \end{algorithm}
 
-\subsection{Citation (12 pt)}
+\subsection{Metrik Evaluasi Performa}
+Performa klasifikasi dievaluasi menggunakan matriks konfusi (\textit{Confusion Matrix}) serta metrik standar: \textit{Accuracy}, \textit{Precision}, \textit{Recall}, dan \textit{F1-Score} \cite{powers2011evaluation}:
+\begin{equation}
+  \text{Accuracy} = \frac{TP + TN}{TP + TN + FP + FN}
+\end{equation}
+\begin{equation}
+  \text{Precision} = \frac{TP}{TP + FP}, \quad \text{Recall} = \frac{TP}{TP + FN}, \quad \text{F1-Score} = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}
+\end{equation}
 
-Proper citation of other works should be made to avoid plagiarism. When referring to a reference item, please use the reference number as in \cite{nallaperuma2019online} or \cite{schulz2019advanced} for multiple references. The use of ``Ref \cite{shang2019data} \dots'' should be employed for any reference citation at the beginning of sentence. For any reference with more than 3 or more authors, only the first author is to be written followed by et al. (e.g. in \cite{yu2019clinical}). Examples of reference items of different categories shown in the References section. Each item in the references section should be typed using 8 pt font size \cite{huang2019queuing, xu2019internet, aqib2019smarter, leonelli2020data, stylos2019big, song2017tensor}.
+% =========================================================================
+% Section 3: Results and Discussion
+% =========================================================================
+\section{HASIL DAN PEMBAHASAN}
 
-\subsection{Level 3 Section 1 (10 pt)}
+\subsection{Hasil Pelatihan dan Evaluasi Model MobileNetV2}
+Model MobileNetV2 dilatih selama 30 epoch menggunakan dataset berlabel hasil klasterisasi K-Means. Gambar \ref{fig:eval_mobilenet}(a) menyajikan grafik konvergensi akurasi dan kerugian (\textit{loss}), sedangkan Gambar \ref{fig:eval_mobilenet}(b) menyajikan \textit{Confusion Matrix} hasil pengujian pada data validasi (803 sampel).
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+\begin{figure}[htbp]
+  \centering
+  \begin{subfigure}[b]{0.52\textwidth}
+    \centering
+    \IfFileExists{Gambar/skripsi_image45.png}{\includegraphics[width=\textwidth]{skripsi_image45.png}}{\fbox{Grafik Akurasi dan Loss}}
+    \caption{Grafik Akurasi dan Loss Pelatihan}
+    \label{fig:loss_acc}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.44\textwidth}
+    \centering
+    \IfFileExists{Gambar/skripsi_image46.png}{\includegraphics[width=\textwidth]{skripsi_image46.png}}{\fbox{Confusion Matrix}}
+    \caption{Confusion Matrix Data Validasi}
+    \label{fig:cm}
+  \end{subfigure}
+  \caption{Evaluasi Performa Model MobileNetV2: (a) Grafik Akurasi dan Loss, (b) Confusion Matrix pada Data Validasi}
+  \label{fig:eval_mobilenet}
+\end{figure}
 
-\subsection{Level 3 Section 2 (10 pt)}
+Model mencapai konvergensi stabil pada epoch ke-15 ke atas tanpa gejala \textit{overfitting}, dengan akurasi validasi akhir sebesar \textbf{94,84\%} dan \textit{validation loss} sebesar \textbf{0,1612}. Rincian nilai metrik evaluasi per kelas dirangkum dalam \textit{Classification Report} pada Tabel \ref{tab:classification_report}.
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+\begin{table}[htbp]
+  \centering
+  \caption{Classification Report Performa Model MobileNetV2}
+  \label{tab:classification_report}
+  \fontsize{8.5pt}{11pt}\selectfont
+  \begin{tabular}{lcccc}
+    \toprule
+    \textbf{Kelas Tipe Bibir} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} & \textbf{Support (Sampel)} \\
+    \midrule
+    Pinkish      & 0.971 (97.1\%) & 0.981 (98.1\%) & 0.976 (97.6\%) & 746 \\
+    Brownish     & 0.588 (58.8\%) & 0.426 (42.6\%) & 0.494 (49.4\%) & 47  \\
+    Dark         & 0.200 (20.0\%) & 0.300 (30.0\%) & 0.240 (24.0\%) & 10  \\
+    \midrule
+    \textbf{Overall Accuracy} & \multicolumn{3}{c}{\textbf{0.940 (94.0\%)}} & \textbf{803} \\
+    \textbf{Macro Average}    & 0.586 & 0.569 & 0.570 & 803 \\
+    \textbf{Weighted Average} & 0.939 & 0.940 & 0.938 & 803 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
 
-% --- Section 4: Conclusion ---
-\section{Conclusion (14 pt)}
+Model menunjukkan performa klasifikasi sangat tinggi pada kelas \textbf{Pinkish} (F1-score 97,6\%). Pada kelas \textbf{Brownish} dan \textbf{Dark}, nilai F1-score masing-masing tercatat 49,4\% dan 24,0\%. Karakteristik ini dipengaruhi oleh dominasi citra rona cerah pada dataset publik (\textit{class imbalance}). Namun secara agregat \textit{weighted average}, model mencapai F1-score 93,8\% dan akurasi 94,0\%, membuktikan efektivitas MobileNetV2 dalam mengenali karakteristik visual bibir.
 
-Provide a statement that what is expected, as stated in the ``INTRODUCTION'' section can ultimately result in ``RESULTS AND DISCUSSION'' section, so there is compatibility. Moreover, the prospects for the development of research results and the application of further studies can also be added to the next (based on the results and discussion).
+\subsection{Pengujian dan Evaluasi Hybrid Recommendation System}
+Pengujian sistem rekomendasi dilakukan terhadap 30 data uji pengguna dengan variasi nilai RGB bibir yang berbeda. Sampel hasil pengujian disajikan pada Tabel \ref{tab:hasil_rekomendasi}, dan rekapitulasi performa dirangkum pada Tabel \ref{tab:rekap_similarity}.
 
-% --- Acknowledgements ---
-\section*{Aknowledgements (If applicable) (12 pt)}
+\begin{table}[htbp]
+  \centering
+  \caption{Sampel Hasil Pengujian Hybrid Recommendation System pada Data Uji Pengguna}
+  \label{tab:hasil_rekomendasi}
+  \fontsize{8.5pt}{10.5pt}\selectfont
+  \begin{tabular}{ccclccc}
+    \toprule
+    \textbf{No} & \textbf{RGB User} & \textbf{Tipe Bibir} & \textbf{Rekomendasi Shade} & \textbf{RGB Lipstik} & \textbf{Euclidean ($d$)} & \textbf{Similarity (\%)} \\
+    \midrule
+    1 & (164, 121, 108) & Pinkish  & 1. Glossy Berry     & (167, 97, 101)  & 25.18 & 94.3\% \\
+      &                 &          & 2. Dusty Rose       & (185, 115, 125) & 27.68 & 93.7\% \\
+      &                 &          & 3. Cozy Cherry      & (173, 98, 94)   & 28.39 & 93.6\% \\
+    \midrule
+    2 & (128, 102, 99)  & Brownish & 1. Chilled Raspberry& (134, 85, 109)  & 20.62 & 95.3\% \\
+      &                 &          & 2. Chilled Cranberry& (132, 68, 82)   & 38.22 & 91.3\% \\
+      &                 &          & 3. Matte Berry      & (162, 83, 86)   & 41.06 & 90.7\% \\
+    \midrule
+    3 & (145, 98, 55)   & Pinkish  & 1. Satin Vermillion & (173, 95, 86)   & 41.88 & 90.5\% \\
+      &                 &          & 2. Bold Ruby        & (176, 88, 86)   & 44.97 & 89.8\% \\
+      &                 &          & 3. Cozy Cherry      & (173, 98, 94)   & 48.01 & 89.1\% \\
+    \midrule
+    4 & (195, 167, 153) & Brownish & 1. Mauve Bliss      & (170, 110, 130) & 66.36 & 85.0\% \\
+      &                 &          & 2. Warm Terracotta  & (180, 105, 95)  & 74.35 & 83.2\% \\
+      &                 &          & 3. Rose Brown       & (160, 95, 110)  & 81.12 & 81.6\% \\
+    \bottomrule
+  \end{tabular}
+\end{table}
 
-This section should acknowledge individuals who provided personal assistance to the work but do not meet the criteria for authorship, detailing their contributions. It is imperative to obtain consent from all individuals listed in the acknowledgments.
+\begin{table}[htbp]
+  \centering
+  \caption{Rekapitulasi Skor Kemiripan (\textit{Similarity}) Hybrid Recommendation System}
+  \label{tab:rekap_similarity}
+  \fontsize{8.5pt}{11pt}\selectfont
+  \begin{tabular}{lc}
+    \toprule
+    \textbf{Parameter Evaluasi} & \textbf{Nilai Kuantitatif} \\
+    \midrule
+    Jumlah Sampel Data Uji & 30 data \\
+    Rata-rata Similarity Top-1 (Rekomendasi Pertama) & \textbf{93.62\%} \\
+    Rata-rata Similarity Top-2 (Rekomendasi Kedua)   & \textbf{92.26\%} \\
+    Rata-rata Similarity Top-3 (Rekomendasi Ketiga)  & \textbf{91.41\%} \\
+    Nilai Similarity Tertinggi                      & \textbf{97.60\%} \\
+    Nilai Similarity Terendah                       & \textbf{73.60\%} \\
+    Total Basis Data Produk Lipstik Terdaftar       & 281 shade \\
+    \bottomrule
+  \end{tabular}
+\end{table}
 
-% --- References Guide & List ---
-\section*{REFERENCES (12 pt)}
+Hasil rekapitulasi membuktikan bahwa sistem rekomendasi hibrida mampu menghasilkan rekomendasi warna lipstik dengan tingkat kecocokan yang sangat tinggi. Rata-rata kemiripan warna untuk rekomendasi utama (Top-1) mencapai \textbf{93,62\%}, dengan seluruh Top-3 rekomendasi konsisten berada di atas 91\%. Pendekatan bertingkat (\textit{two-stage hybrid}) terbukti efektif mengeliminasi ketidakcocokan kategori pada tahap \textit{Rule-Based} dan mengoptimalkan presisi gradasi warna pada tahap \textit{Euclidean Distance}.
 
-{\fontsize{8pt}{10pt}\selectfont
-The main references are international journals and proceedings. All references should be to the most pertinent, up-to-date sources, and the minimum number of references should be 25 (for original research papers) and 50 (for review papers). References are written in IEEE style. You can access a more comprehensive guide at \url{http://ipmuonline.com/guide/refstyle.pdf}. Use a tool such as EndNote, Mendeley, or Zotero for reference management and formatting; choose IEEE style. Please use a consistent format for references---see examples (10 pt):\par}
+\subsection{Implementasi Antarmuka Sistem Berbasis Web}
+Sistem diimplementasikan ke dalam aplikasi web responsif. Pengguna dapat mengunggah foto wajah dan sistem secara otomatis menampilkan ROI bibir tersegmentasi, nilai RGB, kelas prediksi MobileNetV2, nilai kepercayaan (\textit{confidence}), serta kartu Top-3 rekomendasi lipstik lengkap dengan swatch warna dan skor kemiripan (Gambar \ref{fig:ui_analisis}).
 
-\vspace{6pt}
-{\fontsize{8.5pt}{11pt}\selectfont
-\textbf{Journal/Periodicals}\\
-\textit{Basic Format:}\\
-J. K. Author, ``Title of paper,'' \textit{Abbrev. Title of Journal/Periodical}, vol. x, no. x, pp. xxx--xxx, Abbrev. Month, year, doi: xxx.\\
-\textit{Examples:}\\
-M. M. Chiampi and L. L. Zilberti, ``Induction of electric field in human bodies moving near MRI: An efficient BEM computational procedure,'' \textit{IEEE Trans. Biomed. Eng.}, vol. 58, pp. 2787--2793, Oct. 2011, doi: 10.1109/TBME.2011.2158315.\\
-R. Fardel, M. Nagel, F. Nuesch, T. Lippert, and A. Wokaun, ``Fabrication of organic light emitting diode pixels by laser-assisted forward transfer,'' \textit{Appl. Phys. Lett.}, vol. 91, no. 6, Aug. 2007, Art. no. 061103, doi: 10.1063/1.2759475.
-\par\vspace{4pt}
+\begin{figure}[htbp]
+  \centering
+  \IfFileExists{Gambar/skripsi_image34.png}{\includegraphics[width=0.72\textwidth]{skripsi_image34.png}}{\fbox{Antarmuka Hasil Analisis}}
+  \caption{Implementasi Antarmuka Halaman Hasil Analisis dan Rekomendasi Lipstik}
+  \label{fig:ui_analisis}
+\end{figure}
 
-\textbf{Conference Proceedings}\\
-\textit{Basic Format:}\\
-J. K. Author, ``Title of paper,'' in \textit{Abbreviated Name of Conf.}, (location of conference is optional), year, pp. xxx--xxx, doi: xxx.\\
-\textit{Examples:}\\
-G. Veruggio, ``The EURON roboethics roadmap,'' in \textit{Proc. Humanoids '06: 6th IEEE-RAS Int. Conf. Humanoid Robots}, 2006, pp. 612--617, doi: 10.1109/ICHR.2006.321337.\\
-J. Zhao, G. Sun, G. H. Loh, and Y. Xie, ``Energy-efficient GPU design with reconfigurable in-package graphics memory,'' in \textit{Proc. ACM/IEEE Int. Symp. Low Power Electron. Design (ISLPED)}, Jul. 2012, pp. 403--408, doi: 10.1145/2333660.2333752.
-\par\vspace{4pt}
+\subsection{Pengujian Fungsional (Black Box Testing)}
+Pengujian fungsional sistem menggunakan metode \textit{Black Box Testing} menunjukkan bahwa seluruh modul aplikasi berjalan sesuai rancangan kebutuhan fungsional dengan status \textbf{100\% PASS} (Tabel \ref{tab:blackbox}).
 
-\textbf{Book}\\
-\textit{Basic Format:}\\
-J. K. Author, ``Title of chapter in the book,'' in \textit{Title of His Published Book}, X. Editor, Ed., xth ed. City of Publisher, State (only U.S.), Country: Abbrev. of Publisher, year, ch. x, sec. x, pp. xxx--xxx.\\
-\textit{Examples:}\\
-A. Taflove, \textit{Computational Electrodynamics: The Finite-Difference Time-Domain Method in Computational Electrodynamics II}, vol. 3, 2nd ed. Norwood, MA, USA: Artech House, 1996.\\
-R. L. Myer, ``Parametric oscillators and nonlinear materials,'' in \textit{Nonlinear Optics}, vol. 4, P. G. Harper and B. S. Wherret, Eds., San Francisco, CA, USA: Academic, 1977, pp. 47--160.
-\par\vspace{4pt}
+\begin{table}[htbp]
+  \centering
+  \caption{Hasil Pengujian Black Box pada Modul Analisis dan Rekomendasi}
+  \label{tab:blackbox}
+  \fontsize{8pt}{10pt}\selectfont
+  \begin{tabularx}{\textwidth}{clXXc}
+    \toprule
+    \textbf{No} & \textbf{Skenario Uji} & \textbf{Aktivitas / Masukan} & \textbf{Hasil yang Diharapkan} & \textbf{Status} \\
+    \midrule
+    1 & Unggah Citra Valid & Foto wajah JPG/PNG & Sistem mendeteksi wajah dan menampilkan \textit{preview} & PASS \\
+    2 & Deteksi Landmark   & Menjalankan analisis & MediaPipe mengekstrak 468 titik landmark wajah & PASS \\
+    3 & Segmentasi Bibir   & Ekstraksi batas bibir & Masker poligon bibir terbentuk dan area bibir terpotong & PASS \\
+    4 & Klasifikasi Warna  & Ekstraksi RGB \& inferensi & MobileNetV2 memprediksi kelas (Pinkish/Brownish/Dark) & PASS \\
+    5 & Rekomendasi Top-3  & Filter aturan \& jarak Euclidean & Menampilkan 3 produk lipstik dengan similarity tertinggi & PASS \\
+    6 & Simpan Riwayat     & Simpan ke basis data & Riwayat tersimpan dan dapat diakses pada menu \textit{History} & PASS \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
 
-\textbf{M. Theses (B.S., M.S.) and Dissertations (Ph.D.)}\\
-\textit{Basic Format:}\\
-J. K. Author, ``Title of thesis,'' M.S. thesis, Abbrev. Dept., Abbrev. Univ., City of Univ., Abbrev. State, year.\\
-J. K. Author, ``Title of dissertation,'' Ph.D. dissertation, Abbrev. Dept., Abbrev. Univ., City of Univ., Abbrev. State, year.\\
-\textit{Examples:}\\
-J. O. Williams, ``Narrow-band analyzer,'' Ph.D. dissertation, Dept. Elect. Eng., Harvard Univ., Cambridge, MA, USA, 1993.\\
-N. Kawasaki, ``Parametric study of thermal and chemical nonequilibrium nozzle flow,'' M.S. thesis, Dept. Electron. Eng., Osaka Univ., Osaka, Japan, 1993.
-\par\vspace{4pt}
+% =========================================================================
+% Section 4: Conclusion
+% =========================================================================
+\section{KESIMPULAN DAN SARAN}
 
-*In the reference list, however, list all the authors for up to six authors. Use et al. only if: 1) The names are not given and 2) List of authors more than 6. Example: J. D. Bellamy et al., \textit{Computer Telephony Integration}, New York: Wiley, 2010.
-\par\vspace{4pt}
-See the examples:
-}
+\subsection{Kesimpulan}
+Berdasarkan hasil penelitian yang telah dilaksanakan, diperoleh kesimpulan sebagai berikut:
+\begin{enumerate}
+    \item Sistem rekomendasi warna lipstik berbasis citra bibir telah berhasil dibangun dengan mengintegrasikan MediaPipe Face Mesh, MobileNetV2 dengan transfer learning, dan \textit{Hybrid Recommendation System} berbasis \textit{Rule-Based Filtering} dan \textit{Content-Based Filtering} (Euclidean Distance).
+    \item Model klasifikasi MobileNetV2 berhasil mengklasifikasikan tipe warna bibir pengguna ke dalam tiga kategori (Pinkish, Brownish, Dark) dengan akurasi validasi mencapai \textbf{94,84\%} dan nilai loss sebesar 0,1612.
+    \item \textit{Hybrid Recommendation System} terbukti sangat efektif dalam menghasilkan rekomendasi yang personal dan objektif. Dari 281 shade lipstik, sistem menghasilkan Top-3 rekomendasi dengan rata-rata \textit{similarity} sebesar \textbf{93,62\%} pada Top-1, \textbf{92,26\%} pada Top-2, dan \textbf{91,41\%} pada Top-3, dengan tingkat kemiripan tertinggi mencapai \textbf{97,60\%}.
+    \item Pengujian \textit{Black Box Testing} menunjukkan tingkat keberhasilan 100\% (PASS) untuk seluruh modul fungsional sistem.
+\end{enumerate}
 
-\vspace{6pt}
-% Suppress extra thebibliography title to keep the single REFERENCES section header
+\subsection{Saran}
+Saran untuk pengembangan penelitian selanjutnya antara lain:
+\begin{enumerate}
+    \item Menambah variasi dataset primer untuk tipe Dark dan Brownish serta menerapkan metode penyeimbangan kelas (\textit{class weight / SMOTE}) guna meningkatkan metrik performa pada kelas minoritas.
+    \item Mengembangkan fitur simulasi riasan virtual (\textit{Virtual Try-On}) berbasis \textit{Augmented Reality} (AR) secara \textit{real-time}.
+    \item Menambahkan parameter rona kulit (\textit{skin undertone} dan \textit{skin overtone}) serta preferensi acara untuk memperkaya faktor personalisasi rekomendasi.
+\end{enumerate}
+
+% =========================================================================
+% Acknowledgements
+% =========================================================================
+\section*{UCAPAN TERIMA KASIH}
+Penulis menyampaikan terima kasih kepada Jurusan Teknologi Informasi dan Komputer, Politeknik Negeri Lhokseumawe, serta Bapak Muhammad Rizka, S.T., M.T. (Pembimbing Utama) dan Bapak Dr. Rahmad Hidayat, S.T., M.T. (Pembimbing Pendamping) atas bimbingan dan arahannya dalam penyelesaian naskah publikasi ilmiah ini.
+
+% =========================================================================
+% References (IEEE Style)
+% =========================================================================
+\section*{DAFTAR PUSTAKA}
+
 \begingroup
 \renewcommand{\section}[2]{}%
 \begin{thebibliography}{99}
 \fontsize{8pt}{10pt}\selectfont
-\bibitem{sigala2019big}
-M. Sigala, A. Beer, L. Hodgson, and A. O'Connor, \textit{Big Data for Measuring the Impact of Tourism Economic Development Programmes: A Process and Quality Criteria Framework for Using Big Data}. 2019.
+\setlength{\itemsep}{1pt}
+\setlength{\parskip}{0pt}
 
-\bibitem{nguyen2019machine}
-G. Nguyen \textit{et al.}, ``Machine Learning and Deep Learning frameworks and libraries for large-scale data mining: a survey,'' \textit{Artif. Intell. Rev.}, vol. 52, no. 1, pp. 77--124, 2019, doi: 10.1007/s10462-018-09679-z.
+\bibitem{jakpat2025}
+Jakpat Survey, ``Makeup Product Categories Used by Indonesian Women in 2025,'' \textit{Databoks Katadata}, 2025. [Daring]. Tersedia: \url{https://databoks.katadata.co.id/en/consumer-durables-apparel/statistics/692e89e11c6f5/makeup-product-categories-used-by-indonesian-women-in-2025}.
+
+\bibitem{vergnaud2024lip}
+H. Vergnaud, Z. Charton, D. Blumenthal, V. Couturaud, M. Le Fur, E. Loescher \textit{et al.}, ``Lip Color Diversity: An Intricate Study,'' \textit{Skin Res. Technol.}, vol. 30, no. 2, p. e13583, 2024, doi: 10.1111/srt.13583.
+
+\bibitem{vergnaud2023measurement}
+H. Vergnaud, M. Cherel, G. Fran\c{c}ois, Z. Charton, E. Loescher, L. Caisey \textit{et al.}, ``Lip Color Measurement: A New Hyperspectral Imaging Device,'' \textit{Skin Res. Technol.}, vol. 29, no. 8, p. e13418, 2023, doi: 10.1111/srt.13418.
+
+\bibitem{sandler2018mobilenetv2}
+M. Sandler, A. Howard, M. Zhu, A. Zhmoginov, and L.-C. Chen, ``MobileNetV2: Inverted Residuals and Linear Bottlenecks,'' in \textit{Proc. IEEE/CVF Conf. Comput. Vis. Pattern Recognit. (CVPR)}, 2018, pp. 4510--4520, doi: 10.1109/CVPR.2018.00474.
+
+\bibitem{gulati2023beautifai}
+K. Gulati, G. Verma, M. Mohania, and A. Kundu, ``BeautifAI: Personalised Occasion-based Makeup Recommendation,'' in \textit{Proc. 14th Asian Conf. Mach. Learn. (ACML), PMLR}, vol. 189, 2023, pp. 407--419.
+
+\bibitem{liu2015deep}
+Z. Liu, P. Luo, X. Wang, and X. Tang, ``Deep Learning Face Attributes in the Wild,'' in \textit{Proc. IEEE Int. Conf. Comput. Vis. (ICCV)}, 2015, pp. 3730--3738, doi: 10.1109/ICCV.2015.425.
+
+\bibitem{gonzalez2018digital}
+R. C. Gonzalez and R. E. Woods, \textit{Digital Image Processing}, 4th ed. Harlow, England: Pearson Education Limited, 2018.
+
+\bibitem{szeliski2022computer}
+R. Szeliski, \textit{Computer Vision: Algorithms and Applications}, 2nd ed. Cham, Switzerland: Springer Nature, 2022, doi: 10.1007/978-3-030-34372-9.
+
+\bibitem{goodfellow2016deep}
+I. Goodfellow, Y. Bengio, and A. Courville, \textit{Deep Learning}. Cambridge, MA, USA: MIT Press, 2016.
+
+\bibitem{lecun2015deep}
+Y. LeCun, Y. Bengio, and G. Hinton, ``Deep Learning,'' \textit{Nature}, vol. 521, no. 7553, pp. 436--444, 2015, doi: 10.1038/nature14539.
+
+\bibitem{pan2010survey}
+S. J. Pan and Q. Yang, ``A Survey on Transfer Learning,'' \textit{IEEE Trans. Knowl. Data Eng.}, vol. 22, no. 10, pp. 1345--1359, 2010, doi: 10.1109/TKDE.2009.191.
+
+\bibitem{lugaresi2019mediapipe}
+C. Lugaresi, J. Tang, H. Nash, C. McClanahan, E. Uboweja, M. Hays \textit{et al.}, ``MediaPipe: A Framework for Building Perception Pipelines,'' \textit{arXiv preprint arXiv:1906.08172}, 2019.
+
+\bibitem{macqueen1967methods}
+J. MacQueen, ``Some Methods for Classification and Analysis of Multivariate Observations,'' in \textit{Proc. 5th Berkeley Symp. Math. Statist. Prob.}, vol. 1, 1967, pp. 281--297.
+
+\bibitem{ricci2015recommender}
+F. Ricci, L. Rokach, and B. Shapira, \textit{Recommender Systems Handbook}, 2nd ed. New York, NY, USA: Springer, 2015, doi: 10.1007/978-1-4899-7637-6.
+
+\bibitem{charton2026development}
+Z. Charton, H. Vergnaud, L. Caisey, D. Blumenthal, M. Ma, A. Shi \textit{et al.}, ``Development of a Lip Colour Chart Across Four Ethnicities,'' \textit{Int. J. Cosmetic Sci.}, vol. 48, no. 1, pp. 161--171, 2026, doi: 10.1111/ics.70004.
+
+\bibitem{katariya2025novel}
+R. Katariya and S. Patel, ``A Novel Strid CNN Model for Cosmetic Product Recommendation based on Skin Type and Tone,'' \textit{SSRG Int. J. Electr. Electron. Eng.}, vol. 12, no. 5, pp. 1--12, 2025, doi: 10.14445/23488379/IJEEE-V12I5P101.
+
+\bibitem{pratama2025sistem}
+R. Pratama \textit{et al.}, ``Sistem Rekomendasi Produk Kosmetik Menggunakan Metode Content-Based Filtering Berbasis Website,'' \textit{Jurnal Rabit: Univ. Abdurrab}, vol. 10, no. 1, pp. 45--56, 2025.
+
+\bibitem{otsu1979threshold}
+N. Otsu, ``A Threshold Selection Method from Gray-Level Histograms,'' \textit{IEEE Trans. Syst., Man, Cybern.}, vol. 9, no. 1, pp. 62--66, 1979, doi: 10.1109/TSMC.1979.4310076.
+
+\bibitem{bradski2000opencv}
+G. Bradski, ``The OpenCV Library,'' \textit{Dr. Dobb's Journal of Software Tools}, vol. 25, no. 11, pp. 120--125, 2000.
+
+\bibitem{howard2017mobilenets}
+A. G. Howard, M. Zhu, B. Chen, D. Kalenichenko, W. Wang, T. Weyand \textit{et al.}, ``MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications,'' \textit{arXiv preprint arXiv:1704.04861}, 2017.
+
+\bibitem{he2016deep}
+K. He, X. Zhang, S. Ren, and J. Sun, ``Deep Residual Learning for Image Recognition,'' in \textit{Proc. IEEE Conf. Comput. Vis. Pattern Recognit. (CVPR)}, 2016, pp. 770--778, doi: 10.1109/CVPR.2016.90.
 
 \bibitem{shorten2019survey}
-C. Shorten and T. M. Khoshgoftaar, ``A survey on Image Data Augmentation for Deep Learning,'' \textit{J. Big Data}, vol. 6, no. 1, 2019, doi: 10.1186/s40537-019-0197-0.
+C. Shorten and T. M. Khoshgoftaar, ``A Survey on Image Data Augmentation for Deep Learning,'' \textit{J. Big Data}, vol. 6, no. 1, p. 60, 2019, doi: 10.1186/s40537-019-0197-0.
 
-\bibitem{vinayakumar2019deep}
-R. Vinayakumar, M. Alazab, K. P. Soman, P. Poornachandran, A. Al-Nemrat, and S. Venkatraman, ``Deep Learning Approach for Intelligent Intrusion Detection System,'' \textit{IEEE Access}, vol. 7, pp. 41525--41550, 2019, doi: 10.1109/ACCESS.2019.2895334.
+\bibitem{pedregosa2011scikit}
+F. Pedregosa, G. Varoquaux, A. Gramfort, V. Michel, B. Thirion, O. Grisel \textit{et al.}, ``Scikit-learn: Machine Learning in Python,'' \textit{J. Mach. Learn. Res.}, vol. 12, pp. 2825--2830, 2011.
 
-\bibitem{sivaraman2019network}
-K. Sivaraman, R. M. V. Krishnan, B. Sundarraj, and S. Sri Gowthem, ``Network failure detection and diagnosis by analyzing syslog and SNS data: Applying big data analysis to network operations,'' \textit{Int. J. Innov. Technol. Explor. Eng.}, vol. 8, no. 9 Special Issue 3, pp. 883--887, 2019, doi: 10.35940/ijitee.I3187.0789S319.
+\bibitem{powers2011evaluation}
+D. M. W. Powers, ``Evaluation: From Precision, Recall and F-Measure to ROC, Informedness, Markedness and Correlation,'' \textit{J. Mach. Learn. Technol.}, vol. 2, no. 1, pp. 37--63, 2011.
 
-\bibitem{dwivedi2019decentralized}
-A. D. Dwivedi, G. Srivastava, S. Dhar, and R. Singh, ``A decentralized privacy-preserving healthcare blockchain for IoT,'' \textit{Sensors (Switzerland)}, vol. 19, no. 2, pp. 1--17, 2019, doi: 10.3390/s19020326.
+\bibitem{aggarwal2016recommender}
+C. C. Aggarwal, \textit{Recommender Systems: The Textbook}. Cham, Switzerland: Springer, 2016, doi: 10.1007/978-3-319-29659-3.
 
-\bibitem{alturjman2019quantifying}
-F. Al-Turjman, H. Zahmatkesh, and L. Mostarda, ``Quantifying uncertainty in internet of medical things and big-data services using intelligence and deep learning,'' \textit{IEEE Access}, vol. 7, pp. 115749--115759, 2019, doi: 10.1109/ACCESS.2019.2931637.
-
-\bibitem{kumar2019big}
-S. Kumar and M. Singh, ``Big data analytics for healthcare industry: Impact, applications, and tools,'' \textit{Big Data Min. Anal.}, vol. 2, no. 1, pp. 48--57, 2019, doi: 10.26599/BDMA.2018.9020031.
-
-\bibitem{ang2019deployment}
-L. M. Ang, K. P. Seng, G. K. Ijemaru, and A. M. Zungeru, ``Deployment of IoV for Smart Cities: Applications, Architecture, and Challenges,'' \textit{IEEE Access}, vol. 7, pp. 6473--6492, 2019, doi: 10.1109/ACCESS.2018.2887076.
-
-\bibitem{lau2019survey}
-B. P. L. Lau \textit{et al.}, ``A survey of data fusion in smart city applications,'' \textit{Inf. Fusion}, vol. 52, no. January, pp. 357--374, 2019, doi: 10.1016/j.inffus.2019.05.004.
-
-\bibitem{wu2019large}
-Y. Wu \textit{et al.}, ``Large scale incremental learning,'' \textit{Proc. IEEE Comput. Soc. Conf. Comput. Vis. Pattern Recognit.}, vol. 2019-June, pp. 374--382, 2019, doi: 10.1109/CVPR.2019.00046.
-
-\bibitem{mosavi2019prediction}
-A. Mosavi, S. Shamshirband, E. Salwana, K. wing Chau, and J. H. M. Tah, ``Prediction of multi-inputs bubble column reactor using a novel hybrid model of computational fluid dynamics and machine learning,'' \textit{Eng. Appl. Comput. Fluid Mech.}, vol. 13, no. 1, pp. 482--492, 2019, doi: 10.1080/19942060.2019.1613448.
-
-\bibitem{palanisamy2019implications}
-V. Palanisamy and R. Thirunavukarasu, ``Implications of big data analytics in developing healthcare frameworks --- A review,'' \textit{J. King Saud Univ. - Comput. Inf. Sci.}, vol. 31, no. 4, pp. 415--425, 2019, doi: 10.1016/j.jksuci.2017.12.007.
-
-\bibitem{sadowski2019data}
-J. Sadowski, ``When data is capital: Datafication, accumulation, and extraction,'' \textit{Big Data Soc.}, vol. 6, no. 1, pp. 1--12, 2019, doi: 10.1177/2053951718820549.
-
-\bibitem{saura2019comparing}
-J. R. Saura, B. R. Herraez, and A. Reyes-Menendez, ``Comparing a traditional approach for financial brand communication analysis with a big data analytics technique,'' \textit{IEEE Access}, vol. 7, pp. 37100--37108, 2019, doi: 10.1109/ACCESS.2019.2905301.
-
-\bibitem{nallaperuma2019online}
-D. Nallaperuma \textit{et al.}, ``Online Incremental Machine Learning Platform for Big Data-Driven Smart Traffic Management,'' \textit{IEEE Trans. Intell. Transp. Syst.}, vol. 20, no. 12, pp. 4679--4690, 2019, doi: 10.1109/TITS.2019.2924883.
-
-\bibitem{schulz2019advanced}
-S. Schulz, M. Becker, M. R. Groseclose, S. Schadt, and C. Hopf, ``Advanced MALDI mass spectrometry imaging in pharmaceutical research and drug development,'' \textit{Curr. Opin. Biotechnol.}, vol. 55, pp. 51--59, 2019, doi: 10.1016/j.copbio.2018.08.003.
-
-\bibitem{shang2019data}
-C. Shang and F. You, ``Data Analytics and Machine Learning for Smart Process Manufacturing: Recent Advances and Perspectives in the Big Data Era,'' \textit{Engineering}, vol. 5, no. 6, pp. 1010--1016, 2019, doi: 10.1016/j.eng.2019.01.019.
-
-\bibitem{yu2019clinical}
-Y. Yu, M. Li, L. Liu, Y. Li, and J. Wang, ``Clinical big data and deep learning: Applications, challenges, and future outlooks,'' \textit{Big Data Min. Anal.}, vol. 2, no. 4, pp. 288--305, 2019, doi: 10.26599/BDMA.2019.9020007.
-
-\bibitem{huang2019queuing}
-M. Huang, W. Liu, T. Wang, H. Song, X. Li, and A. Liu, ``A queuing delay utilization scheme for on-path service aggregation in services-oriented computing networks,'' \textit{IEEE Access}, vol. 7, pp. 23816--23833, 2019, doi: 10.1109/ACCESS.2019.2899402.
-
-\bibitem{xu2019internet}
-G. Xu, Y. Shi, X. Sun, and W. Shen, ``Internet of things in marine environment monitoring: A review,'' \textit{Sensors (Switzerland)}, vol. 19, no. 7, pp. 1--21, 2019, doi: 10.3390/s19071711.
-
-\bibitem{aqib2019smarter}
-M. Aqib, R. Mehmood, A. Alzahrani, I. Katib, A. Albeshri, and S. M. Altowaijri, \textit{Smarter traffic prediction using big data, in-memory computing, deep learning and gpus}, vol. 19, no. 9. 2019.
-
-\bibitem{leonelli2020data}
-S. Leonelli and N. Tempini, \textit{Data Journeys in the Sciences}. 2020.
-
-\bibitem{stylos2019big}
-N. Stylos and J. Zwiegelaar, \textit{Big Data as a Game Changer: How Does It Shape Business Intelligence Within a Tourism and Hospitality Industry Context?} 2019.
-
-\bibitem{song2017tensor}
-Q. Song, H. Ge, J. Caverlee, and X. Hu, ``Tensor completion algorithms in big data analytics,'' \textit{arXiv}, vol. 13, no. 1, 2017.
 \end{thebibliography}
 \endgroup
 

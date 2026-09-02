@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.5.26)  2 SEP 2026 20:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.5.26)  2 SEP 2026 21:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -482,9 +482,9 @@ LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 332.
 Package: cite 2015/02/27  v 5.5
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 53.
+Package hyperref Info: Option `colorlinks' set `true' on input line 57.
 LaTeX Font Info:    Trying to load font information for T1+lmr on input line 11
-2.
+6.
 
 (C:\Program Files\MiKTeX\tex/latex/lm\t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -495,24 +495,24 @@ File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 ) (Jurnal.aux)
 \openout1 = `Jurnal.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -533,7 +533,7 @@ LaTeX Font Info:    ... okay on input line 112.
 * \headheight=45.0pt
 * \headsep=12.0pt
 * \topskip=10.0pt
-* \footskip=24.0pt
+* \footskip=22.0pt
 * \marginparwidth=57.0pt
 * \marginparsep=11.0pt
 * \columnsep=10.0pt
@@ -582,19 +582,19 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 Package color Info: Driver file: pdftex.def on input line 149.
 
 (C:\Program Files\MiKTeX\tex/latex/graphics\mathcolor.ltx))
-Package hyperref Info: Link coloring ON on input line 112.
+Package hyperref Info: Link coloring ON on input line 116.
  (Jurnal.out)
 (Jurnal.out)
 \@outlinefile=\write3
 \openout3 = `Jurnal.out'.
 
-LaTeX Info: Redefining \microtypecontext on input line 112.
-Package microtype Info: Applying patch `item' on input line 112.
-Package microtype Info: Applying patch `toc' on input line 112.
-Package microtype Info: Applying patch `eqnum' on input line 112.
-Package microtype Info: Applying patch `footnote' on input line 112.
-Package microtype Info: Applying patch `verbatim' on input line 112.
-LaTeX Info: Redefining \microtypesetup on input line 112.
+LaTeX Info: Redefining \microtypecontext on input line 116.
+Package microtype Info: Applying patch `item' on input line 116.
+Package microtype Info: Applying patch `toc' on input line 116.
+Package microtype Info: Applying patch `eqnum' on input line 116.
+Package microtype Info: Applying patch `footnote' on input line 116.
+Package microtype Info: Applying patch `verbatim' on input line 116.
+LaTeX Info: Redefining \microtypesetup on input line 116.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -611,36 +611,36 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 (RS)
 )
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
-20.
+24.
 
 (C:\Program Files\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-20.
+24.
 
 (C:\Program Files\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-120.
+124.
 
 (C:\Program Files\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-120.
+124.
 
 (C:\Program Files\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 120.
+(Font)              <10> on input line 124.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 120.
+(Font)              <7> on input line 124.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 120.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 120
+(Font)              <5> on input line 124.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 124
 .
 
 (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd
@@ -649,7 +649,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (C:\Users\acern\AppData\Roaming\MiKTeX\tex/latex/microtype\mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 120
+LaTeX Font Info:    Trying to load font information for U+msb on input line 124
 .
 
 (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd
@@ -658,29 +658,29 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 (C:\Users\acern\AppData\Roaming\MiKTeX\tex/latex/microtype\mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
+LaTeX Font Info:    Calculating math sizes for size <8.5> on input line 129.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 125.
+(Font)              <8.5> on input line 129.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 125.
-<Gambar/image3.png, id=41, 163.61125pt x 57.21375pt>
+(Font)              <5.94997> on input line 129.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <4.25> on input line 129.
+<Gambar/image3.png, id=81, 163.61125pt x 57.21375pt>
 File: Gambar/image3.png Graphic file (type png)
 <use Gambar/image3.png>
-Package pdftex.def Info: Gambar/image3.png  used on input line 142.
-(pdftex.def)             Requested size: 36.61371pt x 12.80365pt.
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-65.
-
-(C:\Program Files\MiKTeX\tex/latex/lm\t1lmtt.fd
-File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `lmtt' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-<Gambar/image1.png, id=43, 357.335pt x 114.4275pt>
+Package pdftex.def Info: Gambar/image3.png  used on input line 145.
+(pdftex.def)             Requested size: 32.5444pt x 11.38092pt.
+LaTeX Font Info:    Calculating math sizes for size <9.5> on input line 163.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9.5> on input line 163.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6.64996> on input line 163.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <4.75> on input line 163.
+<Gambar/image1.png, id=82, 357.335pt x 114.4275pt>
 File: Gambar/image1.png Graphic file (type png)
 <use Gambar/image1.png>
-Package pdftex.def Info: Gambar/image1.png  used on input line 170.
+Package pdftex.def Info: Gambar/image1.png  used on input line 166.
 (pdftex.def)             Requested size: 93.29202pt x 29.87547pt.
 
 Overfull \hbox (2.2446pt too wide) has occurred while \output is active
@@ -693,62 +693,126 @@ Files/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}
 {C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX/
 fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm
 -mathit.enc} <./Gambar/image1.png (PNG copy)> <./Gambar/image3.png (PNG copy)>]
-<Gambar/image2.png, id=76, 471.7625pt x 302.12875pt>
-File: Gambar/image2.png Graphic file (type png)
-<use Gambar/image2.png>
-Package pdftex.def Info: Gambar/image2.png  used on input line 184.
-(pdftex.def)             Requested size: 250.38564pt x 160.35336pt.
-<Gambar/image4.png, id=78, 869.2475pt x 417.56pt>
-File: Gambar/image4.png Graphic file (type png)
-<use Gambar/image4.png>
-Package pdftex.def Info: Gambar/image4.png  used on input line 216.
-(pdftex.def)             Requested size: 218.51521pt x 104.96317pt.
-<Gambar/image5.jpg, id=79, 702.625pt x 315.1775pt>
-File: Gambar/image5.jpg Graphic file (type jpg)
-<use Gambar/image5.jpg>
-Package pdftex.def Info: Gambar/image5.jpg  used on input line 223.
-(pdftex.def)             Requested size: 218.51521pt x 98.02142pt.
- [2 <./Gambar/image2.png>]
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 252.
- [3 <./Gambar/image4.png> <./Gambar/image5.jpg>]
+ [2]
+<Gambar/skripsi_image28.png, id=137, 1541.76pt x 1027.84pt>
+File: Gambar/skripsi_image28.png Graphic file (type png)
+<use Gambar/skripsi_image28.png>
+Package pdftex.def Info: Gambar/skripsi_image28.png  used on input line 199.
+(pdftex.def)             Requested size: 327.7763pt x 218.50328pt.
+<Gambar/skripsi_image39.png, id=143, 1299.85625pt x 1219.55624pt>
+File: Gambar/skripsi_image39.png Graphic file (type png)
+<use Gambar/skripsi_image39.png>
+Package pdftex.def Info: Gambar/skripsi_image39.png  used on input line 225.
+(pdftex.def)             Requested size: 209.41534pt x 196.47282pt.
+<Gambar/skripsi_image40.png, id=144, 1296.845pt x 1221.56375pt>
+File: Gambar/skripsi_image40.png Graphic file (type png)
+<use Gambar/skripsi_image40.png>
+Package pdftex.def Info: Gambar/skripsi_image40.png  used on input line 232.
+(pdftex.def)             Requested size: 209.41534pt x 197.24359pt.
+ [3 <./Gambar/skripsi_image28.png (PNG copy)>]
+<Gambar/skripsi_image44.png, id=161, 1204.5pt x 903.375pt>
+File: Gambar/skripsi_image44.png Graphic file (type png)
+<use Gambar/skripsi_image44.png>
+Package pdftex.def Info: Gambar/skripsi_image44.png  used on input line 256.
+(pdftex.def)             Requested size: 218.51521pt x 163.88243pt.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 302.
- [4] [5] [6] (Jurnal.aux)
+(Font)              <9> on input line 257.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 257.
+
+Overfull \hbox (37.18929pt too wide) in paragraph at lines 285--286
+\T1/lmr/m/n/10 (-20) Setelah model Mo-bileNetV2 mem-prediksi prob-a-bil-i-tas k
+e-las tipe bibir peng-guna ($[] \OMS/lmsy/m/n/10 2 f[]\OML/lmm/m/it/10 ; []; []
+\OMS/lmsy/m/n/10 g$\T1/lmr/m/n/10 (-20) ),
+ []
+
+[4{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc} <./Gambar/skripsi_
+image39.png (PNG copy)> <./Gambar/skripsi_image40.png (PNG copy)> <./Gambar/skr
+ipsi_image44.png (PNG copy)>]
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
+88.
+ (C:\Program Files\MiKTeX\tex/latex/lm\t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 328.
+
+[5]
+<Gambar/skripsi_image45.png, id=205, 1204.5pt x 401.5pt>
+File: Gambar/skripsi_image45.png Graphic file (type png)
+<use Gambar/skripsi_image45.png>
+Package pdftex.def Info: Gambar/skripsi_image45.png  used on input line 376.
+(pdftex.def)             Requested size: 236.72888pt x 78.90788pt.
+<Gambar/skripsi_image46.png, id=206, 602.25pt x 501.875pt>
+File: Gambar/skripsi_image46.png Graphic file (type png)
+<use Gambar/skripsi_image46.png>
+Package pdftex.def Info: Gambar/skripsi_image46.png  used on input line 383.
+(pdftex.def)             Requested size: 200.30852pt x 166.92111pt.
+
+Overfull \hbox (10.2765pt too wide) in paragraph at lines 423--444
+ [][] 
+ []
+
+[6 <./Gambar/skripsi_image45.png (PNG copy)> <./Gambar/skripsi_image46.png (PNG
+ copy)>]
+<Gambar/skripsi_image34.png, id=219, 1927.2pt x 1762.585pt>
+File: Gambar/skripsi_image34.png Graphic file (type png)
+<use Gambar/skripsi_image34.png>
+Package pdftex.def Info: Gambar/skripsi_image34.png  used on input line 473.
+(pdftex.def)             Requested size: 327.7763pt x 299.76996pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 497--497
+[]|\T1/lmr/m/n/8 (+20) Sistem mende-teksi wa-jah dan
+ []
+
+[7] [8 <./Gambar/skripsi_image34.png>]
+Underfull \hbox (badness 2261) in paragraph at lines 541--542
+\T1/lmr/m/n/8 (+20) ing]. Terse-dia: [][]$\T1/lmtt/m/n/8 https : / / databoks .
+ katadata . co . id / en / consumer-[]durables-[]apparel / statistics / 692e89e
+11c6f5 /
+ []
+
+[9] [10] (Jurnal.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
 Package rerunfilecheck Info: File `Jurnal.out' has not changed.
-(rerunfilecheck)             Checksum: 9613FFC9AEF82FEA76911C2D4E42DD88;1580.
+(rerunfilecheck)             Checksum: CDD4B6F456F5916E7901450287409E34;4218.
  ) 
 Here is how much of TeX's memory you used:
- 16018 strings out of 467871
- 254352 string characters out of 5428443
- 701177 words of memory out of 5000000
- 44391 multiletter control sequences out of 15000+600000
- 726366 words of font info for 207 fonts, out of 8000000 for 9000
+ 16337 strings out of 467871
+ 260096 string characters out of 5428443
+ 711629 words of memory out of 5000000
+ 44550 multiletter control sequences out of 15000+600000
+ 794405 words of font info for 304 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,17n,79p,1124b,686s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,18n,79p,1740b,684s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Program Files/M
 iKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/pub
 lic/lm/lmbx8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbx9.pfb><C:/P
 rogram Files/MiKTeX/fonts/type1/public/lm/lmbxi10.pfb><C:/Program Files/MiKTeX/
-fonts/type1/public/lm/lmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm
-/lmmi6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Program
- Files/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX/fonts/ty
-pe1/public/lm/lmr6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr7.pfb>
-<C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Program Files/MiKTe
-X/fonts/type1/public/lm/lmr9.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm
-/lmri10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmri8.pfb><C:/Progra
-m Files/MiKTeX/fonts/type1/public/lm/lmri9.pfb><C:/Program Files/MiKTeX/fonts/t
-ype1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy7.
-pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Program Files
-/MiKTeX/fonts/type1/public/lm/lmtt8.pfb><C:/Program Files/MiKTeX/fonts/type1/pu
-blic/amsfonts/symbols/msbm10.pfb>
-Output written on Jurnal.pdf (6 pages, 656056 bytes).
+fonts/type1/public/lm/lmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm
+/lmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Progra
+m Files/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Program Files/MiKTeX/fonts/t
+ype1/public/lm/lmmi9.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr10.p
+fb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Program Files/Mi
+KTeX/fonts/type1/public/lm/lmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public
+/lm/lmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Progra
+m Files/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Program Files/MiKTeX/fonts/
+type1/public/lm/lmri8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmri9.
+pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files
+/MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:/Program Files/MiKTeX/fonts/type1/pu
+blic/lm/lmsy9.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:
+/Program Files/MiKTeX/fonts/type1/public/lm/lmtt8.pfb><C:/Program Files/MiKTeX/
+fonts/type1/public/lm/lmtt9.pfb>
+Output written on Jurnal.pdf (10 pages, 9138496 bytes).
 PDF statistics:
- 256 PDF objects out of 1000 (max. 8388607)
- 46 named destinations out of 1000 (max. 500000)
- 52322 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 393 PDF objects out of 1000 (max. 8388607)
+ 89 named destinations out of 1000 (max. 500000)
+ 89798 words of extra memory for PDF output out of 106986 (max. 10000000)
 
