@@ -23,6 +23,8 @@
 \usepackage{microtype}
 \usepackage{url}
 \usepackage{cite}
+\usepackage{float}
+\usepackage{placeins}
 
 % =========================================================================
 % Page Geometry & Margins (JTRIK Standard: A4 Paper, Margins: 2.5 cm all sides)
@@ -148,19 +150,12 @@ This is an open access article under the \href{https://creativecommons.org/licen
 \noindent\rule{\textwidth}{0.4pt}
 \vspace{2pt}
 
-% --- Abstract (13pt Heading, 9.5pt Bold-Italic Content) ---
-{\fontsize{13pt}{15pt}\bfseries Abstract (14 pt)\par}
+% --- Abstrak (13pt Heading, 9.5pt Bold-Italic Content) ---
+{\fontsize{13pt}{15pt}\bfseries Abstrak\par}
 \vspace{3pt}
 
 {\fontsize{9.5pt}{12pt}\bfseries\itshape
-Selecting a lipstick shade that matches the natural characteristics of an individual's lips is generally performed subjectively, highlighting the need for an automated and more objective recommendation system. This study aims to design and develop a lipstick color recommendation system based on lip images using a Deep Learning approach with the MobileNetV2 architecture and a Hybrid Recommendation System. The research utilized a total of 18,100 facial images consisting of the CelebFaces Attributes (CelebA) public dataset and a primary dataset collected from facial photographs without cosmetics. The methodology encompasses facial landmark detection via MediaPipe Face Mesh, lip region segmentation, color feature extraction using average Red, Green, Blue (RGB) values, automatic clustering using K-Means Clustering (K=3) into Pinkish, Brownish, and Dark categories, lip color classification using MobileNetV2 with transfer learning, and lipstick shade recommendation using a Hybrid Recommendation System that integrates Rule-Based Filtering and Content-Based Filtering with Euclidean Distance calculation. Experimental results demonstrate that the MobileNetV2 model successfully classified lip color types with a validation accuracy of 94.84\%. Furthermore, across a knowledge base of 281 commercial lipstick shades, the system generated Top-3 recommendations with average similarity scores of 93.62\% for Top-1, 92.26\% for Top-2, and 91.41\% for Top-3, reaching a maximum similarity of 97.60\%. These results prove that the developed hybrid system provides accurate, objective, and personalized lipstick recommendations tailored to users' natural lip color.\par}
-
-\vspace{4pt}
-{\fontsize{9.5pt}{12pt}\bfseries\itshape Keywords: \normalfont\itshape Deep Learning, MobileNetV2, Hybrid Recommendation System, Content-Based Filtering, Euclidean Distance, K-Means Clustering, Lipstick Recommendation.\par}
-
-\vspace{4pt}
-{\fontsize{9.5pt}{12pt}\bfseries\itshape
-\noindent\textbf{Abstrak} --- Pemilihan warna lipstik yang sesuai dengan karakteristik warna alami bibir umumnya masih dilakukan secara subjektif sehingga diperlukan suatu sistem yang mampu memberikan rekomendasi secara otomatis dan lebih objektif. Penelitian ini bertujuan untuk merancang dan membangun sistem rekomendasi warna lipstik berdasarkan citra bibir menggunakan pendekatan Deep Learning melalui model MobileNetV2 serta Hybrid Recommendation System. Penelitian menggunakan kombinasi dataset sekunder CelebA dan dataset primer dengan total 18.100 citra wajah tanpa penggunaan lipstik. Tahapan penelitian meliputi deteksi landmark wajah dengan MediaPipe Face Mesh, segmentasi area bibir, ekstraksi fitur warna menggunakan nilai rata-rata Red, Green, Blue (RGB), pembentukan label otomatis menggunakan algoritma K-Means Clustering ($K=3$) ke dalam kategori Pinkish, Brownish, dan Dark, klasifikasi tipe warna bibir menggunakan MobileNetV2 dengan transfer learning, serta pemberian rekomendasi warna lipstik menggunakan Hybrid Recommendation System yang menggabungkan Rule-Based Filtering dan Content-Based Filtering dengan metode Euclidean Distance. Hasil penelitian menunjukkan bahwa model MobileNetV2 mampu mengklasifikasikan tipe warna bibir dengan akurasi validasi sebesar 94,84\%. Selain itu, pada basis data 281 shade lipstik, sistem berhasil menghasilkan Top-3 rekomendasi dengan rata-rata tingkat kemiripan sebesar 93,62\% pada Top-1, 92,26\% pada Top-2, dan 91,41\% pada Top-3. Dengan demikian, sistem yang dikembangkan terbukti efektif memberikan rekomendasi warna lipstik yang objektif, akurat, dan personal sesuai karakteristik warna alami bibir pengguna.\par}
+Pemilihan warna lipstik yang sesuai dengan karakteristik warna alami bibir umumnya masih dilakukan secara subjektif sehingga diperlukan suatu sistem yang mampu memberikan rekomendasi secara otomatis dan lebih objektif. Penelitian ini bertujuan untuk merancang dan membangun sistem rekomendasi warna lipstik berdasarkan citra bibir menggunakan pendekatan Deep Learning melalui model MobileNetV2 serta Hybrid Recommendation System. Penelitian menggunakan kombinasi dataset sekunder CelebA dan dataset primer dengan total 18.100 citra wajah tanpa penggunaan lipstik. Tahapan penelitian meliputi deteksi landmark wajah dengan MediaPipe Face Mesh, segmentasi area bibir, ekstraksi fitur warna menggunakan nilai rata-rata Red, Green, Blue (RGB), pembentukan label otomatis menggunakan algoritma K-Means Clustering ($K=3$) ke dalam kategori Pinkish, Brownish, dan Dark, klasifikasi tipe warna bibir menggunakan MobileNetV2 dengan transfer learning, serta pemberian rekomendasi warna lipstik menggunakan Hybrid Recommendation System yang menggabungkan Rule-Based Filtering dan Content-Based Filtering dengan metode Euclidean Distance. Hasil penelitian menunjukkan bahwa model MobileNetV2 mampu mengklasifikasikan tipe warna bibir dengan akurasi validasi sebesar 94,84\%. Selain itu, pada basis data 281 shade lipstik, sistem berhasil menghasilkan Top-3 rekomendasi dengan rata-rata tingkat kemiripan sebesar 93,62\% pada Top-1, 92,26\% pada Top-2, dan 91,41\% pada Top-3. Dengan demikian, sistem yang dikembangkan terbukti efektif memberikan rekomendasi warna lipstik yang objektif, akurat, dan personal sesuai karakteristik warna alami bibir pengguna.\par}
 
 \vspace{4pt}
 {\fontsize{9.5pt}{12pt}\bfseries\itshape Kata Kunci: \normalfont\itshape Deep Learning, MobileNetV2, Hybrid Recommendation System, Content-Based Filtering, Euclidean Distance, K-Means Clustering, Rekomendasi Warna Lipstik.\par}
@@ -468,9 +463,9 @@ Hasil rekapitulasi membuktikan bahwa sistem rekomendasi hibrida mampu menghasilk
 \subsection{Implementasi Antarmuka Sistem Berbasis Web}
 Sistem diimplementasikan ke dalam aplikasi web responsif. Pengguna dapat mengunggah foto wajah dan sistem secara otomatis menampilkan ROI bibir tersegmentasi, nilai RGB, kelas prediksi MobileNetV2, nilai kepercayaan (\textit{confidence}), serta kartu Top-3 rekomendasi lipstik lengkap dengan swatch warna dan skor kemiripan (Gambar \ref{fig:ui_analisis}).
 
-\begin{figure}[htbp]
+\begin{figure}[H]
   \centering
-  \IfFileExists{Gambar/skripsi_image34.png}{\includegraphics[width=0.72\textwidth]{skripsi_image34.png}}{\fbox{Antarmuka Hasil Analisis}}
+  \IfFileExists{Gambar/skripsi_image34.png}{\includegraphics[width=0.68\textwidth]{skripsi_image34.png}}{\fbox{Antarmuka Hasil Analisis}}
   \caption{Implementasi Antarmuka Halaman Hasil Analisis dan Rekomendasi Lipstik}
   \label{fig:ui_analisis}
 \end{figure}
@@ -478,7 +473,7 @@ Sistem diimplementasikan ke dalam aplikasi web responsif. Pengguna dapat mengung
 \subsection{Pengujian Fungsional (Black Box Testing)}
 Pengujian fungsional sistem menggunakan metode \textit{Black Box Testing} menunjukkan bahwa seluruh modul aplikasi berjalan sesuai rancangan kebutuhan fungsional dengan status \textbf{100\% PASS} (Tabel \ref{tab:blackbox}).
 
-\begin{table}[htbp]
+\begin{table}[H]
   \centering
   \caption{Hasil Pengujian Black Box pada Modul Analisis dan Rekomendasi}
   \label{tab:blackbox}
@@ -497,6 +492,8 @@ Pengujian fungsional sistem menggunakan metode \textit{Black Box Testing} menunj
   \end{tabularx}
 \end{table}
 
+\FloatBarrier
+\clearpage
 % =========================================================================
 % Section 4: Conclusion
 % =========================================================================
