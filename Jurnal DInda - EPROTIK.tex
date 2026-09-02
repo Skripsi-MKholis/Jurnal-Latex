@@ -466,9 +466,9 @@ Hasil rekapitulasi membuktikan bahwa sistem rekomendasi hibrida mampu menghasilk
 \subsection{Implementasi Antarmuka Sistem Berbasis Web}
 Sistem diimplementasikan ke dalam aplikasi web responsif. Pengguna dapat mengunggah foto wajah dan sistem secara otomatis menampilkan ROI bibir tersegmentasi, nilai RGB, kelas prediksi MobileNetV2, nilai kepercayaan (\textit{confidence}), serta kartu Top-3 rekomendasi lipstik lengkap dengan swatch warna dan skor kemiripan (Gambar \ref{fig:ui_analisis}).
 
-\begin{figure}[H]
+\begin{figure}[htbp]
  \centering
- \IfFileExists{Gambar/skripsi_image34.png}{\includegraphics[width=0.68\textwidth]{skripsi_image34.png}}{\fbox{Antarmuka Hasil Analisis}}
+ \IfFileExists{Gambar/skripsi_image34.png}{\includegraphics[width=0.55\textwidth]{skripsi_image34.png}}{\fbox{Antarmuka Hasil Analisis}}
  \caption{Implementasi Antarmuka Halaman Hasil Analisis dan Rekomendasi Lipstik}
  \label{fig:ui_analisis}
 \end{figure}
@@ -476,7 +476,7 @@ Sistem diimplementasikan ke dalam aplikasi web responsif. Pengguna dapat mengung
 \subsection{Pengujian Fungsional (Black Box Testing)}
 Pengujian fungsional sistem menggunakan metode \textit{Black Box Testing} menunjukkan bahwa seluruh modul aplikasi berjalan sesuai rancangan kebutuhan fungsional dengan status \textbf{100\% PASS} (Tabel \ref{tab:blackbox}).
 
-\begin{table}[H]
+\begin{table}[htbp]
  \centering
  \caption{Hasil Pengujian Black Box pada Modul Analisis dan Rekomendasi}
  \label{tab:blackbox}
@@ -496,7 +496,7 @@ Pengujian fungsional sistem menggunakan metode \textit{Black Box Testing} menunj
 \end{table}
 
 \FloatBarrier
-\clearpage
+
 % =========================================================================
 % Section 4: Kesimpulan (14pt)
 % =========================================================================
@@ -516,13 +516,6 @@ Saran untuk pengembangan penelitian selanjutnya antara lain:
  \item Mengembangkan fitur simulasi riasan virtual (\textit{Virtual Try-On}) berbasis \textit{Augmented Reality} (AR) secara \textit{real-time}.
  \item Menambahkan parameter rona kulit (\textit{skin undertone} dan \textit{skin overtone}) serta preferensi acara untuk memperkaya faktor personalisasi rekomendasi.
 \end{enumerate}
-
-% =========================================================================
-% Ucapan Terima Kasih (12pt)
-% =========================================================================
-\section*{Ucapan Terima Kasih (bila ada) }
-
-Penulis menyampaikan terima kasih kepada Jurusan Teknologi Informasi dan Komputer, Politeknik Negeri Lhokseumawe, serta Bapak Muhammad Rizka, S.T., M.T. (Pembimbing Utama) dan Bapak Dr. Rahmad Hidayat, S.T., M.T. (Pembimbing Pendamping) atas bimbingan dan arahannya dalam penyelesaian naskah publikasi ilmiah ini.
 
 % =========================================================================
 % References (IEEE Style, 12pt heading)
