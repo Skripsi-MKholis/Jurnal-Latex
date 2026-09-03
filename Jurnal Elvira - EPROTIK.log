@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.5.26)  2 SEP 2026 23:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.5.26)  3 SEP 2026 00:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -487,7 +487,7 @@ Package: placeins 2005/04/18  v 2.2
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 62.
 LaTeX Font Info:    Trying to load font information for T1+lmr on input line 12
-3.
+0.
 
 (C:\Program Files\MiKTeX\tex/latex/lm\t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -499,24 +499,24 @@ File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 (Jurnal Elvira - EPROTIK.aux)
 \openout1 = `"Jurnal Elvira - EPROTIK.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -587,19 +587,19 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 Package color Info: Driver file: pdftex.def on input line 149.
 
 (C:\Program Files\MiKTeX\tex/latex/graphics\mathcolor.ltx))
-Package hyperref Info: Link coloring ON on input line 123.
+Package hyperref Info: Link coloring ON on input line 120.
 
 (Jurnal Elvira - EPROTIK.out) (Jurnal Elvira - EPROTIK.out)
 \@outlinefile=\write3
 \openout3 = `"Jurnal Elvira - EPROTIK.out"'.
 
-LaTeX Info: Redefining \microtypecontext on input line 123.
-Package microtype Info: Applying patch `item' on input line 123.
-Package microtype Info: Applying patch `toc' on input line 123.
-Package microtype Info: Applying patch `eqnum' on input line 123.
-Package microtype Info: Applying patch `footnote' on input line 123.
-Package microtype Info: Applying patch `verbatim' on input line 123.
-LaTeX Info: Redefining \microtypesetup on input line 123.
+LaTeX Info: Redefining \microtypecontext on input line 120.
+Package microtype Info: Applying patch `item' on input line 120.
+Package microtype Info: Applying patch `toc' on input line 120.
+Package microtype Info: Applying patch `eqnum' on input line 120.
+Package microtype Info: Applying patch `footnote' on input line 120.
+Package microtype Info: Applying patch `verbatim' on input line 120.
+LaTeX Info: Redefining \microtypesetup on input line 120.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -615,38 +615,38 @@ Package microtype Info: No adjustment of character kerning.
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
-LaTeX Font Info:    Calculating math sizes for size <11> on input line 131.
+LaTeX Font Info:    Calculating math sizes for size <10.5> on input line 128.
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
-31.
+28.
 
 (C:\Program Files\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-31.
+28.
 
 (C:\Program Files\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-131.
+128.
 
 (C:\Program Files\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-131.
+128.
 
 (C:\Program Files\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <11> on input line 131.
+(Font)              <10.5> on input line 128.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7.69997> on input line 131.
+(Font)              <7.34996> on input line 128.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5.5> on input line 131.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 131
+(Font)              <5.25> on input line 128.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 128
 .
 
 (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd
@@ -655,7 +655,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (C:\Users\acern\AppData\Roaming\MiKTeX\tex/latex/microtype\mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 131
+LaTeX Font Info:    Trying to load font information for U+msb on input line 128
 .
 
 (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd
@@ -664,27 +664,37 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 (C:\Users\acern\AppData\Roaming\MiKTeX\tex/latex/microtype\mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
+LaTeX Font Info:    Calculating math sizes for size <8.5> on input line 133.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 136.
+(Font)              <8.5> on input line 133.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 136.
+(Font)              <5.94997> on input line 133.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 136.
+(Font)              <4.25> on input line 133.
 <Gambar/template_eprotik_image1.png, id=77, 163.61125pt x 57.21375pt>
 File: Gambar/template_eprotik_image1.png Graphic file (type png)
 <use Gambar/template_eprotik_image1.png>
 Package pdftex.def Info: Gambar/template_eprotik_image1.png  used on input line
- 150.
-(pdftex.def)             Requested size: 36.61371pt x 12.80365pt.
+ 147.
+(pdftex.def)             Requested size: 34.17213pt x 11.9501pt.
+LaTeX Font Info:    Calculating math sizes for size <9.5> on input line 158.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 161.
+(Font)              <9.5> on input line 158.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 161.
+(Font)              <6.64996> on input line 158.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <4.75> on input line 158.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 176.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 176.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 176.
 <Gambar/template_eprotik_image5.png, id=85, 430.60875pt x 107.40125pt>
 File: Gambar/template_eprotik_image5.png Graphic file (type png)
 <use Gambar/template_eprotik_image5.png>
 Package pdftex.def Info: Gambar/template_eprotik_image5.png  used on input line
- 178.
+ 176.
 (pdftex.def)             Requested size: 119.78116pt x 29.87547pt.
 
 Overfull \hbox (28.73373pt too wide) has occurred while \output is active
@@ -698,92 +708,90 @@ Files/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}
 fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm
 -mathit.enc} <./Gambar/template_eprotik_image5.png> <./Gambar/template_eprotik_
 image1.png (PNG copy)>]
-<Gambar/skripsi_elvira_image5.png, id=123, 532.99126pt x 340.27126pt>
+<Gambar/skripsi_elvira_image5.png, id=124, 532.99126pt x 340.27126pt>
 File: Gambar/skripsi_elvira_image5.png Graphic file (type png)
 <use Gambar/skripsi_elvira_image5.png>
 Package pdftex.def Info: Gambar/skripsi_elvira_image5.png  used on input line 1
-95.
-(pdftex.def)             Requested size: 373.3035pt x 238.32843pt.
+92.
+(pdftex.def)             Requested size: 200.30852pt x 127.88177pt.
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
-07.
+00.
 
 (C:\Program Files\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 207.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [2]
-<Gambar/elvira_prompt_comparison.png, id=149, 642.9621pt x 310.761pt>
+ [2 <./Gambar/skripsi_elvira_image5.png>]
+<Gambar/elvira_prompt_comparison.png, id=148, 642.9621pt x 310.761pt>
 File: Gambar/elvira_prompt_comparison.png Graphic file (type png)
 <use Gambar/elvira_prompt_comparison.png>
 Package pdftex.def Info: Gambar/elvira_prompt_comparison.png  used on input lin
-e 237.
-(pdftex.def)             Requested size: 373.3035pt x 180.43117pt.
- [3 <./Gambar/skripsi_elvira_image5.png>]
+e 226.
+(pdftex.def)             Requested size: 282.24911pt x 136.4223pt.
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 2
-54.
+43.
  (C:\Program Files\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [4{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Program Files/Mi
-KTeX/fonts/enc/dvips/lm/lm-mathex.enc} <./Gambar/elvira_prompt_comparison.png>]
+) [3{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc} <./Gambar/elvira_pr
+ompt_comparison.png>]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 312.
- [5]
-<Gambar/elvira_scenario_comparison.png, id=204, 787.743pt x 303.534pt>
+put line 300.
+LaTeX Font Info:    Calculating math sizes for size <7.5> on input line 304.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7.5> on input line 304.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5.24997> on input line 304.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <3.75> on input line 304.
+[4{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}] [5]
+<Gambar/elvira_scenario_comparison.png, id=203, 787.743pt x 303.534pt>
 File: Gambar/elvira_scenario_comparison.png Graphic file (type png)
 <use Gambar/elvira_scenario_comparison.png>
 Package pdftex.def Info: Gambar/elvira_scenario_comparison.png  used on input l
-ine 426.
-(pdftex.def)             Requested size: 400.61703pt x 154.36955pt.
- [6] [7 <./Gambar/elvira_scenario_comparison.png>] [8]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 520.
- [9] (Jurnal Elvira - EPROTIK.aux)
+ine 414.
+(pdftex.def)             Requested size: 327.7763pt x 126.30235pt.
+ [6 <./Gambar/elvira_scenario_comparison.png>] [7] [8] (Jurnal Elvira - EPROTIK
+.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `"Jurnal Elvira - EPROTIK".out' has not chang
 ed.
-(rerunfilecheck)             Checksum: 28E355304C2DE36591C7ABE8E89E64AB;4368.
+(rerunfilecheck)             Checksum: 253FFF345E6909FFFAA0CE219E4147BD;4296.
  ) 
 Here is how much of TeX's memory you used:
- 16258 strings out of 467871
- 259913 string characters out of 5428443
- 723170 words of memory out of 5000000
- 44535 multiletter control sequences out of 15000+600000
- 749065 words of font info for 262 fonts, out of 8000000 for 9000
+ 16365 strings out of 467871
+ 261829 string characters out of 5428443
+ 722168 words of memory out of 5000000
+ 44604 multiletter control sequences out of 15000+600000
+ 786592 words of font info for 314 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,17n,79p,2317b,612s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,18n,79p,2317b,614s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Program Files/M
 iKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/pub
-lic/lm/lmbx9.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbxi10.pfb><C:
-/Program Files/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Program Files/MiKTeX
-/fonts/type1/public/lm/lmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/l
-m/lmmi6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Progra
-m Files/MiKTeX/fonts/type1/public/lm/lmmi9.pfb><C:/Program Files/MiKTeX/fonts/t
-ype1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr12.p
-fb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Program Files/Mi
-KTeX/fonts/type1/public/lm/lmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public
-/lm/lmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Progra
-m Files/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Program Files/MiKTeX/fonts/
-type1/public/lm/lmri8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy10
-.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files
-/MiKTeX/fonts/type1/public/lm/lmsy9.pfb><C:/Program Files/MiKTeX/fonts/type1/pu
-blic/lm/lmtk10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C
-:/Program Files/MiKTeX/fonts/type1/public/lm/lmtt8.pfb><C:/Program Files/MiKTeX
-/fonts/type1/public/lm/lmtt9.pfb>
-Output written on "Jurnal Elvira - EPROTIK.pdf" (9 pages, 896857 bytes).
+lic/lm/lmbx8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbx9.pfb><C:/P
+rogram Files/MiKTeX/fonts/type1/public/lm/lmbxi10.pfb><C:/Program Files/MiKTeX/
+fonts/type1/public/lm/lmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm
+/lmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmmi5.pfb><C:/Progra
+m Files/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Program Files/MiKTeX/fonts/t
+ype1/public/lm/lmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmmi8.p
+fb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Program Files/M
+iKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Program Files/MiKTeX/fonts/type1/publi
+c/lm/lmr6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Progr
+am Files/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX/fonts/t
+ype1/public/lm/lmr9.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmri10.p
+fb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmri8.pfb><C:/Program Files/M
+iKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/pub
+lic/lm/lmsy7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/P
+rogram Files/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Program Files/MiKTeX/f
+onts/type1/public/lm/lmtt8.pfb>
+Output written on "Jurnal Elvira - EPROTIK.pdf" (8 pages, 873064 bytes).
 PDF statistics:
- 388 PDF objects out of 1000 (max. 8388607)
- 82 named destinations out of 1000 (max. 500000)
- 65706 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 376 PDF objects out of 1000 (max. 8388607)
+ 77 named destinations out of 1000 (max. 500000)
+ 85162 words of extra memory for PDF output out of 89155 (max. 10000000)
 

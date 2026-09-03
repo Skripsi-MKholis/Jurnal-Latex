@@ -1,7 +1,7 @@
 PWD e:\SKRIPSI\JURNAL\Jurnal-Latex
 INPUT C:\Users\acern\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT e:\SKRIPSI\JURNAL\Jurnal-Latex\Jurnal Elvira - EPROTIK.tex
-OUTPUT Jurnal Elvira - EPROTIK.log
+INPUT e:\SKRIPSI\JURNAL\Jurnal-Latex\Template EPROTIK.tex
+OUTPUT Template EPROTIK.log
 INPUT C:\Program Files\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Program Files\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Program Files\MiKTeX\tex\latex\base\size10.clo
@@ -144,10 +144,10 @@ INPUT C:\Program Files\MiKTeX\tex\latex\lm\t1lmr.fd
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmr10.tfm
 INPUT C:\Program Files\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
 INPUT C:\Program Files\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
-INPUT .\Jurnal Elvira - EPROTIK.aux
-INPUT .\Jurnal Elvira - EPROTIK.aux
-INPUT Jurnal Elvira - EPROTIK.aux
-OUTPUT Jurnal Elvira - EPROTIK.aux
+INPUT .\Template EPROTIK.aux
+INPUT .\Template EPROTIK.aux
+INPUT Template EPROTIK.aux
+OUTPUT Template EPROTIK.aux
 INPUT C:\Program Files\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Program Files\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Program Files\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
@@ -164,14 +164,14 @@ INPUT C:\Program Files\MiKTeX\tex\latex\graphics-cfg\color.cfg
 INPUT C:\Program Files\MiKTeX\tex\latex\graphics\mathcolor.ltx
 INPUT C:\Program Files\MiKTeX\tex\latex\graphics\mathcolor.ltx
 INPUT C:\Program Files\MiKTeX\tex\latex\graphics\mathcolor.ltx
-INPUT .\Jurnal Elvira - EPROTIK.out
-INPUT .\Jurnal Elvira - EPROTIK.out
-INPUT Jurnal Elvira - EPROTIK.out
-INPUT Jurnal Elvira - EPROTIK.out
-OUTPUT Jurnal Elvira - EPROTIK.pdf
-INPUT .\Jurnal Elvira - EPROTIK.out
-INPUT .\Jurnal Elvira - EPROTIK.out
-OUTPUT Jurnal Elvira - EPROTIK.out
+INPUT .\Template EPROTIK.out
+INPUT .\Template EPROTIK.out
+INPUT Template EPROTIK.out
+INPUT Template EPROTIK.out
+OUTPUT Template EPROTIK.pdf
+INPUT .\Template EPROTIK.out
+INPUT .\Template EPROTIK.out
+OUTPUT Template EPROTIK.out
 INPUT C:\Users\acern\AppData\Roaming\MiKTeX\tex\latex\microtype\mt-cmr.cfg
 INPUT C:\Users\acern\AppData\Roaming\MiKTeX\tex\latex\microtype\mt-cmr.cfg
 INPUT C:\Users\acern\AppData\Roaming\MiKTeX\tex\latex\microtype\mt-cmr.cfg
@@ -241,7 +241,11 @@ INPUT .\Gambar\template_eprotik_image1.png
 INPUT .\Gambar\template_eprotik_image1.png
 INPUT .\Gambar\template_eprotik_image1.png
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmbx12.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmri10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmbx10.tfm
+INPUT C:\Program Files\MiKTeX\tex\latex\lm\t1lmtt.fd
+INPUT C:\Program Files\MiKTeX\tex\latex\lm\t1lmtt.fd
+INPUT C:\Program Files\MiKTeX\tex\latex\lm\t1lmtt.fd
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmtt10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmr10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmr7.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmmi10.tfm
@@ -252,7 +256,6 @@ INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam7.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmbx10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmr9.tfm
 INPUT .\Gambar\template_eprotik_image5.png
 INPUT .\Gambar\template_eprotik_image5.png
@@ -265,79 +268,47 @@ INPUT C:\Program Files\MiKTeX\fonts\enc\dvips\lm\lm-ec.enc
 INPUT C:\Program Files\MiKTeX\fonts\enc\dvips\lm\lm-rm.enc
 INPUT C:\Program Files\MiKTeX\fonts\enc\dvips\lm\lm-mathsy.enc
 INPUT C:\Program Files\MiKTeX\fonts\enc\dvips\lm\lm-mathit.enc
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmri10.tfm
+INPUT .\Gambar\template_eprotik_image4.jpg
+INPUT .\Gambar\template_eprotik_image4.jpg
+INPUT .\Gambar\template_eprotik_image4.jpg
+INPUT .\Gambar\template_eprotik_image4.jpg
+INPUT .\Gambar\template_eprotik_image4.jpg
+INPUT .\Gambar\template_eprotik_image4.jpg
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmbx9.tfm
+INPUT .\Gambar\template_eprotik_image2.png
+INPUT .\Gambar\template_eprotik_image2.png
+INPUT .\Gambar\template_eprotik_image2.png
+INPUT .\Gambar\template_eprotik_image2.png
+INPUT .\Gambar\template_eprotik_image2.png
+INPUT .\Gambar\template_eprotik_image2.png
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmbx8.tfm
+INPUT .\Gambar\template_eprotik_image3.png
+INPUT .\Gambar\template_eprotik_image3.png
+INPUT .\Gambar\template_eprotik_image3.png
+INPUT .\Gambar\template_eprotik_image3.png
+INPUT .\Gambar\template_eprotik_image3.png
+INPUT .\Gambar\template_eprotik_image3.png
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmbx12.tfm
-INPUT .\Gambar\skripsi_elvira_image5.png
-INPUT .\Gambar\skripsi_elvira_image5.png
-INPUT .\Gambar\skripsi_elvira_image5.png
-INPUT .\Gambar\skripsi_elvira_image5.png
-INPUT .\Gambar\skripsi_elvira_image5.png
-INPUT .\Gambar\skripsi_elvira_image5.png
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmbx9.tfm
-INPUT C:\Program Files\MiKTeX\tex\latex\lm\t1lmtt.fd
-INPUT C:\Program Files\MiKTeX\tex\latex\lm\t1lmtt.fd
-INPUT C:\Program Files\MiKTeX\tex\latex\lm\t1lmtt.fd
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmtk10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmr9.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmr6.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmr5.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmmi9.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmmi6.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmmi5.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmsy9.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmsy6.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmsy5.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam5.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam5.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmbx9.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmtt9.tfm
-INPUT .\Gambar\elvira_prompt_comparison.png
-INPUT .\Gambar\elvira_prompt_comparison.png
-INPUT .\Gambar\elvira_prompt_comparison.png
-INPUT .\Gambar\elvira_prompt_comparison.png
-INPUT .\Gambar\elvira_prompt_comparison.png
-INPUT .\Gambar\elvira_prompt_comparison.png
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmtt10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmr6.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmr5.tfm
 INPUT C:\Program Files\MiKTeX\tex\latex\lm\ts1lmr.fd
 INPUT C:\Program Files\MiKTeX\tex\latex\lm\ts1lmr.fd
 INPUT C:\Program Files\MiKTeX\tex\latex\lm\ts1lmr.fd
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ts1-lmr10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmr7.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmr5.tfm
 INPUT C:\Program Files\MiKTeX\fonts\enc\dvips\lm\lm-ts1.enc
-INPUT C:\Program Files\MiKTeX\fonts\enc\dvips\lm\lm-mathex.enc
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmr6.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmr5.tfm
-INPUT .\Gambar\elvira_scenario_comparison.png
-INPUT .\Gambar\elvira_scenario_comparison.png
-INPUT .\Gambar\elvira_scenario_comparison.png
-INPUT .\Gambar\elvira_scenario_comparison.png
-INPUT .\Gambar\elvira_scenario_comparison.png
-INPUT .\Gambar\elvira_scenario_comparison.png
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmbxi10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmri8.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmtt8.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmr8.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmmi8.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmsy8.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
-INPUT Jurnal Elvira - EPROTIK.aux
-INPUT .\Jurnal Elvira - EPROTIK.out
-INPUT .\Jurnal Elvira - EPROTIK.out
+INPUT Template EPROTIK.aux
+INPUT .\Template EPROTIK.out
+INPUT .\Template EPROTIK.out
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmbx10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmbx10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmbx12.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmbx12.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmbx8.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmbx8.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmbx9.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmbx9.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmbxi10.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmbxi10.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmex10.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmex10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmmi10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmmi10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmmi6.pfb
@@ -368,11 +339,7 @@ INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmsy8.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmsy8.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmsy9.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmsy9.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmtk10.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmtk10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmtt10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmtt10.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmtt8.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmtt8.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmtt9.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmtt9.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\symbols\msbm10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\symbols\msbm10.pfb
