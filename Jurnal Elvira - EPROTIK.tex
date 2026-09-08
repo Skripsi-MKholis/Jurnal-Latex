@@ -3,9 +3,21 @@
 % =========================================================================
 % Packages
 % =========================================================================
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{lmodern}
+% !TeX program = xelatex
+\usepackage{iftex}
+\ifxetex
+  \usepackage{fontspec}
+  \setmainfont{Tw Cen MT}[
+    BoldFont={TCB_____.TTF},
+    ItalicFont={TCMI____.TTF},
+    BoldItalicFont={TCBI____.TTF}
+  ]
+\else
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage[scaled=0.95]{helvet}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
 \usepackage{geometry}
 \usepackage{graphicx}
 \graphicspath{{Gambar/}}
@@ -34,10 +46,10 @@
 % =========================================================================
 \geometry{
   a4paper,
-  top=2.5cm,
-  bottom=2.5cm,
-  left=2.5cm,
-  right=2.5cm,
+  top=2.08cm,
+  bottom=2.08cm,
+  left=2.25cm,
+  right=1.25cm,
   headheight=45pt,
   headsep=12pt,
   footskip=22pt
@@ -75,16 +87,16 @@
 \fancypagestyle{firstpage}{
   \fancyhf{}
   \fancyhead[L]{%
-    \begin{minipage}[c]{0.78\textwidth}
+    \begin{minipage}[c]{0.73\textwidth}
       {\fontsize{10pt}{12pt}\selectfont\textbf{eProceeding of TIK}}\\[2pt]
       {\fontsize{8.5pt}{10.5pt}\selectfont E-ISSN: 2797-1724, P-ISSN: 3031-1454}\\[1pt]
-      {\fontsize{8.5pt}{10.5pt}\selectfont Vol. 7 No. 1 2027 pp. 1--10}
+      {\fontsize{8.5pt}{10.5pt}\selectfont Vol. 7 No. 1 2027 pp. 1--8}
     \end{minipage}%
   }
   \fancyhead[R]{%
-    \begin{minipage}[c]{0.20\textwidth}
+    \begin{minipage}[c]{0.25\textwidth}
       \raggedleft
-      \IfFileExists{Gambar/template_eprotik_image5.png}{\includegraphics[height=1.05cm]{template_eprotik_image5.png}}{%
+      \IfFileExists{Gambar/template_header_logo.png}{\includegraphics[height=1.05cm]{template_header_logo.png}}{%
         \IfFileExists{Gambar/elvira_image5.png}{\includegraphics[height=1.05cm]{elvira_image5.png}}{}%
       }
     \end{minipage}%
@@ -98,16 +110,16 @@
 % Section Headings Formatting (EPROTIK Standard)
 % =========================================================================
 \titleformat{\section}
-  {\fontsize{13pt}{16pt}\bfseries}{\thesection.}{0.5em}{}
-\titlespacing*{\section}{0pt}{7pt}{2pt}
+  {\fontsize{14pt}{17pt}\bfseries}{\thesection.}{0.5em}{}
+\titlespacing*{\section}{0pt}{8pt}{2.5pt}
 
 \titleformat{\subsection}
-  {\fontsize{11pt}{14pt}\bfseries}{\thesubsection}{0.5em}{}
-\titlespacing*{\subsection}{0pt}{5pt}{1.5pt}
+  {\fontsize{12pt}{15pt}\bfseries}{\thesubsection}{0.5em}{}
+\titlespacing*{\subsection}{0pt}{6pt}{2pt}
 
 \titleformat{\subsubsection}
   {\fontsize{10pt}{12pt}\bfseries}{\thesubsubsection}{0.5em}{}
-\titlespacing*{\subsubsection}{0pt}{3pt}{1pt}
+\titlespacing*{\subsubsection}{0pt}{4pt}{1.5pt}
 
 % Caption styles (9 pt / small)
 \captionsetup{font={small},labelfont=bf,justification=centering}
@@ -120,45 +132,47 @@
 \begin{document}
 \thispagestyle{firstpage}
 
-% --- Article Title (19pt Bold, Left Aligned) ---
-{\fontsize{18pt}{22pt}\bfseries\raggedright Perbandingan Akurasi ChatGPT Menggunakan Chain-of-Thought dan Non-Chain-of-Thought pada IndoMMLU\par}
+% --- Article Title (22pt Bold, Left Aligned) ---
+{\fontsize{22pt}{26pt}\bfseries\raggedright Perbandingan Akurasi ChatGPT Menggunakan Chain-of-Thought dan Non-Chain-of-Thought pada IndoMMLU\par}
 \vspace{4pt}
 
-% --- Authors (11pt Regular) ---
-{\fontsize{10.5pt}{12.5pt}\selectfont Elvira Gladys Samsul$^{1}$, Muhammad Arhami$^{2*}$, Muhammad Rizka$^{3}$\par}
+% --- Authors (10pt Regular) ---
+{\fontsize{10pt}{12pt}\selectfont Elvira Gladys Samsul$^{1}$, Muhammad Arhami$^{2*}$, Muhammad Rizka$^{3}$\par}
 \vspace{2pt}
 
 % --- Affiliations (9pt) ---
-{\fontsize{8.5pt}{10.5pt}\selectfont
+{\fontsize{9pt}{11pt}\selectfont
 $^{1,2,3}$ Jurusan Teknologi Informasi dan Komputer, Politeknik Negeri Lhokseumawe, Indonesia\par}
 \vspace{2pt}
 
 % --- Corresponding Author (9pt) ---
-{\fontsize{8.5pt}{10.5pt}\selectfont
-*Penulis Korespondensi: \href{mailto:mhselvira@gmail.com}{mhselvira@gmail.com}\par}
+{\fontsize{9pt}{11pt}\selectfont
+*Penulis Korespondensi: \href{mailto:muhammad.arhami@pnl.ac.id}{muhammad.arhami@pnl.ac.id}\par}
 \vspace{2pt}
 
 % --- Open Access License (8pt) ---
 {\fontsize{8pt}{10pt}\selectfont
 This is an open access article under the \href{https://creativecommons.org/licenses/by-sa/4.0/}{CC-BY-SA} license.\par
 \vspace{2pt}
-\IfFileExists{Gambar/template_eprotik_image1.png}{\includegraphics[height=0.42cm]{template_eprotik_image1.png}}{%
-  \IfFileExists{Gambar/elvira_image1.png}{\includegraphics[height=0.42cm]{elvira_image1.png}}{}%
+\IfFileExists{Gambar/template_cc_by_sa.jpeg}{\includegraphics[height=0.45cm]{template_cc_by_sa.jpeg}}{%
+  \IfFileExists{Gambar/template_eprotik_image1.png}{\includegraphics[height=0.42cm]{template_eprotik_image1.png}}{%
+    \IfFileExists{Gambar/elvira_image1.png}{\includegraphics[height=0.42cm]{elvira_image1.png}}{}%
+  }%
 }\par}
 
 \vspace{3pt}
 \noindent\rule{\textwidth}{0.4pt}
 \vspace{2pt}
 
-% --- Abstrak (13pt Heading, 9.5pt Content) ---
-{\fontsize{13pt}{15pt}\bfseries Abstrak\par}
-\vspace{2pt}
-
-{\fontsize{9.5pt}{12.5pt}\selectfont
-Pemanfaatan \textit{Large Language Model} (LLM) seperti ChatGPT semakin meluas dalam pemrosesan bahasa alami, namun kinerjanya pada bahasa daerah di Indonesia masih menghadapi tantangan keterbatasan korpus data. Penelitian ini bertujuan untuk membandingkan akurasi dan kemiripan jawaban ChatGPT menggunakan model GPT-4o mini melalui dua metode \textit{prompting}, yaitu \textit{Chain-of-Thought} (CoT) dan \textit{Non-Chain-of-Thought} (Non-CoT). Evaluasi dilakukan menggunakan dataset \textit{Indonesian Massive Multitask Language Understanding} (IndoMMLU) yang mencakup 9 domain bahasa: Bahasa Lampung, Bali, Makassar, Banjar, Madura, Indonesia, Dayak Ngaju, Sunda, dan Jawa. Pengujian dilakukan melalui empat skenario komprehensif, meliputi pengujian per domain bahasa (900 butir soal) serta tiga skenario \textit{multi-domain} gabungan 9 bahasa daerah (225, 450, dan 900 butir soal). Pengukuran derajat kemiripan teks jawaban model terhadap jawaban referensi dihitung menggunakan algoritma \textit{Levenshtein Distance}, yang kemudian dikonversi menjadi persentase \textit{similarity} dan akurasi \textit{exact match}. Hasil penelitian menunjukkan bahwa pada Skenario 1 (pengujian per domain), metode CoT menghasilkan rata-rata akurasi sebesar 53,67\% (483/900 soal benar) dan \textit{similarity} 67,66\%, lebih unggul dibandingkan Non-CoT yang mencatat akurasi 50,44\% (454/900 soal benar) dan \textit{similarity} 66,65\%. Peningkatan performa oleh CoT terjadi pada 5 domain, dengan kenaikan tertinggi pada Bahasa Bali (+11 soal) dan Bahasa Lampung (+10 soal). Namun, pada pengujian \textit{multi-domain} skala besar (Skenario 4 dengan 900 butir soal), Non-CoT justru mencatat akurasi lebih tinggi (52,11\% vs 50,67\%) dan \textit{similarity} lebih stabil (67,30\% vs 65,55\%). Dari aspek komputasi, CoT membutuhkan konsumsi token $5{,}18\times$ hingga $5{,}44\times$ lipat lebih banyak dan waktu latensi respons $3{,}5\times$ hingga $3{,}8\times$ lebih lama dibanding Non-CoT. Dengan demikian, penerapan CoT efektif memberikan penguatan penalaran pada domain bahasa tertentu dengan tingkat kesulitan tinggi, namun metode Non-CoT terbukti lebih efisien dan stabil untuk tugas klasifikasi pemahaman bahasa daerah berskala besar.\par}
-
+% --- Abstrak (14pt Heading, 10pt Content, Line Spacing 1.15) ---
+{\fontsize{14pt}{17pt}\bfseries Abstrak\par}
 \vspace{3pt}
-{\fontsize{9.5pt}{11.5pt}\selectfont\textbf{Kata kunci:} ChatGPT, Chain-of-Thought, Non-Chain-of-Thought, IndoMMLU, Levenshtein Distance, Large Language Model, Bahasa Daerah.\par}
+
+{\fontsize{10pt}{13.5pt}\selectfont
+Perkembangan Large Language Model (LLM) seperti ChatGPT meningkatkan kemampuan pemahaman bahasa alami, namun kemampuannya dalam konteks bahasa dan budaya lokal Indonesia masih perlu dievaluasi karena sebagian besar pengujian dilakukan menggunakan dataset berbahasa Inggris. Penelitian ini mengukur akurasi jawaban GPT-4o mini pada soal Multiple Choice Question (MCQ) dataset IndoMMLU domain bahasa menggunakan algoritma Levenshtein Distance, serta membandingkan efektivitas metode Chain-of-Thought (CoT) dan Non-Chain-of-Thought (Non-CoT). Pengujian dilakukan melalui empat skenario terhadap sembilan domain bahasa daerah dengan total hingga 900 soal, mengukur nilai similarity, akurasi exact match, penggunaan token, dan waktu respons. Hasil menunjukkan pengujian per domain menghasilkan similarity rata-rata 65,42\% (CoT) dan 63,81\% (Non-CoT), dengan 483 dan 454 jawaban benar dari 900 soal. Pada pengujian gabungan skala besar, Non-CoT justru lebih stabil dengan similarity tertinggi 70,18\% dibanding CoT 69,37\%. Bahasa Indonesia mencapai similarity tertinggi (95,92\%), sedangkan bahasa daerah lain berkisar 55,49\%--77,23\%. CoT membutuhkan token sekitar 5,2 kali lebih besar dan waktu respons empat hingga enam kali lebih lama dibanding Non-CoT. Temuan ini menunjukkan bahwa efektivitas Chain-of-Thought tidak konsisten meningkatkan kualitas jawaban GPT-4o mini, melainkan bergantung pada karakteristik domain bahasa dan skala pengujian.\par}
+
+\vspace{4pt}
+{\fontsize{10pt}{12pt}\selectfont\textbf{Kata kunci:} ChatGPT, Chain-of-Thought, Non-Chain-of-Thought, IndoMMLU, Levenshtein Distance, Large Language Model, Bahasa Daerah.\par}
 
 \vspace{2pt}
 \noindent\rule{\textwidth}{0.4pt}
@@ -169,15 +183,15 @@ Pemanfaatan \textit{Large Language Model} (LLM) seperti ChatGPT semakin meluas d
 % =========================================================================
 \section{Pendahuluan}
 
-Perkembangan teknologi \textit{Artificial Intelligence} (AI) khususnya pada bidang \textit{Natural Language Processing} (NLP) telah mengalami lompatan besar dengan diperkenalkannya \textit{Large Language Model} (LLM) \cite{brown2020language, achiam2023gpt}. Salah satu implementasi LLM yang paling populer dan banyak digunakan di berbagai sektor adalah ChatGPT yang dikembangkan oleh OpenAI. ChatGPT memiliki kemampuan memahami instruksi pengguna, menggenerasi teks alami, serta melakukan penalaran logis dalam menjawab berbagai pertanyaan yang kompleks \cite{bubeck2023sparks}.
+Perkembangan teknologi \textit{Artificial Intelligence} (AI) khususnya pada bidang \textit{Natural Language Processing} (NLP) telah mengalami kemajuan pesat berkat arsitektur model transformator (\textit{Transformers}) \cite{wolf2020transformers}. Implementasi \textit{Large Language Model} (LLM) seperti ChatGPT yang berbasis \textit{Generative Pre-trained Transformer} (GPT) memiliki kemampuan menggenerasi teks alami, merespons instruksi multibahasa, serta menyelesaikan penalaran kompleks pada berbagai disiplin ilmu \cite{maitland2024chatgpt, strachan2024testing}. Diperkenalkannya model mutakhir seperti GPT-4o mini menghadirkan kemampuan pemrosesan bahasa yang berkecepatan tinggi dengan biaya komputasi yang jauh lebih terjangkau, sehingga banyak diadaptasi untuk evaluasi akademik maupun otomatisasi penalaran bahasa \cite{ting2024performance}.
 
-Meskipun menunjukkan kinerja yang sangat baik dalam bahasa beresumber daya tinggi (\textit{high-resource language}) seperti Bahasa Inggris dan Bahasa Indonesia formal, performa LLM dalam memahami ragam bahasa daerah di Indonesia masih menjadi tantangan yang terbuka \cite{koto2023indommlu, aji2022one}. Indonesia memiliki lebih dari 700 bahasa daerah dengan struktur sintaksis, kosakata, dan konteks sosio-kultural yang unik. Keterbatasan ketersediaan korpus digital untuk bahasa daerah (\textit{low-resource regional languages}) menyebabkan LLM sering kali mengalami kesalahan pemahaman semantik maupun halusinasi ketika merespons pertanyaan berbasis bahasa daerah \cite{cahyawijaya2021indonlg, winata2023nusax}.
+Meskipun menunjukkan kinerja luar biasa pada bahasa beresumber daya tinggi (\textit{high-resource languages}) seperti Bahasa Inggris dan evaluasi penalaran terstandarisasi \cite{hendrycks2021measuring}, kapabilitas LLM dalam memahami ragam bahasa lokal di Indonesia masih menghadapi tantangan mendasar \cite{koto2023indommlu}. Indonesia memiliki ratusan bahasa daerah dengan keunikan struktur sintaksis, tingkatan tutur, dan morfologi yang kompleks. Keterbatasan ketersediaan korpus data digital lokal menyebabkan LLM kerap mengalami kegagalan inferensi makna, ambiguitas leksikal, maupun kesalahan faktual (\textit{hallucination}) pada saat merespons pertanyaan berbasis bahasa daerah \cite{koto2023indommlu, mugaanyi2024evaluation}. Evaluasi empiris menggunakan format \textit{Multiple Choice Question} (MCQ) menjadi tolok ukur standar dalam menguji pemahaman faktual model bahasa, meskipun format tersebut memiliki karakteristik sensitivitas posisi opsi dan membutuhkan analisis kemiripan yang ketat \cite{li2024multiple}.
 
-Untuk mengoptimalkan kemampuan penalaran LLM tanpa melakukan proses pelatihan ulang model (\textit{fine-tuning}) yang memakan biaya komputasi tinggi, teknik rekayasa \textit{prompt} (\textit{prompt engineering}) menjadi solusi yang sangat efektif \cite{wei2022chain, kojima2022large}. Dua pendekatan \textit{prompting} utama yang sering digunakan adalah \textit{Non-Chain-of-Thought} (Non-CoT) dan \textit{Chain-of-Thought} (CoT). Non-CoT merupakan pendekatan konvensional yang meminta model memberikan jawaban akhir secara langsung (\textit{direct answer}). Sebaliknya, pendekatan CoT mengarahkan model untuk menguraikan langkah-langkah pemikiran dan penalaran secara bertahap (\textit{step-by-step reasoning}) sebelum sampai pada kesimpulan jawaban akhir \cite{wang2022self, zhang2022automatic}.
+Guna mengoptimalkan akurasi dan penalaran LLM tanpa memerlukan proses pelatihan ulang (\textit{fine-tuning}) yang mahal, rekayasa \textit{prompt} (\textit{prompt engineering}) menjadi instrumen utama \cite{chen2023when, kim2023cot}. Dua pendekatan pengujian yang banyak dikaji adalah \textit{Non-Chain-of-Thought} (Non-CoT) dan \textit{Chain-of-Thought} (CoT). Non-CoT meminta model memberikan kesimpulan akhir secara instan (\textit{direct answer}). Sebaliknya, CoT mengarahkan model untuk menguraikan tahapan berpikir logis secara terstruktur (\textit{step-by-step reasoning}) sebelum menarik kesimpulan jawaban akhir \cite{lee2024applying, ji2024chain, ji2025evaluating}. Berbagai studi membuktikan efektivitas CoT dalam meningkatkan akurasi inferensi pada berbagai domain spesifik seperti evaluasi medis, konsultasi terapi, hingga penilaian jawaban otomatis \cite{ting2024performance, zhu2025assessing, lim2023benchmarking, tsai2025optimizing}. Namun demikian, pengujian efektivitas CoT pada pemahaman ragam bahasa daerah di Indonesia yang bersumber dari \textit{benchmark} IndoMMLU masih sangat terbatas dan memerlukan investigasi yang komprehensif \cite{koto2023indommlu}.
 
-Penelitian terkini mengenai efektivitas CoT pada berbagai tugas penalaran multi-bahasa menunjukkan hasil yang bervariasi. Sejumlah studi membuktikan bahwa CoT mampu meningkatkan akurasi model pada tugas penalaran matematika, logika, dan sains secara signifikan \cite{wei2022chain, zhou2022least}. Namun, efektivitas CoT pada domain bahasa daerah di Indonesia yang memiliki keragaman dialek dan struktur morfologi kompleks belum banyak dievaluasi secara komprehensif dan kuantitatif \cite{koto2023indommlu}. Selain itu, pendekatan CoT menghasilkan teks penalaran yang panjang sehingga berdampak langsung pada lonjakan konsumsi token dan latensi komputasi API \cite{chen2023frugalgpt, openaigpt4mini}.
+Di sisi lain, evaluasi jawaban teks LLM terhadap kunci referensi memerlukan pendekatan kuantitatif yang objektif di luar pencocokan label biner sederhana. Pengukuran derajat kemiripan teks menggunakan algoritma \textit{Levenshtein Distance} terbukti andal dalam menganalisis variasi string teks, mendeteksi penyimpangan leksikal, serta mengukur akurasi dan presisi pada perbandingan sekuens di berbagai domain ilmiah \cite{beernaerts2019method, lindcombs2023comparing, song2024sidildng, berger2021levenshtein, petty2022new, sandamette2025penerapan, young2021levenshtein, suharto2025comparative}. Pemanfaatan matriks jarak Levenshtein memungkinkan penghitungan persentase kemiripan (\textit{similarity score}) dan akurasi pencocokan eksak (\textit{exact match}) secara matematis dan terstruktur \cite{berger2021levenshtein, sandamette2025penerapan}.
 
-Oleh karena itu, penelitian ini bertujuan untuk menganalisis dan membandingkan akurasi jawaban ChatGPT (menggunakan model GPT-4o mini) dengan metode \textit{Chain-of-Thought} dan \textit{Non-Chain-of-Thought} pada \textit{benchmark} dataset IndoMMLU \cite{koto2023indommlu}. Evaluasi dilakukan pada 9 domain bahasa (Bahasa Lampung, Bali, Makassar, Banjar, Madura, Indonesia, Dayak Ngaju, Sunda, dan Jawa) yang mencakup 4 skenario pengujian. Tingkat akurasi dan derajat kemiripan teks jawaban model terhadap kunci jawaban referensi diukur secara objektif menggunakan algoritma \textit{Levenshtein Distance} \cite{levenshtein1966binary, navarro2001guided}, serta dilengkapi dengan analisis efisiensi komputasi terhadap jumlah token dan waktu respons.
+Oleh karena itu, penelitian ini bertujuan untuk melakukan analisis komparatif performa ChatGPT (GPT-4o mini) menggunakan metode CoT dan Non-CoT pada 9 domain bahasa lokal dari dataset IndoMMLU (Bahasa Lampung, Bali, Makassar, Banjar, Madura, Indonesia, Dayak Ngaju, Sunda, dan Jawa) melalui metodologi tinjauan state-of-the-art yang sistematis \cite{barry2022state, koto2023indommlu}. Evaluasi dilakukan secara komprehensif melalui 4 skenario pengujian dengan mengukur akurasi \textit{exact match}, skor kemiripan berbasis \textit{Levenshtein Distance} \cite{berger2021levenshtein, petty2022new}, serta analisis \textit{trade-off} terhadap efisiensi konsumsi token dan waktu respons komputasi.
 
 % =========================================================================
 % Section 2: Metode
@@ -235,7 +249,7 @@ Penjelasan kedua format \textit{prompt} adalah sebagai berikut:
 \end{enumerate}
 
 \subsection{Model LLM dan Konfigurasi Pengujian}
-Model LLM yang digunakan adalah \textbf{GPT-4o mini} (\texttt{gpt-4o-mini-2024-07-18}) yang diakses melalui OpenAI REST API. Model ini dipilih karena memiliki efisiensi komputasi tinggi, latensi rendah, serta kapabilitas penalaran yang unggul \cite{openaigpt4mini}. Seluruh pengujian dijalankan dengan parameter suhu (\textit{temperature}) $T = 0{,}0$ guna memastikan determinisme keluaran respons model \cite{brown2020language}.
+Model LLM yang digunakan adalah \textbf{GPT-4o mini} (\texttt{gpt-4o-mini-2024-07-18}) yang diakses melalui OpenAI REST API. Model ini dipilih karena memiliki efisiensi komputasi tinggi, latensi rendah, serta kapabilitas penalaran yang unggul pada tugas evaluasi bahasa dan penalaran terstruktur \cite{ting2024performance, lim2023benchmarking}. Seluruh pengujian dijalankan dengan parameter suhu (\textit{temperature}) $T = 0{,}0$ guna memastikan determinisme keluaran respons model secara konsisten \cite{chen2023when}.
 
 \subsection{Skenario Pengujian}
 Evaluasi disusun ke dalam 4 skenario komprehensif:
@@ -247,7 +261,7 @@ Evaluasi disusun ke dalam 4 skenario komprehensif:
 \end{itemize}
 
 \subsection{Rumus Matematis dan Metrik Pengukuran}
-Untuk mengukur derajat kemiripan teks jawaban model terhadap jawaban referensi secara kuantitatif, digunakan algoritma \textit{Levenshtein Distance} \cite{levenshtein1966binary}.
+Untuk mengukur derajat kemiripan teks jawaban model terhadap jawaban referensi secara kuantitatif, digunakan algoritma \textit{Levenshtein Distance} \cite{beernaerts2019method, berger2021levenshtein, petty2022new, sandamette2025penerapan}.
 
 \subsubsection{Perhitungan Jarak Levenshtein}
 Diberikan dua string teks, yaitu string jawaban model $s$ dengan panjang $m = \text{len}(s)$ dan string referensi $t$ dengan panjang $n = \text{len}(t)$. Matriks jarak Levenshtein $\text{lev}(i, j)$ berukuran $(m+1) \times (n+1)$ dihitung melalui Persamaan \eqref{eq:levenshtein}:
@@ -383,7 +397,7 @@ Metode CoT berhasil meningkatkan jumlah jawaban benar pada 5 domain (Lampung, Ba
 \end{table}
 
 \subsection{Hasil Pengujian Multi-Domain (Skenario 2, 3, dan 4)}
-Evaluasi gabungan domain dilakukan untuk menguji stabilitas performa penalaran model saat menghadapi perpindahan konteks bahasa daerah secara acak dan simultan. Hasil pengujian multi-domain dirangkum pada Tabel \ref{tab:multi_domain}.
+Evaluasi gabungan domain dilakukan untuk menguji stabilitas performa penalaran model saat menghadapi perpindahan konteks bahasa daerah secara acak dan simultan. Pengujian dilakukan menggunakan sembilan domain bahasa dengan jumlah sampel yang berbeda, yaitu 25, 50, dan 100 soal untuk setiap domain. Variasi jumlah sampel tersebut digunakan untuk melihat konsistensi performa model ketika jumlah data pengujian meningkat. Selain membandingkan nilai similarity dan akurasi, pengujian juga memperhatikan penggunaan token dan rata-rata latensi untuk melihat efisiensi respons dari masing-masing metode. Hasil pengujian multi-domain dirangkum pada Tabel \ref{tab:multi_domain}.
 
 \begin{table}[H]
   \centering
@@ -447,9 +461,9 @@ Berdasarkan hasil evaluasi dan pembahasan yang telah dilakukan, dapat ditarik ke
 
 Saran untuk pengembangan penelitian selanjutnya antara lain:
 \begin{enumerate}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
-    \item Menerapkan teknik \textit{Few-Shot CoT} dengan menyertakan contoh penalaran dalam bahasa daerah yang relevan untuk meminimalkan halusinasi semantik.
-    \item Melakukan pengujian perbandingan pada model LLM multibahasa sumber terbuka (\textit{open-source}) seperti Llama 3 atau Mistral guna membandingkan ketahanan pemahaman bahasa daerah di luar ekosistem OpenAI.
-    \item Mengintegrasikan korpus kamus bahasa daerah melalui pendekatan \textit{Retrieval-Augmented Generation} (RAG) guna memperkaya pengetahuan leksikal model secara dinamis.
+    \item Menerapkan teknik \textit{Few-Shot CoT} atau pendekatan \textit{prompt fine-tuning} dengan menyertakan contoh penalaran dalam bahasa daerah yang relevan untuk meminimalkan halusinasi semantik \cite{kim2023cot, ji2024chain}.
+    \item Melakukan pengujian perbandingan pada model LLM multibahasa sumber terbuka (\textit{open-source}) berbasis arsitektur Transformers mutakhir guna membandingkan ketahanan pemahaman bahasa daerah di luar ekosistem OpenAI \cite{wolf2020transformers}.
+    \item Mengembangkan metrik evaluasi hybrid yang memadukan edit distance dengan representasi embedding semantik teks untuk menangkap variasi jawaban berbahasa daerah secara lebih fleksibel \cite{mugaanyi2024evaluation, li2024multiple}.
 \end{enumerate}
 
 % =========================================================================
@@ -464,80 +478,80 @@ Saran untuk pengembangan penelitian selanjutnya antara lain:
 \setlength{\itemsep}{1pt}
 \setlength{\parskip}{0pt}
 
-\bibitem{brown2020language}
-T. B. Brown, B. Mann, N. Ryder, M. Subbiah, J. Kaplan, P. Dhariwal \textit{et al.}, ``Language Models are Few-Shot Learners,'' in \textit{Proc. Adv. Neural Inf. Process. Syst. (NeurIPS)}, vol. 33, 2020, pp. 1877--1901.
-
-\bibitem{achiam2023gpt}
-J. Achiam, S. Adler, S. Agarwal, L. Ahmad, I. Akkaya, F. L. Aleman \textit{et al.}, ``GPT-4 Technical Report,'' \textit{arXiv preprint arXiv:2303.08774}, 2023.
-
-\bibitem{bubeck2023sparks}
-S. Bubeck, V. Chandrasekaran, R. Eldan, J. Gehrke, E. Horvitz, E. Kamar \textit{et al.}, ``Sparks of Artificial General Intelligence: Early experiments with GPT-4,'' \textit{arXiv preprint arXiv:2303.12712}, 2023.
-
 \bibitem{koto2023indommlu}
-F. Koto, N. H. Prasojo, and E. A. Rachman, ``IndoMMLU: A Multi-Task Language Understanding Benchmark for Indonesian and Local Languages,'' in \textit{Proc. 2023 Conf. Empir. Methods Nat. Lang. Process. (EMNLP)}, 2023, pp. 11210--11225.
+F. Koto, N. Aisyah, H. Li, and T. Baldwin, ``Large Language Models Only Pass Primary School Exams in Indonesia: A Comprehensive Test on IndoMMLU,'' in \textit{Proc. 2023 Conf. Empir. Methods Nat. Lang. Process. (EMNLP)}, 2023, pp. 11210--11225.
 
-\bibitem{aji2022one}
-A. F. Aji, G. I. Winata, R. F. Sari, E. Bradshaw, Z. Liu, P. Fung \textit{et al.}, ``One Country, 700+ Languages: NLP Challenges for Underrepresented Languages and Dialects in Indonesia,'' in \textit{Proc. 60th Annu. Meet. Assoc. Comput. Linguist. (ACL)}, 2022, pp. 7226--7249.
+\bibitem{beernaerts2019method}
+J. Beernaerts, E. Debever, M. Lenoir, B. De Baets, and N. Van de Weghe, ``A method based on the Levenshtein Distance metric for the comparison of multiple movement patterns described by matrix sequences of different length,'' \textit{Expert Syst. Appl.}, vol. 115, pp. 373--385, Jan. 2019, doi: 10.1016/j.eswa.2018.07.076.
 
-\bibitem{cahyawijaya2021indonlg}
-S. Cahyawijaya, G. I. Winata, B. Wilie, K. Vincent, X. Li, J. D. Kuncoro \textit{et al.}, ``IndoNLG: Benchmark and Resources for Evaluating Indonesian Natural Language Generation,'' in \textit{Proc. 2021 Conf. Empir. Methods Nat. Lang. Process. (EMNLP)}, 2021, pp. 8875--8898.
+\bibitem{maitland2024chatgpt}
+A. Maitland, R. Fowkes, and S. Maitland, ``Can ChatGPT pass the MRCP (UK) written examinations? Analysis of performance and errors using a clinical decision-reasoning framework,'' \textit{BMJ Open}, vol. 14, no. 3, Mar. 2024, doi: 10.1136/bmjopen-2023-080558.
 
-\bibitem{winata2023nusax}
-G. I. Winata, A. F. Aji, Z. Zheng, S. Cahyawijaya, D. I. Adelani, Z. Liu \textit{et al.}, ``NusaX: Multilingual Parallel Sentiment Dataset for 10 Indonesian Local Languages,'' in \textit{Proc. 17th Conf. Eur. Chapter Assoc. Comput. Linguist. (EACL)}, 2023, pp. 2420--2434.
+\bibitem{ting2024performance}
+Y. T. Ting \textit{et al.}, ``Performance of ChatGPT incorporated Chain-of-Thought method in bilingual nuclear medicine physician board examinations,'' \textit{Digit. Health}, vol. 10, Jan. 2024, doi: 10.1177/20552076231224074.
 
-\bibitem{wei2022chain}
-J. Wei, X. Wang, D. Schuurmans, M. Bosma, F. Xia, E. Chi, Q. V. Le, and D. Zhou, ``Chain-of-Thought Prompting Elicits Reasoning in Large Language Models,'' in \textit{Proc. Adv. Neural Inf. Process. Syst. (NeurIPS)}, vol. 35, 2022, pp. 24824--24837.
+\bibitem{strachan2024testing}
+J. W. A. Strachan \textit{et al.}, ``Testing theory of mind in large language models and humans,'' \textit{Nat. Hum. Behav.}, vol. 8, no. 7, pp. 1285--1295, Jul. 2024, doi: 10.1038/s41562-024-01882-z.
 
-\bibitem{kojima2022large}
-T. Kojima, S. S. Gu, M. Reid, Y. Matsuo, and Y. Iwasawa, ``Large Language Models are Zero-Shot Reasoners,'' in \textit{Proc. Adv. Neural Inf. Process. Syst. (NeurIPS)}, vol. 35, 2022, pp. 22199--22213.
+\bibitem{lee2024applying}
+G. G. Lee, E. Latif, X. Wu, N. Liu, and X. Zhai, ``Applying large language models and Chain-of-Thought for automatic scoring,'' \textit{Comput. Educ. Artif. Intell.}, vol. 6, Jun. 2024, doi: 10.1016/j.caeai.2024.100213.
 
-\bibitem{wang2022self}
-X. Wang, J. Wei, D. Schuurmans, Q. Le, E. Chi, S. Narang, A. Chowdhery, and D. Zhou, ``Self-Consistency Improves Chain of Thought Reasoning in Language Models,'' in \textit{Proc. 11th Int. Conf. Learn. Represent. (ICLR)}, 2023.
+\bibitem{chen2023when}
+J. Chen, L. Chen, H. Huang, and T. Zhou, ``When do you need Chain-of-Thought Prompting for ChatGPT?,'' \textit{arXiv preprint arXiv:2304.03262}, 2023.
 
-\bibitem{zhang2022automatic}
-Z. Zhang, A. Zhang, M. Li, and A. Smola, ``Automatic Chain of Thought Prompting in Large Language Models,'' in \textit{Proc. 11th Int. Conf. Learn. Represent. (ICLR)}, 2023.
+\bibitem{hendrycks2021measuring}
+D. Hendrycks \textit{et al.}, ``Measuring Massive Multitask Language Understanding,'' in \textit{Proc. 9th Int. Conf. Learn. Represent. (ICLR)}, 2021.
 
-\bibitem{zhou2022least}
-D. Zhou, N. Sch{\"a}rli, L. Hou, J. Wei, N. Scales, X. Wang \textit{et al.}, ``Least-to-Most Prompting Enables Complex Reasoning in Large Language Models,'' in \textit{Proc. 11th Int. Conf. Learn. Represent. (ICLR)}, 2023.
+\bibitem{li2024multiple}
+W. Li, L. Li, T. Xiang, X. Liu, W. Deng, and N. Garcia, ``Can multiple-choice questions really be useful in detecting the abilities of LLMs?,'' \textit{arXiv preprint arXiv:2403.17752}, 2024.
 
-\bibitem{chen2023frugalgpt}
-L. Chen, M. Zaharia, and J. Zou, ``FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Accuracy,'' \textit{arXiv preprint arXiv:2305.05176}, 2023.
+\bibitem{zhu2025assessing}
+G. Zhu, X. Zhang, and C. Chen, ``Assessing and enhancing the reliability of Chinese large language models in dental implantology,'' \textit{BMC Oral Health}, vol. 25, no. 1, Dec. 2025, doi: 10.1186/s12903-025-06648-1.
 
-\bibitem{openaigpt4mini}
-OpenAI, ``GPT-4o mini: Advancing Cost-Efficient Intelligence,'' OpenAI Blog, 2024. [Daring]. Tersedia: \url{https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/}.
+\bibitem{lim2023benchmarking}
+Z. W. Lim \textit{et al.}, ``Benchmarking large language models' performances for myopia care: a comparative analysis of ChatGPT-3.5, ChatGPT-4.0, and Google Bard,'' \textit{eClinicalMedicine (The Lancet Discovery Science)}, 2023.
 
-\bibitem{levenshtein1966binary}
-V. I. Levenshtein, ``Binary Codes Capable of Correcting Deletions, Insertions, and Reversals,'' \textit{Soviet Physics Doklady}, vol. 10, no. 8, pp. 707--710, 1966.
+\bibitem{tsai2025optimizing}
+C. W. Tsai, Y. J. Lin, J. U. Hou, S. C. Tsai, P. C. Yeh, and C. H. Kao, ``Optimizing patient education for radioactive iodine therapy and the role of ChatGPT incorporating Chain-of-Thought technique: ChatGPT questionnaire,'' \textit{Digit. Health}, vol. 11, Jan. 2025, doi: 10.1177/20552076251357468.
 
-\bibitem{navarro2001guided}
-G. Navarro, ``A Guided Tour to Approximate String Matching,'' \textit{ACM Comput. Surv.}, vol. 33, no. 1, pp. 31--88, 2001, doi: 10.1145/398738.398744.
+\bibitem{lindcombs2023comparing}
+H. C. Lind-Combs, T. Bent, R. F. Holt, C. G. Clopper, and E. Brown, ``Comparing Levenshtein Distance and dynamic time warping in predicting listeners' judgments of accent distance,'' \textit{Speech Commun.}, vol. 155, Nov. 2023, doi: 10.1016/j.specom.2023.102987.
 
-\bibitem{jurafsky2024speech}
-D. Jurafsky and J. H. Martin, \textit{Speech and Language Processing: An Introduction to Natural Language Processing, Computational Linguistics, and Speech Recognition}, 3rd ed. draft. Stanford, CA, USA, 2024.
+\bibitem{song2024sidildng}
+J. Song, G. Qin, Y. Liang, J. Yan, and M. Sun, ``SIDiLDNG: A similarity-based intrusion detection system using improved Levenshtein Distance and N-gram for CAN,'' \textit{Comput. Secur.}, vol. 142, Jul. 2024, doi: 10.1016/j.cose.2024.103847.
 
-\bibitem{manning2008introduction}
-C. D. Manning, P. Raghavan, and H. Sch{\"u}tze, \textit{Introduction to Information Retrieval}. Cambridge, UK: Cambridge University Press, 2008, doi: 10.1017/CBO9780511809071.
+\bibitem{berger2021levenshtein}
+B. Berger, M. S. Waterman, and Y. W. Yu, ``Levenshtein Distance, Sequence Comparison and Biological Database Search,'' \textit{IEEE Trans. Inf. Theory}, vol. 67, no. 6, pp. 3287--3294, Jun. 2021, doi: 10.1109/TIT.2020.2996543.
 
-\bibitem{hendrycks2020measuring}
-D. Hendrycks, C. Burns, S. Basart, A. Zou, M. Mazeika, D. Song, and J. Steinhardt, ``Measuring Massive Multitask Language Understanding,'' in \textit{Proc. 9th Int. Conf. Learn. Represent. (ICLR)}, 2021.
+\bibitem{petty2022new}
+T. Petty, J. Hannig, T. I. Huszar, and H. Iyer, ``A New String Edit Distance and Applications,'' \textit{Algorithms}, vol. 15, no. 7, Jul. 2022, doi: 10.3390/a15070242.
 
-\bibitem{papineni2002bleu}
-K. Papineni, S. Roukos, T. Ward, and W.-J. Zhu, ``BLEU: A Method for Automatic Evaluation of Machine Translation,'' in \textit{Proc. 40th Annu. Meet. Assoc. Comput. Linguist. (ACL)}, 2002, pp. 311--318.
+\bibitem{sandamette2025penerapan}
+P. Sanda Mette, E. Arriyanti, and S. Lailiyah, ``Penerapan Algoritma Levenshtein Distance Untuk Pengecekan Kemiripan Judul Skripsi di STMIK Widya Cipta Dharma,'' \textit{Jurnal Nasional Komputasi dan Teknologi Informasi (JNKTI)}, vol. 8, no. 3, 2025.
 
-\bibitem{lin2004rouge}
-C.-Y. Lin, ``ROUGE: A Package for Automatic Evaluation of Summaries,'' in \textit{Text Summarization Branches Out: Proc. ACL-04 Workshop}, 2004, pp. 74--81.
+\bibitem{young2021levenshtein}
+B. Young, T. Faris, and L. Armogida, ``Levenshtein Distance as a measure of accuracy and precision in forensic PCR-MPS methods,'' \textit{Forensic Sci. Int. Genet.}, vol. 55, Nov. 2021, doi: 10.1016/j.fsigen.2021.102594.
 
-\bibitem{banerjee2005meteor}
-S. Banerjee and A. Lavie, ``METEOR: An Automatic Metric for MT Evaluation with Improved Correlation with Human Judgments,'' in \textit{Proc. ACL Workshop Intrinsic Extrinsic Eval. Meas. MT/Summarization}, 2005, pp. 65--72.
+\bibitem{mugaanyi2024evaluation}
+J. Mugaanyi, L. Cai, S. Cheng, C. Lu, and J. Huang, ``Evaluation of Large Language Model Performance and Reliability for Citations and References in Scholarly Writing: Cross-Disciplinary Study,'' \textit{J. Med. Internet Res.}, vol. 26, no. 1, Jan. 2024, doi: 10.2196/52935.
 
-\bibitem{cahyawijaya2023nusacrowd}
-S. Cahyawijaya, H. Lovenia, A. F. Aji, G. I. Winata, B. Wilie, K. Vincent \textit{et al.}, ``NusaCrowd: Open Source Initiative for Indonesian NLP Resources,'' in \textit{Proc. 61st Annu. Meet. Assoc. Comput. Linguist. (ACL)}, 2023, pp. 13745--13818.
+\bibitem{barry2022state}
+E. S. Barry, J. Merkebu, and L. Varpio, ``State-of-the-art literature review methodology: A six-step approach for knowledge synthesis,'' \textit{Perspect. Med. Educ.}, vol. 11, no. 5, pp. 281--288, Oct. 2022, doi: 10.1007/s40037-022-00725-9.
 
-\bibitem{touvron2023llama}
-H. Touvron, L. Martin, K. Stone, P. Albert, A. Almahairi, Y. Babaei \textit{et al.}, ``Llama 2: Open Foundation and Fine-Tuned Chat Models,'' \textit{arXiv preprint arXiv:2307.09288}, 2023.
+\bibitem{ji2025evaluating}
+K. Ji, Z. Wu, J. Han, G. Zhai, and J. Liu, ``Evaluating ChatGPT-4's performance on oral and maxillofacial queries: Chain-of-Thought and standard method,'' \textit{Front. Oral Health}, vol. 6, 2025, doi: 10.3389/froh.2025.1541976.
 
-\bibitem{jiang2023mistral}
-A. Q. Jiang, A. Sablayrolles, A. Mensch, C. Bamford, D. S. Chaplot, D. d. l. Casas \textit{et al.}, ``Mistral 7B,'' \textit{arXiv preprint arXiv:2310.06825}, 2023.
+\bibitem{kim2023cot}
+S. Kim \textit{et al.}, ``The CoT Collection: Improving Zero-shot and Few-shot Learning of Language Models via Chain-of-Thought Fine-Tuning,'' in \textit{Proc. 2023 Conf. Empir. Methods Nat. Lang. Process. (EMNLP)}, 2023.
+
+\bibitem{ji2024chain}
+B. Ji, H. Liu, M. Du, and S.-K. Ng, ``Chain-of-Thought Improves Text Generation with Citations in Large Language Models,'' \textit{arXiv preprint arXiv:2402.16438}, 2024.
+
+\bibitem{suharto2025comparative}
+R. N. Suharto, M. H. Z. Al Faroby, and Y. Setiawan, ``Comparative Evaluation of YOLO-based Models for Indonesian License Plate Detection and Recognition with EASY OCR,'' in \textit{Procedia Computer Science}, Elsevier B.V., vol. 260, 2025, pp. 943--952, doi: 10.1016/j.procs.2025.09.037.
+
+\bibitem{wolf2020transformers}
+T. Wolf \textit{et al.}, ``Transformers: State-of-the-Art Natural Language Processing,'' in \textit{Proc. 2020 Conf. Empir. Methods Nat. Lang. Process.: System Demonstrations}, 2020, pp. 38--45.
 
 \end{thebibliography}
 \endgroup

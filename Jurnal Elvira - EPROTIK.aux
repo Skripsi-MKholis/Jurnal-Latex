@@ -2,18 +2,22 @@
 \providecommand\hyper@newdestlabel[2]{}
 \providecommand\HyField@AuxAddToFields[1]{}
 \providecommand\HyField@AuxAddToCoFields[2]{}
-\citation{brown2020language,achiam2023gpt}
-\citation{bubeck2023sparks}
-\citation{koto2023indommlu,aji2022one}
-\citation{cahyawijaya2021indonlg,winata2023nusax}
+\citation{wolf2020transformers}
+\citation{maitland2024chatgpt,strachan2024testing}
+\citation{ting2024performance}
+\citation{hendrycks2021measuring}
+\citation{koto2023indommlu}
+\citation{koto2023indommlu,mugaanyi2024evaluation}
+\citation{li2024multiple}
+\citation{chen2023when,kim2023cot}
+\citation{lee2024applying,ji2024chain,ji2025evaluating}
+\citation{ting2024performance,zhu2025assessing,lim2023benchmarking,tsai2025optimizing}
+\citation{koto2023indommlu}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Pendahuluan}{1}{section.1}\protected@file@percent }
-\citation{wei2022chain,kojima2022large}
-\citation{wang2022self,zhang2022automatic}
-\citation{wei2022chain,zhou2022least}
-\citation{koto2023indommlu}
-\citation{chen2023frugalgpt,openaigpt4mini}
-\citation{koto2023indommlu}
-\citation{levenshtein1966binary,navarro2001guided}
+\citation{beernaerts2019method,lindcombs2023comparing,song2024sidildng,berger2021levenshtein,petty2022new,sandamette2025penerapan,young2021levenshtein,suharto2025comparative}
+\citation{berger2021levenshtein,sandamette2025penerapan}
+\citation{barry2022state,koto2023indommlu}
+\citation{berger2021levenshtein,petty2022new}
 \citation{koto2023indommlu}
 \@writefile{toc}{\contentsline {section}{\numberline {2}Metode}{2}{section.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Arsitektur Sistem Evaluasi}{2}{subsection.2.1}\protected@file@percent }
@@ -21,9 +25,9 @@
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{fig:arsitektur_sistem}{{1}{2}{Arsitektur Sistem Evaluasi}{figure.caption.1}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Dataset Penelitian dan Tahapan Preprocessing}{2}{subsection.2.2}\protected@file@percent }
-\citation{openaigpt4mini}
-\citation{brown2020language}
-\citation{levenshtein1966binary}
+\citation{ting2024performance,lim2023benchmarking}
+\citation{chen2023when}
+\citation{beernaerts2019method,berger2021levenshtein,petty2022new,sandamette2025penerapan}
 \@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Struktur Kolom Dataset IndoMMLU Hasil Preprocessing}}{3}{table.caption.2}\protected@file@percent }
 \newlabel{tab:struktur_dataset}{{1}{3}{Struktur Kolom Dataset IndoMMLU Hasil Preprocessing}{table.caption.2}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Perancangan Prompt Pengujian (Non-CoT vs CoT)}{3}{subsection.2.3}\protected@file@percent }
@@ -43,43 +47,46 @@
 \newlabel{eq:correct}{{5}{4}{Akurasi Pencocokan Eksak (\textit {Exact Match Accuracy})}{equation.5}{}}
 \@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Prosedur Evaluasi Akurasi ChatGPT Menggunakan Levenshtein Distance}}{4}{algorithm.1}\protected@file@percent }
 \newlabel{alg:eval_pipeline}{{1}{4}{Prosedur Evaluasi Akurasi ChatGPT Menggunakan Levenshtein Distance}{algorithm.1}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Hasil dan Pembahasan}{5}{section.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Hasil Pengujian Per Domain Bahasa (Skenario 1)}{5}{subsection.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}Hasil dan Pembahasan}{4}{section.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Hasil Pengujian Per Domain Bahasa (Skenario 1)}{4}{subsection.3.1}\protected@file@percent }
 \@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Perbandingan Hasil Pengujian Skenario 1 Per Domain Bahasa}}{5}{table.caption.4}\protected@file@percent }
 \newlabel{tab:skenario1}{{2}{5}{Perbandingan Hasil Pengujian Skenario 1 Per Domain Bahasa}{table.caption.4}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Rincian Distribusi Kebenaran Jawaban Per Butir Soal pada Skenario 1}}{5}{table.caption.5}\protected@file@percent }
 \newlabel{tab:rincian_soal}{{3}{5}{Rincian Distribusi Kebenaran Jawaban Per Butir Soal pada Skenario 1}{table.caption.5}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Hasil Pengujian Multi-Domain (Skenario 2, 3, dan 4)}{5}{subsection.3.2}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Perbandingan Performa Pengujian Multi-Domain (Skenario 2, 3, dan 4)}}{6}{table.caption.6}\protected@file@percent }
-\newlabel{tab:multi_domain}{{4}{6}{Perbandingan Performa Pengujian Multi-Domain (Skenario 2, 3, dan 4)}{table.caption.6}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Analisis Komparatif Gabungan 4 Skenario}{6}{subsection.3.3}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Perbandingan Performa Pengujian Multi-Domain (Skenario 2, 3, dan 4)}}{5}{table.caption.6}\protected@file@percent }
+\newlabel{tab:multi_domain}{{4}{5}{Perbandingan Performa Pengujian Multi-Domain (Skenario 2, 3, dan 4)}{table.caption.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Analisis Komparatif Gabungan 4 Skenario}{5}{subsection.3.3}\protected@file@percent }
+\citation{kim2023cot,ji2024chain}
+\citation{wolf2020transformers}
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Grafik Perbandingan Komparatif Performa Metode Non-CoT dan CoT pada Seluruh Skenario Pengujian (Skenario 1--4): (a) Akurasi Exact Match (\%), (b) Skor Kemiripan Levenshtein (\%)}}{6}{figure.caption.7}\protected@file@percent }
 \newlabel{fig:scenario_comparison}{{3}{6}{Grafik Perbandingan Komparatif Performa Metode Non-CoT dan CoT pada Seluruh Skenario Pengujian (Skenario 1--4): (a) Akurasi Exact Match (\%), (b) Skor Kemiripan Levenshtein (\%)}{figure.caption.7}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Analisis Trade-Off Efisiensi Komputasi (Token dan Latensi)}{6}{subsection.3.4}\protected@file@percent }
-\bibcite{brown2020language}{1}
-\bibcite{achiam2023gpt}{2}
-\bibcite{bubeck2023sparks}{3}
-\bibcite{koto2023indommlu}{4}
-\bibcite{aji2022one}{5}
-\bibcite{cahyawijaya2021indonlg}{6}
-\bibcite{winata2023nusax}{7}
-\bibcite{wei2022chain}{8}
-\bibcite{kojima2022large}{9}
-\bibcite{wang2022self}{10}
-\bibcite{zhang2022automatic}{11}
-\bibcite{zhou2022least}{12}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Kesimpulan}{7}{section.4}\protected@file@percent }
-\bibcite{chen2023frugalgpt}{13}
-\bibcite{openaigpt4mini}{14}
-\bibcite{levenshtein1966binary}{15}
-\bibcite{navarro2001guided}{16}
-\bibcite{jurafsky2024speech}{17}
-\bibcite{manning2008introduction}{18}
-\bibcite{hendrycks2020measuring}{19}
-\bibcite{papineni2002bleu}{20}
-\bibcite{lin2004rouge}{21}
-\bibcite{banerjee2005meteor}{22}
-\bibcite{cahyawijaya2023nusacrowd}{23}
-\bibcite{touvron2023llama}{24}
-\bibcite{jiang2023mistral}{25}
-\gdef \@abspage@last{8}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Kesimpulan}{6}{section.4}\protected@file@percent }
+\citation{mugaanyi2024evaluation,li2024multiple}
+\bibcite{koto2023indommlu}{1}
+\bibcite{beernaerts2019method}{2}
+\bibcite{maitland2024chatgpt}{3}
+\bibcite{ting2024performance}{4}
+\bibcite{strachan2024testing}{5}
+\bibcite{lee2024applying}{6}
+\bibcite{chen2023when}{7}
+\bibcite{hendrycks2021measuring}{8}
+\bibcite{li2024multiple}{9}
+\bibcite{zhu2025assessing}{10}
+\bibcite{lim2023benchmarking}{11}
+\bibcite{tsai2025optimizing}{12}
+\bibcite{lindcombs2023comparing}{13}
+\bibcite{song2024sidildng}{14}
+\bibcite{berger2021levenshtein}{15}
+\bibcite{petty2022new}{16}
+\bibcite{sandamette2025penerapan}{17}
+\bibcite{young2021levenshtein}{18}
+\bibcite{mugaanyi2024evaluation}{19}
+\bibcite{barry2022state}{20}
+\bibcite{ji2025evaluating}{21}
+\bibcite{kim2023cot}{22}
+\bibcite{ji2024chain}{23}
+\bibcite{suharto2025comparative}{24}
+\bibcite{wolf2020transformers}{25}
+\gdef \@abspage@last{7}
