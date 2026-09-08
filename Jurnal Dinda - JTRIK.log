@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.5.26)  8 SEP 2026 15:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.5.26)  8 SEP 2026 15:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -674,12 +674,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 492--492
 []|\T1/lmr/m/n/8 (+20) Sistem mende-teksi wa-jah dan
  []
 
-[7 <./Gambar/skripsi_image34.png>]
-Underfull \hbox (badness 2261) in paragraph at lines 531--532
-\T1/lmr/m/n/8 (+20) ing]. Terse-dia: [][]$\T1/lmtt/m/n/8 https : / / databoks . katadata . co . id / en / consumer-[]durables-[]apparel / statistics / 692e89e11c6f5 /
- []
-
-[8] [9] (Jurnal Dinda - JTRIK.aux)
+[7 <./Gambar/skripsi_image34.png>] [8] [9] [10] (Jurnal Dinda - JTRIK.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
@@ -688,17 +683,17 @@ Package rerunfilecheck Info: File `"Jurnal Dinda - JTRIK".out' has not changed.
 (rerunfilecheck)             Checksum: CDD4B6F456F5916E7901450287409E34;4218.
  ) 
 Here is how much of TeX's memory you used:
- 16345 strings out of 467871
- 260887 string characters out of 5428443
- 708847 words of memory out of 5000000
+ 16386 strings out of 467871
+ 261284 string characters out of 5428443
+ 708849 words of memory out of 5000000
  44570 multiletter control sequences out of 15000+600000
- 784245 words of font info for 294 fonts, out of 8000000 for 9000
+ 785925 words of font info for 314 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,17n,79p,1755b,684s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbx8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbx9.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmmi9.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmri8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmri9.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy9.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmtt8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmtt9.pfb>
-Output written on "Jurnal Dinda - JTRIK.pdf" (9 pages, 9108456 bytes).
+Output written on "Jurnal Dinda - JTRIK.pdf" (10 pages, 9127623 bytes).
 PDF statistics:
- 384 PDF objects out of 1000 (max. 8388607)
- 88 named destinations out of 1000 (max. 500000)
+ 415 PDF objects out of 1000 (max. 8388607)
+ 89 named destinations out of 1000 (max. 500000)
  85702 words of extra memory for PDF output out of 89155 (max. 10000000)
 
