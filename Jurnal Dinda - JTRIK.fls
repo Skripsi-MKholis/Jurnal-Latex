@@ -156,14 +156,6 @@ INPUT C:\Program Files\MiKTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Program Files\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Program Files\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
-INPUT C:\Program Files\MiKTeX\tex\latex\graphics\color.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\graphics\color.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\graphics-cfg\color.cfg
-INPUT C:\Program Files\MiKTeX\tex\latex\graphics-cfg\color.cfg
-INPUT C:\Program Files\MiKTeX\tex\latex\graphics-cfg\color.cfg
-INPUT C:\Program Files\MiKTeX\tex\latex\graphics\mathcolor.ltx
-INPUT C:\Program Files\MiKTeX\tex\latex\graphics\mathcolor.ltx
-INPUT C:\Program Files\MiKTeX\tex\latex\graphics\mathcolor.ltx
 INPUT .\Jurnal Dinda - JTRIK.out
 INPUT .\Jurnal Dinda - JTRIK.out
 INPUT Jurnal Dinda - JTRIK.out
@@ -266,25 +258,27 @@ INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\helvetic\phvb8t.vf
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvb8r.tfm
 INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\helvetic\phvb8t.vf
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvb8r.tfm
-INPUT .\Gambar\skripsi_image39_bw.png
-INPUT .\Gambar\skripsi_image39_bw.png
-INPUT .\Gambar\skripsi_image39_bw.png
-INPUT .\Gambar\skripsi_image39_bw.png
-INPUT .\Gambar\skripsi_image39_bw.png
-INPUT .\Gambar\skripsi_image39_bw.png
+INPUT .\Gambar\skripsi_image39.png
+INPUT .\Gambar\skripsi_image39.png
+INPUT .\Gambar\skripsi_image39.png
+INPUT .\Gambar\skripsi_image39.png
+INPUT .\Gambar\skripsi_image39.png
+INPUT .\Gambar\skripsi_image39.png
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvb8t.tfm
-INPUT .\Gambar\skripsi_image40_bw.png
-INPUT .\Gambar\skripsi_image40_bw.png
-INPUT .\Gambar\skripsi_image40_bw.png
-INPUT .\Gambar\skripsi_image40_bw.png
-INPUT .\Gambar\skripsi_image40_bw.png
-INPUT .\Gambar\skripsi_image40_bw.png
-INPUT .\Gambar\skripsi_image44_bw.png
-INPUT .\Gambar\skripsi_image44_bw.png
-INPUT .\Gambar\skripsi_image44_bw.png
-INPUT .\Gambar\skripsi_image44_bw.png
-INPUT .\Gambar\skripsi_image44_bw.png
-INPUT .\Gambar\skripsi_image44_bw.png
+INPUT .\Gambar\skripsi_image40.png
+INPUT .\Gambar\skripsi_image40.png
+INPUT .\Gambar\skripsi_image40.png
+INPUT .\Gambar\skripsi_image40.png
+INPUT .\Gambar\skripsi_image40.png
+INPUT .\Gambar\skripsi_image40.png
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\helvetic\phvb8t.vf
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvb8r.tfm
+INPUT .\Gambar\skripsi_image44.png
+INPUT .\Gambar\skripsi_image44.png
+INPUT .\Gambar\skripsi_image44.png
+INPUT .\Gambar\skripsi_image44.png
+INPUT .\Gambar\skripsi_image44.png
+INPUT .\Gambar\skripsi_image44.png
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr9.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi9.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy9.tfm
@@ -294,8 +288,6 @@ INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam7.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
-INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\helvetic\phvb8t.vf
-INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvb8r.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvr8t.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvr8t.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvr8t.tfm
@@ -311,38 +303,38 @@ INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\helvetic\phvr8t.vf
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvr8r.tfm
 INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\helvetic\phvb8t.vf
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvb8r.tfm
-INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\helvetic\phvro8t.vf
-INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvro8r.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmbx8.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmbx6.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmbx5.tfm
-INPUT .\Gambar\skripsi_image45_bw.png
-INPUT .\Gambar\skripsi_image45_bw.png
-INPUT .\Gambar\skripsi_image45_bw.png
-INPUT .\Gambar\skripsi_image45_bw.png
-INPUT .\Gambar\skripsi_image45_bw.png
-INPUT .\Gambar\skripsi_image45_bw.png
-INPUT .\Gambar\skripsi_image46_bw.png
-INPUT .\Gambar\skripsi_image46_bw.png
-INPUT .\Gambar\skripsi_image46_bw.png
-INPUT .\Gambar\skripsi_image46_bw.png
-INPUT .\Gambar\skripsi_image46_bw.png
-INPUT .\Gambar\skripsi_image46_bw.png
+INPUT .\Gambar\skripsi_image45.png
+INPUT .\Gambar\skripsi_image45.png
+INPUT .\Gambar\skripsi_image45.png
+INPUT .\Gambar\skripsi_image45.png
+INPUT .\Gambar\skripsi_image45.png
+INPUT .\Gambar\skripsi_image45.png
+INPUT .\Gambar\skripsi_image46.png
+INPUT .\Gambar\skripsi_image46.png
+INPUT .\Gambar\skripsi_image46.png
+INPUT .\Gambar\skripsi_image46.png
+INPUT .\Gambar\skripsi_image46.png
+INPUT .\Gambar\skripsi_image46.png
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\helvetic\phvro8t.vf
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvro8r.tfm
 INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\helvetic\phvr8t.vf
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvr8r.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvro8t.tfm
-INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\helvetic\phvro8t.vf
-INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvro8r.tfm
-INPUT .\Gambar\skripsi_image34_bw.png
-INPUT .\Gambar\skripsi_image34_bw.png
-INPUT .\Gambar\skripsi_image34_bw.png
-INPUT .\Gambar\skripsi_image34_bw.png
-INPUT .\Gambar\skripsi_image34_bw.png
-INPUT .\Gambar\skripsi_image34_bw.png
+INPUT .\Gambar\skripsi_image34.png
+INPUT .\Gambar\skripsi_image34.png
+INPUT .\Gambar\skripsi_image34.png
+INPUT .\Gambar\skripsi_image34.png
+INPUT .\Gambar\skripsi_image34.png
+INPUT .\Gambar\skripsi_image34.png
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex8.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvro8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\helvetic\phvro8t.vf
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvro8r.tfm
 INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\helvetic\phvro8t.vf
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvro8r.tfm
 INPUT Jurnal Dinda - JTRIK.aux
