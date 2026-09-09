@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.7.26)  9 SEP 2026 15:32
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.7.26)  9 SEP 2026 15:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1052,13 +1052,12 @@ Underfull \hbox (badness 1052) in paragraph at lines 504--504
  []
 
 [7]
-Underfull \hbox (badness 1990) in paragraph at lines 565--566
-[]\TU/Twentieth-Century.ttf(0)/m/it/8 A. G. Howard et al., “MobileNets: Efficie
-nt Convolutional Neural Networks for Mobile Vision Applications,” arXiv preprin
-t
+Underfull \hbox (badness 5417) in paragraph at lines 532--533
+[]\TU/Twentieth-Century.ttf(0)/m/it/8 Jakpat Survey, 2025, “Makeup Product Cate
+gories Used by Indonesian Women in 2025,” Databoks Katadata, Kata-
  []
 
-[8] (Jurnal Dinda - JTRIK.aux)
+[8] [9] [10] (Jurnal Dinda - JTRIK.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
@@ -1073,12 +1072,12 @@ Package rerunfilecheck Info: File `"Jurnal Dinda - JTRIK".out' has not changed.
 (rerunfilecheck)             Checksum: <no file>.
  ) 
 Here is how much of TeX's memory you used:
- 17236 strings out of 402987
- 322967 string characters out of 5452871
- 816050 words of memory out of 5000000
- 45754 multiletter control sequences out of 15000+600000
- 636508 words of font info for 96 fonts, out of 8000000 for 9000
+ 17241 strings out of 402987
+ 323055 string characters out of 5452871
+ 831050 words of memory out of 5000000
+ 45757 multiletter control sequences out of 15000+600000
+ 636516 words of font info for 97 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  73i,14n,93p,1554b,664s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Jurnal Dinda - JTRIK.pdf (8 pages).
+Output written on Jurnal Dinda - JTRIK.pdf (10 pages).
