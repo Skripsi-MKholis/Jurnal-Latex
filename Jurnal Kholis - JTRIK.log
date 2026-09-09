@@ -1,9 +1,9 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.7.26)  9 SEP 2026 15:01
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.7.26)  9 SEP 2026 14:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**"./Jurnal Dinda - JTRIK.tex"
-(Jurnal Dinda - JTRIK.tex
+**"./Jurnal Kholis - JTRIK.tex"
+(Jurnal Kholis - JTRIK.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
 (C:\Program Files\MiKTeX\tex/latex/base\article.cls
@@ -497,8 +497,8 @@ Package: cite 2015/02/27  v 5.5
 (C:\Users\acern\AppData\Roaming\MiKTeX\tex/latex/placeins\placeins.sty
 Package: placeins 2005/04/18  v 2.2
 )
-(Jurnal Dinda - JTRIK.aux)
-\openout1 = `"Jurnal Dinda - JTRIK.aux"'.
+(Jurnal Kholis - JTRIK.aux)
+\openout1 = `"Jurnal Kholis - JTRIK.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 126.
 LaTeX Font Info:    ... okay on input line 126.
@@ -621,13 +621,9 @@ Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 Package hyperref Info: Link coloring OFF on input line 126.
-(Jurnal Dinda - JTRIK.out) (Jurnal Dinda - JTRIK.out)
+(Jurnal Kholis - JTRIK.out) (Jurnal Kholis - JTRIK.out)
 \@outlinefile=\write3
-\openout3 = `"Jurnal Dinda - JTRIK.out"'.
-
-
-
-Package hyperref Warning: Rerun to get /PageLabels entry.
+\openout3 = `"Jurnal Kholis - JTRIK.out"'.
 
 LaTeX Info: Redefining \microtypecontext on input line 126.
 Package microtype Info: Applying patch `item' on input line 126.
@@ -645,6 +641,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `TwCenMT' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
+
 
 Package microtype Warning: Unknown slot number of character
 (microtype)                `\u G'
@@ -722,49 +719,56 @@ Overfull \hbox (2.2446pt too wide) has occurred while \output is active
 [1
 
 ]
-Overfull \hbox (21.68799pt too wide) in paragraph at lines 191--192
-[]\TU/TwCenMT(0)/m/n/10 Dalam sistem rekomendasi, pendekatan tunggal seperti \T
-U/TwCenMT(0)/m/it/10 Rule-Based Filtering \TU/TwCenMT(0)/m/n/10 efektif untuk m
-enyaring kandidat berdasarkan
- []
-
-File: Gambar/skripsi_image28_bw.png Graphic file (type bmp)
-<Gambar/skripsi_image28_bw.png>
-[2]
-File: Gambar/skripsi_image39_bw.png Graphic file (type bmp)
-<Gambar/skripsi_image39_bw.png>
-File: Gambar/skripsi_image40_bw.png Graphic file (type bmp)
-<Gambar/skripsi_image40_bw.png>
-File: Gambar/skripsi_image44_bw.png Graphic file (type bmp)
-<Gambar/skripsi_image44_bw.png>
- [3]
+File: Gambar/arsitektur_sistem.png Graphic file (type bmp)
+<Gambar/arsitektur_sistem.png>
+ [2]
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-
-Overfull \hbox (0.2316pt too wide) in paragraph at lines 292--293
-\TU/TwCenMT(0)/m/n/10 Sistem menyaring 281 koleksi lipstik komersial pada \TU/T
-wCenMT(0)/m/it/10 knowledge base \TU/TwCenMT(0)/m/n/10 berdasarkan kesesuaian a
-tribut \TU/lmtt/m/n/10 lip_type_tag
+ [3]
+Overfull \hbox (0.28665pt too wide) in paragraph at lines 281--282
+[]\TU/TwCenMT(0)/m/n/10 Untuk proyeksi multi-langkah ke depan secara rekursif h
+ingga horizon 7 hari aktif, sistem menerapkan tiga mekanisme
  []
 
 [4]
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 332.
-File: Gambar/skripsi_image45_bw.png Graphic file (type bmp)
-<Gambar/skripsi_image45_bw.png>
-File: Gambar/skripsi_image46_bw.png Graphic file (type bmp)
-<Gambar/skripsi_image46_bw.png>
- [5] [6]
-File: Gambar/skripsi_image34_bw.png Graphic file (type bmp)
-<Gambar/skripsi_image34_bw.png>
+File: Gambar/prediksi_vs_aktual.png Graphic file (type bmp)
+<Gambar/prediksi_vs_aktual.png>
+ [5]
+File: Gambar/boxplot_multiseed.png Graphic file (type bmp)
+<Gambar/boxplot_multiseed.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 501--501
-[]|\TU/TwCenMT(0)/m/n/8 MobileNetV2 memprediksi kelas (Pink-
+Underfull \hbox (badness 1348) in paragraph at lines 374--374
+\TU/TwCenMT(0)/m/n/8.5 depan (\TU/TwCenMT(0)/m/it/8.5 one-step-ahead\TU/TwCenMT
+(0)/m/n/8.5 ) terhadap
  []
 
-[7] [8] (Jurnal Dinda - JTRIK.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 374--374
+[]|\TU/TwCenMT(0)/m/n/8.5 Sebaran MAE sangat lebar (Rp495.527–
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 374--374
+\TU/TwCenMT(0)/m/n/8.5 Rp1.048.967) dengan deviasi Rp145.024; 0
+ []
+
+
+Underfull \hbox (badness 10000) in alignment at lines 374--374
+[][][][] 
+ []
+
+File: Gambar/smart_analytics.png Graphic file (type bmp)
+<Gambar/smart_analytics.png>
+
+Overfull \hbox (0.41522pt too wide) in paragraph at lines 437--438
+\TU/TwCenMT(0)/m/n/10 transaksi yang cepat (\TU/TwCenMT(0)/m/it/10 near-instant
+\TU/TwCenMT(0)/m/n/10 ) di sisi kasir, sekaligus menjamin konsistensi data tanp
+a kehilangan riwayat transaksi
+ []
+
+[6] [7] [8] [9] [10] (Jurnal Kholis - JTRIK.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
@@ -774,17 +778,17 @@ L3 programming layer <2025-12-24>
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.75pt have occurred.
 
-Package rerunfilecheck Info: File `"Jurnal Dinda - JTRIK".out' has not changed.
-
+Package rerunfilecheck Info: File `"Jurnal Kholis - JTRIK".out' has not changed
+.
 (rerunfilecheck)             Checksum: <no file>.
  ) 
 Here is how much of TeX's memory you used:
- 17272 strings out of 402987
- 322747 string characters out of 5452871
- 815625 words of memory out of 5000000
- 45769 multiletter control sequences out of 15000+600000
- 636644 words of font info for 113 fonts, out of 8000000 for 9000
+ 17177 strings out of 402987
+ 320394 string characters out of 5452871
+ 817260 words of memory out of 5000000
+ 45679 multiletter control sequences out of 15000+600000
+ 635107 words of font info for 108 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 73i,14n,93p,1554b,666s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 73i,14n,93p,1911b,540s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Jurnal Dinda - JTRIK.pdf (8 pages).
+Output written on Jurnal Kholis - JTRIK.pdf (10 pages).

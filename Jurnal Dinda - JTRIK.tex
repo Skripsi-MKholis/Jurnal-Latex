@@ -61,12 +61,9 @@
 \setlength{\textfloatsep}{10pt plus 2pt minus 2pt}
 \setlength{\intextsep}{8pt plus 2pt minus 2pt}
 
-% Hyperlink configuration
+% Hyperlink configuration (Non-colored citations & links per JTRIK / Mendeley standard)
 \hypersetup{
-  colorlinks=true,
-  linkcolor=blue,
-  citecolor=blue,
-  urlcolor=blue
+  hidelinks
 }
 
 % =========================================================================
@@ -154,8 +151,11 @@ $^{1,2,3}$ Jurusan Teknologi Informasi dan Komputer, Politeknik Negeri Lhokseuma
 
 % --- Open Access License (8pt) ---
 {\fontsize{8pt}{10pt}\selectfont
-This is an open access article under the \href{https://creativecommons.org/licenses/by-sa/4.0/}{CC BY-SA} license. 
-\IfFileExists{Gambar/image3.png}{\raisebox{-0.10cm}{\includegraphics[height=0.40cm]{image3.png}}}{}\par}
+This is an open access article under the \href{https://creativecommons.org/licenses/by-sa/4.0/}{CC BY-SA} license.\par
+\vspace{2pt}
+\IfFileExists{Gambar/image3.png}{\includegraphics[height=0.45cm]{image3.png}}{%
+  \IfFileExists{Gambar/template_eprotik_image1.png}{\includegraphics[height=0.45cm]{template_eprotik_image1.png}}{}%
+}\par}
 
 \vspace{4pt}
 \noindent\rule{\textwidth}{0.4pt}
@@ -526,79 +526,80 @@ Untuk pengembangan dan penyempurnaan penelitian di masa mendatang, disarankan un
 \setlength{\parskip}{0pt}
 
 \bibitem{jakpat2025}
-Jakpat Survey, 2025, ``Makeup Product Categories Used by Indonesian Women in 2025,'' \textit{Databoks Katadata}, Katadata Indonesia, URL: \url{https://databoks.katadata.co.id/en/consumer-durables-apparel/statistics/692e89e11c6f5/makeup-product-categories-used-by-indonesian-women-in-2025}, Abstract: Survey on cosmetic usage showing lip products as the most popular category used by Indonesian women (80.4\%)., Keywords: Makeup categories, Indonesian women, Cosmetics market, Lip products, Document Type: Online Report, Language: English, Database/Indexing: Katadata Databoks, Citation Key: \texttt{jakpat2025}.
+Jakpat Survey, ``Makeup Product Categories Used by Indonesian Women in 2025,'' \textit{Databoks Katadata}, 2025, [Online]. Available: https://databoks.katadata.co.id/en/consumer-durables-apparel/statistics/692e89e11c6f5/makeup-product-categories-used-by-indonesian-women-in-2025
 
 \bibitem{vergnaud2024lip}
-H. Vergnaud, Z. Charton, D. Blumenthal, V. Couturaud, M. Le Fur, E. Loescher, et al., 2024, ``Lip Color Diversity: An Intricate Study,'' \textit{Skin Research and Technology}, vol. 30, no. 2, p. e13583, John Wiley \& Sons, Inc., doi: 10.1111/srt.13583, ISSN: 1600-0846, URL: \url{https://doi.org/10.1111/srt.13583}, Abstract: Analysis of multi-ethnic lip pigmentation variations and underlying anatomical and physiological factors., Keywords: Lip color diversity, Melanin, Hemoglobin, Ethnicity, Skin colorimetry, Document Type: Journal Article, Language: English, Database/Indexing: Scopus / PubMed, Citation Key: \texttt{vergnaud2024lip}.
+H. Vergnaud \textit{et al.}, ``Lip Color Diversity: An Intricate Study,'' \textit{Skin Research and Technology}, vol. 30, no. 2, p. e13583, Feb. 2024, doi: 10.1111/srt.13583.
 
 \bibitem{vergnaud2023measurement}
-H. Vergnaud, M. Cherel, G. Fran\c{c}ois, Z. Charton, E. Loescher, L. Caisey, et al., 2023, ``Lip Color Measurement: A New Hyperspectral Imaging Device,'' \textit{Skin Research and Technology}, vol. 29, no. 8, p. e13418, John Wiley \& Sons, Inc., doi: 10.1111/srt.13418, ISSN: 1600-0846, URL: \url{https://doi.org/10.1111/srt.13418}, Abstract: Introduction of a hyperspectral imaging methodology for high-fidelity non-contact measurement of human lip color., Keywords: Lip color measurement, Hyperspectral imaging, Colorimetry, Spectroscopy, Document Type: Journal Article, Language: English, Database/Indexing: Scopus / PubMed, Citation Key: \texttt{vergnaud2023measurement}.
+H. Vergnaud \textit{et al.}, ``Lip Color Measurement: A New Hyperspectral Imaging Device,'' \textit{Skin Research and Technology}, vol. 29, no. 8, p. e13418, Aug. 2023, doi: 10.1111/srt.13418.
 
 \bibitem{charton2026development}
-Z. Charton, H. Vergnaud, L. Caisey, D. Blumenthal, M. Ma, A. Shi, et al., 2026, ``Development of a Lip Colour Chart Across Four Ethnicities,'' \textit{International Journal of Cosmetic Science}, vol. 48, no. 1, pp. 161--171, John Wiley \& Sons, Inc., doi: 10.1111/ics.70004, ISSN: 0142-5463, URL: \url{https://doi.org/10.1111/ics.70004}, Abstract: Construction of standardized multi-ethnic lip color chart aiding cosmetic product formulation and shade matching., Keywords: Lip colour chart, Multi-ethnic shade matching, Cosmetic science, Spectrophotometry, Document Type: Journal Article, Language: English, Database/Indexing: Scopus / Wiley Online Library, Citation Key: \texttt{charton2026development}.
+Z. Charton \textit{et al.}, ``Development of a Lip Colour Chart Across Four Ethnicities,'' \textit{International Journal of Cosmetic Science}, vol. 48, no. 1, pp. 161--171, Feb. 2026, doi: 10.1111/ics.70004.
 
 \bibitem{katariya2025novel}
-R. Katariya and S. Patel, 2025, ``A Novel Strid CNN Model for Cosmetic Product Recommendation based on Skin Type and Tone,'' \textit{SSRG International Journal of Electrical and Electronics Engineering}, vol. 12, no. 5, pp. 1--12, Seventh Sense Research Group, doi: 10.14445/23488379/IJEEE-V12I5P101, ISSN: 2348-8379, URL: \url{https://doi.org/10.14445/23488379/IJEEE-V12I5P101}, Abstract: Application of custom convolutional neural network for classifying skin types and predicting cosmetic products., Keywords: Cosmetic recommendation, Skin tone classification, Convolutional neural networks, Computer vision, Document Type: Journal Article, Language: English, Database/Indexing: SSRG / Google Scholar, Citation Key: \texttt{katariya2025novel}.
+R. Katariya and S. Patel, ``A Novel Strid CNN Model for Cosmetic Product Recommendation based on Skin Type and Tone,'' \textit{SSRG International Journal of Electrical and Electronics Engineering}, vol. 12, no. 5, pp. 1--12, May 2025, doi: 10.14445/23488379/IJEEE-V12I5P101.
 
 \bibitem{gulati2023beautifai}
-K. Gulati, G. Verma, M. Mohania, and A. Kundu, 2023, ``BeautifAI: Personalised Occasion-based Makeup Recommendation,'' \textit{Proc. 14th Asian Conf. Mach. Learn. (ACML), PMLR}, vol. 189, pp. 407--419, PMLR, ISSN: 2640-3498, URL: \url{https://proceedings.mlr.press/v189/gulati23a.html}, Abstract: Machine learning framework recommending personalized makeup looks matching occasion and user facial traits., Keywords: Makeup recommendation, Facial cosmetics, Occasion-based styling, Deep learning, Document Type: Conference Paper, Language: English, Database/Indexing: PMLR / DBLP, Citation Key: \texttt{gulati2023beautifai}.
+K. Gulati, G. Verma, M. Mohania, and A. Kundu, ``BeautifAI: Personalised Occasion-based Makeup Recommendation,'' in \textit{Proc. 14th Asian Conf. Mach. Learn. (ACML)}, PMLR, vol. 189, pp. 407--419, Dec. 2023.
 
 \bibitem{pratama2025sistem}
-R. Pratama et al., 2025, ``Sistem Rekomendasi Produk Kosmetik Menggunakan Metode Content-Based Filtering Berbasis Website,'' \textit{Jurnal Rabit: Jurnal Teknologi dan Sistem Informasi Univ. Abdurrab}, vol. 10, no. 1, pp. 45--56, Universitas Abdurrab, ISSN: 2477-2062, URL: \url{https://jurnal.univrab.ac.id/index.php/rabit/article/view/6371}, Abstract: Web-based cosmetic recommendation system implementation applying Euclidean distance content-based filtering., Keywords: Content-based filtering, Euclidean distance, Cosmetics recommendation, Web system, Document Type: Journal Article, Language: Indonesian, Database/Indexing: SINTA / Garuda, Citation Key: \texttt{pratama2025sistem}.
+R. Pratama, M. Ikhsan, and A. Fitri, ``Sistem Rekomendasi Produk Kosmetik Menggunakan Metode Content-Based Filtering Berbasis Website,'' \textit{Jurnal Rabit: Jurnal Teknologi dan Sistem Informasi Univ. Abdurrab}, vol. 10, no. 1, pp. 45--56, Jan. 2025, doi: 10.36341/rabit.v10i1.6371.
 
 \bibitem{szeliski2022computer}
-R. Szeliski, 2022, ``Computer Vision: Algorithms and Applications,'' \textit{Springer Nature}, 2nd ed., Springer Cham, doi: 10.1007/978-3-030-34372-9, ISSN: 1868-0941, URL: \url{https://doi.org/10.1007/978-3-030-34372-9}, Abstract: Foundational textbook on fundamental computer vision algorithms, modern deep learning architectures, and applications., Keywords: Computer vision, Image classification, Recognition, Feature representation, Document Type: Book, Language: English, Database/Indexing: SpringerLink, Citation Key: \texttt{szeliski2022computer}.
+R. Szeliski, \textit{Computer Vision: Algorithms and Applications}, 2nd ed. Cham, Switzerland: Springer Nature, 2022, doi: 10.1007/978-3-030-34372-9.
 
 \bibitem{goodfellow2016deep}
-I. Goodfellow, Y. Bengio, and A. Courville, 2016, ``Deep Learning,'' \textit{MIT Press}, MIT Press, ISSN: 978-0262035613, URL: \url{https://www.deeplearningbook.org/}, Abstract: Authoritative reference on deep feedforward networks, regularization, optimization, and convolutional networks., Keywords: Deep learning, Neural networks, Convolutional networks, Optimization, Document Type: Book, Language: English, Database/Indexing: MIT Press, Citation Key: \texttt{goodfellow2016deep}.
+I. Goodfellow, Y. Bengio, and A. Courville, \textit{Deep Learning}. Cambridge, MA, USA: MIT Press, 2016.
 
 \bibitem{lecun2015deep}
-Y. LeCun, Y. Bengio, and G. Hinton, 2015, ``Deep Learning,'' \textit{Nature}, vol. 521, no. 7553, pp. 436--444, Nature Publishing Group, doi: 10.1038/nature14539, ISSN: 0028-0836, URL: \url{https://doi.org/10.1038/nature14539}, Abstract: Seminal review paper explaining foundations, capabilities, and future breakthroughs of deep learning in vision and speech., Keywords: Deep learning, Representation learning, Convolutional networks, Artificial intelligence, Document Type: Journal Article, Language: English, Database/Indexing: Scopus / Web of Science, Citation Key: \texttt{lecun2015deep}.
+Y. LeCun, Y. Bengio, and G. Hinton, ``Deep Learning,'' \textit{Nature}, vol. 521, no. 7553, pp. 436--444, May 2015, doi: 10.1038/nature14539.
 
 \bibitem{sandler2018mobilenetv2}
-M. Sandler, A. Howard, M. Zhu, A. Zhmoginov, and L.-C. Chen, 2018, ``MobileNetV2: Inverted Residuals and Linear Bottlenecks,'' \textit{Proc. IEEE/CVF Conf. Comput. Vis. Pattern Recognit. (CVPR)}, pp. 4510--4520, IEEE, doi: 10.1109/CVPR.2018.00474, ISSN: 2575-7075, URL: \url{https://doi.org/10.1109/CVPR.2018.00474}, Abstract: Novel mobile neural network architecture utilizing inverted residual blocks with linear bottlenecks for efficient vision tasks., Keywords: MobileNetV2, Inverted residuals, Linear bottlenecks, Convolutional neural networks, Mobile vision, Document Type: Conference Paper, Language: English, Database/Indexing: IEEE Xplore / Scopus, Citation Key: \texttt{sandler2018mobilenetv2}.
+M. Sandler, A. Howard, M. Zhu, A. Zhmoginov, and L.-C. Chen, ``MobileNetV2: Inverted Residuals and Linear Bottlenecks,'' in \textit{Proc. IEEE/CVF Conf. Comput. Vis. Pattern Recognit. (CVPR)}, pp. 4510--4520, Jun. 2018, doi: 10.1109/CVPR.2018.00474.
 
 \bibitem{howard2017mobilenets}
-A. G. Howard, M. Zhu, B. Chen, D. Kalenichenko, W. Wang, T. Weyand, et al., 2017, ``MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications,'' \textit{arXiv preprint arXiv:1704.04861}, arXiv, doi: 10.48550/arXiv.1704.04861, URL: \url{https://arxiv.org/abs/1704.04861}, Abstract: Introduction of depthwise separable convolutions to dramatically decrease parameter count and latency for mobile deep learning., Keywords: MobileNets, Depthwise separable convolution, Efficient CNN, Mobile vision, Document Type: Preprint, Language: English, Database/Indexing: arXiv, Citation Key: \texttt{howard2017mobilenets}.
+A. G. Howard \textit{et al.}, ``MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications,'' \textit{arXiv preprint arXiv:1704.04861}, Apr. 2017, [Online]. Available: https://arxiv.org/abs/1704.04861
 
 \bibitem{macqueen1967methods}
-J. MacQueen, 1967, ``Some Methods for Classification and Analysis of Multivariate Observations,'' \textit{Proc. 5th Berkeley Symp. Math. Statist. Prob.}, vol. 1, pp. 281--297, University of California Press, URL: \url{https://projecteuclid.org/euclid.bsmsp/1200512992}, Abstract: Original formulation of the k-means clustering process for iterative partitioning and minimum variance multivariate analysis., Keywords: K-Means clustering, Multivariate analysis, Unsupervised classification, Centroid optimization, Document Type: Conference Paper, Language: English, Database/Indexing: Project Euclid, Citation Key: \texttt{macqueen1967methods}.
+J. MacQueen, ``Some Methods for Classification and Analysis of Multivariate Observations,'' in \textit{Proc. 5th Berkeley Symp. Math. Statist. Prob.}, vol. 1, pp. 281--297, 1967.
 
 \bibitem{pedregosa2011scikit}
-F. Pedregosa, G. Varoquaux, A. Gramfort, V. Michel, B. Thirion, O. Grisel, et al., 2011, ``Scikit-learn: Machine Learning in Python,'' \textit{Journal of Machine Learning Research}, vol. 12, pp. 2825--2830, JMLR.org, ISSN: 1532-4435, URL: \url{https://jmlr.org/papers/v12/pedregosa11a.html}, Abstract: Python module integrating widely accessible, unified, and efficient machine learning algorithms for medium-scale problems., Keywords: Scikit-learn, Python, Machine learning, Data mining, Scientific computing, Document Type: Journal Article, Language: English, Database/Indexing: JMLR / Scopus, Citation Key: \texttt{pedregosa2011scikit}.
+F. Pedregosa \textit{et al.}, ``Scikit-learn: Machine Learning in Python,'' \textit{Journal of Machine Learning Research}, vol. 12, pp. 2825--2830, Nov. 2011.
 
 \bibitem{ricci2015recommender}
-F. Ricci, L. Rokach, and B. Shapira, 2015, ``Recommender Systems Handbook,'' \textit{Springer}, 2nd ed., Springer New York, doi: 10.1007/978-1-4899-7637-6, ISSN: 978-1-4899-7636-9, URL: \url{https://doi.org/10.1007/978-1-4899-7637-6}, Abstract: Exhaustive reference handbook on content-based filtering, collaborative filtering, hybrid techniques, and evaluation., Keywords: Recommender systems, Hybrid recommendation, Content-based filtering, Collaborative filtering, Document Type: Book, Language: English, Database/Indexing: SpringerLink, Citation Key: \texttt{ricci2015recommender}.
+F. Ricci, L. Rokach, and B. Shapira, \textit{Recommender Systems Handbook}, 2nd ed. New York, NY, USA: Springer, 2015, doi: 10.1007/978-1-4899-7637-6.
 
 \bibitem{aggarwal2016recommender}
-C. C. Aggarwal, 2016, ``Recommender Systems: The Textbook,'' \textit{Springer Nature}, Springer Cham, doi: 10.1007/978-3-319-29659-3, ISSN: 978-3-319-29658-6, URL: \url{https://doi.org/10.1007/978-3-319-29659-3}, Abstract: Foundational textbook covering mathematical algorithms and applications of recommender systems and distance similarity metrics., Keywords: Recommender systems, Collaborative filtering, Content-based models, Similarity metrics, Document Type: Book, Language: English, Database/Indexing: SpringerLink, Citation Key: \texttt{aggarwal2016recommender}.
+C. C. Aggarwal, \textit{Recommender Systems: The Textbook}. Cham, Switzerland: Springer Nature, 2016, doi: 10.1007/978-3-319-29659-3.
 
 \bibitem{lugaresi2019mediapipe}
-C. Lugaresi, J. Tang, H. Nash, C. McClanahan, E. Uboweja, M. Hays, et al., 2019, ``MediaPipe: A Framework for Building Perception Pipelines,'' \textit{arXiv preprint arXiv:1906.08172}, arXiv, URL: \url{https://arxiv.org/abs/1906.08172}, Abstract: Open-source modular framework enabling cross-platform streaming perception pipelines including 3D face mesh estimation., Keywords: MediaPipe, Real-time perception, Face mesh, Streaming pipelines, Mobile computer vision, Document Type: Preprint, Language: English, Database/Indexing: arXiv, Citation Key: \texttt{lugaresi2019mediapipe}.
+C. Lugaresi \textit{et al.}, ``MediaPipe: A Framework for Building Perception Pipelines,'' \textit{arXiv preprint arXiv:1906.08172}, Jun. 2019, [Online]. Available: https://arxiv.org/abs/1906.08172
 
 \bibitem{liu2015deep}
-Z. Liu, P. Luo, X. Wang, and X. Tang, 2015, ``Deep Learning Face Attributes in the Wild,'' \textit{Proc. IEEE Int. Conf. Comput. Vis. (ICCV)}, pp. 3730--3738, IEEE, doi: 10.1109/ICCV.2015.425, URL: \url{https://doi.org/10.1109/ICCV.2015.425}, Abstract: Establishment of CelebA large-scale benchmark dataset and deep cascaded neural networks for facial attribute prediction., Keywords: CelebA, Face attributes, Deep learning, Face localization, Facial representation, Document Type: Conference Paper, Language: English, Database/Indexing: IEEE Xplore / Scopus, Citation Key: \texttt{liu2015deep}.
+Z. Liu, P. Luo, X. Wang, and X. Tang, ``Deep Learning Face Attributes in the Wild,'' in \textit{Proc. IEEE Int. Conf. Comput. Vis. (ICCV)}, pp. 3730--3738, Dec. 2015, doi: 10.1109/ICCV.2015.425.
 
 \bibitem{bradski2000opencv}
-G. Bradski, 2000, ``The OpenCV Library,'' \textit{Dr. Dobb's Journal of Software Tools}, vol. 25, no. 11, pp. 120--125, Miller Freeman Inc., ISSN: 1044-789X, Abstract: Design, capabilities, and computational architecture of OpenCV real-time computer vision library., Keywords: OpenCV, Computer vision library, Real-time image processing, C/C++, Document Type: Journal Article, Language: English, Database/Indexing: Scopus, Citation Key: \texttt{bradski2000opencv}.
+G. Bradski, ``The OpenCV Library,'' \textit{Dr. Dobb's Journal of Software Tools}, vol. 25, no. 11, pp. 120--125, Nov. 2000.
 
 \bibitem{otsu1979threshold}
-N. Otsu, 1979, ``A Threshold Selection Method from Gray-Level Histograms,'' \textit{IEEE Transactions on Systems, Man, and Cybernetics}, vol. 9, no. 1, pp. 62--66, IEEE, doi: 10.1109/TSMC.1979.4310076, ISSN: 0018-9472, URL: \url{https://doi.org/10.1109/TSMC.1979.4310076}, Abstract: Classic non-parametric threshold selection technique maximizing discriminant between-class variance in image histograms., Keywords: Otsu thresholding, Image binarization, Gray-level histogram, Image segmentation, Document Type: Journal Article, Language: English, Database/Indexing: IEEE Xplore / Scopus, Citation Key: \texttt{otsu1979threshold}.
+N. Otsu, ``A Threshold Selection Method from Gray-Level Histograms,'' \textit{IEEE Transactions on Systems, Man, and Cybernetics}, vol. 9, no. 1, pp. 62--66, Jan. 1979, doi: 10.1109/TSMC.1979.4310076.
 
 \bibitem{gonzalez2018digital}
-R. C. Gonzalez and R. E. Woods, 2018, ``Digital Image Processing,'' \textit{Pearson Education Limited}, 4th ed., Pearson Education Limited, ISSN: 978-0133356724, Abstract: Comprehensive textbook covering spatial filtering, image restoration, color processing, segmentation, and feature extraction., Keywords: Digital image processing, Color spaces, Image segmentation, Feature extraction, Document Type: Book, Language: English, Database/Indexing: Google Books, Citation Key: \texttt{gonzalez2018digital}.
+R. C. Gonzalez and R. E. Woods, \textit{Digital Image Processing}, 4th ed. New York, NY, USA: Pearson, 2018.
 
 \bibitem{pan2010survey}
-S. J. Pan and Q. Yang, 2010, ``A Survey on Transfer Learning,'' \textit{IEEE Transactions on Knowledge and Data Engineering}, vol. 22, no. 10, pp. 1345--1359, IEEE, doi: 10.1109/TKDE.2009.191, ISSN: 1041-4347, URL: \url{https://doi.org/10.1109/TKDE.2009.191}, Abstract: Comprehensive taxonomy, categorization, and review of transfer learning algorithms across heterogeneous domains., Keywords: Transfer learning, Inductive transfer, Transductive learning, Domain adaptation, Document Type: Journal Article, Language: English, Database/Indexing: IEEE Xplore / Scopus, Citation Key: \texttt{pan2010survey}.
+S. J. Pan and Q. Yang, ``A Survey on Transfer Learning,'' \textit{IEEE Transactions on Knowledge and Data Engineering}, vol. 22, no. 10, pp. 1345--1359, Oct. 2010, doi: 10.1109/TKDE.2009.191.
 
 \bibitem{he2016deep}
-K. He, X. Zhang, S. Ren, and J. Sun, 2016, ``Deep Residual Learning for Image Recognition,'' \textit{Proc. IEEE Conf. Computer Vision and Pattern Recognition (CVPR)}, pp. 770--778, IEEE, doi: 10.1109/CVPR.2016.90, URL: \url{https://doi.org/10.1109/CVPR.2016.90}, Abstract: Residual learning framework reformulating deep layers as learning residual functions with reference to layer inputs (ResNet)., Keywords: Deep residual learning, ResNet, Image classification, Deep convolutional networks, Document Type: Conference Paper, Language: English, Database/Indexing: IEEE Xplore / Scopus, Citation Key: \texttt{he2016deep}.
+K. He, X. Zhang, S. Ren, and J. Sun, ``Deep Residual Learning for Image Recognition,'' in \textit{Proc. IEEE Conf. Computer Vision and Pattern Recognition (CVPR)}, pp. 770--778, Jun. 2016, doi: 10.1109/CVPR.2016.90.
 
 \bibitem{shorten2019survey}
-C. Shorten and T. M. Khoshgoftaar, 2019, ``A Survey on Image Data Augmentation for Deep Learning,'' \textit{Journal of Big Data}, vol. 6, no. 1, p. 60, SpringerOpen, doi: 10.1186/s40537-019-0197-0, ISSN: 2196-1115, URL: \url{https://doi.org/10.1186/s40537-019-0197-0}, Abstract: Comprehensive review of image data augmentation methods covering geometric transformations, color spaces, GANs, and meta-learning., Keywords: Data augmentation, Deep learning, Image classification, Regularization, Overfitting, Document Type: Journal Article, Language: English, Database/Indexing: SpringerLink / Scopus, Citation Key: \texttt{shorten2019survey}.
+C. Shorten and T. M. Khoshgoftaar, ``A Survey on Image Data Augmentation for Deep Learning,'' \textit{Journal of Big Data}, vol. 6, no. 1, p. 60, Jul. 2019, doi: 10.1186/s40537-019-0197-0.
 
 \bibitem{powers2011evaluation}
-D. M. W. Powers, 2011, ``Evaluation: From Precision, Recall and F-Measure to ROC, Informedness, Markedness and Correlation,'' \textit{Journal of Machine Learning Technologies}, vol. 2, no. 1, pp. 37--63, Bioinfo Publications, ISSN: 2229-3981, Abstract: Rigorous mathematical examination and unified analysis of machine learning evaluation metrics and trade-offs., Keywords: Evaluation metrics, Precision, Recall, F-measure, ROC, Informedness, Document Type: Journal Article, Language: English, Database/Indexing: Google Scholar, Citation Key: \texttt{powers2011evaluation}.
+D. M. W. Powers, ``Evaluation: From Precision, Recall and F-Measure to ROC, Informedness, Markedness and Correlation,'' \textit{Journal of Machine Learning Technologies}, vol. 2, no. 1, pp. 37--63, Dec. 2011.
+
 \end{thebibliography}
 \endgroup
 
