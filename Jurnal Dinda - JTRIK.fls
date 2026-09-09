@@ -7,21 +7,21 @@ INPUT C:\Program Files\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Program Files\MiKTeX\tex\latex\base\size10.clo
 INPUT C:\Program Files\MiKTeX\tex\latex\base\size10.clo
 INPUT C:\Program Files\MiKTeX\tex\latex\base\size10.clo
+INPUT C:\Program Files\MiKTeX\tex\generic\iftex\iftex.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\iftex\iftex.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\base\inputenc.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\base\inputenc.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\base\fontenc.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\base\fontenc.sty
 INPUT C:\Program Files\MiKTeX\fonts\tfm\jknappen\ec\ecrm1000.tfm
-INPUT C:\Program Files\MiKTeX\tex\latex\lm\lmodern.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\lm\lmodern.sty
-INPUT C:\Users\acern\AppData\Roaming\MiKTeX\tex\latex\geometry\geometry.sty
-INPUT C:\Users\acern\AppData\Roaming\MiKTeX\tex\latex\geometry\geometry.sty
+INPUT C:\Users\acern\AppData\Roaming\MiKTeX\tex\latex\psnfss\helvet.sty
+INPUT C:\Users\acern\AppData\Roaming\MiKTeX\tex\latex\psnfss\helvet.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\graphics\keyval.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\graphics\keyval.sty
+INPUT C:\Users\acern\AppData\Roaming\MiKTeX\tex\latex\geometry\geometry.sty
+INPUT C:\Users\acern\AppData\Roaming\MiKTeX\tex\latex\geometry\geometry.sty
 INPUT C:\Program Files\MiKTeX\tex\generic\iftex\ifvtex.sty
 INPUT C:\Program Files\MiKTeX\tex\generic\iftex\ifvtex.sty
-INPUT C:\Program Files\MiKTeX\tex\generic\iftex\iftex.sty
-INPUT C:\Program Files\MiKTeX\tex\generic\iftex\iftex.sty
 INPUT C:\Users\acern\AppData\Roaming\MiKTeX\tex\latex\geometry\geometry.cfg
 INPUT C:\Users\acern\AppData\Roaming\MiKTeX\tex\latex\geometry\geometry.cfg
 INPUT C:\Users\acern\AppData\Roaming\MiKTeX\tex\latex\geometry\geometry.cfg
@@ -138,10 +138,10 @@ INPUT C:\Users\acern\AppData\Roaming\MiKTeX\tex\latex\cite\cite.sty
 INPUT C:\Users\acern\AppData\Roaming\MiKTeX\tex\latex\cite\cite.sty
 INPUT C:\Users\acern\AppData\Roaming\MiKTeX\tex\latex\placeins\placeins.sty
 INPUT C:\Users\acern\AppData\Roaming\MiKTeX\tex\latex\placeins\placeins.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\lm\t1lmr.fd
-INPUT C:\Program Files\MiKTeX\tex\latex\lm\t1lmr.fd
-INPUT C:\Program Files\MiKTeX\tex\latex\lm\t1lmr.fd
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmr10.tfm
+INPUT C:\Users\acern\AppData\Roaming\MiKTeX\tex\latex\psnfss\t1phv.fd
+INPUT C:\Users\acern\AppData\Roaming\MiKTeX\tex\latex\psnfss\t1phv.fd
+INPUT C:\Users\acern\AppData\Roaming\MiKTeX\tex\latex\psnfss\t1phv.fd
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvr8t.tfm
 INPUT C:\Program Files\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
 INPUT C:\Program Files\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
 INPUT .\Jurnal Dinda - JTRIK.aux
@@ -172,32 +172,12 @@ OUTPUT Jurnal Dinda - JTRIK.pdf
 INPUT .\Jurnal Dinda - JTRIK.out
 INPUT .\Jurnal Dinda - JTRIK.out
 OUTPUT Jurnal Dinda - JTRIK.out
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvb8t.tfm
 INPUT C:\Users\acern\AppData\Roaming\MiKTeX\tex\latex\microtype\mt-cmr.cfg
 INPUT C:\Users\acern\AppData\Roaming\MiKTeX\tex\latex\microtype\mt-cmr.cfg
 INPUT C:\Users\acern\AppData\Roaming\MiKTeX\tex\latex\microtype\mt-cmr.cfg
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmbx12.tfm
-INPUT C:\Program Files\MiKTeX\tex\latex\lm\ot1lmr.fd
-INPUT C:\Program Files\MiKTeX\tex\latex\lm\ot1lmr.fd
-INPUT C:\Program Files\MiKTeX\tex\latex\lm\ot1lmr.fd
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmr10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmr7.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmr5.tfm
-INPUT C:\Program Files\MiKTeX\tex\latex\lm\omllmm.fd
-INPUT C:\Program Files\MiKTeX\tex\latex\lm\omllmm.fd
-INPUT C:\Program Files\MiKTeX\tex\latex\lm\omllmm.fd
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmmi10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmmi7.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmmi5.tfm
-INPUT C:\Program Files\MiKTeX\tex\latex\lm\omslmsy.fd
-INPUT C:\Program Files\MiKTeX\tex\latex\lm\omslmsy.fd
-INPUT C:\Program Files\MiKTeX\tex\latex\lm\omslmsy.fd
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmsy10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmsy7.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmsy5.tfm
-INPUT C:\Program Files\MiKTeX\tex\latex\lm\omxlmex.fd
-INPUT C:\Program Files\MiKTeX\tex\latex\lm\omxlmex.fd
-INPUT C:\Program Files\MiKTeX\tex\latex\lm\omxlmex.fd
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmex10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT C:\Program Files\MiKTeX\tex\latex\amsfonts\umsa.fd
 INPUT C:\Program Files\MiKTeX\tex\latex\amsfonts\umsa.fd
 INPUT C:\Program Files\MiKTeX\tex\latex\amsfonts\umsa.fd
@@ -216,190 +196,197 @@ INPUT C:\Users\acern\AppData\Roaming\MiKTeX\tex\latex\microtype\mt-msb.cfg
 INPUT C:\Users\acern\AppData\Roaming\MiKTeX\tex\latex\microtype\mt-msb.cfg
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmr9.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmr9.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmr6.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmr5.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmmi9.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmmi6.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmmi5.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmsy9.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmsy6.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmsy5.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvr8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr8.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr6.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr5.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi8.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi6.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy8.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy6.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex9.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam5.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam5.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmbx9.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmr8.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvb8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvr8t.tfm
 INPUT .\Gambar\image3.png
 INPUT .\Gambar\image3.png
 INPUT .\Gambar\image3.png
 INPUT .\Gambar\image3.png
 INPUT .\Gambar\image3.png
 INPUT .\Gambar\image3.png
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmbx12.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmr10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmr10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmr7.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmr5.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmmi10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmmi7.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmmi5.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmsy10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmsy7.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmsy5.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam7.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam5.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmbx10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmri10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvb8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvr8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvb8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvro8t.tfm
 INPUT .\Gambar\image1.png
 INPUT .\Gambar\image1.png
 INPUT .\Gambar\image1.png
 INPUT .\Gambar\image1.png
 INPUT .\Gambar\image1.png
 INPUT .\Gambar\image1.png
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmr9.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvr8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\helvetic\phvb8t.vf
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvb8r.tfm
 INPUT C:\Users\acern\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
-INPUT C:\Program Files\MiKTeX\fonts\enc\dvips\lm\lm-ec.enc
-INPUT C:\Program Files\MiKTeX\fonts\enc\dvips\lm\lm-rm.enc
-INPUT C:\Program Files\MiKTeX\fonts\enc\dvips\lm\lm-mathsy.enc
-INPUT C:\Program Files\MiKTeX\fonts\enc\dvips\lm\lm-mathit.enc
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmbx12.tfm
-INPUT .\Gambar\skripsi_image28.png
-INPUT .\Gambar\skripsi_image28.png
-INPUT .\Gambar\skripsi_image28.png
-INPUT .\Gambar\skripsi_image28.png
-INPUT .\Gambar\skripsi_image28.png
-INPUT .\Gambar\skripsi_image28.png
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmbx9.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmbx10.tfm
-INPUT .\Gambar\skripsi_image39.png
-INPUT .\Gambar\skripsi_image39.png
-INPUT .\Gambar\skripsi_image39.png
-INPUT .\Gambar\skripsi_image39.png
-INPUT .\Gambar\skripsi_image39.png
-INPUT .\Gambar\skripsi_image39.png
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmbx8.tfm
-INPUT .\Gambar\skripsi_image40.png
-INPUT .\Gambar\skripsi_image40.png
-INPUT .\Gambar\skripsi_image40.png
-INPUT .\Gambar\skripsi_image40.png
-INPUT .\Gambar\skripsi_image40.png
-INPUT .\Gambar\skripsi_image40.png
-INPUT C:\Program Files\MiKTeX\fonts\enc\dvips\lm\lm-mathex.enc
-INPUT .\Gambar\skripsi_image44.png
-INPUT .\Gambar\skripsi_image44.png
-INPUT .\Gambar\skripsi_image44.png
-INPUT .\Gambar\skripsi_image44.png
-INPUT .\Gambar\skripsi_image44.png
-INPUT .\Gambar\skripsi_image44.png
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmr9.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmr6.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmmi9.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmmi6.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmsy9.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmsy6.tfm
+INPUT C:\Program Files\MiKTeX\fonts\enc\dvips\base\8r.enc
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\helvetic\phvr8t.vf
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvr8r.tfm
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\helvetic\phvb8t.vf
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvb8r.tfm
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\helvetic\phvr8t.vf
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvr8r.tfm
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\helvetic\phvb8t.vf
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvb8r.tfm
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\helvetic\phvr8t.vf
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvr8r.tfm
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\helvetic\phvb8t.vf
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvb8r.tfm
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\helvetic\phvr8t.vf
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvr8r.tfm
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\helvetic\phvro8t.vf
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvro8r.tfm
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\helvetic\phvr8t.vf
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvr8r.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvb8t.tfm
+INPUT .\Gambar\skripsi_image28_bw.png
+INPUT .\Gambar\skripsi_image28_bw.png
+INPUT .\Gambar\skripsi_image28_bw.png
+INPUT .\Gambar\skripsi_image28_bw.png
+INPUT .\Gambar\skripsi_image28_bw.png
+INPUT .\Gambar\skripsi_image28_bw.png
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvb8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\helvetic\phvb8t.vf
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvb8r.tfm
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\helvetic\phvb8t.vf
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvb8r.tfm
+INPUT .\Gambar\skripsi_image39_bw.png
+INPUT .\Gambar\skripsi_image39_bw.png
+INPUT .\Gambar\skripsi_image39_bw.png
+INPUT .\Gambar\skripsi_image39_bw.png
+INPUT .\Gambar\skripsi_image39_bw.png
+INPUT .\Gambar\skripsi_image39_bw.png
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvb8t.tfm
+INPUT .\Gambar\skripsi_image40_bw.png
+INPUT .\Gambar\skripsi_image40_bw.png
+INPUT .\Gambar\skripsi_image40_bw.png
+INPUT .\Gambar\skripsi_image40_bw.png
+INPUT .\Gambar\skripsi_image40_bw.png
+INPUT .\Gambar\skripsi_image40_bw.png
+INPUT .\Gambar\skripsi_image44_bw.png
+INPUT .\Gambar\skripsi_image44_bw.png
+INPUT .\Gambar\skripsi_image44_bw.png
+INPUT .\Gambar\skripsi_image44_bw.png
+INPUT .\Gambar\skripsi_image44_bw.png
+INPUT .\Gambar\skripsi_image44_bw.png
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr9.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi9.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy9.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex9.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam7.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmr6.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmr5.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmr7.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmr5.tfm
-INPUT C:\Program Files\MiKTeX\tex\latex\lm\t1lmtt.fd
-INPUT C:\Program Files\MiKTeX\tex\latex\lm\t1lmtt.fd
-INPUT C:\Program Files\MiKTeX\tex\latex\lm\t1lmtt.fd
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmtt10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmtt9.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmri9.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmbx10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmbx7.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmbx5.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmbx9.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmbx6.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmbx5.tfm
-INPUT .\Gambar\skripsi_image45.png
-INPUT .\Gambar\skripsi_image45.png
-INPUT .\Gambar\skripsi_image45.png
-INPUT .\Gambar\skripsi_image45.png
-INPUT .\Gambar\skripsi_image45.png
-INPUT .\Gambar\skripsi_image45.png
-INPUT .\Gambar\skripsi_image46.png
-INPUT .\Gambar\skripsi_image46.png
-INPUT .\Gambar\skripsi_image46.png
-INPUT .\Gambar\skripsi_image46.png
-INPUT .\Gambar\skripsi_image46.png
-INPUT .\Gambar\skripsi_image46.png
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmri9.tfm
-INPUT .\Gambar\skripsi_image34.png
-INPUT .\Gambar\skripsi_image34.png
-INPUT .\Gambar\skripsi_image34.png
-INPUT .\Gambar\skripsi_image34.png
-INPUT .\Gambar\skripsi_image34.png
-INPUT .\Gambar\skripsi_image34.png
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmr8.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmmi8.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmsy8.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmbx8.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmbx6.tfm
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\helvetic\phvb8t.vf
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvb8r.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvr8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvr8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvr8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvr8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvb8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\jknappen\ec\ectt1000.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\jknappen\ec\ectt0800.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvro8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmbx10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmbx7.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmbx5.tfm
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\helvetic\phvr8t.vf
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvr8r.tfm
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\helvetic\phvb8t.vf
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvb8r.tfm
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\helvetic\phvro8t.vf
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvro8r.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmbx8.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmbx6.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmbx5.tfm
+INPUT .\Gambar\skripsi_image45_bw.png
+INPUT .\Gambar\skripsi_image45_bw.png
+INPUT .\Gambar\skripsi_image45_bw.png
+INPUT .\Gambar\skripsi_image45_bw.png
+INPUT .\Gambar\skripsi_image45_bw.png
+INPUT .\Gambar\skripsi_image45_bw.png
+INPUT .\Gambar\skripsi_image46_bw.png
+INPUT .\Gambar\skripsi_image46_bw.png
+INPUT .\Gambar\skripsi_image46_bw.png
+INPUT .\Gambar\skripsi_image46_bw.png
+INPUT .\Gambar\skripsi_image46_bw.png
+INPUT .\Gambar\skripsi_image46_bw.png
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\helvetic\phvr8t.vf
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvr8r.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvro8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\helvetic\phvro8t.vf
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvro8r.tfm
+INPUT .\Gambar\skripsi_image34_bw.png
+INPUT .\Gambar\skripsi_image34_bw.png
+INPUT .\Gambar\skripsi_image34_bw.png
+INPUT .\Gambar\skripsi_image34_bw.png
+INPUT .\Gambar\skripsi_image34_bw.png
+INPUT .\Gambar\skripsi_image34_bw.png
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex8.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmri8.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmtt8.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvro8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\helvetic\phvro8t.vf
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvro8r.tfm
 INPUT Jurnal Dinda - JTRIK.aux
 INPUT .\Jurnal Dinda - JTRIK.out
 INPUT .\Jurnal Dinda - JTRIK.out
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmbx10.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmbx10.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmbx12.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmbx12.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmbx8.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmbx8.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmbx9.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmbx9.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmex10.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmex10.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmmi10.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmmi10.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmmi6.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmmi6.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmmi7.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmmi7.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmmi9.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmmi9.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmr10.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmr10.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmr6.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmr6.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmr7.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmr7.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmr8.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmr8.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmr9.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmr9.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmri10.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmri10.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmri8.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmri8.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmri9.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmri9.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmsy10.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmsy10.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmsy7.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmsy7.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmsy9.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmsy9.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmtt10.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmtt10.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmtt8.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmtt8.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmtt9.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmtt9.pfb
+INPUT C:\Users\acern\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ectt0800.pk
+INPUT C:\Users\acern\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ectt0800.pk
+INPUT C:\Users\acern\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1000.pk
+INPUT C:\Users\acern\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1000.pk
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cmextra\cmex9.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cmextra\cmex9.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi6.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi6.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi7.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi7.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi8.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi8.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi9.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi9.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr6.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr6.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr7.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr7.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr8.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr8.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr9.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr9.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy7.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy7.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy8.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy8.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\urw\helvetic\uhvb8a.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\urw\helvetic\uhvb8a.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\urw\helvetic\uhvr8a.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\urw\helvetic\uhvr8a.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\urw\helvetic\uhvro8a.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\urw\helvetic\uhvro8a.pfb

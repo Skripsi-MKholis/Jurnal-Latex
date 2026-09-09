@@ -3,9 +3,20 @@
 % =========================================================================
 % Packages
 % =========================================================================
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{lmodern}
+\usepackage{iftex}
+\ifxetex
+  \usepackage{fontspec}
+  \setmainfont{Tw Cen MT}[
+    BoldFont={TCB_____.TTF},
+    ItalicFont={TCMI____.TTF},
+    BoldItalicFont={TCBI____.TTF}
+  ]
+\else
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage[scaled=0.92]{helvet}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
 \usepackage{geometry}
 \usepackage{graphicx}
 \graphicspath{{Gambar/}}
@@ -155,7 +166,7 @@ This is an open access article under the \href{https://creativecommons.org/licen
 \vspace{3pt}
 
 {\fontsize{9.5pt}{12pt}\selectfont
-Pemilihan warna lipstik yang sesuai dengan karakteristik warna alami bibir umumnya masih dilakukan secara subjektif sehingga diperlukan suatu sistem yang mampu memberikan rekomendasi secara otomatis dan lebih objektif. Penelitian ini bertujuan untuk merancang dan membangun sistem rekomendasi warna lipstik berdasarkan citra bibir menggunakan pendekatan Deep Learning melalui model MobileNetV2 serta Hybrid Recommendation System. Penelitian menggunakan kombinasi dataset sekunder CelebA dan dataset primer dengan total 18.100 citra wajah tanpa penggunaan lipstik. Tahapan penelitian meliputi deteksi landmark wajah dengan MediaPipe Face Mesh, segmentasi area bibir, ekstraksi fitur warna menggunakan nilai rata-rata Red, Green, Blue (RGB), pembentukan label otomatis menggunakan algoritma K-Means Clustering ($K=3$) ke dalam kategori Pinkish, Brownish, dan Dark, klasifikasi tipe warna bibir menggunakan MobileNetV2 dengan transfer learning, serta pemberian rekomendasi warna lipstik menggunakan Hybrid Recommendation System yang menggabungkan Rule-Based Filtering dan Content-Based Filtering dengan metode Euclidean Distance. Hasil penelitian menunjukkan bahwa model MobileNetV2 mampu mengklasifikasikan tipe warna bibir dengan akurasi validasi sebesar 94,84\%. Selain itu, pada basis data 281 shade lipstik, sistem berhasil menghasilkan Top-3 rekomendasi dengan rata-rata tingkat kemiripan sebesar 93,62\% pada Top-1, 92,26\% pada Top-2, dan 91,41\% pada Top-3. Dengan demikian, sistem yang dikembangkan terbukti efektif memberikan rekomendasi warna lipstik yang objektif, akurat, dan personal sesuai karakteristik warna alami bibir pengguna.\par}
+Pemilihan warna lipstik yang sesuai dengan karakteristik warna alami bibir umumnya masih dilakukan secara subjektif dan konvensional, sehingga diperlukan suatu sistem yang mampu memberikan rekomendasi secara otomatis, objektif, dan personal. Penelitian ini bertujuan untuk merancang dan membangun sistem rekomendasi warna lipstik berdasarkan citra bibir menggunakan pendekatan Deep Learning melalui model MobileNetV2 serta Hybrid Recommendation System. Alur penelitian mencakup deteksi landmark wajah menggunakan MediaPipe Face Mesh, segmentasi area bibir, ekstraksi fitur nilai rata-rata Red, Green, Blue (RGB), pelabelan otomatis berbasis K-Means Clustering ke dalam kategori Pinkish, Brownish, dan Dark, klasifikasi tipe bibir dengan MobileNetV2 melalui transfer learning, serta pemberian rekomendasi warna lipstik melalui perpaduan Rule-Based Filtering dan Content-Based Filtering berbasis Euclidean Distance. Hasil evaluasi pengujian menunjukkan bahwa model MobileNetV2 berhasil mengklasifikasikan tipe warna bibir dengan akurasi validasi sebesar 94,84\%. Pada sistem rekomendasi, pengujian terhadap basis data shade lipstik komersial berhasil menghasilkan rekomendasi Top-3 dengan rata-rata tingkat kemiripan sebesar 93,62\% pada rekomendasi pertama, 92,26\% pada rekomendasi kedua, dan 91,41\% pada rekomendasi ketiga. Dengan demikian, sistem yang dikembangkan terbukti akurat dan efektif dalam memberikan rekomendasi warna lipstik yang sesuai dengan karakteristik warna alami bibir pengguna.\par}
 
 \vspace{4pt}
 {\fontsize{9.5pt}{12pt}\selectfont\textbf{Kata Kunci:} Deep Learning, MobileNetV2, Hybrid Recommendation System, Content-Based Filtering, Euclidean Distance, K-Means Clustering, Rekomendasi Warna Lipstik.\par}
@@ -171,15 +182,13 @@ Pemilihan warna lipstik yang sesuai dengan karakteristik warna alami bibir umumn
 
 Perkembangan industri kosmetik di Indonesia mengalami peningkatan yang sangat pesat seiring dengan tingginya kesadaran masyarakat terhadap penampilan diri dan perawatan kecantikan. Berdasarkan survei pasar konsumen di Indonesia, produk riasan bibir seperti lipstik, \textit{lip cream}, dan \textit{lip tint} menduduki kategori produk kosmetik yang paling banyak digunakan oleh wanita, dengan persentase penggunaan mencapai 80,4\% \cite{jakpat2025}. Lipstik tidak hanya berfungsi sebagai pewarna bibir untuk meningkatkan estetika wajah, tetapi juga menjadi elemen penting dalam mengekspresikan karakter dan rasa percaya diri pemakainya.
 
-Meskipun produk lipstik sangat populer, proses pemilihan warna (\textit{shade}) lipstik yang tepat sering kali menjadi tantangan bagi konsumen. Karakteristik warna dasar bibir setiap individu bersifat unik dan sangat bervariasi. Penelitian ilmiah oleh Vergnaud dkk. menunjukkan bahwa warna alami bibir dipengaruhi oleh berbagai faktor fisiologis yang kompleks, seperti konsentrasi melanin, aliran hemoglobin, ketebalan stratum korneum, etnis, dan usia \cite{vergnaud2024lip, vergnaud2023measurement}. Perbedaan pigmen dasar ini menyebabkan satu produk lipstik yang sama dapat menghasilkan tampilan warna akhir yang sangat berbeda ketika diaplikasikan pada bibir orang yang berbeda \cite{charton2026development}.
+Meskipun produk lipstik sangat populer, proses pemilihan warna (\textit{shade}) lipstik yang tepat sering kali menjadi tantangan bagi konsumen. Karakteristik warna dasar bibir setiap individu bersifat unik dan sangat bervariasi. Penelitian ilmiah oleh Vergnaud dkk. menunjukkan bahwa warna alami bibir dipengaruhi oleh berbagai faktor fisiologis yang kompleks, seperti konsentrasi melanin, aliran hemoglobin, ketebalan stratum korneum, etnis, dan usia \cite{vergnaud2024lip, vergnaud2023measurement}. Perbedaan pigmen dasar ini menyebabkan satu produk lipstik yang sama dapat menghasilkan tampilan warna akhir yang sangat berbeda ketika diaplikasikan pada bibir orang yang berbeda. Hal tersebut diperkuat oleh penelitian Charton dkk. yang berhasil menyusun bagan warna bibir (\textit{lip colour chart}) multi-etnis dan membuktikan keragaman spektrum rona bibir manusia \cite{charton2026development}.
 
-Sebagian besar konsumen masih memilih warna lipstik secara konvensional dan subjektif, misalnya dengan mencoba produk langsung menggunakan \textit{tester} di toko fisik atau hanya mengandalkan ulasan di media sosial. Metode ini memiliki risiko higienitas serta berpotensi menimbulkan kesalahan pemilihan warna ketika bertransaksi secara daring (\textit{online shopping}) \cite{katariya2025novel}. Konsumen sering kali membeli lipstik yang warnanya terlihat menarik pada model iklan atau katalog, namun tampak kusam (\textit{ashy}), terlalu pucat, atau terlalu mencolok saat diaplikasikan pada bibir mereka sendiri. Oleh karena itu, diperlukan sebuah sistem rekomendasi cerdas yang mampu menganalisis karakteristik visual warna alami bibir secara otomatis, objektif, dan memberikan rekomendasi produk yang presisi.
+Sebagian besar konsumen masih memilih warna lipstik secara konvensional dan subjektif, misalnya dengan mencoba produk langsung menggunakan \textit{tester} di toko fisik atau hanya mengandalkan ulasan di media sosial. Metode konvensional ini memiliki risiko higienitas serta berpotensi menimbulkan ketidakcocokan warna saat bertransaksi daring. Sejumlah penelitian terdahulu telah mengkaji sistem rekomendasi produk kecantikan. Katariya dan Patel merancang model CNN untuk merekomendasikan produk kosmetik berdasarkan tipe dan rona warna kulit (\textit{skin tone}) \cite{katariya2025novel}. Selanjutnya, Gulati dkk. mengembangkan sistem BeautifAI yang memberikan rekomendasi riasan terpersonalisasi berdasarkan karakteristik wajah dan kebutuhan acara (\textit{occasion}) pengguna \cite{gulati2023beautifai}. Pada aspek komputasi rekomendasi, Pratama dkk. menerapkan metode \textit{Content-Based Filtering} untuk sistem rekomendasi kosmetik berbasis kemiripan atribut produk \cite{pratama2025sistem}. Meskipun demikian, sebagian besar penelitian terdahulu tersebut masih menggunakan warna kulit wajah secara umum atau atribut teks katalog sebagai parameter acuan. Belum ditemukan penelitian yang secara spesifik mengekstraksi dan mengklasifikasikan karakteristik warna alami bibir pengguna sebagai basis utama rekomendasi warna lipstik.
 
-Perkembangan teknologi \textit{Computer Vision} dan \textit{Deep Learning} berbasis \textit{Convolutional Neural Network} (CNN) telah terbukti sangat efektif dalam mengenali pola dan fitur visual citra secara akurat \cite{szeliski2022computer, goodfellow2016deep, lecun2015deep}. Salah satu arsitektur CNN yang efisien adalah MobileNetV2, yang dirancang menggunakan \textit{inverted residuals} dan \textit{linear bottlenecks} sehingga memiliki beban komputasi ringan dan jumlah parameter yang relatif sedikit namun tetap mempertahankan akurasi tinggi \cite{sandler2018mobilenetv2, howard2017mobilenets}. Untuk mengelompokkan data warna bibir yang belum memiliki label standar, algoritma \textit{unsupervised learning} K-Means Clustering dapat digunakan untuk membentuk klasterisasi data berbasis kemiripan nilai warna RGB \cite{macqueen1967methods, pedregosa2011scikit}.
+Pemanfaatan teknologi \textit{Computer Vision} dan \textit{Deep Learning} berbasis \textit{Convolutional Neural Network} (CNN) terbukti sangat andal dalam mengenali pola visual citra secara akurat \cite{szeliski2022computer, goodfellow2016deep, lecun2015deep}. Salah satu arsitektur CNN yang efisien untuk implementasi praktis adalah MobileNetV2, yang dirancang menggunakan \textit{inverted residuals} dan \textit{linear bottlenecks} sehingga berbobot komputasi ringan tanpa mengorbankan akurasi tinggi \cite{sandler2018mobilenetv2, howard2017mobilenets}. Untuk mengelompokkan data warna bibir yang belum memiliki label acuan, algoritma \textit{unsupervised learning} K-Means Clustering dapat digunakan untuk membentuk klasterisasi data berbasis kemiripan nilai warna RGB \cite{macqueen1967methods, pedregosa2011scikit}.
 
-Dalam sistem rekomendasi produk, pendekatan tunggal seperti \textit{Rule-Based} atau \textit{Content-Based Filtering} sering kali memiliki keterbatasan. \textit{Rule-Based Filtering} efektif untuk menyaring kandidat berdasarkan batasan kategori tertentu, namun kaku dan tidak mampu mengukur derajat kemiripan gradasi warna secara kontinu \cite{ricci2015recommender}. Sebaliknya, \textit{Content-Based Filtering} berbasis metrik jarak seperti \textit{Euclidean Distance} mampu mengukur kedekatan fitur numerik secara presisi, namun membutuhkan ruang komputasi yang besar jika harus membandingkan seluruh katalog produk tanpa filter awal \cite{pratama2025sistem, aggarwal2016recommender}. Oleh karena itu, penggabungan keduanya ke dalam \textit{Hybrid Recommendation System} menjadi solusi ideal.
-
-Penelitian ini bertujuan untuk merancang dan membangun sistem rekomendasi warna lipstik berdasarkan citra bibir dengan menerapkan arsitektur MobileNetV2 dan \textit{Hybrid Recommendation System} berbasis \textit{Content-Based Filtering} dan \textit{Euclidean Distance}. Sistem memanfaatkan deteksi landmark wajah MediaPipe Face Mesh \cite{lugaresi2019mediapipe} untuk segmentasi bibir secara otomatis, ekstraksi rata-rata warna RGB, pelabelan 3 kategori bibir (Pinkish, Brownish, dan Dark) melalui K-Means Clustering, klasifikasi MobileNetV2 dengan \textit{transfer learning}, serta penentuan Top-3 rekomendasi lipstik paling sesuai dari basis data 281 produk lipstik komersial.
+Dalam sistem rekomendasi, pendekatan tunggal seperti \textit{Rule-Based Filtering} efektif untuk menyaring kandidat berdasarkan batasan kategori tertentu, namun tidak fleksibel dalam mengukur derajat kedekatan gradasi warna \cite{ricci2015recommender}. Sebaliknya, \textit{Content-Based Filtering} berbasis metrik jarak geometri \textit{Euclidean Distance} mampu mengukur kedekatan fitur numerik secara kontinu dan presisi \cite{aggarwal2016recommender}. Oleh karena itu, penggabungan keduanya ke dalam \textit{Hybrid Recommendation System} menjadi solusi ideal. Penelitian ini bertujuan merancang dan membangun sistem rekomendasi warna lipstik berbasis citra bibir dengan menerapkan MediaPipe Face Mesh \cite{lugaresi2019mediapipe} untuk segmentasi bibir otomatis, ekstraksi nilai rata-rata RGB, klasterisasi K-Means, klasifikasi MobileNetV2 dengan \textit{transfer learning}, serta perpaduan \textit{Rule-Based} dan \textit{Content-Based Filtering} (Euclidean Distance) untuk menghasilkan Top-3 rekomendasi lipstik paling presisi.
 
 % =========================================================================
 % Section 2: Methods
@@ -191,7 +200,7 @@ Penelitian ini dilaksanakan melalui tahapan sistematis yang terbagi ke dalam fas
 
 \begin{figure}[htbp]
   \centering
-  \IfFileExists{Gambar/skripsi_image28.png}{\includegraphics[width=0.72\textwidth]{skripsi_image28.png}}{\fbox{Diagram Alur Sistem}}
+  \IfFileExists{Gambar/skripsi_image28_bw.png}{\includegraphics[width=0.72\textwidth]{skripsi_image28_bw.png}}{\fbox{Diagram Alur Sistem}}
   \caption{Diagram Alur Sistem Rekomendasi Warna Lipstik Menggunakan MobileNetV2 dan Hybrid Recommendation System}
   \label{fig:alur_sistem}
 \end{figure}
@@ -199,32 +208,32 @@ Penelitian ini dilaksanakan melalui tahapan sistematis yang terbagi ke dalam fas
 \subsection{Pengumpulan dan Pembagian Dataset}
 Dataset yang digunakan dalam penelitian ini berjumlah total 18.100 citra wajah, yang terdiri atas:
 \begin{enumerate}
-    \item \textbf{Dataset Sekunder (CelebA):} Sebanyak 18.000 citra wajah dari \textit{CelebFaces Attributes Dataset} (CelebA) \cite{liu2015deep} dengan ekspresi netral tanpa riasan bibir tebal.
-    \item \textbf{Dataset Primer:} Sebanyak 100 citra wajah wanita Indonesia tanpa riasan bibir untuk meningkatkan representasi variasi pigmen bibir lokal.
+    \item Dataset Sekunder (CelebA): Sebanyak 18.000 citra wajah dari \textit{CelebFaces Attributes Dataset} (CelebA) \cite{liu2015deep} dengan ekspresi netral tanpa riasan bibir tebal.
+    \item Dataset Primer: Sebanyak 100 citra wajah wanita Indonesia tanpa riasan bibir untuk meningkatkan representasi variasi pigmen bibir lokal.
 \end{enumerate}
 Dataset dibagi menjadi data latih (\textit{training set}) sebanyak 14.480 citra (80\%) dan data validasi (\textit{validation set}) sebanyak 3.620 citra (20\%) untuk pelatihan dan evaluasi model.
 
 \subsection{Preprocessing dan Segmentasi Area Bibir}
 Tahap \textit{preprocessing} bertujuan untuk mengekstraksi area bibir (\textit{Region of Interest} / ROI) dan menyeragamkan format citra:
 \begin{enumerate}
-    \item \textbf{Resize Citra:} Menyeragamkan ukuran citra masukan menjadi $224 \times 224$ piksel menggunakan OpenCV \cite{bradski2000opencv}.
-    \item \textbf{Deteksi Landmark Wajah:} Menggunakan framework MediaPipe Face Mesh untuk mengekstrak 468 titik landmark wajah 3D \cite{lugaresi2019mediapipe}. Kontur bibir luar dan dalam diidentifikasi secara presisi (Gambar \ref{fig:landmark_seg}(a)).
-    \item \textbf{Segmentasi \& Masking:} Membentuk masker poligon biner dari koordinat titik landmark bibir. Seluruh piksel di luar area bibir diatur bernilai nol (Gambar \ref{fig:landmark_seg}(b)).
-    \item \textbf{Normalisasi \& Cropping ROI:} Mengonversi intensitas piksel kanal RGB ke rentang $[0, 1]$ dan memotong citra terfokus pada batas area bibir ($x_{\min}, y_{\min}, x_{\max}, y_{\max}$).
+    \item Resize Citra: Menyeragamkan ukuran citra masukan menjadi $224 \times 224$ piksel menggunakan OpenCV \cite{bradski2000opencv}.
+    \item Deteksi Landmark Wajah: Menggunakan framework MediaPipe Face Mesh untuk mengekstrak 468 titik landmark wajah 3D \cite{lugaresi2019mediapipe}. Kontur bibir luar dan dalam diidentifikasi secara presisi (Gambar \ref{fig:landmark_seg}(a)).
+    \item Segmentasi dan Masking: Membentuk masker poligon biner berdasarkan prinsip segmentasi citra digital \cite{otsu1979threshold, gonzalez2018digital} dari koordinat landmark bibir. Seluruh piksel di luar area bibir diatur bernilai nol (Gambar \ref{fig:landmark_seg}(b)).
+    \item Normalisasi dan Cropping ROI: Mengonversi intensitas piksel kanal RGB ke rentang $[0, 1]$ dan memotong citra terfokus pada batas area bibir ($x_{\min}, y_{\min}, x_{\max}, y_{\max}$).
 \end{enumerate}
 
 \begin{figure}[htbp]
   \centering
   \begin{subfigure}[b]{0.46\textwidth}
     \centering
-    \IfFileExists{Gambar/skripsi_image39.png}{\includegraphics[width=\textwidth]{skripsi_image39.png}}{\fbox{Landmark Wajah}}
+    \IfFileExists{Gambar/skripsi_image39_bw.png}{\includegraphics[width=\textwidth]{skripsi_image39_bw.png}}{\fbox{Landmark Wajah}}
     \caption{Deteksi Landmark MediaPipe}
     \label{fig:landmark}
   \end{subfigure}
   \hfill
   \begin{subfigure}[b]{0.46\textwidth}
     \centering
-    \IfFileExists{Gambar/skripsi_image40.png}{\includegraphics[width=\textwidth]{skripsi_image40.png}}{\fbox{Segmentasi Bibir}}
+    \IfFileExists{Gambar/skripsi_image40_bw.png}{\includegraphics[width=\textwidth]{skripsi_image40_bw.png}}{\fbox{Segmentasi Bibir}}
     \caption{Segmentasi dan Masking Bibir}
     \label{fig:seg_bibir}
   \end{subfigure}
@@ -241,20 +250,20 @@ Karakteristik warna bibir diekstraksi berdasarkan nilai rata-rata pada kanal Red
 
 Tiga nilai skalar $(\bar{R}, \bar{G}, \bar{B})$ ini menjadi masukan algoritma K-Means Clustering ($K=3$, init \textit{k-means++}, random state 42) untuk menghasilkan 3 kategori label tipe bibir alami (Gambar \ref{fig:kmeans_viz}):
 \begin{enumerate}
-    \item \textbf{Pinkish:} Rona cerah dengan rona kemerahan/merah muda dominan ($\bar{R} > 150, \bar{G} \approx 95-120, \bar{B} \approx 100-125$).
-    \item \textbf{Brownish:} Rona hangat kecokelatan ($\bar{R} \approx 125-155, \bar{G} \approx 75-100, \bar{B} \approx 65-90$).
-    \item \textbf{Dark:} Rona bibir dengan pigmentasi gelap/pekat ($\bar{R} < 110, \bar{G} < 65, \bar{B} < 60$).
+    \item Pinkish: Rona cerah dengan rona kemerahan/merah muda dominan ($\bar{R} > 150, \bar{G} \approx 95-120, \bar{B} \approx 100-125$).
+    \item Brownish: Rona hangat kecokelatan ($\bar{R} \approx 125-155, \bar{G} \approx 75-100, \bar{B} \approx 65-90$).
+    \item Dark: Rona bibir dengan pigmentasi gelap/pekat ($\bar{R} < 110, \bar{G} < 65, \bar{B} < 60$).
 \end{enumerate}
 
 \begin{figure}[htbp]
   \centering
-  \IfFileExists{Gambar/skripsi_image44.png}{\includegraphics[width=0.48\textwidth]{skripsi_image44.png}}{\fbox{Visualisasi K-Means}}
+  \IfFileExists{Gambar/skripsi_image44_bw.png}{\includegraphics[width=0.48\textwidth]{skripsi_image44_bw.png}}{\fbox{Visualisasi K-Means}}
   \caption{Visualisasi Distribusi Hasil K-Means Clustering Warna Bibir ($K=3$)}
   \label{fig:kmeans_viz}
 \end{figure}
 
 \subsection{Pelatihan Model Klasifikasi MobileNetV2}
-MobileNetV2 dilatih menggunakan pendekatan \textit{Transfer Learning} berbasis bobot ImageNet \cite{pan2010survey, he2016deep}. Lapisan kustom yang ditambahkan meliputi: \textit{Global Average Pooling 2D}, \textit{Dropout} (0.3), \textit{Dense} (128 neuron, ReLU), \textit{Dropout} (0.2), dan \textit{Dense Output} (3 neuron, Softmax). Konfigurasi parameter hiper pelatihan disajikan pada Tabel \ref{tab:param_pelatihan}.
+MobileNetV2 dilatih menggunakan pendekatan \textit{Transfer Learning} berbasis bobot ImageNet \cite{pan2010survey, he2016deep} yang didukung teknik augmentasi citra untuk memperluas variasi fitur \cite{shorten2019survey}. Lapisan kustom yang ditambahkan meliputi: \textit{Global Average Pooling 2D}, \textit{Dropout} (0.3), \textit{Dense} (128 neuron, ReLU), \textit{Dropout} (0.2), dan \textit{Dense Output} (3 neuron, Softmax). Konfigurasi parameter hiper pelatihan disajikan pada Tabel \ref{tab:param_pelatihan}.
 
 \begin{table}[htbp]
   \centering
@@ -368,14 +377,14 @@ Model MobileNetV2 dilatih selama 30 epoch menggunakan dataset berlabel hasil kla
   \centering
   \begin{subfigure}[b]{0.52\textwidth}
     \centering
-    \IfFileExists{Gambar/skripsi_image45.png}{\includegraphics[width=\textwidth]{skripsi_image45.png}}{\fbox{Grafik Akurasi dan Loss}}
+    \IfFileExists{Gambar/skripsi_image45_bw.png}{\includegraphics[width=\textwidth]{skripsi_image45_bw.png}}{\fbox{Grafik Akurasi dan Loss}}
     \caption{Grafik Akurasi dan Loss Pelatihan}
     \label{fig:loss_acc}
   \end{subfigure}
   \hfill
   \begin{subfigure}[b]{0.44\textwidth}
     \centering
-    \IfFileExists{Gambar/skripsi_image46.png}{\includegraphics[width=\textwidth]{skripsi_image46.png}}{\fbox{Confusion Matrix}}
+    \IfFileExists{Gambar/skripsi_image46_bw.png}{\includegraphics[width=\textwidth]{skripsi_image46_bw.png}}{\fbox{Confusion Matrix}}
     \caption{Confusion Matrix Data Validasi}
     \label{fig:cm}
   \end{subfigure}
@@ -465,7 +474,7 @@ Sistem diimplementasikan ke dalam aplikasi web responsif. Pengguna dapat mengung
 
 \begin{figure}[htbp]
   \centering
-  \IfFileExists{Gambar/skripsi_image34.png}{\includegraphics[width=0.55\textwidth]{skripsi_image34.png}}{\fbox{Antarmuka Hasil Analisis}}
+  \IfFileExists{Gambar/skripsi_image34_bw.png}{\includegraphics[width=0.55\textwidth]{skripsi_image34_bw.png}}{\fbox{Antarmuka Hasil Analisis}}
   \caption{Implementasi Antarmuka Halaman Hasil Analisis dan Rekomendasi Lipstik}
   \label{fig:ui_analisis}
 \end{figure}
@@ -499,21 +508,10 @@ Pengujian fungsional sistem menggunakan metode \textit{Black Box Testing} menunj
 \section{KESIMPULAN DAN SARAN}
 
 \subsection{Kesimpulan}
-Berdasarkan hasil penelitian yang telah dilaksanakan, diperoleh kesimpulan sebagai berikut:
-\begin{enumerate}
-    \item Sistem rekomendasi warna lipstik berbasis citra bibir telah berhasil dibangun dengan mengintegrasikan MediaPipe Face Mesh, MobileNetV2 dengan transfer learning, dan \textit{Hybrid Recommendation System} berbasis \textit{Rule-Based Filtering} dan \textit{Content-Based Filtering} (Euclidean Distance).
-    \item Model klasifikasi MobileNetV2 berhasil mengklasifikasikan tipe warna bibir pengguna ke dalam tiga kategori (Pinkish, Brownish, Dark) dengan akurasi validasi mencapai \textbf{94,84\%} dan nilai loss sebesar 0,1612.
-    \item \textit{Hybrid Recommendation System} terbukti sangat efektif dalam menghasilkan rekomendasi yang personal dan objektif. Dari 281 shade lipstik, sistem menghasilkan Top-3 rekomendasi dengan rata-rata \textit{similarity} sebesar \textbf{93,62\%} pada Top-1, \textbf{92,26\%} pada Top-2, dan \textbf{91,41\%} pada Top-3, dengan tingkat kemiripan tertinggi mencapai \textbf{97,60\%}.
-    \item Pengujian \textit{Black Box Testing} menunjukkan tingkat keberhasilan 100\% (PASS) untuk seluruh modul fungsional sistem.
-\end{enumerate}
+Berdasarkan hasil perancangan, implementasi, dan pengujian yang telah dilaksanakan, penelitian ini telah berhasil membangun sistem rekomendasi warna lipstik terpersonalisasi berbasis citra bibir dengan mengintegrasikan MediaPipe Face Mesh, MobileNetV2 melalui \textit{transfer learning}, serta \textit{Hybrid Recommendation System}. Model MobileNetV2 terbukti andal dalam mengklasifikasikan tipe warna bibir pengguna ke dalam tiga kategori (Pinkish, Brownish, dan Dark) dengan perolehan akurasi validasi mencapai 94,84\% dan nilai kerugian validasi sebesar 0,1612. Selain itu, integrasi metode \textit{Rule-Based Filtering} dan \textit{Content-Based Filtering} berbasis \textit{Euclidean Distance} berhasil mengoptimalkan akurasi rekomendasi produk lipstik dari katalog komersial, menghasilkan rata-rata tingkat kemiripan sebesar 93,62\% pada rekomendasi pertama, 92,26\% pada rekomendasi kedua, dan 91,41\% pada rekomendasi ketiga, dengan skor kecocokan tertinggi mencapai 97,60\%. Pengujian fungsionalitas menggunakan metode \textit{Black Box Testing} juga membuktikan bahwa seluruh modul aplikasi web berjalan lancar dengan tingkat keberhasilan 100\%.
 
 \subsection{Saran}
-Saran untuk pengembangan penelitian selanjutnya antara lain:
-\begin{enumerate}
-    \item Menambah variasi dataset primer untuk tipe Dark dan Brownish serta menerapkan metode penyeimbangan kelas (\textit{class weight / SMOTE}) guna meningkatkan metrik performa pada kelas minoritas.
-    \item Mengembangkan fitur simulasi riasan virtual (\textit{Virtual Try-On}) berbasis \textit{Augmented Reality} (AR) secara \textit{real-time}.
-    \item Menambahkan parameter rona kulit (\textit{skin undertone} dan \textit{skin overtone}) serta preferensi acara untuk memperkaya faktor personalisasi rekomendasi.
-\end{enumerate}
+Untuk pengembangan dan penyempurnaan penelitian di masa mendatang, disarankan untuk memperbanyak jumlah sampel data primer terutama pada kategori berpigmen gelap (Dark) dan kecokelatan (Brownish), serta menerapkan metode penanganan ketidakseimbangan kelas seperti \textit{class weighting} atau SMOTE guna meningkatkan sensitivitas pada kelas minoritas. Di samping itu, penelitian lanjutan dapat memperluas kapabilitas sistem dengan menambahkan fitur simulasi riasan virtual (\textit{Virtual Try-On}) berbasis \textit{Augmented Reality} (AR) interaktif serta mempertimbangkan integrasi rona warna kulit (\textit{skin undertone}) dan preferensi kebutuhan acara agar hasil rekomendasi kosmetik menjadi semakin komprehensif dan adaptif.
 
 % =========================================================================
 % References (IEEE Style)
@@ -536,17 +534,17 @@ H. Vergnaud, Z. Charton, D. Blumenthal, V. Couturaud, M. Le Fur, E. Loescher, et
 \bibitem{vergnaud2023measurement}
 H. Vergnaud, M. Cherel, G. Fran\c{c}ois, Z. Charton, E. Loescher, L. Caisey, et al., 2023, ``Lip Color Measurement: A New Hyperspectral Imaging Device,'' \textit{Skin Research and Technology}, vol. 29, no. 8, p. e13418, John Wiley \& Sons, Inc., doi: 10.1111/srt.13418, ISSN: 1600-0846, URL: \url{https://doi.org/10.1111/srt.13418}, Abstract: Introduction of a hyperspectral imaging methodology for high-fidelity non-contact measurement of human lip color., Keywords: Lip color measurement, Hyperspectral imaging, Colorimetry, Spectroscopy, Document Type: Journal Article, Language: English, Database/Indexing: Scopus / PubMed, Citation Key: \texttt{vergnaud2023measurement}.
 
-\bibitem{sandler2018mobilenetv2}
-M. Sandler, A. Howard, M. Zhu, A. Zhmoginov, and L.-C. Chen, 2018, ``MobileNetV2: Inverted Residuals and Linear Bottlenecks,'' \textit{Proc. IEEE/CVF Conf. Comput. Vis. Pattern Recognit. (CVPR)}, pp. 4510--4520, IEEE, doi: 10.1109/CVPR.2018.00474, ISSN: 2575-7075, URL: \url{https://doi.org/10.1109/CVPR.2018.00474}, Abstract: Novel mobile neural network architecture utilizing inverted residual blocks with linear bottlenecks for efficient vision tasks., Keywords: MobileNetV2, Inverted residuals, Linear bottlenecks, Convolutional neural networks, Mobile vision, Document Type: Conference Paper, Language: English, Database/Indexing: IEEE Xplore / Scopus, Citation Key: \texttt{sandler2018mobilenetv2}.
+\bibitem{charton2026development}
+Z. Charton, H. Vergnaud, L. Caisey, D. Blumenthal, M. Ma, A. Shi, et al., 2026, ``Development of a Lip Colour Chart Across Four Ethnicities,'' \textit{International Journal of Cosmetic Science}, vol. 48, no. 1, pp. 161--171, John Wiley \& Sons, Inc., doi: 10.1111/ics.70004, ISSN: 0142-5463, URL: \url{https://doi.org/10.1111/ics.70004}, Abstract: Construction of standardized multi-ethnic lip color chart aiding cosmetic product formulation and shade matching., Keywords: Lip colour chart, Multi-ethnic shade matching, Cosmetic science, Spectrophotometry, Document Type: Journal Article, Language: English, Database/Indexing: Scopus / Wiley Online Library, Citation Key: \texttt{charton2026development}.
+
+\bibitem{katariya2025novel}
+R. Katariya and S. Patel, 2025, ``A Novel Strid CNN Model for Cosmetic Product Recommendation based on Skin Type and Tone,'' \textit{SSRG International Journal of Electrical and Electronics Engineering}, vol. 12, no. 5, pp. 1--12, Seventh Sense Research Group, doi: 10.14445/23488379/IJEEE-V12I5P101, ISSN: 2348-8379, URL: \url{https://doi.org/10.14445/23488379/IJEEE-V12I5P101}, Abstract: Application of custom convolutional neural network for classifying skin types and predicting cosmetic products., Keywords: Cosmetic recommendation, Skin tone classification, Convolutional neural networks, Computer vision, Document Type: Journal Article, Language: English, Database/Indexing: SSRG / Google Scholar, Citation Key: \texttt{katariya2025novel}.
 
 \bibitem{gulati2023beautifai}
 K. Gulati, G. Verma, M. Mohania, and A. Kundu, 2023, ``BeautifAI: Personalised Occasion-based Makeup Recommendation,'' \textit{Proc. 14th Asian Conf. Mach. Learn. (ACML), PMLR}, vol. 189, pp. 407--419, PMLR, ISSN: 2640-3498, URL: \url{https://proceedings.mlr.press/v189/gulati23a.html}, Abstract: Machine learning framework recommending personalized makeup looks matching occasion and user facial traits., Keywords: Makeup recommendation, Facial cosmetics, Occasion-based styling, Deep learning, Document Type: Conference Paper, Language: English, Database/Indexing: PMLR / DBLP, Citation Key: \texttt{gulati2023beautifai}.
 
-\bibitem{liu2015deep}
-Z. Liu, P. Luo, X. Wang, and X. Tang, 2015, ``Deep Learning Face Attributes in the Wild,'' \textit{Proc. IEEE Int. Conf. Comput. Vis. (ICCV)}, pp. 3730--3738, IEEE, doi: 10.1109/ICCV.2015.425, URL: \url{https://doi.org/10.1109/ICCV.2015.425}, Abstract: Establishment of CelebA large-scale benchmark dataset and deep cascaded neural networks for facial attribute prediction., Keywords: CelebA, Face attributes, Deep learning, Face localization, Facial representation, Document Type: Conference Paper, Language: English, Database/Indexing: IEEE Xplore / Scopus, Citation Key: \texttt{liu2015deep}.
-
-\bibitem{gonzalez2018digital}
-R. C. Gonzalez and R. E. Woods, 2018, ``Digital Image Processing,'' \textit{Pearson Education Limited}, 4th ed., Pearson Education Limited, ISSN: 978-0133356724, Abstract: Comprehensive textbook covering spatial filtering, image restoration, color processing, segmentation, and feature extraction., Keywords: Digital image processing, Color spaces, Image segmentation, Feature extraction, Document Type: Book, Language: English, Database/Indexing: Google Books, Citation Key: \texttt{gonzalez2018digital}.
+\bibitem{pratama2025sistem}
+R. Pratama et al., 2025, ``Sistem Rekomendasi Produk Kosmetik Menggunakan Metode Content-Based Filtering Berbasis Website,'' \textit{Jurnal Rabit: Jurnal Teknologi dan Sistem Informasi Univ. Abdurrab}, vol. 10, no. 1, pp. 45--56, Universitas Abdurrab, ISSN: 2477-2062, URL: \url{https://jurnal.univrab.ac.id/index.php/rabit/article/view/6371}, Abstract: Web-based cosmetic recommendation system implementation applying Euclidean distance content-based filtering., Keywords: Content-based filtering, Euclidean distance, Cosmetics recommendation, Web system, Document Type: Journal Article, Language: Indonesian, Database/Indexing: SINTA / Garuda, Citation Key: \texttt{pratama2025sistem}.
 
 \bibitem{szeliski2022computer}
 R. Szeliski, 2022, ``Computer Vision: Algorithms and Applications,'' \textit{Springer Nature}, 2nd ed., Springer Cham, doi: 10.1007/978-3-030-34372-9, ISSN: 1868-0941, URL: \url{https://doi.org/10.1007/978-3-030-34372-9}, Abstract: Foundational textbook on fundamental computer vision algorithms, modern deep learning architectures, and applications., Keywords: Computer vision, Image classification, Recognition, Feature representation, Document Type: Book, Language: English, Database/Indexing: SpringerLink, Citation Key: \texttt{szeliski2022computer}.
@@ -557,35 +555,41 @@ I. Goodfellow, Y. Bengio, and A. Courville, 2016, ``Deep Learning,'' \textit{MIT
 \bibitem{lecun2015deep}
 Y. LeCun, Y. Bengio, and G. Hinton, 2015, ``Deep Learning,'' \textit{Nature}, vol. 521, no. 7553, pp. 436--444, Nature Publishing Group, doi: 10.1038/nature14539, ISSN: 0028-0836, URL: \url{https://doi.org/10.1038/nature14539}, Abstract: Seminal review paper explaining foundations, capabilities, and future breakthroughs of deep learning in vision and speech., Keywords: Deep learning, Representation learning, Convolutional networks, Artificial intelligence, Document Type: Journal Article, Language: English, Database/Indexing: Scopus / Web of Science, Citation Key: \texttt{lecun2015deep}.
 
-\bibitem{pan2010survey}
-S. J. Pan and Q. Yang, 2010, ``A Survey on Transfer Learning,'' \textit{IEEE Transactions on Knowledge and Data Engineering}, vol. 22, no. 10, pp. 1345--1359, IEEE, doi: 10.1109/TKDE.2009.191, ISSN: 1041-4347, URL: \url{https://doi.org/10.1109/TKDE.2009.191}, Abstract: Comprehensive taxonomy, categorization, and review of transfer learning algorithms across heterogeneous domains., Keywords: Transfer learning, Inductive transfer, Transductive learning, Domain adaptation, Document Type: Journal Article, Language: English, Database/Indexing: IEEE Xplore / Scopus, Citation Key: \texttt{pan2010survey}.
+\bibitem{sandler2018mobilenetv2}
+M. Sandler, A. Howard, M. Zhu, A. Zhmoginov, and L.-C. Chen, 2018, ``MobileNetV2: Inverted Residuals and Linear Bottlenecks,'' \textit{Proc. IEEE/CVF Conf. Comput. Vis. Pattern Recognit. (CVPR)}, pp. 4510--4520, IEEE, doi: 10.1109/CVPR.2018.00474, ISSN: 2575-7075, URL: \url{https://doi.org/10.1109/CVPR.2018.00474}, Abstract: Novel mobile neural network architecture utilizing inverted residual blocks with linear bottlenecks for efficient vision tasks., Keywords: MobileNetV2, Inverted residuals, Linear bottlenecks, Convolutional neural networks, Mobile vision, Document Type: Conference Paper, Language: English, Database/Indexing: IEEE Xplore / Scopus, Citation Key: \texttt{sandler2018mobilenetv2}.
 
-\bibitem{lugaresi2019mediapipe}
-C. Lugaresi, J. Tang, H. Nash, C. McClanahan, E. Uboweja, M. Hays, et al., 2019, ``MediaPipe: A Framework for Building Perception Pipelines,'' \textit{arXiv preprint arXiv:1906.08172}, arXiv, URL: \url{https://arxiv.org/abs/1906.08172}, Abstract: Open-source modular framework enabling cross-platform streaming perception pipelines including 3D face mesh estimation., Keywords: MediaPipe, Real-time perception, Face mesh, Streaming pipelines, Mobile computer vision, Document Type: Preprint, Language: English, Database/Indexing: arXiv, Citation Key: \texttt{lugaresi2019mediapipe}.
+\bibitem{howard2017mobilenets}
+A. G. Howard, M. Zhu, B. Chen, D. Kalenichenko, W. Wang, T. Weyand, et al., 2017, ``MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications,'' \textit{arXiv preprint arXiv:1704.04861}, arXiv, doi: 10.48550/arXiv.1704.04861, URL: \url{https://arxiv.org/abs/1704.04861}, Abstract: Introduction of depthwise separable convolutions to dramatically decrease parameter count and latency for mobile deep learning., Keywords: MobileNets, Depthwise separable convolution, Efficient CNN, Mobile vision, Document Type: Preprint, Language: English, Database/Indexing: arXiv, Citation Key: \texttt{howard2017mobilenets}.
 
 \bibitem{macqueen1967methods}
 J. MacQueen, 1967, ``Some Methods for Classification and Analysis of Multivariate Observations,'' \textit{Proc. 5th Berkeley Symp. Math. Statist. Prob.}, vol. 1, pp. 281--297, University of California Press, URL: \url{https://projecteuclid.org/euclid.bsmsp/1200512992}, Abstract: Original formulation of the k-means clustering process for iterative partitioning and minimum variance multivariate analysis., Keywords: K-Means clustering, Multivariate analysis, Unsupervised classification, Centroid optimization, Document Type: Conference Paper, Language: English, Database/Indexing: Project Euclid, Citation Key: \texttt{macqueen1967methods}.
 
+\bibitem{pedregosa2011scikit}
+F. Pedregosa, G. Varoquaux, A. Gramfort, V. Michel, B. Thirion, O. Grisel, et al., 2011, ``Scikit-learn: Machine Learning in Python,'' \textit{Journal of Machine Learning Research}, vol. 12, pp. 2825--2830, JMLR.org, ISSN: 1532-4435, URL: \url{https://jmlr.org/papers/v12/pedregosa11a.html}, Abstract: Python module integrating widely accessible, unified, and efficient machine learning algorithms for medium-scale problems., Keywords: Scikit-learn, Python, Machine learning, Data mining, Scientific computing, Document Type: Journal Article, Language: English, Database/Indexing: JMLR / Scopus, Citation Key: \texttt{pedregosa2011scikit}.
+
 \bibitem{ricci2015recommender}
 F. Ricci, L. Rokach, and B. Shapira, 2015, ``Recommender Systems Handbook,'' \textit{Springer}, 2nd ed., Springer New York, doi: 10.1007/978-1-4899-7637-6, ISSN: 978-1-4899-7636-9, URL: \url{https://doi.org/10.1007/978-1-4899-7637-6}, Abstract: Exhaustive reference handbook on content-based filtering, collaborative filtering, hybrid techniques, and evaluation., Keywords: Recommender systems, Hybrid recommendation, Content-based filtering, Collaborative filtering, Document Type: Book, Language: English, Database/Indexing: SpringerLink, Citation Key: \texttt{ricci2015recommender}.
 
-\bibitem{charton2026development}
-Z. Charton, H. Vergnaud, L. Caisey, D. Blumenthal, M. Ma, A. Shi, et al., 2026, ``Development of a Lip Colour Chart Across Four Ethnicities,'' \textit{International Journal of Cosmetic Science}, vol. 48, no. 1, pp. 161--171, John Wiley \& Sons, Inc., doi: 10.1111/ics.70004, ISSN: 0142-5463, URL: \url{https://doi.org/10.1111/ics.70004}, Abstract: Construction of standardized multi-ethnic lip color chart aiding cosmetic product formulation and shade matching., Keywords: Lip colour chart, Multi-ethnic shade matching, Cosmetic science, Spectrophotometry, Document Type: Journal Article, Language: English, Database/Indexing: Scopus / Wiley Online Library, Citation Key: \texttt{charton2026development}.
+\bibitem{aggarwal2016recommender}
+C. C. Aggarwal, 2016, ``Recommender Systems: The Textbook,'' \textit{Springer Nature}, Springer Cham, doi: 10.1007/978-3-319-29659-3, ISSN: 978-3-319-29658-6, URL: \url{https://doi.org/10.1007/978-3-319-29659-3}, Abstract: Foundational textbook covering mathematical algorithms and applications of recommender systems and distance similarity metrics., Keywords: Recommender systems, Collaborative filtering, Content-based models, Similarity metrics, Document Type: Book, Language: English, Database/Indexing: SpringerLink, Citation Key: \texttt{aggarwal2016recommender}.
 
-\bibitem{katariya2025novel}
-R. Katariya and S. Patel, 2025, ``A Novel Strid CNN Model for Cosmetic Product Recommendation based on Skin Type and Tone,'' \textit{SSRG International Journal of Electrical and Electronics Engineering}, vol. 12, no. 5, pp. 1--12, Seventh Sense Research Group, doi: 10.14445/23488379/IJEEE-V12I5P101, ISSN: 2348-8379, URL: \url{https://doi.org/10.14445/23488379/IJEEE-V12I5P101}, Abstract: Application of custom convolutional neural network for classifying skin types and predicting cosmetic products., Keywords: Cosmetic recommendation, Skin tone classification, Convolutional neural networks, Computer vision, Document Type: Journal Article, Language: English, Database/Indexing: SSRG / Google Scholar, Citation Key: \texttt{katariya2025novel}.
+\bibitem{lugaresi2019mediapipe}
+C. Lugaresi, J. Tang, H. Nash, C. McClanahan, E. Uboweja, M. Hays, et al., 2019, ``MediaPipe: A Framework for Building Perception Pipelines,'' \textit{arXiv preprint arXiv:1906.08172}, arXiv, URL: \url{https://arxiv.org/abs/1906.08172}, Abstract: Open-source modular framework enabling cross-platform streaming perception pipelines including 3D face mesh estimation., Keywords: MediaPipe, Real-time perception, Face mesh, Streaming pipelines, Mobile computer vision, Document Type: Preprint, Language: English, Database/Indexing: arXiv, Citation Key: \texttt{lugaresi2019mediapipe}.
 
-\bibitem{pratama2025sistem}
-R. Pratama et al., 2025, ``Sistem Rekomendasi Produk Kosmetik Menggunakan Metode Content-Based Filtering Berbasis Website,'' \textit{Jurnal Rabit: Jurnal Teknologi dan Sistem Informasi Univ. Abdurrab}, vol. 10, no. 1, pp. 45--56, Universitas Abdurrab, ISSN: 2477-2062, URL: \url{https://jurnal.univrab.ac.id/index.php/rabit/article/view/6371}, Abstract: Web-based cosmetic recommendation system implementation applying Euclidean distance content-based filtering., Keywords: Content-based filtering, Euclidean distance, Cosmetics recommendation, Web system, Document Type: Journal Article, Language: Indonesian, Database/Indexing: SINTA / Garuda, Citation Key: \texttt{pratama2025sistem}.
-
-\bibitem{otsu1979threshold}
-N. Otsu, 1979, ``A Threshold Selection Method from Gray-Level Histograms,'' \textit{IEEE Transactions on Systems, Man, and Cybernetics}, vol. 9, no. 1, pp. 62--66, IEEE, doi: 10.1109/TSMC.1979.4310076, ISSN: 0018-9472, URL: \url{https://doi.org/10.1109/TSMC.1979.4310076}, Abstract: Classic non-parametric threshold selection technique maximizing discriminant between-class variance in image histograms., Keywords: Otsu thresholding, Image binarization, Gray-level histogram, Image segmentation, Document Type: Journal Article, Language: English, Database/Indexing: IEEE Xplore / Scopus, Citation Key: \texttt{otsu1979threshold}.
+\bibitem{liu2015deep}
+Z. Liu, P. Luo, X. Wang, and X. Tang, 2015, ``Deep Learning Face Attributes in the Wild,'' \textit{Proc. IEEE Int. Conf. Comput. Vis. (ICCV)}, pp. 3730--3738, IEEE, doi: 10.1109/ICCV.2015.425, URL: \url{https://doi.org/10.1109/ICCV.2015.425}, Abstract: Establishment of CelebA large-scale benchmark dataset and deep cascaded neural networks for facial attribute prediction., Keywords: CelebA, Face attributes, Deep learning, Face localization, Facial representation, Document Type: Conference Paper, Language: English, Database/Indexing: IEEE Xplore / Scopus, Citation Key: \texttt{liu2015deep}.
 
 \bibitem{bradski2000opencv}
 G. Bradski, 2000, ``The OpenCV Library,'' \textit{Dr. Dobb's Journal of Software Tools}, vol. 25, no. 11, pp. 120--125, Miller Freeman Inc., ISSN: 1044-789X, Abstract: Design, capabilities, and computational architecture of OpenCV real-time computer vision library., Keywords: OpenCV, Computer vision library, Real-time image processing, C/C++, Document Type: Journal Article, Language: English, Database/Indexing: Scopus, Citation Key: \texttt{bradski2000opencv}.
 
-\bibitem{howard2017mobilenets}
-A. G. Howard, M. Zhu, B. Chen, D. Kalenichenko, W. Wang, T. Weyand, et al., 2017, ``MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications,'' \textit{arXiv preprint arXiv:1704.04861}, arXiv, doi: 10.48550/arXiv.1704.04861, URL: \url{https://arxiv.org/abs/1704.04861}, Abstract: Introduction of depthwise separable convolutions to dramatically decrease parameter count and latency for mobile deep learning., Keywords: MobileNets, Depthwise separable convolution, Efficient CNN, Mobile vision, Document Type: Preprint, Language: English, Database/Indexing: arXiv, Citation Key: \texttt{howard2017mobilenets}.
+\bibitem{otsu1979threshold}
+N. Otsu, 1979, ``A Threshold Selection Method from Gray-Level Histograms,'' \textit{IEEE Transactions on Systems, Man, and Cybernetics}, vol. 9, no. 1, pp. 62--66, IEEE, doi: 10.1109/TSMC.1979.4310076, ISSN: 0018-9472, URL: \url{https://doi.org/10.1109/TSMC.1979.4310076}, Abstract: Classic non-parametric threshold selection technique maximizing discriminant between-class variance in image histograms., Keywords: Otsu thresholding, Image binarization, Gray-level histogram, Image segmentation, Document Type: Journal Article, Language: English, Database/Indexing: IEEE Xplore / Scopus, Citation Key: \texttt{otsu1979threshold}.
+
+\bibitem{gonzalez2018digital}
+R. C. Gonzalez and R. E. Woods, 2018, ``Digital Image Processing,'' \textit{Pearson Education Limited}, 4th ed., Pearson Education Limited, ISSN: 978-0133356724, Abstract: Comprehensive textbook covering spatial filtering, image restoration, color processing, segmentation, and feature extraction., Keywords: Digital image processing, Color spaces, Image segmentation, Feature extraction, Document Type: Book, Language: English, Database/Indexing: Google Books, Citation Key: \texttt{gonzalez2018digital}.
+
+\bibitem{pan2010survey}
+S. J. Pan and Q. Yang, 2010, ``A Survey on Transfer Learning,'' \textit{IEEE Transactions on Knowledge and Data Engineering}, vol. 22, no. 10, pp. 1345--1359, IEEE, doi: 10.1109/TKDE.2009.191, ISSN: 1041-4347, URL: \url{https://doi.org/10.1109/TKDE.2009.191}, Abstract: Comprehensive taxonomy, categorization, and review of transfer learning algorithms across heterogeneous domains., Keywords: Transfer learning, Inductive transfer, Transductive learning, Domain adaptation, Document Type: Journal Article, Language: English, Database/Indexing: IEEE Xplore / Scopus, Citation Key: \texttt{pan2010survey}.
 
 \bibitem{he2016deep}
 K. He, X. Zhang, S. Ren, and J. Sun, 2016, ``Deep Residual Learning for Image Recognition,'' \textit{Proc. IEEE Conf. Computer Vision and Pattern Recognition (CVPR)}, pp. 770--778, IEEE, doi: 10.1109/CVPR.2016.90, URL: \url{https://doi.org/10.1109/CVPR.2016.90}, Abstract: Residual learning framework reformulating deep layers as learning residual functions with reference to layer inputs (ResNet)., Keywords: Deep residual learning, ResNet, Image classification, Deep convolutional networks, Document Type: Conference Paper, Language: English, Database/Indexing: IEEE Xplore / Scopus, Citation Key: \texttt{he2016deep}.
@@ -593,14 +597,8 @@ K. He, X. Zhang, S. Ren, and J. Sun, 2016, ``Deep Residual Learning for Image Re
 \bibitem{shorten2019survey}
 C. Shorten and T. M. Khoshgoftaar, 2019, ``A Survey on Image Data Augmentation for Deep Learning,'' \textit{Journal of Big Data}, vol. 6, no. 1, p. 60, SpringerOpen, doi: 10.1186/s40537-019-0197-0, ISSN: 2196-1115, URL: \url{https://doi.org/10.1186/s40537-019-0197-0}, Abstract: Comprehensive review of image data augmentation methods covering geometric transformations, color spaces, GANs, and meta-learning., Keywords: Data augmentation, Deep learning, Image classification, Regularization, Overfitting, Document Type: Journal Article, Language: English, Database/Indexing: SpringerLink / Scopus, Citation Key: \texttt{shorten2019survey}.
 
-\bibitem{pedregosa2011scikit}
-F. Pedregosa, G. Varoquaux, A. Gramfort, V. Michel, B. Thirion, O. Grisel, et al., 2011, ``Scikit-learn: Machine Learning in Python,'' \textit{Journal of Machine Learning Research}, vol. 12, pp. 2825--2830, JMLR.org, ISSN: 1532-4435, URL: \url{https://jmlr.org/papers/v12/pedregosa11a.html}, Abstract: Python module integrating widely accessible, unified, and efficient machine learning algorithms for medium-scale problems., Keywords: Scikit-learn, Python, Machine learning, Data mining, Scientific computing, Document Type: Journal Article, Language: English, Database/Indexing: JMLR / Scopus, Citation Key: \texttt{pedregosa2011scikit}.
-
 \bibitem{powers2011evaluation}
 D. M. W. Powers, 2011, ``Evaluation: From Precision, Recall and F-Measure to ROC, Informedness, Markedness and Correlation,'' \textit{Journal of Machine Learning Technologies}, vol. 2, no. 1, pp. 37--63, Bioinfo Publications, ISSN: 2229-3981, Abstract: Rigorous mathematical examination and unified analysis of machine learning evaluation metrics and trade-offs., Keywords: Evaluation metrics, Precision, Recall, F-measure, ROC, Informedness, Document Type: Journal Article, Language: English, Database/Indexing: Google Scholar, Citation Key: \texttt{powers2011evaluation}.
-
-\bibitem{aggarwal2016recommender}
-C. C. Aggarwal, 2016, ``Recommender Systems: The Textbook,'' \textit{Springer Nature}, Springer Cham, doi: 10.1007/978-3-319-29659-3, ISSN: 978-3-319-29658-6, URL: \url{https://doi.org/10.1007/978-3-319-29659-3}, Abstract: Foundational textbook covering mathematical algorithms and applications of recommender systems and distance similarity metrics., Keywords: Recommender systems, Collaborative filtering, Content-based models, Similarity metrics, Document Type: Book, Language: English, Database/Indexing: SpringerLink, Citation Key: \texttt{aggarwal2016recommender}.
 \end{thebibliography}
 \endgroup
 
