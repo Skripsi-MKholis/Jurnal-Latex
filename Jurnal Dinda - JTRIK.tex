@@ -6,10 +6,11 @@
 \usepackage{iftex}
 \ifxetex
   \usepackage{fontspec}
-  \setmainfont{Tw Cen MT}[
-    BoldFont={TCB_____.TTF},
-    ItalicFont={TCMI____.TTF},
-    BoldItalicFont={TCBI____.TTF}
+  \setmainfont{Twentieth-Century.ttf}[
+    Path=File/Font/,
+    BoldFont=Twentieth-Century.ttf,
+    ItalicFont=Twentieth-Century.ttf,
+    BoldItalicFont=Twentieth-Century.ttf
   ]
 \else
   \usepackage[utf8]{inputenc}
@@ -34,6 +35,8 @@
 \usepackage{microtype}
 \usepackage{url}
 \usepackage{cite}
+\renewcommand\citepunct{], [}
+\renewcommand\citedash{]--[}
 \usepackage{float}
 \usepackage{placeins}
 

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.7.26)  9 SEP 2026 14:57
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.7.26)  9 SEP 2026 15:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -65,22 +65,26 @@ Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
 (C:\Program Files\MiKTeX\tex/latex/fontspec\fontspec.cfg)))
 
 Package fontspec Info: 
-(fontspec)             Font family 'TwCenMT(0)' created for font 'Tw Cen MT'
-(fontspec)             with options
-(fontspec)             [Ligatures=TeX,BoldFont={TCB_____.TTF},ItalicFont={TCMI_
-___.TTF},BoldItalicFont={TCBI____.TTF}].
+(fontspec)             Font family 'Twentieth-Century.ttf(0)' created for font
+(fontspec)             'Twentieth-Century.ttf' with options
+(fontspec)             [Ligatures=TeX,Path=File/Font/,BoldFont=Twentieth-Centur
+y.ttf,ItalicFont=Twentieth-Century.ttf,BoldItalicFont=Twentieth-Century.ttf].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
 (fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"Tw Cen
-(fontspec)             MT/OT:language=dflt;mapping=tex-text;"
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"[File/Font/Twentieth-Century.ttf]/OT:script=latn;lan
+guage=dflt;mapping=tex-text;"
 (fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->"[TCB_____.TTF]/OT:language=dflt;mapping=tex-text;"
+(fontspec)             <->"[File/Font/Twentieth-Century.ttf]/OT:script=latn;lan
+guage=dflt;mapping=tex-text;"
 (fontspec)             - 'italic' (m/it) with NFSS spec.:
-(fontspec)             <->"[TCMI____.TTF]/OT:language=dflt;mapping=tex-text;"
+(fontspec)             <->"[File/Font/Twentieth-Century.ttf]/OT:script=latn;lan
+guage=dflt;mapping=tex-text;"
 (fontspec)             - 'bold italic' (b/it) with NFSS spec.:
-(fontspec)             <->"[TCBI____.TTF]/OT:language=dflt;mapping=tex-text;"
+(fontspec)             <->"[File/Font/Twentieth-Century.ttf]/OT:script=latn;lan
+guage=dflt;mapping=tex-text;"
 
 
 (C:\Users\acern\AppData\Roaming\MiKTeX\tex/latex/geometry\geometry.sty
@@ -500,26 +504,26 @@ Package: placeins 2005/04/18  v 2.2
 (Jurnal Kholis - JTRIK.aux)
 \openout1 = `"Jurnal Kholis - JTRIK.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
 
 Package fontspec Info: 
 (fontspec)             Adjusting the maths setup (use [no-math] to avoid
@@ -527,60 +531,64 @@ Package fontspec Info:
 
 \symlegacymaths=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 126.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 126.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 126.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 126.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 126.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 126.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 126.
-LaTeX Font Info:    Redeclaring math accent \check on input line 126.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 126.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 126.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 126.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 126.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 126.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 126.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 126.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 126.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 126.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 126.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 126.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 126.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 126.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 126.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 126.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 126.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 129.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 129.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 129.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 129.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 129.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 129.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 129.
+LaTeX Font Info:    Redeclaring math accent \check on input line 129.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 129.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 129.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 129.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 129.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 129.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 129.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 129.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 129.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 129.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 129.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 129.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 129.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 129.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 129.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 129.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 129.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 126.
+(Font)              `operators' in the math version `normal' on input line 129.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/TwCenMT(0)/m/n on input line 126.
+(Font)                  OT1/cmr/m/n --> TU/Twentieth-Century.ttf(0)/m/n on inpu
+t line 129.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 126.
+(Font)              `operators' in the math version `bold' on input line 129.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/TwCenMT(0)/m/n on input line 126.
+(Font)                  OT1/cmr/bx/n --> TU/Twentieth-Century.ttf(0)/m/n on inp
+ut line 129.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/TwCenMT(0)/m/n --> TU/TwCenMT(0)/m/n on input line 1
-26.
+(Font)                  TU/Twentieth-Century.ttf(0)/m/n --> TU/Twentieth-Centur
+y.ttf(0)/m/n on input line 129.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/TwCenMT(0)/m/it on input line 126.
+(Font)                  OT1/cmr/m/it --> TU/Twentieth-Century.ttf(0)/m/it on in
+put line 129.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/TwCenMT(0)/b/n on input line 126.
+(Font)                  OT1/cmr/bx/n --> TU/Twentieth-Century.ttf(0)/b/n on inp
+ut line 129.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 126.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 129.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 126.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 129.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/TwCenMT(0)/m/n --> TU/TwCenMT(0)/b/n on input line 1
-26.
+(Font)                  TU/Twentieth-Century.ttf(0)/m/n --> TU/Twentieth-Centur
+y.ttf(0)/b/n on input line 129.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/TwCenMT(0)/b/it on input line 126.
-
+(Font)                  OT1/cmr/bx/it --> TU/Twentieth-Century.ttf(0)/b/it on i
+nput line 129.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 126.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 129.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 126.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 129.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -620,27 +628,114 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 126.
+Package hyperref Info: Link coloring OFF on input line 129.
 (Jurnal Kholis - JTRIK.out) (Jurnal Kholis - JTRIK.out)
 \@outlinefile=\write3
 \openout3 = `"Jurnal Kholis - JTRIK.out"'.
 
-LaTeX Info: Redefining \microtypecontext on input line 126.
-Package microtype Info: Applying patch `item' on input line 126.
-Package microtype Info: Applying patch `toc' on input line 126.
-Package microtype Info: Applying patch `eqnum' on input line 126.
-Package microtype Info: Applying patch `footnote' on input line 126.
-Package microtype Info: Applying patch `verbatim' on input line 126.
-LaTeX Info: Redefining \microtypesetup on input line 126.
+LaTeX Info: Redefining \microtypecontext on input line 129.
+Package microtype Info: Applying patch `item' on input line 129.
+Package microtype Info: Applying patch `toc' on input line 129.
+Package microtype Info: Applying patch `eqnum' on input line 129.
+Package microtype Info: Applying patch `footnote' on input line 129.
+Package microtype Info: Applying patch `verbatim' on input line 129.
+LaTeX Info: Redefining \microtypesetup on input line 129.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of spacing.
 Package microtype Info: No adjustment of kerning.
 Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `TwCenMT' (encoding: TU).
+(microtype)             `Twentieth-Century.ttf' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\k A'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/425(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\u A'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/425(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\k a'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/425(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\u a'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/425(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'C'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/425(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v C'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/425(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'c'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/425(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v c'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/425(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v D'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/425(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v d'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/425(protrusion)'.
+
+Package microtype Info: Character `\dj ' is missing
+(microtype)             in font `\TU/Twentieth-Century.ttf(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\k E'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/425(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v E'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/425(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\k e'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/425(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v e'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/425(protrusion)'.
 
 
 Package microtype Warning: Unknown slot number of character
@@ -660,7 +755,196 @@ Package microtype Warning: Unknown slot number of character
 (microtype)                in font encoding `TU' in inheritance list
 (microtype)                `microtype.cfg/425(protrusion)'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 134
+Package microtype Info: Character `\i ' is missing
+(microtype)             in font `\TU/Twentieth-Century.ttf(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\L ' is missing
+(microtype)             in font `\TU/Twentieth-Century.ttf(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'L'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/425(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v L'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/425(protrusion)'.
+
+Package microtype Info: Character `\l ' is missing
+(microtype)             in font `\TU/Twentieth-Century.ttf(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'l'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/425(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v l'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/425(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'N'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/425(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v N'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/425(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'n'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/425(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v n'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/425(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\H O'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/425(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\H o'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/425(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'R'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/425(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v R'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/425(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'r'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/425(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v r'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/425(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'S'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/425(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\c S'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/425(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'s'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/425(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\c s'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/425(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\c T'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/425(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v T'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/425(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\c t'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/425(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v t'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/425(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\H U'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/425(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\r U'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/425(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\H u'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/425(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\r u'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/425(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'Z'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/425(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\.Z'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/425(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'z'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/425(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\.z'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/425(protrusion)'.
+
+LaTeX Font Info:    Trying to load font information for U+msa on input line 137
 .
 (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -668,7 +952,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (C:\Users\acern\AppData\Roaming\MiKTeX\tex/latex/microtype\mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 134
+LaTeX Font Info:    Trying to load font information for U+msb on input line 137
 .
 
 (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd
@@ -681,31 +965,31 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
-LaTeX Font Info:    Calculating math sizes for size <8.5> on input line 139.
+LaTeX Font Info:    Calculating math sizes for size <8.5> on input line 142.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <8.5> not available
-(Font)              size <8> substituted on input line 139.
+(Font)              size <8> substituted on input line 142.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <4.25> not available
-(Font)              size <5> substituted on input line 139.
+(Font)              size <5> substituted on input line 142.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <8.5> not available
-(Font)              size <8> substituted on input line 139.
+(Font)              size <8> substituted on input line 142.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <4.25> not available
-(Font)              size <5> substituted on input line 139.
+(Font)              size <5> substituted on input line 142.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <8.5> not available
-(Font)              size <8> substituted on input line 139.
+(Font)              size <8> substituted on input line 142.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <4.25> not available
-(Font)              size <5> substituted on input line 139.
+(Font)              size <5> substituted on input line 142.
 
 File: Gambar/image3.png Graphic file (type bmp)
 <Gambar/image3.png>
@@ -726,10 +1010,22 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [3]
-Overfull \hbox (0.28665pt too wide) in paragraph at lines 281--282
-[]\TU/TwCenMT(0)/m/n/10 Untuk proyeksi multi-langkah ke depan secara rekursif h
-ingga horizon 7 hari aktif, sistem menerapkan tiga mekanisme
+
+Overfull \hbox (3.20705pt too wide) in paragraph at lines 224--225
+[]\TU/Twentieth-Century.ttf(0)/b/n/10 Transformasi Target Log-Return: Untuk men
+gatasi ketidakstasioneran data omzet nominal yang memiliki rentang
+ []
+
+
+Overfull \hbox (4.6038pt too wide) in paragraph at lines 236--237
+[]\TU/Twentieth-Century.ttf(0)/b/n/10 Normalisasi dan Pembentukan Sequence: Fit
+ur numerik dinormalisasi menggunakan Min-Max Scaling ke rentang
+ []
+
+[3]
+Overfull \hbox (0.28665pt too wide) in paragraph at lines 284--285
+[]\TU/Twentieth-Century.ttf(0)/b/n/10 Untuk proyeksi multi-langkah ke depan sec
+ara rekursif hingga horizon 7 hari aktif, sistem menerapkan tiga mekanisme
  []
 
 [4]
@@ -739,35 +1035,22 @@ File: Gambar/prediksi_vs_aktual.png Graphic file (type bmp)
 File: Gambar/boxplot_multiseed.png Graphic file (type bmp)
 <Gambar/boxplot_multiseed.png>
 
-Underfull \hbox (badness 1348) in paragraph at lines 374--374
-\TU/TwCenMT(0)/m/n/8.5 depan (\TU/TwCenMT(0)/m/it/8.5 one-step-ahead\TU/TwCenMT
-(0)/m/n/8.5 ) terhadap
+Underfull \hbox (badness 10000) in paragraph at lines 377--377
+[]|\TU/Twentieth-Century.ttf(0)/m/it/8.5 Sebaran MAE sangat lebar (Rp495.527–
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 374--374
-[]|\TU/TwCenMT(0)/m/n/8.5 Sebaran MAE sangat lebar (Rp495.527–
+Underfull \hbox (badness 10000) in paragraph at lines 377--377
+\TU/Twentieth-Century.ttf(0)/m/it/8.5 Rp1.048.967) dengan deviasi Rp145.024; 0
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 374--374
-\TU/TwCenMT(0)/m/n/8.5 Rp1.048.967) dengan deviasi Rp145.024; 0
- []
-
-
-Underfull \hbox (badness 10000) in alignment at lines 374--374
+Underfull \hbox (badness 10000) in alignment at lines 377--377
 [][][][] 
  []
 
 File: Gambar/smart_analytics.png Graphic file (type bmp)
 <Gambar/smart_analytics.png>
-
-Overfull \hbox (0.41522pt too wide) in paragraph at lines 437--438
-\TU/TwCenMT(0)/m/n/10 transaksi yang cepat (\TU/TwCenMT(0)/m/it/10 near-instant
-\TU/TwCenMT(0)/m/n/10 ) di sisi kasir, sekaligus menjamin konsistensi data tanp
-a kehilangan riwayat transaksi
- []
-
 [6] [7] [8] [9] [10] (Jurnal Kholis - JTRIK.aux)
  ***********
 LaTeX2e <2025-11-01>
@@ -783,11 +1066,11 @@ Package rerunfilecheck Info: File `"Jurnal Kholis - JTRIK".out' has not changed
 (rerunfilecheck)             Checksum: <no file>.
  ) 
 Here is how much of TeX's memory you used:
- 17177 strings out of 402987
- 320394 string characters out of 5452871
- 817260 words of memory out of 5000000
- 45679 multiletter control sequences out of 15000+600000
- 635107 words of font info for 108 fonts, out of 8000000 for 9000
+ 17142 strings out of 402987
+ 320639 string characters out of 5452871
+ 817676 words of memory out of 5000000
+ 45666 multiletter control sequences out of 15000+600000
+ 634963 words of font info for 90 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  73i,14n,93p,1911b,540s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
