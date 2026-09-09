@@ -56,13 +56,13 @@
 
 % Paragraph settings: Justified, single space, compact spacing for <= 10 pages
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{4pt}
+\setlength{\parskip}{3pt}
 \linespread{1.0}
 
 % Float Spacing Adjustments
-\setlength{\floatsep}{8pt plus 2pt minus 2pt}
-\setlength{\textfloatsep}{10pt plus 2pt minus 2pt}
-\setlength{\intextsep}{8pt plus 2pt minus 2pt}
+\setlength{\floatsep}{6pt plus 2pt minus 2pt}
+\setlength{\textfloatsep}{8pt plus 2pt minus 2pt}
+\setlength{\intextsep}{6pt plus 2pt minus 2pt}
 
 % Hyperlink configuration (Non-colored citations & links per JTRIK / Mendeley standard)
 \hypersetup{
@@ -249,7 +249,24 @@ Model LSTM dirancang untuk mempelajari keterkaitan temporal pada deret waktu \ci
 \end{align}
 di mana $\mathbf{f}_t, \mathbf{i}_t, \mathbf{o}_t$ masing-masing menyatakan vektor gerbang lupa (\textit{forget gate}), gerbang masukan (\textit{input gate}), dan gerbang keluaran (\textit{output gate}); $\mathbf{C}_t$ adalah \textit{cell state}; $\mathbf{h}_t$ adalah \textit{hidden state}; $\sigma(\cdot)$ adalah fungsi aktivasi sigmoid; dan $\odot$ melambangkan perkalian elemen per elemen (\textit{Hadamard product}).
 
-Mengingat ukuran dataset yang terbatas (212 sampel latih), arsitektur model dibangun secara minimalis (\textit{low-capacity}) untuk mencegah \textit{overfitting}, yang terdiri atas: satu lapisan LSTM dengan 24 \textit{hidden units}, lapisan \textit{Dropout} (laju 0,1), lapisan \textit{Dense} dengan 16 neuron (aktivasi ReLU), serta lapisan keluaran \textit{Dense} satu neuron linier yang menghasilkan estimasi \textit{log-return} $\hat{r}_t$. Total parameter terlatih adalah 3.585 parameter. Parameter hiper pelatihan disajikan pada Tabel \ref{tab:param_pelatihan}.
+Potongan kode dan prosedur konstruksi arsitektur model LSTM Hybrid dirangkum pada Algoritma \ref{alg:lstm_model}, sedangkan rincian parameter hiper pelatihan disajikan pada Tabel \ref{tab:param_pelatihan}.
+
+\begin{algorithm}[htbp]
+\caption{Konstruksi Model LSTM Hybrid Residual Berbasis TensorFlow/Keras}
+\label{alg:lstm_model}
+\fontsize{8.5pt}{10.5pt}\selectfont
+\begin{algorithmic}[1]
+\Require Sekuens masukan $\mathbf{X}_t \in \mathbb{R}^{7 \times 8}$ (horizon $look\_back = 7$, $n\_features = 8$).
+\Ensure Estimasi nilai \textit{log-return} omzet penjualan $\hat{r}_t \in \mathbb{R}$.
+\State $\text{model} \gets \text{Sequential}()$
+\State $\text{model}.\text{add}(\text{LSTM}(\text{units}=24, \text{input\_shape}=(7, 8), \text{return\_sequences}=\text{False}))$
+\State $\text{model}.\text{add}(\text{Dropout}(\text{rate}=0.1))$
+\State $\text{model}.\text{add}(\text{Dense}(\text{units}=16, \text{activation}=\text{'relu'}))$
+\State $\text{model}.\text{add}(\text{Dense}(\text{units}=1, \text{activation}=\text{'linear'}))$
+\State $\text{model}.\text{compile}(\text{optimizer}=\text{Adam}(\text{lr}=5 \times 10^{-4}), \text{loss}=\text{'mse'}, \text{metrics}=[\text{'mae'}])$
+\State \Return $\text{model}$
+\end{algorithmic}
+\end{algorithm}
 
 \begin{table}[htbp]
   \centering
