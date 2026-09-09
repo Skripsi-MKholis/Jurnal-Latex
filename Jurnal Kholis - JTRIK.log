@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.7.26)  9 SEP 2026 15:33
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.7.26)  9 SEP 2026 16:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1003,8 +1003,8 @@ Overfull \hbox (2.2446pt too wide) has occurred while \output is active
 [1
 
 ]
-File: Gambar/arsitektur_sistem.png Graphic file (type bmp)
-<Gambar/arsitektur_sistem.png>
+File: Gambar/arsitektur_sistem_bw.png Graphic file (type bmp)
+<Gambar/arsitektur_sistem_bw.png>
  [2]
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: TU).
@@ -1066,10 +1066,10 @@ Package rerunfilecheck Info: File `"Jurnal Kholis - JTRIK".out' has not changed
 (rerunfilecheck)             Checksum: <no file>.
  ) 
 Here is how much of TeX's memory you used:
- 17142 strings out of 402987
- 320639 string characters out of 5452871
- 817676 words of memory out of 5000000
- 45666 multiletter control sequences out of 15000+600000
+ 17143 strings out of 402987
+ 320689 string characters out of 5452871
+ 830676 words of memory out of 5000000
+ 45667 multiletter control sequences out of 15000+600000
  634963 words of font info for 90 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  73i,14n,93p,1911b,540s stack positions out of 10000i,1000n,20000p,200000b,200000s
