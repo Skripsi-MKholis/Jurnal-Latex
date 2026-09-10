@@ -42,6 +42,8 @@
 \usepackage{graphicx}
 \graphicspath{{Gambar/}}
 \usepackage{amsmath,amssymb}
+\usepackage{xcolor}
+\definecolor{headerblue}{RGB}{0, 80, 160}
 \usepackage{fancyhdr}
 \usepackage{titlesec}
 \usepackage{booktabs}
@@ -71,7 +73,7 @@
   bottom=2.5cm,
   left=2.5cm,
   right=2.5cm,
-  headheight=45pt,
+  headheight=48pt,
   headsep=12pt,
   footskip=22pt
 }
@@ -118,7 +120,12 @@
     \end{minipage}%
   }
   \fancyfoot[R]{\fontsize{9pt}{11pt}\selectfont\thepage}
-  \renewcommand{\headrulewidth}{0.5pt}
+  \renewcommand{\headrulewidth}{0.8pt}
+  \renewcommand{\headrule}{%
+    \vspace{12pt}%
+    {\color{headerblue}\hrule height \headrulewidth width \headwidth}%
+    \vspace{-\headrulewidth}%
+  }
   \renewcommand{\footrulewidth}{0pt}
 }
 
@@ -182,9 +189,7 @@ This is an open access article under the \href{https://creativecommons.org/licen
   \IfFileExists{Gambar/template_eprotik_image1.png}{\includegraphics[height=0.45cm]{template_eprotik_image1.png}}{}%
 }\par}
 
-\vspace{4pt}
-\noindent\rule{\textwidth}{0.4pt}
-\vspace{2pt}
+\vspace{6pt}
 
 % --- Abstrak (13pt Heading, 9.5pt Regular Content) ---
 {\fontsize{13pt}{15pt}\bfseries Abstrak\par}
@@ -195,15 +200,12 @@ Usaha Mikro, Kecil, dan Menengah (UMKM) sering kali menghadapi kendala ketergant
 
 \vspace{4pt}
 {\fontsize{9.5pt}{12pt}\selectfont\textbf{Kata Kunci:} Point of Sale, Prediksi Penjualan Harian, Long Short-Term Memory, Offline-First, Isar DB, UMKM.\par}
-
-\vspace{3pt}
-\noindent\rule{\textwidth}{0.4pt}
-\vspace{4pt}
+\vspace{6pt}
 
 % =========================================================================
 % Section 1: Introduction
 % =========================================================================
-\section{PENDAHULUAN}
+\section{Pendahuluan}
 
 Sektor Usaha Mikro, Kecil, dan Menengah (UMKM) memegang peranan yang sangat penting dalam menggerakkan perekonomian nasional di Indonesia. Meskipun demikian, sebagian besar pelaku UMKM masih mengelola operasional harian secara manual atau menggunakan sistem pencatatan yang belum terintegrasi secara optimal \cite{sipayung2020}. Dalam operasional kasir (\textit{Point of Sale}/POS), banyak pelaku usaha menghadapi kendala ketergantungan konektivitas internet \cite{siddik2020}. Aplikasi kasir berbasis \textit{cloud} murni sering kali tidak dapat beroperasi ketika koneksi internet terputus, sehingga menghambat proses transaksi dan memicu antrean pelanggan. Oleh karena itu, diperlukan arsitektur sistem POS yang bersifat \textit{offline-first}, di mana transaksi kasir dapat tetap dieksekusi secara lokal dan data disinkronkan secara otomatis ketika koneksi internet kembali pulih \cite{flutter2026}.
 
@@ -218,7 +220,7 @@ Berdasarkan latar belakang tersebut, penelitian ini merancang dan membangun sist
 % =========================================================================
 % Section 2: Methods
 % =========================================================================
-\section{METODE PENELITIAN}
+\section{Metode Penelitian}
 
 \subsection{Alur Penelitian}
 Penelitian ini dilaksanakan sebagai penelitian pengembangan (\textit{Research and Development}) dengan pendekatan kuantitatif. Alur penelitian terbagi ke dalam dua fase terintegrasi: fase pengembangan sistem \textit{Point of Sale} dan fase pengembangan model prediksi penjualan deret waktu menggunakan LSTM, sebagaimana diilustrasikan pada Gambar \ref{fig:alur_penelitian}.
@@ -339,7 +341,7 @@ di mana $Y_t$ adalah omzet penjualan aktual, $\hat{Y}_t$ adalah omzet prediksi, 
 % =========================================================================
 % Section 3: Results and Discussion
 % =========================================================================
-\section{HASIL DAN PEMBAHASAN}
+\section{Hasil dan Pembahasan}
 
 \subsection{Evaluasi Model Prediksi LSTM terhadap Ambang Kelayakan}
 Pengujian model pada data uji (46 sampel aktif) dievaluasi dalam dua skenario pengujian yang dirancang secara ketat. Skenario pertama menguji akurasi model LSTM Hybrid pada skema satu langkah ke depan (\textit{one-step-ahead}). Hasil perbandingan antara nilai aktual dan prediksi model disajikan pada Tabel \ref{tab:skenario1}.
@@ -517,7 +519,7 @@ Meskipun demikian, penelitian ini memberikan kontribusi metodologis yang sangat 
 % =========================================================================
 % Section 4: Conclusion
 % =========================================================================
-\section{KESIMPULAN DAN SARAN}
+\section{Kesimpulan dan Saran}
 
 \subsection{Kesimpulan}
 Berdasarkan perancangan, implementasi, dan pengujian sistem yang telah dilaksanakan, sistem aplikasi \textit{Point of Sale} berbasis \textit{mobile} dengan arsitektur \textit{offline-first} telah berhasil dibangun menggunakan Flutter, Isar DB, Supabase PostgreSQL, dan layanan inferensi Flask pada Hugging Face. Pengujian fungsionalitas \textit{black box} terhadap 12 kasus penggunaan, pengujian mekanisme sinkronisasi data dua arah, serta penelusuran logika kode \textit{white box} seluruhnya berhasil dengan tingkat kesuksesan 100\%, membuktikan sistem sangat andal untuk menjamin kelancaran operasional kasir UMKM tanpa kendala latensi maupun ketergantungan koneksi internet secara terus-menerus. Pada aspek pemodelan prediktif, evaluasi model peramalan penjualan LSTM Hybrid pada dataset 313 hari aktif mencatat rata-rata nilai MAE sebesar Rp667.718,00, RMSE Rp897.563,00, dan sMAPE sebesar 38,06\%, yang melampaui ambang batas kelayakan praktis operasional yang ditetapkan ($\text{sMAPE} < 20\%$). Selain itu, pengujian stabilitas \textit{multi-seed} memperlihatkan sebaran nilai MAE yang lebar dari Rp495.527,00 hingga Rp1.048.967,00 (simpangan baku Rp145.024,00) serta sMAPE antara 29,16\% hingga 44,63\%, mengonfirmasi bahwa model LSTM sangat peka terhadap inisialisasi bobot acak awal dan belum mencapai stabilitas konvergen pada dataset transaksi UMKM berukuran kecil.
@@ -528,7 +530,7 @@ Untuk pengembangan dan penyempurnaan sistem pada penelitian selanjutnya, disaran
 % =========================================================================
 % References (IEEE Style)
 % =========================================================================
-\section*{DAFTAR PUSTAKA}
+\section*{Daftar Pustaka}
 
 \begingroup
 \renewcommand{\section}[2]{}%
