@@ -9,16 +9,27 @@
   % Menggunakan font Twentieth Century yang terinstall di sistem Windows
   \IfFontExistsTF{Twentieth Century}{
     \setmainfont{Twentieth Century}[
+      AutoFakeBold=2.2,
+      AutoFakeSlant=0.2,
       BoldFont={Twentieth Century},
       ItalicFont={Twentieth Century},
       BoldItalicFont={Twentieth Century}
     ]
+    \newfontfamily\titlefont{Twentieth Century}[
+      AutoFakeBold=3.2
+    ]
   }{
     \setmainfont{Twentieth-Century.ttf}[
       Path=File/Font/,
+      AutoFakeBold=2.2,
+      AutoFakeSlant=0.2,
       BoldFont=Twentieth-Century.ttf,
       ItalicFont=Twentieth-Century.ttf,
       BoldItalicFont=Twentieth-Century.ttf
+    ]
+    \newfontfamily\titlefont{Twentieth-Century.ttf}[
+      Path=File/Font/,
+      AutoFakeBold=3.2
     ]
   }
 \else
@@ -138,8 +149,8 @@
 \begin{document}
 \thispagestyle{firstpage}
 
-% --- Article Title (19pt Bold) ---
-{\fontsize{18pt}{22pt}\bfseries\raggedright Rancang Bangun Aplikasi Point of Sale Offline-First dengan Fitur Prediksi Penjualan Harian Menggunakan Long Short-Term Memory (LSTM)\par}
+% --- Article Title (18pt Bold) ---
+{\titlefont\fontsize{18pt}{22pt}\bfseries\raggedright Rancang Bangun Aplikasi Point of Sale Offline-First dengan Fitur Prediksi Penjualan Harian Menggunakan Long Short-Term Memory (LSTM)\par}
 \vspace{6pt}
 
 % --- Authors (10pt Regular) ---
@@ -178,7 +189,7 @@ This is an open access article under the \href{https://creativecommons.org/licen
 \vspace{3pt}
 
 {\fontsize{9.5pt}{12pt}\selectfont
-Usaha Mikro, Kecil, dan Menengah (UMKM) sering kali menghadapi kendala ketergantungan konektivitas internet pada sistem kasir digital serta ketidakpastian volume penjualan harian dalam pengelolaan persediaan bahan baku. Penelitian ini bertujuan untuk merancang dan membangun aplikasi \textit{Point of Sale} (POS) berbasis \textit{mobile} dengan arsitektur \textit{offline-first} yang dilengkapi fitur peramalan penjualan harian menggunakan metode \textit{Long Short-Term Memory} (LSTM), dengan studi kasus kantin EatsTEDI Universitas Gadjah Mada. Sistem klien dikembangkan menggunakan \textit{framework} Flutter yang terintegrasi dengan basis data lokal Isar DB dan basis data \textit{cloud} Supabase PostgreSQL melalui sinkronisasi dua arah, sedangkan modul prediksi diimplementasikan menggunakan Python (TensorFlow dan Flask) sebagai layanan REST API terpisah pada Hugging Face Spaces. Pemodelan deret waktu dilakukan pada data transaksi riil kantin dengan target transformasi \textit{log-return} dan dievaluasi terhadap ambang batas kelayakan praktis. Hasil evaluasi peramalan satu langkah ke depan menunjukkan bahwa model LSTM Hybrid belum mampu memenuhi ambang batas kelayakan operasional praktis. Pengujian kestabilan melalui sepuluh inisialisasi bobot acak (\textit{multi-seed}) memperlihatkan rentang galat yang lebar, menandakan tingginya sensitivitas model dan keterbatasan volume data transaksi historis dalam mempelajari pola deret waktu. Meskipun demikian, pengujian fungsionalitas \textit{black box} terhadap seluruh kasus penggunaan utama, verifikasi mekanisme sinkronisasi luring-ke-daring, serta penelusuran logika \textit{white box} pada layanan API berhasil diselesaikan dengan tingkat kesuksesan penuh, membuktikan keandalan sistem POS \textit{offline-first} untuk menunjang kelancaran transaksi harian UMKM.\par}
+Usaha Mikro, Kecil, dan Menengah (UMKM) sering kali menghadapi kendala ketergantungan konektivitas internet pada sistem kasir digital serta ketidakpastian volume penjualan harian dalam perencanaan stok. Penelitian ini merancang dan membangun aplikasi \textit{Point of Sale} (POS) berbasis \textit{mobile} berarsitektur \textit{offline-first} yang mengintegrasikan fitur peramalan penjualan harian menggunakan metode \textit{Long Short-Term Memory} (LSTM), dengan studi kasus kantin EatsTEDI Sekolah Vokasi UGM. Sistem klien dikembangkan menggunakan Flutter dan basis data lokal Isar DB yang disinkronisasikan secara dua arah dengan \textit{cloud} Supabase PostgreSQL, sedangkan modul peramalan dijalankan melalui layanan REST API (Flask/TensorFlow). Pemodelan deret waktu dilakukan pada 313 data hari aktif transaksi riil menggunakan target transformasi \textit{log-return} dan dievaluasi terhadap ambang batas kelayakan operasional ($\text{sMAPE} < 20\%$). Hasil evaluasi peramalan satu langkah ke depan (\textit{one-step-ahead}) mencatat nilai rata-rata MAE sebesar Rp667.718,00, RMSE Rp897.563,00, dan sMAPE 38,06\%, yang mengindikasikan bahwa model belum memenuhi ambang batas kelayakan praktis akibat keterbatasan ukuran data (212 sekuens latih) dan tingginya variasi ritme transaksi harian. Pengujian stabilitas melalui 10 inisialisasi bobot acak (\textit{multi-seed}) menghasilkan sebaran MAE antara Rp495.527,00 hingga Rp1.048.967,00 (simpangan baku Rp145.024,00) serta rentang sMAPE 29,16\%--44,63\% (0 dari 10 \textit{seed} memenuhi ambang batas kelayakan). Kendati demikian, pengujian fungsionalitas \textit{black box} pada 12 kasus penggunaan, verifikasi sinkronisasi luring-ke-daring, serta penelusuran logika \textit{white box} pada 7 jalur kritis berhasil mencapai tingkat kesuksesan 100\% PASS, membuktikan keandalan sistem POS \textit{offline-first} dalam menjamin kelancaran transaksi kasir UMKM tanpa ketergantungan internet berkelanjutan.\par}
 
 \vspace{4pt}
 {\fontsize{9.5pt}{12pt}\selectfont\textbf{Kata Kunci:} Point of Sale, Prediksi Penjualan Harian, Long Short-Term Memory, Offline-First, Isar DB, UMKM.\par}
