@@ -6,12 +6,21 @@
 \usepackage{iftex}
 \ifxetex
   \usepackage{fontspec}
-  \setmainfont{Twentieth-Century.ttf}[
-    Path=File/Font/,
-    BoldFont=Twentieth-Century.ttf,
-    ItalicFont=Twentieth-Century.ttf,
-    BoldItalicFont=Twentieth-Century.ttf
-  ]
+  % Menggunakan font Twentieth Century yang terinstall di sistem Windows
+  \IfFontExistsTF{Twentieth Century}{
+    \setmainfont{Twentieth Century}[
+      BoldFont={Twentieth Century},
+      ItalicFont={Twentieth Century},
+      BoldItalicFont={Twentieth Century}
+    ]
+  }{
+    \setmainfont{Twentieth-Century.ttf}[
+      Path=File/Font/,
+      BoldFont=Twentieth-Century.ttf,
+      ItalicFont=Twentieth-Century.ttf,
+      BoldItalicFont=Twentieth-Century.ttf
+    ]
+  }
 \else
   \usepackage[utf8]{inputenc}
   \usepackage[T1]{fontenc}
