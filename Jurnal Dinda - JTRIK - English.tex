@@ -130,7 +130,7 @@
 \thispagestyle{firstpage}
 
 % --- Article Title (20pt Bold) ---
-{\fontsize{19pt}{23pt}\bfseries\raggedright Penerapan Hybrid Recommendation System dengan Content-Based Filtering dan Euclidean Distance untuk Rekomendasi Warna Lipstik\par}
+{\fontsize{19pt}{23pt}\bfseries\raggedright Application of Hybrid Recommendation System with Content-Based Filtering and Euclidean Distance for Lipstick Shade Recommendation\par}
 \vspace{6pt}
 
 % --- Authors (10pt Regular) ---
@@ -139,7 +139,7 @@
 
 % --- Affiliations (9pt) ---
 {\fontsize{8.5pt}{11pt}\selectfont
-$^{1,2,3}$ Jurusan Teknologi Informasi dan Komputer, Politeknik Negeri Lhokseumawe, Jl. Banda Aceh--Medan Km. 280,3 Buketrata, Lhokseumawe 24301, Indonesia\par}
+$^{1,2,3}$ Department of Information and Computer Technology, Politeknik Negeri Lhokseumawe, Jl. Banda Aceh--Medan Km. 280.3 Buketrata, Lhokseumawe 24301, Indonesia\par}
 \vspace{3pt}
 
 % --- Corresponding Author (9pt) ---
@@ -164,15 +164,15 @@ This is an open access article under the \href{https://creativecommons.org/licen
 \noindent\rule{\textwidth}{0.4pt}
 \vspace{2pt}
 
-% --- Abstrak (13pt Heading, 9.5pt Regular Content) ---
-{\fontsize{13pt}{15pt}\bfseries Abstrak\par}
+% --- Abstract (13pt Heading, 9.5pt Regular Content) ---
+{\fontsize{13pt}{15pt}\bfseries Abstract\par}
 \vspace{3pt}
 
 {\fontsize{9.5pt}{12pt}\selectfont
-Pemilihan warna lipstik yang sesuai dengan karakteristik warna alami bibir umumnya masih dilakukan secara subjektif dan konvensional, sehingga diperlukan suatu sistem yang mampu memberikan rekomendasi secara otomatis, objektif, dan personal. Penelitian ini bertujuan untuk merancang dan membangun sistem rekomendasi warna lipstik berdasarkan citra bibir menggunakan pendekatan Deep Learning melalui model MobileNetV2 serta Hybrid Recommendation System. Alur penelitian mencakup deteksi landmark wajah menggunakan MediaPipe Face Mesh, segmentasi area bibir, ekstraksi fitur nilai rata-rata Red, Green, Blue (RGB), pelabelan otomatis berbasis K-Means Clustering ke dalam kategori Pinkish, Brownish, dan Dark, klasifikasi tipe bibir dengan MobileNetV2 melalui transfer learning, serta pemberian rekomendasi warna lipstik melalui perpaduan Rule-Based Filtering dan Content-Based Filtering berbasis Euclidean Distance. Hasil evaluasi pengujian menunjukkan bahwa model MobileNetV2 berhasil mengklasifikasikan tipe warna bibir dengan akurasi validasi sebesar 94,84\%. Pada sistem rekomendasi, pengujian terhadap basis data shade lipstik komersial berhasil menghasilkan rekomendasi Top-3 dengan rata-rata tingkat kemiripan sebesar 93,62\% pada rekomendasi pertama, 92,26\% pada rekomendasi kedua, dan 91,41\% pada rekomendasi ketiga. Dengan demikian, sistem yang dikembangkan terbukti akurat dan efektif dalam memberikan rekomendasi warna lipstik yang sesuai dengan karakteristik warna alami bibir pengguna.\par}
+Selecting a lipstick shade that matches the natural characteristics of lip tone is generally conducted subjectively and conventionally, creating the need for a system capable of delivering automated, objective, and personalized recommendations. This study aims to design and implement a lip image-based lipstick shade recommendation system using a Deep Learning approach via the MobileNetV2 architecture combined with a Hybrid Recommendation System. The research pipeline comprises facial landmark detection using MediaPipe Face Mesh, lip area segmentation, feature extraction of average Red, Green, and Blue (RGB) values, automated labeling based on K-Means Clustering into Pinkish, Brownish, and Dark categories, lip type classification with MobileNetV2 through transfer learning, and lipstick shade recommendation through a combination of Rule-Based Filtering and Content-Based Filtering using Euclidean Distance. Evaluation results demonstrate that the MobileNetV2 model successfully classifies lip color types with a validation accuracy of 94.84\%. In the recommendation system, evaluation on a commercial lipstick shade database successfully produced Top-3 recommendations with average similarity scores of 93.62\% for the first recommendation, 92.26\% for the second recommendation, and 91.41\% for the third recommendation. Consequently, the developed system is proven accurate and effective in delivering lipstick shade recommendations tailored to the user's natural lip color characteristics.\par}
 
 \vspace{4pt}
-{\fontsize{9.5pt}{12pt}\selectfont\textbf{Kata Kunci:} Deep Learning, MobileNetV2, Hybrid Recommendation System, Content-Based Filtering, Euclidean Distance, K-Means Clustering, Rekomendasi Warna Lipstik.\par}
+{\fontsize{9.5pt}{12pt}\selectfont\textbf{Keywords:} Deep Learning, MobileNetV2, Hybrid Recommendation System, Content-Based Filtering, Euclidean Distance, K-Means Clustering, Lipstick Shade Recommendation.\par}
 
 \vspace{3pt}
 \noindent\rule{\textwidth}{0.4pt}
@@ -181,186 +181,186 @@ Pemilihan warna lipstik yang sesuai dengan karakteristik warna alami bibir umumn
 % =========================================================================
 % Section 1: Introduction
 % =========================================================================
-\section{PENDAHULUAN}
+\section{INTRODUCTION}
 
-Perkembangan industri kosmetik di Indonesia mengalami peningkatan yang sangat pesat seiring dengan tingginya kesadaran masyarakat terhadap penampilan diri dan perawatan kecantikan. Berdasarkan survei pasar konsumen di Indonesia, produk riasan bibir seperti lipstik, \textit{lip cream}, dan \textit{lip tint} menduduki kategori produk kosmetik yang paling banyak digunakan oleh wanita, dengan persentase penggunaan mencapai 80,4\% \cite{jakpat2025}. Lipstik tidak hanya berfungsi sebagai pewarna bibir untuk meningkatkan estetika wajah, tetapi juga menjadi elemen penting dalam mengekspresikan karakter dan rasa percaya diri pemakainya.
+The growth of the cosmetics industry in Indonesia has increased rapidly alongside heightened public awareness regarding self-appearance and personal grooming. Based on consumer market surveys in Indonesia, lip makeup products such as lipsticks, \textit{lip creams}, and \textit{lip tints} constitute the most widely used cosmetic category among women, with a usage prevalence reaching 80.4\% \cite{jakpat2025}. Lipstick serves not only as a lip colorant to enhance facial aesthetics, but also as an essential element for expressing personal character and self-confidence.
 
-Meskipun produk lipstik sangat populer, proses pemilihan warna (\textit{shade}) lipstik yang tepat sering kali menjadi tantangan bagi konsumen. Karakteristik warna dasar bibir setiap individu bersifat unik dan sangat bervariasi. Penelitian ilmiah oleh Vergnaud dkk. menunjukkan bahwa warna alami bibir dipengaruhi oleh berbagai faktor fisiologis yang kompleks, seperti konsentrasi melanin, aliran hemoglobin, ketebalan stratum korneum, etnis, dan usia \cite{vergnaud2024lip, vergnaud2023measurement}. Perbedaan pigmen dasar ini menyebabkan satu produk lipstik yang sama dapat menghasilkan tampilan warna akhir yang sangat berbeda ketika diaplikasikan pada bibir orang yang berbeda. Hal tersebut diperkuat oleh penelitian Charton dkk. yang berhasil menyusun bagan warna bibir (\textit{lip colour chart}) multi-etnis dan membuktikan keragaman spektrum rona bibir manusia \cite{charton2026development}.
+Despite the widespread popularity of lipstick products, selecting the appropriate shade often remains a challenge for consumers. The baseline lip color characteristics of each individual are unique and highly variable. Scientific investigations by Vergnaud et al. have demonstrated that natural lip coloration is influenced by complex physiological determinants, including melanin concentration, hemoglobin perfusion, stratum corneum thickness, ethnicity, and chronological age \cite{vergnaud2024lip, vergnaud2023measurement}. These baseline pigment variations cause an identical lipstick shade to yield substantially different visual results when applied across different individuals. This phenomenon is further reinforced by the findings of Charton et al., who established a multi-ethnic lip color chart and demonstrated the wide spectral diversity of human lip tones \cite{charton2026development}.
 
-Sebagian besar konsumen masih memilih warna lipstik secara konvensional dan subjektif, misalnya dengan mencoba produk langsung menggunakan \textit{tester} di toko fisik atau hanya mengandalkan ulasan di media sosial. Metode konvensional ini memiliki risiko higienitas serta berpotensi menimbulkan ketidakcocokan warna saat bertransaksi daring. Sejumlah penelitian terdahulu telah mengkaji sistem rekomendasi produk kecantikan. Katariya dan Patel merancang model CNN untuk merekomendasikan produk kosmetik berdasarkan tipe dan rona warna kulit (\textit{skin tone}) \cite{katariya2025novel}. Selanjutnya, Gulati dkk. mengembangkan sistem BeautifAI yang memberikan rekomendasi riasan terpersonalisasi berdasarkan karakteristik wajah dan kebutuhan acara (\textit{occasion}) pengguna \cite{gulati2023beautifai}. Pada aspek komputasi rekomendasi, Pratama dkk. menerapkan metode \textit{Content-Based Filtering} untuk sistem rekomendasi kosmetik berbasis kemiripan atribut produk \cite{pratama2025sistem}. Meskipun demikian, sebagian besar penelitian terdahulu tersebut masih menggunakan warna kulit wajah secara umum atau atribut teks katalog sebagai parameter acuan. Belum ditemukan penelitian yang secara spesifik mengekstraksi dan mengklasifikasikan karakteristik warna alami bibir pengguna sebagai basis utama rekomendasi warna lipstik.
+Most consumers continue to choose lipstick shades through conventional and subjective means, such as trying physical tester products at retail counters or relying on social media reviews. These conventional methods present hygiene risks and often lead to color mismatches during online purchases. Several previous studies have investigated beauty product recommendation systems. Katariya and Patel designed a CNN model to recommend cosmetic products based on skin type and tone \cite{katariya2025novel}. Furthermore, Gulati et al. developed the BeautifAI system, which offers personalized makeup recommendations based on facial attributes and occasion requirements \cite{gulati2023beautifai}. Regarding recommendation computation, Pratama et al. applied the Content-Based Filtering method for cosmetic recommendation based on product attribute similarities \cite{pratama2025sistem}. Nevertheless, most existing studies continue to rely on general facial skin tones or catalog text descriptions as reference parameters. No prior research has specifically extracted and classified the natural lip color characteristics of users as the primary foundation for lipstick shade recommendations.
 
-Pemanfaatan teknologi \textit{Computer Vision} dan \textit{Deep Learning} berbasis \textit{Convolutional Neural Network} (CNN) terbukti sangat andal dalam mengenali pola visual citra secara akurat \cite{szeliski2022computer, goodfellow2016deep, lecun2015deep}. Salah satu arsitektur CNN yang efisien untuk implementasi praktis adalah MobileNetV2, yang dirancang menggunakan \textit{inverted residuals} dan \textit{linear bottlenecks} sehingga berbobot komputasi ringan tanpa mengorbankan akurasi tinggi \cite{sandler2018mobilenetv2, howard2017mobilenets}. Untuk mengelompokkan data warna bibir yang belum memiliki label acuan, algoritma \textit{unsupervised learning} K-Means Clustering dapat digunakan untuk membentuk klasterisasi data berbasis kemiripan nilai warna RGB \cite{macqueen1967methods, pedregosa2011scikit}.
+The application of Computer Vision and Deep Learning technologies based on Convolutional Neural Networks (CNN) has proven highly reliable in recognizing visual image patterns accurately \cite{szeliski2022computer, goodfellow2016deep, lecun2015deep}. One CNN architecture that is highly efficient for practical deployment is MobileNetV2, which employs inverted residuals and linear bottlenecks to maintain a lightweight computational footprint without sacrificing high predictive accuracy \cite{sandler2018mobilenetv2, howard2017mobilenets}. To categorize lip color data lacking predefined ground-truth labels, the unsupervised K-Means Clustering algorithm can be utilized to partition data based on RGB color value similarities \cite{macqueen1967methods, pedregosa2011scikit}.
 
-Dalam sistem rekomendasi, pendekatan tunggal seperti \textit{Rule-Based Filtering} efektif untuk menyaring kandidat berdasarkan batasan kategori tertentu, namun tidak fleksibel dalam mengukur derajat kedekatan gradasi warna \cite{ricci2015recommender}. Sebaliknya, \textit{Content-Based Filtering} berbasis metrik jarak geometri \textit{Euclidean Distance} mampu mengukur kedekatan fitur numerik secara kontinu dan presisi \cite{aggarwal2016recommender}. Oleh karena itu, penggabungan keduanya ke dalam \textit{Hybrid Recommendation System} menjadi solusi ideal. Penelitian ini bertujuan merancang dan membangun sistem rekomendasi warna lipstik berbasis citra bibir dengan menerapkan MediaPipe Face Mesh \cite{lugaresi2019mediapipe} untuk segmentasi bibir otomatis, ekstraksi nilai rata-rata RGB, klasterisasi K-Means, klasifikasi MobileNetV2 dengan \textit{transfer learning}, serta perpaduan \textit{Rule-Based} dan \textit{Content-Based Filtering} (Euclidean Distance) untuk menghasilkan Top-3 rekomendasi lipstik paling presisi.
+In recommender systems, single-paradigm methods such as Rule-Based Filtering are effective for pruning candidates based on rigid category constraints, yet lack the flexibility needed to quantify continuous gradations of color proximity \cite{ricci2015recommender}. Conversely, Content-Based Filtering utilizing the Euclidean Distance geometric metric can measure numerical feature proximity in a continuous and precise manner \cite{aggarwal2016recommender}. Therefore, combining both approaches into a Hybrid Recommendation System offers an optimal solution. This study aims to design and implement a lip image-based lipstick shade recommendation system by employing MediaPipe Face Mesh \cite{lugaresi2019mediapipe} for automated lip segmentation, average RGB feature extraction, K-Means clustering, MobileNetV2 classification via transfer learning, and a combination of Rule-Based and Content-Based Filtering (Euclidean Distance) to generate precise Top-3 lipstick recommendations.
 
 % =========================================================================
 % Section 2: Methods
 % =========================================================================
-\section{METODE PENELITIAN}
+\section{RESEARCH METHOD}
 
-\subsection{Alur Penelitian dan Arsitektur Sistem}
-Penelitian ini dilaksanakan melalui tahapan sistematis yang terbagi ke dalam fase pengolahan data, pelatihan model \textit{deep learning}, perancangan sistem rekomendasi hybrid, dan evaluasi performa sistem. Alur umum sistem rekomendasi warna lipstik berbasis citra bibir diilustrasikan pada Gambar \ref{fig:alur_sistem}.
+\subsection{Research Pipeline and System Architecture}
+This research was conducted through systematic phases encompassing data preprocessing, deep learning model training, hybrid recommendation system design, and system performance evaluation. The general pipeline of the lip image-based lipstick shade recommendation system is illustrated in Figure \ref{fig:alur_sistem}.
 
 \begin{figure}[htbp]
   \centering
-  \IfFileExists{Gambar/skripsi_image28_bw.png}{\includegraphics[width=0.72\textwidth]{skripsi_image28_bw.png}}{\fbox{Diagram Alur Sistem}}
-  \caption{Diagram Alur Sistem Rekomendasi Warna Lipstik Menggunakan MobileNetV2 dan Hybrid Recommendation System}
+  \IfFileExists{Gambar/skripsi_image28_bw.png}{\includegraphics[width=0.72\textwidth]{skripsi_image28_bw.png}}{\fbox{System Flowchart Diagram}}
+  \caption{System Architecture and Flowchart of Lipstick Shade Recommendation Using MobileNetV2 and Hybrid Recommendation System}
   \label{fig:alur_sistem}
 \end{figure}
 
-\subsection{Pengumpulan dan Pembagian Dataset}
-Dataset yang digunakan dalam penelitian ini berjumlah total 18.100 citra wajah, yang terdiri atas:
+\subsection{Dataset Collection and Partitioning}
+The dataset utilized in this research comprises a total of 18,100 facial images, consisting of:
 \begin{enumerate}
-    \item Dataset Sekunder (CelebA): Sebanyak 18.000 citra wajah dari \textit{CelebFaces Attributes Dataset} (CelebA) \cite{liu2015deep} dengan ekspresi netral tanpa riasan bibir tebal.
-    \item Dataset Primer: Sebanyak 100 citra wajah wanita Indonesia tanpa riasan bibir untuk meningkatkan representasi variasi pigmen bibir lokal.
+    \item Secondary Dataset (CelebA): 18,000 facial images sourced from the CelebFaces Attributes Dataset (CelebA) \cite{liu2015deep} featuring neutral expressions without heavy lip makeup.
+    \item Primary Dataset: 100 facial images of Indonesian women captured without lip makeup to enhance the representation of local lip pigmentation diversity.
 \end{enumerate}
-Dataset dibagi menjadi data latih (\textit{training set}) sebanyak 14.480 citra (80\%) dan data validasi (\textit{validation set}) sebanyak 3.620 citra (20\%) untuk pelatihan dan evaluasi model.
+The complete dataset was partitioned into a training set of 14,480 images (80\%) and a validation set of 3,620 images (20\%) for model training and hyperparameter evaluation.
 
-\subsection{Preprocessing dan Segmentasi Area Bibir}
-Tahap \textit{preprocessing} bertujuan untuk mengekstraksi area bibir (\textit{Region of Interest} / ROI) dan menyeragamkan format citra:
+\subsection{Preprocessing and Lip Region Segmentation}
+The preprocessing stage aims to isolate the Region of Interest (ROI) corresponding to the lip area and standardize image dimensions:
 \begin{enumerate}
-    \item Resize Citra: Menyeragamkan ukuran citra masukan menjadi $224 \times 224$ piksel menggunakan OpenCV \cite{bradski2000opencv}.
-    \item Deteksi Landmark Wajah: Menggunakan framework MediaPipe Face Mesh untuk mengekstrak 468 titik landmark wajah 3D \cite{lugaresi2019mediapipe}. Kontur bibir luar dan dalam diidentifikasi secara presisi (Gambar \ref{fig:landmark_seg}(a)).
-    \item Segmentasi dan Masking: Membentuk masker poligon biner berdasarkan prinsip segmentasi citra digital \cite{otsu1979threshold, gonzalez2018digital} dari koordinat landmark bibir. Seluruh piksel di luar area bibir diatur bernilai nol (Gambar \ref{fig:landmark_seg}(b)).
-    \item Normalisasi dan Cropping ROI: Mengonversi intensitas piksel kanal RGB ke rentang $[0, 1]$ dan memotong citra terfokus pada batas area bibir ($x_{\min}, y_{\min}, x_{\max}, y_{\max}$).
+    \item Image Resizing: Standardizing input images to $224 \times 224$ pixels using OpenCV \cite{bradski2000opencv}.
+    \item Facial Landmark Detection: Employing the MediaPipe Face Mesh framework to extract 468 3D facial landmark coordinates \cite{lugaresi2019mediapipe}. Outer and inner lip contours are precisely delineated (Figure \ref{fig:landmark_seg}(a)).
+    \item Segmentation and Masking: Constructing a binary polygon mask based on digital image segmentation principles \cite{otsu1979threshold, gonzalez2018digital} derived from the lip boundary coordinates. All pixels outside the designated lip contour are set to zero (Figure \ref{fig:landmark_seg}(b)).
+    \item Normalization and ROI Cropping: Rescaling RGB pixel intensities to the $[0, 1]$ interval and cropping the image tightly bounded by the lip coordinates ($x_{\min}, y_{\min}, x_{\max}, y_{\max}$).
 \end{enumerate}
 
 \begin{figure}[htbp]
   \centering
   \begin{subfigure}[b]{0.46\textwidth}
     \centering
-    \IfFileExists{Gambar/skripsi_image39.png}{\includegraphics[width=\textwidth]{skripsi_image39.png}}{\fbox{Landmark Wajah}}
-    \caption{Deteksi Landmark MediaPipe}
+    \IfFileExists{Gambar/skripsi_image39.png}{\includegraphics[width=\textwidth]{skripsi_image39.png}}{\fbox{Facial Landmarks}}
+    \caption{MediaPipe Landmark Detection}
     \label{fig:landmark}
   \end{subfigure}
   \hfill
   \begin{subfigure}[b]{0.46\textwidth}
     \centering
-    \IfFileExists{Gambar/skripsi_image40.png}{\includegraphics[width=\textwidth]{skripsi_image40.png}}{\fbox{Segmentasi Bibir}}
-    \caption{Segmentasi dan Masking Bibir}
+    \IfFileExists{Gambar/skripsi_image40.png}{\includegraphics[width=\textwidth]{skripsi_image40.png}}{\fbox{Lip Segmentation}}
+    \caption{Lip Segmentation and Masking}
     \label{fig:seg_bibir}
   \end{subfigure}
-  \caption{Tahapan Deteksi Landmark Wajah dan Segmentasi Area Bibir Pengguna}
+  \caption{Stages of Facial Landmark Detection and User Lip Region Segmentation}
   \label{fig:landmark_seg}
 \end{figure}
 
-\subsection{Ekstraksi Fitur Warna dan K-Means Clustering}
-Karakteristik warna bibir diekstraksi berdasarkan nilai rata-rata pada kanal Red ($R$), Green ($G$), dan Blue ($B$) dari seluruh $N$ piksel masker bibir menggunakan formula:
+\subsection{Color Feature Extraction and K-Means Clustering}
+Lip color characteristics are extracted from the mean intensities of the Red ($R$), Green ($G$), and Blue ($B$) color channels across all $N$ segmented lip mask pixels using the formulation:
 \begin{equation}
   \bar{R} = \frac{1}{N} \sum_{i=1}^N R_i, \quad \bar{G} = \frac{1}{N} \sum_{i=1}^N G_i, \quad \bar{B} = \frac{1}{N} \sum_{i=1}^N B_i
   \label{eq:rgb_avg}
 \end{equation}
 
-Tiga nilai skalar $(\bar{R}, \bar{G}, \bar{B})$ ini menjadi masukan algoritma K-Means Clustering ($K=3$, init \textit{k-means++}, random state 42) untuk menghasilkan 3 kategori label tipe bibir alami (Gambar \ref{fig:kmeans_viz}):
+These three scalar values $(\bar{R}, \bar{G}, \bar{B})$ serve as input features to the K-Means Clustering algorithm ($K=3$, initialization \textit{k-means++}, random state 42) to establish three distinct natural lip type clusters (Figure \ref{fig:kmeans_viz}):
 \begin{enumerate}
-    \item Pinkish: Rona cerah dengan rona kemerahan/merah muda dominan ($\bar{R} > 150, \bar{G} \approx 95-120, \bar{B} \approx 100-125$).
-    \item Brownish: Rona hangat kecokelatan ($\bar{R} \approx 125-155, \bar{G} \approx 75-100, \bar{B} \approx 65-90$).
-    \item Dark: Rona bibir dengan pigmentasi gelap/pekat ($\bar{R} < 110, \bar{G} < 65, \bar{B} < 60$).
+    \item Pinkish: Bright tones with dominant reddish or soft pink hue components ($\bar{R} > 150, \bar{G} \approx 95-120, \bar{B} \approx 100-125$).
+    \item Brownish: Warm brownish tones ($\bar{R} \approx 125-155, \bar{G} \approx 75-100, \bar{B} \approx 65-90$).
+    \item Dark: Lip tones characterized by deep, concentrated pigmentation ($\bar{R} < 110, \bar{G} < 65, \bar{B} < 60$).
 \end{enumerate}
 
 \begin{figure}[htbp]
   \centering
-  \IfFileExists{Gambar/skripsi_image44.png}{\includegraphics[width=0.48\textwidth]{skripsi_image44.png}}{\fbox{Visualisasi K-Means}}
-  \caption{Visualisasi Distribusi Hasil K-Means Clustering Warna Bibir ($K=3$)}
+  \IfFileExists{Gambar/skripsi_image44.png}{\includegraphics[width=0.48\textwidth]{skripsi_image44.png}}{\fbox{K-Means Visualization}}
+  \caption{Distribution Visualization of Lip Color K-Means Clustering Results ($K=3$)}
   \label{fig:kmeans_viz}
 \end{figure}
 
-\subsection{Pelatihan Model Klasifikasi MobileNetV2}
-MobileNetV2 dilatih menggunakan pendekatan \textit{Transfer Learning} berbasis bobot ImageNet \cite{pan2010survey, he2016deep} yang didukung teknik augmentasi citra untuk memperluas variasi fitur \cite{shorten2019survey}. Lapisan kustom yang ditambahkan meliputi: \textit{Global Average Pooling 2D}, \textit{Dropout} (0.3), \textit{Dense} (128 neuron, ReLU), \textit{Dropout} (0.2), dan \textit{Dense Output} (3 neuron, Softmax). Konfigurasi parameter hiper pelatihan disajikan pada Tabel \ref{tab:param_pelatihan}.
+\subsection{MobileNetV2 Classification Model Training}
+The MobileNetV2 architecture was trained using a Transfer Learning approach initialized with pre-trained ImageNet weights \cite{pan2010survey, he2016deep}, supported by image data augmentation techniques to broaden feature variability \cite{shorten2019survey}. Customized classification layers appended to the base feature extractor include: Global Average Pooling 2D, Dropout (0.3), Dense (128 units, ReLU activation), Dropout (0.2), and Dense Output (3 units, Softmax activation). The training hyperparameter configuration is summarized in Table \ref{tab:param_pelatihan}.
 
 \begin{table}[htbp]
   \centering
-  \caption{Parameter Hiper Pelatihan Model MobileNetV2}
+  \caption{Hyperparameter Configuration for MobileNetV2 Model Training}
   \label{tab:param_pelatihan}
   \fontsize{8.5pt}{11pt}\selectfont
   \begin{tabular}{ll}
     \toprule
-    \textbf{Parameter} & \textbf{Nilai / Konfigurasi} \\
+    \textbf{Parameter} & \textbf{Value / Configuration} \\
     \midrule
-    Arsitektur Dasar & MobileNetV2 (Pre-trained ImageNet) \\
-    Dimensi Masukan Citra & $224 \times 224 \times 3$ piksel \\
-    Jumlah Epoch & 30 \\
+    Base Architecture & MobileNetV2 (ImageNet Pre-trained) \\
+    Input Image Dimensions & $224 \times 224 \times 3$ pixels \\
+    Number of Epochs & 30 \\
     Batch Size & 32 \\
     Optimizer & Adam ($\beta_1=0.9, \beta_2=0.999$, $\text{lr}=0.0001$) \\
-    Fungsi Kerugian (Loss) & Categorical Crossentropy \\
-    Jumlah Kelas Output & 3 (Pinkish, Brownish, Dark) \\
+    Loss Function & Categorical Crossentropy \\
+    Number of Output Classes & 3 (Pinkish, Brownish, Dark) \\
     \bottomrule
   \end{tabular}
 \end{table}
 
 \subsection{Hybrid Recommendation System}
-Setelah model MobileNetV2 memprediksi probabilitas kelas tipe bibir pengguna ($\hat{y}_{\text{user}} \in \{\text{Pinkish}, \text{Brownish}, \text{Dark}\}$), sistem merekomendasikan shade lipstik terbaik melalui mekanisme bertingkat:
+Once the MobileNetV2 classifier computes class probabilities for the user's lip tone ($\hat{y}_{\text{user}} \in \{\text{Pinkish}, \text{Brownish}, \text{Dark}\}$), the system identifies the most suitable lipstick shades through a two-stage hybrid mechanism:
 
-\subsubsection{Tahap 1: Rule-Based Filtering}
-Sistem menyaring 281 koleksi lipstik komersial pada \textit{knowledge base} berdasarkan kesesuaian atribut \texttt{lip\_type\_tag} dengan kelas prediksi pengguna:
+\subsubsection{Stage 1: Rule-Based Filtering}
+The system filters 281 commercial lipstick shades stored in the knowledge base by matching the \texttt{lip\_type\_tag} attribute with the user's predicted category:
 \begin{equation}
-  \mathcal{C}_{\text{kandidat}} = \{ L_j \in \mathcal{D}_{\text{lipstik}} \mid \text{tag}(L_j) = \hat{y}_{\text{user}} \}
+  \mathcal{C}_{\text{candidate}} = \{ L_j \in \mathcal{D}_{\text{lipstick}} \mid \text{tag}(L_j) = \hat{y}_{\text{user}} \}
 \end{equation}
-Jumlah kandidat tersaring adalah 147 produk untuk Pinkish, 127 produk untuk Brownish, dan 14 produk untuk Dark (Tabel \ref{tab:rule_based}).
+The resulting candidate pool comprises 147 products for Pinkish, 127 products for Brownish, and 14 products for Dark categories (Table \ref{tab:rule_based}).
 
 \begin{table}[htbp]
   \centering
-  \caption{Aturan Rule-Based Recommendation Berdasarkan Tipe Warna Bibir}
+  \caption{Rule-Based Recommendation Filtering Criteria Based on Lip Color Type}
   \label{tab:rule_based}
   \fontsize{8.5pt}{11pt}\selectfont
   \begin{tabular}{cllc}
     \toprule
-    \textbf{No} & \textbf{Tipe Warna Bibir Prediksi} & \textbf{Kriteria Filter Knowledge Base} & \textbf{Jumlah Kandidat Produk} \\
+    \textbf{No} & \textbf{Predicted Lip Color Type} & \textbf{Knowledge Base Filtering Criteria} & \textbf{Candidate Product Count} \\
     \midrule
-    1 & Pinkish  & \texttt{lip\_type\_tag} = \textit{Pinkish}  & 147 produk \\
-    2 & Brownish & \texttt{lip\_type\_tag} = \textit{Brownish} & 127 produk \\
-    3 & Dark     & \texttt{lip\_type\_tag} = \textit{Dark}     & 14 produk \\
+    1 & Pinkish  & \texttt{lip\_type\_tag} = \textit{Pinkish}  & 147 products \\
+    2 & Brownish & \texttt{lip\_type\_tag} = \textit{Brownish} & 127 products \\
+    3 & Dark     & \texttt{lip\_type\_tag} = \textit{Dark}     & 14 products \\
     \midrule
-    \multicolumn{3}{l}{\textbf{Total Basis Data Lipstik}} & \textbf{281 produk} \\
+    \multicolumn{3}{l}{\textbf{Total Lipstick Database Entries}} & \textbf{281 products} \\
     \bottomrule
   \end{tabular}
 \end{table}
 
-\subsubsection{Tahap 2: Content-Based Filtering Menggunakan Euclidean Distance}
-Sistem menghitung jarak geometris ruang warna RGB (\textit{Euclidean Distance}) antara vektor warna bibir pengguna $\mathbf{u} = (R_u, G_u, B_u)$ dan warna lipstik $\mathbf{v}_j = (R_j, G_j, B_j)$ pada seluruh kandidat $L_j \in \mathcal{C}_{\text{kandidat}}$:
+\subsubsection{Stage 2: Content-Based Filtering Using Euclidean Distance}
+The system computes the geometric RGB color space distance (Euclidean Distance) between the user's lip color vector $\mathbf{u} = (R_u, G_u, B_u)$ and candidate lipstick shades $\mathbf{v}_j = (R_j, G_j, B_j)$ across all candidate items $L_j \in \mathcal{C}_{\text{candidate}}$:
 \begin{equation}
   d(\mathbf{u}, \mathbf{v}_j) = \sqrt{(R_u - R_j)^2 + (G_u - G_j)^2 + (B_u - B_j)^2}
   \label{eq:euclidean}
 \end{equation}
 
-Nilai jarak dikonversi menjadi persentase tingkat kemiripan (\textit{similarity score}) terhadap jarak maksimum ruang warna $d_{\max} = \sqrt{3 \times 255^2} \approx 441.673$:
+The geometric distance is then mapped to a percentage similarity score relative to the maximum diagonal span of the RGB color cube $d_{\max} = \sqrt{3 \times 255^2} \approx 441.673$:
 \begin{equation}
   \text{Similarity}(\mathbf{u}, \mathbf{v}_j) = \left( 1 - \frac{d(\mathbf{u}, \mathbf{v}_j)}{d_{\max}} \right) \times 100\%
   \label{eq:similarity}
 \end{equation}
 
-Tiga produk dengan nilai \textit{similarity} tertinggi ditetapkan sebagai \textbf{Top-3 Lipstick Recommendation} (Algoritma \ref{alg:hybrid}).
+The top three candidate products yielding the highest similarity scores are designated as the \textbf{Top-3 Lipstick Recommendation} (Algorithm \ref{alg:hybrid}).
 
 \begin{algorithm}[htbp]
-\caption{Algoritma Hybrid Recommendation System untuk Rekomendasi Lipstik}
+\caption{Hybrid Recommendation System Algorithm for Lipstick Shade Recommendation}
 \label{alg:hybrid}
 \fontsize{8.5pt}{10.5pt}\selectfont
 \begin{algorithmic}[1]
-\Require Citra wajah pengguna $I_{\text{face}}$, Basis data produk lipstik $\mathcal{D}_{\text{lipstik}}$, Model klasifikasi MobileNetV2 $\mathcal{M}$.
-\Ensure Tiga rekomendasi warna lipstik terbaik (Top-3) beserta nilai persentase kemiripan (\textit{similarity}).
-\State $I_{\text{lip}} \gets \text{SegmentLipRegion}(I_{\text{face}})$ \Comment{Segmentasi MediaPipe Face Mesh}
+\Require User facial image $I_{\text{face}}$, Lipstick product database $\mathcal{D}_{\text{lipstick}}$, MobileNetV2 classification model $\mathcal{M}$.
+\Ensure Top-3 lipstick shade recommendations along with calculated percentage similarity scores.
+\State $I_{\text{lip}} \gets \text{SegmentLipRegion}(I_{\text{face}})$ \Comment{MediaPipe Face Mesh segmentation}
 \State $(R_u, G_u, B_u) \gets \text{ExtractAverageRGB}(I_{\text{lip}})$
-\State $\hat{y}_{\text{user}} \gets \mathcal{M}.\text{predict}(I_{\text{lip}})$ \Comment{Klasifikasi: Pinkish, Brownish, atau Dark}
-\State $\mathcal{C}_{\text{kandidat}} \gets \emptyset$
-\For{each $L_j \in \mathcal{D}_{\text{lipstik}}$} \Comment{Tahap 1: Rule-Based Filtering}
+\State $\hat{y}_{\text{user}} \gets \mathcal{M}.\text{predict}(I_{\text{lip}})$ \Comment{Classification: Pinkish, Brownish, or Dark}
+\State $\mathcal{C}_{\text{candidate}} \gets \emptyset$
+\For{each $L_j \in \mathcal{D}_{\text{lipstick}}$} \Comment{Stage 1: Rule-Based Filtering}
     \If{$L_j.\text{tag} == \hat{y}_{\text{user}}$}
-        \State $\mathcal{C}_{\text{kandidat}} \gets \mathcal{C}_{\text{kandidat}} \cup \{L_j\}$
+        \State $\mathcal{C}_{\text{candidate}} \gets \mathcal{C}_{\text{candidate}} \cup \{L_j\}$
     \EndIf
 \EndFor
 \State $\mathcal{R} \gets []$
-\For{each $L_j \in \mathcal{C}_{\text{kandidat}}$} \Comment{Tahap 2: Content-Based Filtering}
+\For{each $L_j \in \mathcal{C}_{\text{candidate}}$} \Comment{Stage 2: Content-Based Filtering}
     \State $(R_j, G_j, B_j) \gets L_j.\text{rgb}$
     \State $d_j \gets \sqrt{(R_u - R_j)^2 + (G_u - G_j)^2 + (B_u - B_j)^2}$
     \State $S_j \gets (1 - d_j / 441.673) \times 100\%$
     \State Append $(L_j, d_j, S_j)$ to $\mathcal{R}$
 \EndFor
-\State Sort $\mathcal{R}$ ascending by distance $d_j$
+\State Sort $\mathcal{R}$ in ascending order by distance $d_j$
 \State \Return Top-3 elements of $\mathcal{R}$
 \end{algorithmic}
 \end{algorithm}
 
-\subsection{Metrik Evaluasi Performa}
-Performa klasifikasi dievaluasi menggunakan matriks konfusi (\textit{Confusion Matrix}) serta metrik standar: \textit{Accuracy}, \textit{Precision}, \textit{Recall}, dan \textit{F1-Score} \cite{powers2011evaluation}:
+\subsection{Performance Evaluation Metrics}
+Classification performance is evaluated using the Confusion Matrix and standard metrics: Accuracy, Precision, Recall, and F1-Score \cite{powers2011evaluation}:
 \begin{equation}
   \text{Accuracy} = \frac{TP + TN}{TP + TN + FP + FN}
 \end{equation}
@@ -371,40 +371,40 @@ Performa klasifikasi dievaluasi menggunakan matriks konfusi (\textit{Confusion M
 % =========================================================================
 % Section 3: Results and Discussion
 % =========================================================================
-\section{HASIL DAN PEMBAHASAN}
+\section{RESULTS AND DISCUSSION}
 
-\subsection{Hasil Pelatihan dan Evaluasi Model MobileNetV2}
-Model MobileNetV2 dilatih selama 30 epoch menggunakan dataset berlabel hasil klasterisasi K-Means. Gambar \ref{fig:eval_mobilenet}(a) menyajikan grafik konvergensi akurasi dan kerugian (\textit{loss}), sedangkan Gambar \ref{fig:eval_mobilenet}(b) menyajikan \textit{Confusion Matrix} hasil pengujian pada data validasi (803 sampel).
+\subsection{MobileNetV2 Model Training and Evaluation Results}
+The MobileNetV2 architecture was trained for 30 epochs on the dataset annotated via K-Means clustering. Figure \ref{fig:eval_mobilenet}(a) depicts the convergence curves of accuracy and categorical loss, while Figure \ref{fig:eval_mobilenet}(b) displays the resulting Confusion Matrix evaluated on the validation dataset (803 samples).
 
 \begin{figure}[htbp]
   \centering
   \begin{subfigure}[b]{0.52\textwidth}
     \centering
-    \IfFileExists{Gambar/skripsi_image45.png}{\includegraphics[width=\textwidth]{skripsi_image45.png}}{\fbox{Grafik Akurasi dan Loss}}
-    \caption{Grafik Akurasi dan Loss Pelatihan}
+    \IfFileExists{Gambar/skripsi_image45.png}{\includegraphics[width=\textwidth]{skripsi_image45.png}}{\fbox{Accuracy and Loss Graph}}
+    \caption{Training Accuracy and Loss Graph}
     \label{fig:loss_acc}
   \end{subfigure}
   \hfill
   \begin{subfigure}[b]{0.44\textwidth}
     \centering
     \IfFileExists{Gambar/skripsi_image46.png}{\includegraphics[width=\textwidth]{skripsi_image46.png}}{\fbox{Confusion Matrix}}
-    \caption{Confusion Matrix Data Validasi}
+    \caption{Validation Confusion Matrix}
     \label{fig:cm}
   \end{subfigure}
-  \caption{Evaluasi Performa Model MobileNetV2: (a) Grafik Akurasi dan Loss, (b) Confusion Matrix pada Data Validasi}
+  \caption{MobileNetV2 Performance Evaluation: (a) Accuracy and Loss Convergence Graph, (b) Confusion Matrix on Validation Data}
   \label{fig:eval_mobilenet}
 \end{figure}
 
-Model mencapai konvergensi stabil pada epoch ke-15 ke atas tanpa gejala \textit{overfitting}, dengan akurasi validasi akhir sebesar \textbf{94,84\%} dan \textit{validation loss} sebesar \textbf{0,1612}. Rincian nilai metrik evaluasi per kelas dirangkum dalam \textit{Classification Report} pada Tabel \ref{tab:classification_report}.
+The model attained stable convergence beyond the 15th epoch without indications of overfitting, yielding a final validation accuracy of \textbf{94.84\%} and a validation loss of \textbf{0.1612}. Detailed performance metrics across individual classes are summarized in the Classification Report in Table \ref{tab:classification_report}.
 
 \begin{table}[htbp]
   \centering
-  \caption{Classification Report Performa Model MobileNetV2}
+  \caption{MobileNetV2 Model Performance Classification Report}
   \label{tab:classification_report}
   \fontsize{8.5pt}{11pt}\selectfont
   \begin{tabular}{lcccc}
     \toprule
-    \textbf{Kelas Tipe Bibir} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} & \textbf{Support (Sampel)} \\
+    \textbf{Lip Tone Class} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} & \textbf{Support (Samples)} \\
     \midrule
     Pinkish      & 0.971 (97.1\%) & 0.981 (98.1\%) & 0.976 (97.6\%) & 746 \\
     Brownish     & 0.588 (58.8\%) & 0.426 (42.6\%) & 0.494 (49.4\%) & 47  \\
@@ -417,19 +417,19 @@ Model mencapai konvergensi stabil pada epoch ke-15 ke atas tanpa gejala \textit{
   \end{tabular}
 \end{table}
 
-Model menunjukkan performa klasifikasi sangat tinggi pada kelas \textbf{Pinkish} (F1-score 97,6\%). Pada kelas \textbf{Brownish} dan \textbf{Dark}, nilai F1-score masing-masing tercatat 49,4\% dan 24,0\%. Karakteristik ini dipengaruhi oleh dominasi citra rona cerah pada dataset publik (\textit{class imbalance}). Namun secara agregat \textit{weighted average}, model mencapai F1-score 93,8\% dan akurasi 94,0\%, membuktikan efektivitas MobileNetV2 dalam mengenali karakteristik visual bibir.
+The model demonstrates strong predictive performance on the \textbf{Pinkish} class (F1-score 97.6\%). On the \textbf{Brownish} and \textbf{Dark} classes, F1-scores were 49.4\% and 24.0\%, respectively. These values reflect the predominance of lighter lip tones within the public facial dataset (\textit{class imbalance}). Nevertheless, across all samples, the model achieved a weighted average F1-score of 93.8\% and an overall accuracy of 94.0\%, validating MobileNetV2's effectiveness in recognizing lip visual characteristics.
 
-\subsection{Pengujian dan Evaluasi Hybrid Recommendation System}
-Pengujian sistem rekomendasi dilakukan terhadap 30 data uji pengguna dengan variasi nilai RGB bibir yang berbeda. Sampel hasil pengujian disajikan pada Tabel \ref{tab:hasil_rekomendasi}, dan rekapitulasi performa dirangkum pada Tabel \ref{tab:rekap_similarity}.
+\subsection{Testing and Evaluation of the Hybrid Recommendation System}
+Evaluation of the recommendation system was conducted using 30 user test samples with diverse lip RGB color values. Selected sample test outputs are presented in Table \ref{tab:hasil_rekomendasi}, and the overall quantitative summary is detailed in Table \ref{tab:rekap_similarity}.
 
 \begin{table}[htbp]
   \centering
-  \caption{Sampel Hasil Pengujian Hybrid Recommendation System pada Data Uji Pengguna}
+  \caption{Sample Results of the Hybrid Recommendation System on User Test Data}
   \label{tab:hasil_rekomendasi}
   \fontsize{8.5pt}{10.5pt}\selectfont
   \begin{tabular}{ccclccc}
     \toprule
-    \textbf{No} & \textbf{RGB User} & \textbf{Tipe Bibir} & \textbf{Rekomendasi Shade} & \textbf{RGB Lipstik} & \textbf{Euclidean ($d$)} & \textbf{Similarity (\%)} \\
+    \textbf{No} & \textbf{User RGB} & \textbf{Lip Type} & \textbf{Shade Recommendation} & \textbf{Lipstick RGB} & \textbf{Euclidean ($d$)} & \textbf{Similarity (\%)} \\
     \midrule
     1 & (164, 121, 108) & Pinkish  & 1. Glossy Berry     & (167, 97, 101)  & 25.18 & 94.3\% \\
       &                 &          & 2. Dusty Rose       & (185, 115, 125) & 27.68 & 93.7\% \\
@@ -452,54 +452,54 @@ Pengujian sistem rekomendasi dilakukan terhadap 30 data uji pengguna dengan vari
 
 \begin{table}[htbp]
   \centering
-  \caption{Rekapitulasi Skor Kemiripan (\textit{Similarity}) Hybrid Recommendation System}
+  \caption{Quantitative Summary of Similarity Scores for the Hybrid Recommendation System}
   \label{tab:rekap_similarity}
   \fontsize{8.5pt}{11pt}\selectfont
   \begin{tabular}{lc}
     \toprule
-    \textbf{Parameter Evaluasi} & \textbf{Nilai Kuantitatif} \\
+    \textbf{Evaluation Metric} & \textbf{Quantitative Value} \\
     \midrule
-    Jumlah Sampel Data Uji & 30 data \\
-    Rata-rata Similarity Top-1 (Rekomendasi Pertama) & \textbf{93.62\%} \\
-    Rata-rata Similarity Top-2 (Rekomendasi Kedua)   & \textbf{92.26\%} \\
-    Rata-rata Similarity Top-3 (Rekomendasi Ketiga)  & \textbf{91.41\%} \\
-    Nilai Similarity Tertinggi                      & \textbf{97.60\%} \\
-    Nilai Similarity Terendah                       & \textbf{73.60\%} \\
-    Total Basis Data Produk Lipstik Terdaftar       & 281 shade \\
+    Number of Evaluation Test Samples & 30 data points \\
+    Average Top-1 Similarity (First Recommendation)  & \textbf{93.62\%} \\
+    Average Top-2 Similarity (Second Recommendation) & \textbf{92.26\%} \\
+    Average Top-3 Similarity (Third Recommendation)  & \textbf{91.41\%} \\
+    Highest Recorded Similarity Score                & \textbf{97.60\%} \\
+    Lowest Recorded Similarity Score                 & \textbf{73.60\%} \\
+    Total Registered Commercial Lipstick Shades      & 281 shades \\
     \bottomrule
   \end{tabular}
 \end{table}
 
-Hasil rekapitulasi membuktikan bahwa sistem rekomendasi hibrida mampu menghasilkan rekomendasi warna lipstik dengan tingkat kecocokan yang sangat tinggi. Rata-rata kemiripan warna untuk rekomendasi utama (Top-1) mencapai \textbf{93,62\%}, dengan seluruh Top-3 rekomendasi konsisten berada di atas 91\%. Pendekatan bertingkat (\textit{two-stage hybrid}) terbukti efektif mengeliminasi ketidakcocokan kategori pada tahap \textit{Rule-Based} dan mengoptimalkan presisi gradasi warna pada tahap \textit{Euclidean Distance}.
+The performance summary demonstrates that the hybrid recommendation system consistently produces lipstick shade recommendations with high compatibility. The average color similarity for the primary recommendation (Top-1) reached \textbf{93.62\%}, with all Top-3 recommendations consistently exceeding 91\%. The two-stage hybrid framework proves effective in filtering out mismatched categories during the Rule-Based phase while maximizing fine-grained color gradation matching during the Euclidean Distance stage.
 
-\subsection{Implementasi Antarmuka Sistem Berbasis Web}
-Sistem diimplementasikan ke dalam aplikasi web responsif. Pengguna dapat mengunggah foto wajah dan sistem secara otomatis menampilkan ROI bibir tersegmentasi, nilai RGB, kelas prediksi MobileNetV2, nilai kepercayaan (\textit{confidence}), serta kartu Top-3 rekomendasi lipstik lengkap dengan swatch warna dan skor kemiripan (Gambar \ref{fig:ui_analisis}).
+\subsection{Web-Based System User Interface Implementation}
+The system was deployed as a responsive web application. Users upload a facial photograph, after which the application automatically displays the segmented lip ROI, extracted RGB values, MobileNetV2 predicted classification, confidence score, and interactive Top-3 recommendation cards complete with color swatches and similarity percentages (Figure \ref{fig:ui_analisis}).
 
 \begin{figure}[htbp]
   \centering
-  \IfFileExists{Gambar/skripsi_image34.png}{\includegraphics[width=0.55\textwidth]{skripsi_image34.png}}{\fbox{Antarmuka Hasil Analisis}}
-  \caption{Implementasi Antarmuka Halaman Hasil Analisis dan Rekomendasi Lipstik}
+  \IfFileExists{Gambar/skripsi_image34.png}{\includegraphics[width=0.55\textwidth]{skripsi_image34.png}}{\fbox{Analysis Results Interface}}
+  \caption{User Interface Implementation of Analysis Results and Lipstick Recommendations}
   \label{fig:ui_analisis}
 \end{figure}
 
-\subsection{Pengujian Fungsional (Black Box Testing)}
-Pengujian fungsional sistem menggunakan metode \textit{Black Box Testing} menunjukkan bahwa seluruh modul aplikasi berjalan sesuai rancangan kebutuhan fungsional dengan status \textbf{100\% PASS} (Tabel \ref{tab:blackbox}).
+\subsection{Functional Testing (Black Box Testing)}
+Functional evaluation using Black Box Testing verified that all core software modules operate according to operational requirements, achieving a \textbf{100\% PASS} rate (Table \ref{tab:blackbox}).
 
 \begin{table}[htbp]
   \centering
-  \caption{Hasil Pengujian Black Box pada Modul Analisis dan Rekomendasi}
+  \caption{Black Box Testing Results for Analysis and Recommendation Modules}
   \label{tab:blackbox}
   \fontsize{8pt}{10pt}\selectfont
   \begin{tabularx}{\textwidth}{clXXc}
     \toprule
-    \textbf{No} & \textbf{Skenario Uji} & \textbf{Aktivitas / Masukan} & \textbf{Hasil yang Diharapkan} & \textbf{Status} \\
+    \textbf{No} & \textbf{Test Scenario} & \textbf{Activity / Input} & \textbf{Expected Output} & \textbf{Status} \\
     \midrule
-    1 & Unggah Citra Valid & Foto wajah JPG/PNG & Sistem mendeteksi wajah dan menampilkan \textit{preview} & PASS \\
-    2 & Deteksi Landmark   & Menjalankan analisis & MediaPipe mengekstrak 468 titik landmark wajah & PASS \\
-    3 & Segmentasi Bibir   & Ekstraksi batas bibir & Masker poligon bibir terbentuk dan area bibir terpotong & PASS \\
-    4 & Klasifikasi Warna  & Ekstraksi RGB \& inferensi & MobileNetV2 memprediksi kelas (Pinkish/Brownish/Dark) & PASS \\
-    5 & Rekomendasi Top-3  & Filter aturan \& jarak Euclidean & Menampilkan 3 produk lipstik dengan similarity tertinggi & PASS \\
-    6 & Simpan Riwayat     & Simpan ke basis data & Riwayat tersimpan dan dapat diakses pada menu \textit{History} & PASS \\
+    1 & Valid Image Upload     & JPG/PNG facial image & Face detected and image preview rendered & PASS \\
+    2 & Landmark Detection     & Execute analysis & MediaPipe extracts 468 3D facial landmarks & PASS \\
+    3 & Lip Segmentation       & Delineate lip boundary & Polygon mask generated and lip region cropped & PASS \\
+    4 & Color Classification   & RGB extraction \& inference & MobileNetV2 predicts class (Pinkish/Brownish/Dark) & PASS \\
+    5 & Top-3 Recommendation   & Rule filter \& Euclidean metric & Top 3 lipstick shades with highest similarity displayed & PASS \\
+    6 & Save History           & Commit to database & Record persisted and retrievable via History menu & PASS \\
     \bottomrule
   \end{tabularx}
 \end{table}
@@ -508,18 +508,18 @@ Pengujian fungsional sistem menggunakan metode \textit{Black Box Testing} menunj
 % =========================================================================
 % Section 4: Conclusion
 % =========================================================================
-\section{KESIMPULAN DAN SARAN}
+\section{CONCLUSION AND FUTURE WORK}
 
-\subsection{Kesimpulan}
-Berdasarkan hasil perancangan, implementasi, dan pengujian yang telah dilaksanakan, penelitian ini telah berhasil membangun sistem rekomendasi warna lipstik terpersonalisasi berbasis citra bibir dengan mengintegrasikan MediaPipe Face Mesh, MobileNetV2 melalui \textit{transfer learning}, serta \textit{Hybrid Recommendation System}. Model MobileNetV2 terbukti andal dalam mengklasifikasikan tipe warna bibir pengguna ke dalam tiga kategori (Pinkish, Brownish, dan Dark) dengan perolehan akurasi validasi mencapai 94,84\% dan nilai kerugian validasi sebesar 0,1612. Selain itu, integrasi metode \textit{Rule-Based Filtering} dan \textit{Content-Based Filtering} berbasis \textit{Euclidean Distance} berhasil mengoptimalkan akurasi rekomendasi produk lipstik dari katalog komersial, menghasilkan rata-rata tingkat kemiripan sebesar 93,62\% pada rekomendasi pertama, 92,26\% pada rekomendasi kedua, dan 91,41\% pada rekomendasi ketiga, dengan skor kecocokan tertinggi mencapai 97,60\%. Pengujian fungsionalitas menggunakan metode \textit{Black Box Testing} juga membuktikan bahwa seluruh modul aplikasi web berjalan lancar dengan tingkat keberhasilan 100\%.
+\subsection{Conclusion}
+Based on the design, development, and evaluation conducted, this study has successfully established an automated, personalized lip image-based lipstick shade recommendation system integrating MediaPipe Face Mesh, MobileNetV2 via transfer learning, and a Hybrid Recommendation System. The MobileNetV2 model proved reliable in classifying natural lip tones into three defined categories (Pinkish, Brownish, and Dark), achieving a validation accuracy of 94.84\% and a validation loss of 0.1612. Furthermore, integrating Rule-Based Filtering and Content-Based Filtering based on Euclidean Distance effectively optimized recommendation precision from a commercial cosmetic database, attaining average similarity scores of 93.62\% for the first recommendation, 92.26\% for the second recommendation, and 91.41\% for the third recommendation, with a peak compatibility score of 97.60\%. Functional validation through Black Box Testing verified that all application modules execute reliably with a 100\% success rate.
 
-\subsection{Saran}
-Untuk pengembangan dan penyempurnaan penelitian di masa mendatang, disarankan untuk memperbanyak jumlah sampel data primer terutama pada kategori berpigmen gelap (Dark) dan kecokelatan (Brownish), serta menerapkan metode penanganan ketidakseimbangan kelas seperti \textit{class weighting} atau SMOTE guna meningkatkan sensitivitas pada kelas minoritas. Di samping itu, penelitian lanjutan dapat memperluas kapabilitas sistem dengan menambahkan fitur simulasi riasan virtual (\textit{Virtual Try-On}) berbasis \textit{Augmented Reality} (AR) interaktif serta mempertimbangkan integrasi rona warna kulit (\textit{skin undertone}) dan preferensi kebutuhan acara agar hasil rekomendasi kosmetik menjadi semakin komprehensif dan adaptif.
+\subsection{Future Work}
+For future research and system enhancement, increasing primary sample diversity—particularly within the underrepresented Dark and Brownish pigmentation categories—is recommended. Incorporating specialized class imbalance countermeasures such as class weighting or SMOTE will further enhance minority class sensitivity. Additionally, subsequent developments may extend system functionality by introducing interactive Augmented Reality (AR) Virtual Try-On capabilities, as well as integrating skin undertone and occasion-based preferences to deliver even more comprehensive and adaptive cosmetic recommendations.
 
 % =========================================================================
 % References (IEEE Style)
 % =========================================================================
-\section*{DAFTAR PUSTAKA}
+\section*{REFERENCES}
 
 \begingroup
 \renewcommand{\section}[2]{}%
