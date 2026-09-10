@@ -59,6 +59,8 @@
 \renewcommand\citedash{]--[}
 \usepackage{float}
 \usepackage{placeins}
+\usepackage{enumitem}
+\setlist[itemize]{label={--},leftmargin=1.5em,itemsep=1.5pt,topsep=2pt,parsep=0pt}
 
 % =========================================================================
 % Page Geometry & Margins (JTRIK Standard: A4 Paper, Margins: 2.5 cm all sides)
@@ -230,32 +232,32 @@ Penelitian ini dilaksanakan sebagai penelitian pengembangan (\textit{Research an
 
 \subsection{Arsitektur Sistem POS Offline-First}
 Arsitektur sistem dirancang untuk menjamin kelangsungan operasional transaksi kasir tanpa ketergantungan koneksi internet secara terus-menerus. Sistem terdiri atas empat komponen utama (Gambar \ref{fig:alur_penelitian}):
-\begin{enumerate}
-  \item \textbf{Aplikasi Mobile (Sisi Klien):} Dibangun menggunakan \textit{framework} Flutter (bahasa Dart) dengan arsitektur manajemen \textit{state} Riverpod. Penyimpanan lokal ditangani oleh Isar Database yang menyimpan data produk, kategori, dan transaksi secara instan. Komponen \textit{Sync Engine} secara berkala memeriksa status konektivitas jaringan; apabila koneksi internet terhubung, sistem mengunggah nota transaksi lokal yang memiliki status \texttt{is\_synced = false} ke basis data \textit{cloud}.
-  \item \textbf{Infrastruktur Cloud (Supabase):} Menggunakan platform Supabase PostgreSQL sebagai basis data relasional terpusat yang dilengkapi \textit{Row Level Security} (RLS) serta prosedur tersimpan (\textit{Remote Procedure Call}/RPC) \texttt{create\_transaction\_v4} untuk memproses pencatatan transaksi dan pengurangan stok secara atomik.
-  \item \textbf{Layanan Telemetri dan Notifikasi (Firebase):} Menggunakan Firebase Cloud Messaging (FCM) untuk pengiriman notifikasi \textit{broadcast} antarkaryawan dan peringatan stok menipis, serta Firebase Analytics untuk telemetri penggunaan fitur aplikasi.
-  \item \textbf{Layanan Inferensi Prediksi (Hugging Face):} Model LSTM dikemas dalam layanan REST API berbasis Flask di platform Hugging Face Spaces. Aplikasi klien mengirimkan riwayat penjualan agregat melalui protokol HTTPS dan menerima hasil proyeksi penjualan dalam format JSON.
-\end{enumerate}
+\begin{itemize}
+  \item Aplikasi Mobile (Sisi Klien): Dibangun menggunakan \textit{framework} Flutter (bahasa Dart) dengan arsitektur manajemen \textit{state} Riverpod. Penyimpanan lokal ditangani oleh Isar Database yang menyimpan data produk, kategori, dan transaksi secara instan. Komponen \textit{Sync Engine} secara berkala memeriksa status konektivitas jaringan; apabila koneksi internet terhubung, sistem mengunggah nota transaksi lokal yang memiliki status \texttt{is\_synced = false} ke basis data \textit{cloud}.
+  \item Infrastruktur Cloud (Supabase): Menggunakan platform Supabase PostgreSQL sebagai basis data relasional terpusat yang dilengkapi \textit{Row Level Security} (RLS) serta prosedur tersimpan (\textit{Remote Procedure Call}/RPC) \texttt{create\_transaction\_v4} untuk memproses pencatatan transaksi dan pengurangan stok secara atomik.
+  \item Layanan Telemetri dan Notifikasi (Firebase): Menggunakan Firebase Cloud Messaging (FCM) untuk pengiriman notifikasi \textit{broadcast} antarkaryawan dan peringatan stok menipis, serta Firebase Analytics untuk telemetri penggunaan fitur aplikasi.
+  \item Layanan Inferensi Prediksi (Hugging Face): Model LSTM dikemas dalam layanan REST API berbasis Flask di platform Hugging Face Spaces. Aplikasi klien mengirimkan riwayat penjualan agregat melalui protokol HTTPS dan menerima hasil proyeksi penjualan dalam format JSON.
+\end{itemize}
 
 \subsection{Dataset dan Pra-pemrosesan Data Penjualan}
 Dataset yang digunakan berasal dari transaksi riil kantin EatsTEDI UGM pada rentang waktu 26 Oktober 2024 hingga 4 September 2025. Dari total rentang waktu tersebut, dilakukan pra-pemrosesan data sebagai berikut:
-\begin{enumerate}
-  \item \textbf{Penyaringan Hari Aktif:} Memfilter dan mempertahankan hari-hari operasional yang memiliki transaksi penjualan positif ($\text{revenue} > 0$), menghasilkan 313 hari aktif transaksi. Hari libur kalender akademik dan akhir pekan tanpa penjualan dieliminasi untuk membentuk deret waktu aktif teratur.
-  \item \textbf{Transformasi Target Log-Return:} Untuk mengatasi ketidakstasioneran data omzet nominal yang memiliki rentang fluktuasi lebar, target model ditransformasikan ke dalam bentuk \textit{log-return} harian ($r_t$):
+\begin{itemize}
+  \item Penyaringan Hari Aktif: Memfilter dan mempertahankan hari-hari operasional yang memiliki transaksi penjualan positif ($\text{revenue} > 0$), menghasilkan 313 hari aktif transaksi. Hari libur kalender akademik dan akhir pekan tanpa penjualan dieliminasi untuk membentuk deret waktu aktif teratur.
+  \item Transformasi Target Log-Return: Untuk mengatasi ketidakstasioneran data omzet nominal yang memiliki rentang fluktuasi lebar, target model ditransformasikan ke dalam bentuk \textit{log-return} harian ($r_t$):
   \begin{equation}
     r_t = \ln\left(\frac{Y_t + 1}{Y_{t-1} + 1}\right)
     \label{eq:log_return}
   \end{equation}
   di mana $Y_t$ adalah nilai omzet penjualan nominal pada hari aktif ke-$t$. Penambahan konstanta $+1$ bertujuan mencegah timbulnya nilai tak terdefinisi saat omzet bernilai nol.
-  \item \textbf{Fitur Siklik Temporal:} Ekstraksi fitur hari kerja berupa representasi trigonometri siklik siklus mingguan:
+  \item Fitur Siklik Temporal: Ekstraksi fitur hari kerja berupa representasi trigonometri siklik siklus mingguan:
   \begin{equation}
     \sin_{\text{dow}} = \sin\left(\frac{2\pi \cdot d}{7}\right), \quad \cos_{\text{dow}} = \cos\left(\frac{2\pi \cdot d}{7}\right)
     \label{eq:dow}
   \end{equation}
   di mana $d \in \{0, 1, \dots, 6\}$ menyatakan indeks hari dalam sepekan.
-  \item \textbf{Normalisasi dan Pembentukan Sequence:} Fitur numerik dinormalisasi menggunakan Min-Max Scaling ke rentang $[0, 1]$. Pembentukan sampel pembelajaran terawasi (\textit{supervised learning}) dilakukan dengan metode \textit{sliding window} berjangka pandang 7 hari aktif ($LOOK\_BACK=7$), menghasilkan dimensi masukan sekuens sebesar $7 \times 8$.
-  \item \textbf{Pembagian Dataset Kronologis:} Dataset dibagi secara kronologis (\textit{time-based split}) dengan rasio 70\% untuk data latih (212 sampel sekuens), 15\% untuk data validasi (45 sampel sekuens), dan 15\% untuk data uji (46 sampel sekuens).
-\end{enumerate}
+  \item Normalisasi dan Pembentukan Sequence: Fitur numerik dinormalisasi menggunakan Min-Max Scaling ke rentang $[0, 1]$. Pembentukan sampel pembelajaran terawasi (\textit{supervised learning}) dilakukan dengan metode \textit{sliding window} berjangka pandang 7 hari aktif ($LOOK\_BACK=7$), menghasilkan dimensi masukan sekuens sebesar $7 \times 8$.
+  \item Pembagian Dataset Kronologis: Dataset dibagi secara kronologis (\textit{time-based split}) dengan rasio 70\% untuk data latih (212 sampel sekuens), 15\% untuk data validasi (45 sampel sekuens), dan 15\% untuk data uji (46 sampel sekuens).
+\end{itemize}
 
 \subsection{Arsitektur Model Long Short-Term Memory (LSTM)}
 Model LSTM dirancang untuk mempelajari keterkaitan temporal pada deret waktu \cite{hochreiter1997}. Perhitungan di dalam satu unit sel LSTM pada langkah waktu $t$ diatur oleh empat mekanisme gerbang (\textit{gating mechanism}):
@@ -319,11 +321,11 @@ Nilai keluaran estimasi \textit{log-return} $\hat{r}_t$ direkonstruksi kembali k
 \end{equation}
 
 Untuk proyeksi multi-langkah ke depan secara rekursif hingga horizon 7 hari aktif, sistem menerapkan tiga mekanisme pengaman (\textit{safety guard}):
-\begin{enumerate}
-  \item \textbf{\textit{Clipping}:} Membatasi \textit{log-return} prediksi dalam persentil 10 hingga 90 dari data latih untuk mengeliminasi lonjakan tak wajar.
-  \item \textbf{\textit{Damping}:} Mengalikan nilai variasi perubahan dengan faktor redaman $\phi^{h-1}$ ($\phi = 0,7$) seiring bertambahnya horizon langkah $h$.
-  \item \textbf{\textit{Safety Rail}:} Membatasi omzet nominal proyeksi agar tidak melebihi nilai batas atas omzet historis (\textit{revenue ceiling}).
-\end{enumerate}
+\begin{itemize}
+  \item \textit{Clipping}: Membatasi \textit{log-return} prediksi dalam persentil 10 hingga 90 dari data latih untuk mengeliminasi lonjakan tak wajar.
+  \item \textit{Damping}: Mengalikan nilai variasi perubahan dengan faktor redaman $\phi^{h-1}$ ($\phi = 0,7$) seiring bertambahnya horizon langkah $h$.
+  \item \textit{Safety Rail}: Membatasi omzet nominal proyeksi agar tidak melebihi nilai batas atas omzet historis (\textit{revenue ceiling}).
+\end{itemize}
 
 \subsection{Metrik Evaluasi dan Ambang Kelayakan}
 Performa akurasi peramalan diuji pada skema satu langkah ke depan (\textit{one-step-ahead}) menggunakan tiga metrik evaluasi secara simultan \cite{hyndman2006}:
@@ -505,11 +507,11 @@ Pengujian \textit{white box} mengonfirmasi bahwa seluruh percabangan fungsi pena
 Hasil pengujian empiris pada penelitian ini menunjukkan bahwa kendala ketercapaian ambang batas akurasi LSTM ($\text{sMAPE} = 38,06\%$) bersumber langsung dari keterbatasan volume data historis (313 hari aktif atau 212 sampel latih) serta tingginya variasi ritme transaksi di lingkungan kampus. Temuan ini selaras dengan studi Makridakis dkk. pada kompetisi M5 yang menunjukkan bahwa pada rentang data pendek, model \textit{deep learning} sering kali tidak memberikan keunggulan signifikan dibandingkan model statistik yang lebih sederhana akibat minimnya pengulangan siklus musiman tahunan \cite{makridakis2022}. Selain itu, penghapusan hari-hari libur ($\text{revenue} = 0$) menyebabkan interval waktu antar-hari aktif menjadi tidak seragam, yang mendistorsi asumsi keteraturan deret waktu kontinu pada arsitektur LSTM \cite{box2015}.
 
 Meskipun demikian, penelitian ini memberikan kontribusi metodologis yang sangat penting bagi literatur rekayasa perangkat lunak dan komputasi prediktif terapan:
-\begin{enumerate}
-  \item \textbf{Transparansi Evaluasi Multi-Seed:} Mengungkap variasi performa inisialisasi bobot jaringan saraf tiruan secara jujur dan transparan melalui pelaporan simpangan baku dan rentang metrik.
-  \item \textbf{Validitas Metrik sMAPE:} Mengatasi kelemahan metrik MAPE konvensional yang meledak (\textit{exploding MAPE}) saat menghadapi nilai penjualan mendekati nol pada skala usaha kecil.
-  \item \textbf{Arsitektur Offline-First yang Tangguh:} Membuktikan keberhasilan integrasi basis data lokal Isar DB dan Supabase PostgreSQL untuk menjamin kontinuitas transaksi kasir secara mutlak tanpa hambatan latensi jaringan internet.
-\end{enumerate}
+\begin{itemize}
+  \item Transparansi Evaluasi Multi-Seed: Mengungkap variasi performa inisialisasi bobot jaringan saraf tiruan secara jujur dan transparan melalui pelaporan simpangan baku dan rentang metrik.
+  \item Validitas Metrik sMAPE: Mengatasi kelemahan metrik MAPE konvensional yang meledak (\textit{exploding MAPE}) saat menghadapi nilai penjualan mendekati nol pada skala usaha kecil.
+  \item Arsitektur Offline-First yang Tangguh: Membuktikan keberhasilan integrasi basis data lokal Isar DB dan Supabase PostgreSQL untuk menjamin kontinuitas transaksi kasir secara mutlak tanpa hambatan latensi jaringan internet.
+\end{itemize}
 
 \FloatBarrier
 % =========================================================================
