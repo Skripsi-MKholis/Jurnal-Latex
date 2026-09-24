@@ -252,7 +252,28 @@ The system architecture was designed to guarantee uninterrupted cashier transact
 \end{itemize}
 
 \subsection{Dataset and Data Preprocessing}
-The empirical dataset comprises authentic transactional records collected from the EatsTEDI SV UGM canteen between October 26, 2024, and September 4, 2025. Preprocessing was conducted through the following stages:
+The empirical dataset comprises authentic transactional records collected from the EatsTEDI SV UGM canteen spanning August 26, 2024, to June 21, 2026, comprising 314 daily records and over 94,000 transaction line items. A representative preview of the daily sales time-series dataset is presented in Table \ref{tab:sample_dataset}.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Sample Preview of the Daily Sales Time Series Dataset (EatsTEDI UGM)}
+  \label{tab:sample_dataset}
+  \fontsize{8pt}{10.5pt}\selectfont
+  \begin{tabular}{crrrrrrc}
+    \toprule
+    \textbf{Date} & \textbf{Revenue (IDR)} & \textbf{Trx} & \textbf{Qty} & \textbf{DOW} & \textbf{Weekend} & \textbf{Holiday} & \textbf{Ramadan} \\
+    \midrule
+    2024-08-26 & 1,701,500 & 113 & 585 & 0 & 0 & 0 & 0 \\
+    2024-08-27 & 1,746,500 & 245 & 611 & 1 & 0 & 0 & 0 \\
+    2024-08-28 & 1,650,500 & 179 & 570 & 2 & 0 & 0 & 0 \\
+    2024-08-29 & 1,814,500 & 219 & 646 & 3 & 0 & 0 & 0 \\
+    2024-08-30 & 1,233,500 & 167 & 453 & 4 & 0 & 0 & 0 \\
+    2024-09-02 & 1,393,500 & 176 & 489 & 0 & 0 & 0 & 0 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+Across the operational timeline, data preprocessing was systematically conducted through the following stages:
 \begin{itemize}
   \item Active Day Filtering: Retained only operational business days with positive gross revenue ($\text{revenue} > 0$), resulting in 313 active sales days. Academic holiday closures and non-trading weekends were pruned to establish a continuous operational sequence.
   \item Target Log-Return Transformation: To mitigate non-stationarity and stabilize wide revenue variance, the target series was converted into daily log-returns ($r_t$):

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.7.26)  24 SEP 2026 14:02
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.7.26)  24 SEP 2026 14:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1080,9 +1080,9 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
  [2] [3]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 289.
+put line 310.
 
-Overfull \hbox (0.28665pt too wide) in paragraph at lines 335--337
+Overfull \hbox (0.28665pt too wide) in paragraph at lines 356--358
 []\TU/TwentiethCentury(0)/m/n/10 Untuk proyeksi multi-langkah ke depan secara r
 ekursif hingga horizon 7 hari aktif, sistem menerapkan tiga mekanisme
  []
@@ -1094,17 +1094,17 @@ File: Gambar/prediksi_vs_aktual.png Graphic file (type bmp)
 File: Gambar/boxplot_multiseed.png Graphic file (type bmp)
 <Gambar/boxplot_multiseed.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 428--428
+Underfull \hbox (badness 10000) in paragraph at lines 449--449
 []|\TU/TwentiethCentury(0)/m/n/8.5 Sebaran MAE sangat lebar (Rp495.527–
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 428--428
+Underfull \hbox (badness 10000) in paragraph at lines 449--449
 \TU/TwentiethCentury(0)/m/n/8.5 Rp1.048.967) dengan deviasi Rp145.024; 0
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 428--428
+Underfull \hbox (badness 10000) in alignment at lines 449--449
 [][][][] 
  []
 
@@ -1125,10 +1125,10 @@ Package rerunfilecheck Info: File `"Jurnal Kholis - JTRIK".out' has not changed
 (rerunfilecheck)             Checksum: <no file>.
  ) 
 Here is how much of TeX's memory you used:
- 18042 strings out of 402987
- 335373 string characters out of 5452871
- 839022 words of memory out of 5000000
- 46525 multiletter control sequences out of 15000+600000
+ 18043 strings out of 402987
+ 335393 string characters out of 5452871
+ 844107 words of memory out of 5000000
+ 46526 multiletter control sequences out of 15000+600000
  637942 words of font info for 120 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  73i,14n,95p,2054b,543s stack positions out of 10000i,1000n,20000p,200000b,200000s

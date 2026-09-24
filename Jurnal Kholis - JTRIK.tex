@@ -252,7 +252,28 @@ Arsitektur sistem dirancang untuk menjamin kelangsungan operasional transaksi ka
 \end{itemize}
 
 \subsection{Dataset dan Pra-pemrosesan Data Penjualan}
-Dataset yang digunakan berasal dari transaksi riil kantin EatsTEDI UGM pada rentang waktu 26 Oktober 2024 hingga 4 September 2025. Dari total rentang waktu tersebut, dilakukan pra-pemrosesan data sebagai berikut:
+Dataset yang digunakan berasal dari transaksi riil kantin EatsTEDI UGM pada rentang waktu 26 Agustus 2024 hingga 21 Juni 2026 yang mencakup 314 rekaman harian dan lebih dari 94.000 baris transaksi individual. Cuplikan sampel data deret waktu penjualan harian disajikan pada Tabel \ref{tab:sample_dataset}.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Sampel Data Deret Waktu Penjualan Harian (EatsTEDI UGM)}
+  \label{tab:sample_dataset}
+  \fontsize{8pt}{10.5pt}\selectfont
+  \begin{tabular}{crrrrrrc}
+    \toprule
+    \textbf{Tanggal} & \textbf{Omzet (Rp)} & \textbf{Trx} & \textbf{Qty} & \textbf{DOW} & \textbf{Weekend} & \textbf{Holiday} & \textbf{Ramadan} \\
+    \midrule
+    2024-08-26 & 1.701.500 & 113 & 585 & 0 & 0 & 0 & 0 \\
+    2024-08-27 & 1.746.500 & 245 & 611 & 1 & 0 & 0 & 0 \\
+    2024-08-28 & 1.650.500 & 179 & 570 & 2 & 0 & 0 & 0 \\
+    2024-08-29 & 1.814.500 & 219 & 646 & 3 & 0 & 0 & 0 \\
+    2024-08-30 & 1.233.500 & 167 & 453 & 4 & 0 & 0 & 0 \\
+    2024-09-02 & 1.393.500 & 176 & 489 & 0 & 0 & 0 & 0 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+Dari total rentang data tersebut, dilakukan tahapan pra-pemrosesan data sebagai berikut:
 \begin{itemize}
   \item Penyaringan Hari Aktif: Memfilter dan mempertahankan hari-hari operasional yang memiliki transaksi penjualan positif ($\text{revenue} > 0$), menghasilkan 313 hari aktif transaksi. Hari libur kalender akademik dan akhir pekan tanpa penjualan dieliminasi untuk membentuk deret waktu aktif teratur.
   \item Transformasi Target Log-Return: Untuk mengatasi ketidakstasioneran data omzet nominal yang memiliki rentang fluktuasi lebar, target model ditransformasikan ke dalam bentuk \textit{log-return} harian ($r_t$):
