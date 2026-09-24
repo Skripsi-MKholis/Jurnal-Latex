@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.7.26)  24 SEP 2026 13:50
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.7.26)  24 SEP 2026 13:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -655,16 +655,16 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
 * h-part:(L,W,R)=(71.13188pt, 455.24411pt, 71.13188pt)
-* v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
+* v-part:(T,H,B)=(85.35826pt, 688.5567pt, 71.13188pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
 * \textwidth=455.24411pt
-* \textheight=702.78308pt
+* \textheight=688.5567pt
 * \oddsidemargin=-1.1381pt
 * \evensidemargin=-1.1381pt
-* \topmargin=-61.1381pt
+* \topmargin=-52.91173pt
 * \headheight=48.0pt
-* \headsep=12.0pt
+* \headsep=18.0pt
 * \topskip=10.0pt
 * \footskip=22.0pt
 * \marginparwidth=57.0pt
@@ -1074,12 +1074,11 @@ Overfull \hbox (2.2446pt too wide) has occurred while \output is active
 ]
 File: Gambar/arsitektur_sistem_bw.png Graphic file (type bmp)
 <Gambar/arsitektur_sistem_bw.png>
- [2]
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [3]
+ [2] [3]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 289.
  [4]
@@ -1092,14 +1091,14 @@ File: Gambar/prediksi_vs_aktual.png Graphic file (type bmp)
 <Gambar/prediksi_vs_aktual.png>
 File: Gambar/boxplot_multiseed.png Graphic file (type bmp)
 <Gambar/boxplot_multiseed.png>
-
+[5]
 Underfull \hbox (badness 10000) in alignment at lines 428--428
 [][][][] 
  []
 
 File: Gambar/smart_analytics.png Graphic file (type bmp)
 <Gambar/smart_analytics.png>
-[5] [6] [7] [8] [9] (Jurnal Kholis - JTRIK - English.aux)
+[6] [7] [8] [9] [10] (Jurnal Kholis - JTRIK - English.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
@@ -1109,6 +1108,9 @@ L3 programming layer <2025-12-24>
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.75pt have occurred.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `"Jurnal Kholis - JTRIK - English".out' has n
 ot changed.
 (rerunfilecheck)             Checksum: <no file>.
@@ -1116,10 +1118,10 @@ ot changed.
 Here is how much of TeX's memory you used:
  18039 strings out of 402987
  335448 string characters out of 5452871
- 843103 words of memory out of 5000000
+ 842102 words of memory out of 5000000
  46523 multiletter control sequences out of 15000+600000
  637934 words of font info for 119 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 73i,15n,95p,2010b,543s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 73i,14n,95p,2010b,543s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Jurnal Kholis - JTRIK - English.pdf (9 pages).
+Output written on Jurnal Kholis - JTRIK - English.pdf (10 pages).
