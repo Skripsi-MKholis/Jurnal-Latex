@@ -122,7 +122,12 @@
     \end{minipage}%
   }
   \fancyfoot[R]{\fontsize{9pt}{11pt}\selectfont\thepage}
-  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\headrulewidth}{1.0pt}
+  \renewcommand{\headrule}{%
+    \vspace{12pt}%
+    {\color{dividerblue}\hrule height \headrulewidth width \headwidth}%
+    \vspace{-\headrulewidth}%
+  }
   \renewcommand{\footrulewidth}{0pt}
 }
 
