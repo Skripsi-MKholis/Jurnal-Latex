@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.7.26)  24 SEP 2026 10:37
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.7.26)  24 SEP 2026 12:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1098,34 +1098,7 @@ Underfull \hbox (badness 10000) in alignment at lines 420--420
 
 File: Gambar/smart_analytics.png Graphic file (type bmp)
 <Gambar/smart_analytics.png>
-[5] [6] [7]
-LaTeX Font Info:    Calculating math sizes for size <7.5> on input line 545.
-
-
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <7.5> not available
-(Font)              size <7> substituted on input line 545.
-
-
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <3.75> not available
-(Font)              size <5> substituted on input line 545.
-
-
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <7.5> not available
-(Font)              size <7> substituted on input line 545.
-
-
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <3.75> not available
-(Font)              size <5> substituted on input line 545.
-
-
-LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <7.5> not available
-(Font)              size <7> substituted on input line 545.
-
-
-LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <3.75> not available
-(Font)              size <5> substituted on input line 545.
-
-[8] [9] [10] (Jurnal Kholis - JTRIK - English.aux)
+[5] [6] [7] [8] [9] (Jurnal Kholis - JTRIK - English.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
@@ -1133,19 +1106,19 @@ L3 programming layer <2025-12-24>
 
 
 LaTeX Font Warning: Size substitutions with differences
-(Font)              up to 1.25pt have occurred.
+(Font)              up to 0.75pt have occurred.
 
 Package rerunfilecheck Info: File `"Jurnal Kholis - JTRIK - English".out' has n
 ot changed.
 (rerunfilecheck)             Checksum: <no file>.
  ) 
 Here is how much of TeX's memory you used:
- 18099 strings out of 402987
- 337251 string characters out of 5452871
- 859076 words of memory out of 5000000
- 46575 multiletter control sequences out of 15000+600000
- 639930 words of font info for 136 fonts, out of 8000000 for 9000
+ 18038 strings out of 402987
+ 335430 string characters out of 5452871
+ 843074 words of memory out of 5000000
+ 46522 multiletter control sequences out of 15000+600000
+ 637934 words of font info for 119 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  73i,14n,95p,2010b,543s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Jurnal Kholis - JTRIK - English.pdf (10 pages).
+Output written on Jurnal Kholis - JTRIK - English.pdf (9 pages).
