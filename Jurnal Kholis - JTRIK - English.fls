@@ -1,7 +1,7 @@
 PWD e:\SKRIPSI\JURNAL\Jurnal-Latex
 INPUT C:\Users\acern\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT e:\SKRIPSI\JURNAL\Jurnal-Latex\Jurnal Kholis - JTRIK.tex
-OUTPUT Jurnal Kholis - JTRIK.log
+INPUT e:\SKRIPSI\JURNAL\Jurnal-Latex\Jurnal Kholis - JTRIK - English.tex
+OUTPUT Jurnal Kholis - JTRIK - English.log
 INPUT C:\Program Files\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Program Files\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Program Files\MiKTeX\tex\latex\base\size10.clo
@@ -154,10 +154,10 @@ INPUT C:\Users\acern\AppData\Roaming\MiKTeX\tex\latex\psnfss\t1phv.fd
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvr8t.tfm
 INPUT C:\Program Files\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
 INPUT C:\Program Files\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
-INPUT .\Jurnal Kholis - JTRIK.aux
-INPUT .\Jurnal Kholis - JTRIK.aux
-INPUT Jurnal Kholis - JTRIK.aux
-OUTPUT Jurnal Kholis - JTRIK.aux
+INPUT .\Jurnal Kholis - JTRIK - English.aux
+INPUT .\Jurnal Kholis - JTRIK - English.aux
+INPUT Jurnal Kholis - JTRIK - English.aux
+OUTPUT Jurnal Kholis - JTRIK - English.aux
 INPUT C:\Program Files\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Program Files\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Program Files\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
@@ -166,8 +166,14 @@ INPUT C:\Program Files\MiKTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Program Files\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Program Files\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
-OUTPUT Jurnal Kholis - JTRIK.out
-OUTPUT Jurnal Kholis - JTRIK.pdf
+INPUT .\Jurnal Kholis - JTRIK - English.out
+INPUT .\Jurnal Kholis - JTRIK - English.out
+INPUT Jurnal Kholis - JTRIK - English.out
+INPUT Jurnal Kholis - JTRIK - English.out
+OUTPUT Jurnal Kholis - JTRIK - English.pdf
+INPUT .\Jurnal Kholis - JTRIK - English.out
+INPUT .\Jurnal Kholis - JTRIK - English.out
+OUTPUT Jurnal Kholis - JTRIK - English.out
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvb8t.tfm
 INPUT C:\Users\acern\AppData\Roaming\MiKTeX\tex\latex\microtype\mt-cmr.cfg
 INPUT C:\Users\acern\AppData\Roaming\MiKTeX\tex\latex\microtype\mt-cmr.cfg
@@ -219,7 +225,6 @@ INPUT .\Gambar\image3.png
 INPUT .\Gambar\image3.png
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvb8t.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvr8t.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvro8t.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr9.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr7.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr5.tfm
@@ -236,7 +241,6 @@ INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvr8t.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvr8t.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvb8t.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvb8t.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvro8t.tfm
 INPUT .\Gambar\image1.png
@@ -266,10 +270,6 @@ INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\helvetic\phvr8t.vf
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvr8r.tfm
 INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\helvetic\phvro8t.vf
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvro8r.tfm
-INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\helvetic\phvb8t.vf
-INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvb8r.tfm
-INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\helvetic\phvro8t.vf
-INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvro8r.tfm
 INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\helvetic\phvr8t.vf
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvr8r.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvr8t.tfm
@@ -290,6 +290,7 @@ INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvb8r.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmbx10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmbx7.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmbx5.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvb8t.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmbx8.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmbx6.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmbx5.tfm
@@ -298,6 +299,8 @@ INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvr8t.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvro8t.tfm
 INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\helvetic\phvr8t.vf
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvr8r.tfm
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\helvetic\phvb8t.vf
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvb8r.tfm
 INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\helvetic\phvro8t.vf
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvro8r.tfm
 INPUT .\Gambar\prediksi_vs_aktual.png
@@ -326,14 +329,14 @@ INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvb8t.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\jknappen\ec\ectt0800.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvro8t.tfm
 INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\helvetic\phvb8t.vf
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvb8r.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvro8t.tfm
 INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\helvetic\phvro8t.vf
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvro8r.tfm
-INPUT Jurnal Kholis - JTRIK.aux
-INPUT .\Jurnal Kholis - JTRIK.out
-INPUT .\Jurnal Kholis - JTRIK.out
+INPUT Jurnal Kholis - JTRIK - English.aux
+INPUT .\Jurnal Kholis - JTRIK - English.out
+INPUT .\Jurnal Kholis - JTRIK - English.out
 INPUT C:\Users\acern\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ectt0800.pk
 INPUT C:\Users\acern\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ectt0800.pk
 INPUT C:\Users\acern\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1000.pk
