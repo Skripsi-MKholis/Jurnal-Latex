@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.7.26)  24 SEP 2026 13:54
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.7.26)  24 SEP 2026 14:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1120,9 +1120,6 @@ L3 programming layer <2025-12-24>
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.75pt have occurred.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `"Jurnal Kholis - JTRIK".out' has not changed
 .
 (rerunfilecheck)             Checksum: <no file>.
@@ -1130,7 +1127,7 @@ Package rerunfilecheck Info: File `"Jurnal Kholis - JTRIK".out' has not changed
 Here is how much of TeX's memory you used:
  18042 strings out of 402987
  335373 string characters out of 5452871
- 839021 words of memory out of 5000000
+ 839022 words of memory out of 5000000
  46525 multiletter control sequences out of 15000+600000
  637942 words of font info for 120 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
